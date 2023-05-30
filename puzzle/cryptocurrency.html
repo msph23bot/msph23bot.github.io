@@ -1,0 +1,266 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Cryptocurrency</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+<a href="../round/econ.html" class="btn">Economics</a>
+
+
+
+
+
+<a href="../post-hunt-solve/cryptocurrency.html" class="btn">Call in an answer</a>
+
+
+<a href="../solution/cryptocurrency.html" class="btn solution-button">View solution</a>
+<a href="../stats/cryptocurrency.html" class="btn">Stats</a>
+
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<h1 class="puzzle-title">
+    Cryptocurrency
+    
+</h1>
+
+<main class="puzzle-main clipboard-container">
+    
+
+    
+    <style>
+.minesweeper {
+        margin: 0px auto;
+}
+
+.minesweeper tr td {
+        width: 40px;
+        height: 40px;
+        padding: 0px;
+        font-size: 30px;
+        border: 2px solid black;
+        border-bottom: 2px solid black;
+        text-align: center;
+        user-select: none;
+        cursor: pointer;
+}
+
+.minesweeper td.mine {
+        background-color: #ff7f7f;
+}
+
+.minesweeper td.nomine {
+        /* base64 encode of: <svg xmlns="http://www.w3.org/2000/svg" height="30" width="30"><path d="M0 0 L30 30 M0 30 L30 0" stroke="#777" stroke-width="1"/></svg> */
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzAiIHdpZHRoPSIzMCI+PHBhdGggZD0iTTAgMCBMMzAgMzAgTTAgMzAgTDMwIDAiIHN0cm9rZT0iIzc3NyIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+);
+        background-size: 80%;
+        background-position: center;
+        background-repeat: no-repeat;
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll(".minesweeper").forEach((m) => { new Minesweeper(m); });
+
+        window.addEventListener('beforeunload', function(e) {
+            var state = [];
+            document.querySelectorAll(".minesweeper td").forEach(td => {
+                state.push(td.classList.contains("mine") ? "M" : (td.classList.contains("nomine") ? "X" : ""));
+            });
+            localStorage.setItem("cryptocurrency", state.join("|"));
+        });
+});
+
+function Minesweeper(m) {
+        this.container = m;
+        this.mousedown = false;
+        this.currentCellType = null;
+        this.shift = null;
+
+        this.setCell = function(cell, celltype) {
+            cell.classList.remove("mine");
+            cell.classList.remove("nomine");
+
+            if (celltype != null) {
+                cell.classList.add(celltype);
+            }
+        }
+
+        this.onmousedown = function(e) {
+                this.mousedown = true;
+                this.currentCellType = null;
+
+                if (this.shift || e.which != 1)
+                {
+                        if (e.currentTarget.classList.contains("nomine")) { this.currentCellType = "mine"; }
+                        else if (e.currentTarget.classList.contains("mine")) { this.currentCellType = null; }
+                        else { this.currentCellType = "nomine"; }
+                }
+                else
+                {
+                        if (e.currentTarget.classList.contains("mine")) { this.currentCellType = "nomine"; }
+                        else if (e.currentTarget.classList.contains("nomine")) { this.currentCellType = null; }
+                        else { this.currentCellType = "mine"; }
+                }
+
+                this.setCell(e.currentTarget, this.currentCellType);
+        };
+
+        this.onmouseenter = function(e) {
+                if (this.mousedown) { this.setCell(e.currentTarget, this.currentCellType); }
+        };
+
+        this.onmouseup = function(e) {
+                this.mousedown = false;
+        }
+
+        this.oncontextmenu = (e) => { e.preventDefault(); };
+
+        var shape = this.container.getAttribute("data-shape").split("|");
+
+        var state = localStorage.getItem("cryptocurrency");
+        if (state) state = state.split("|");
+        var iTd = 0;
+
+        for (var r = 0; r < shape.length; r++) {
+                var tr = document.createElement("tr");
+
+                for (var c = 0; c < shape[r].length; c++) {
+                        var td = document.createElement("td");
+
+                        if (state) {
+                                var tdState = state[iTd++].split(",");
+                                if (tdState == "M") { td.classList.add("mine"); }
+                                else if (tdState == "X") { td.classList.add("nomine"); }
+                        }
+
+                        if (shape[r][c] != ".") {
+                                td.innerText = shape[r][c];
+                        } else {
+                                td.onmousedown = (e) => { this.onmousedown(e); };
+                                td.onmouseenter = (e) => { this.onmouseenter(e); };
+                        }
+                        td.oncontextmenu = (e) => { this.oncontextmenu(e); };
+                        tr.appendChild(td);
+                }
+
+                this.container.appendChild(tr);
+        }
+
+        window.onmouseup = (e) => { this.onmouseup(e)};
+        document.addEventListener("keyup", (e) => { this.shift = e.shiftKey; });
+        document.addEventListener("keydown", (e) => { this.shift = e.shiftKey; });
+}
+</script>
+<ul><li>Several blockchains of various lengths are hidden in the grid. Blockchain blocks can connect orthogonally or diagonally.</li><li>Each of the letters in CRYPTO stands for a different digit from 1-6, indicating how many blockchain blocks touch that square. [Think of a blockchain block as a Minesweeper mine.]</li><li>No square containing a letter is part of a blockchain.</li><li>All squares that are not part of any blockchain form a single orthogonally-connected group. [Think of a blockchain block as a black square in Hitori, Statue Park, etc.]</li><li>The grid below can be solved interactively.</li></ul>
+<table class="minesweeper" data-shape="..C.....R|.Y.P.TP.R|.........|C.....T.C|..Y.C.P..|........O|RY.Y.....|.....CO..|..YY.P.Y.|R.C....Y.|.C.C....."></table>
+<p><button class="btn clipboard-button"></button></p>
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

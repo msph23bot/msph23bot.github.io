@@ -1,0 +1,314 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>PH17: Juke Box Hero</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+<a href="../round/placement-test.html" class="btn">Placement Test</a>
+
+
+
+
+
+<a href="../post-hunt-solve/ph17.html" class="btn">Call in an answer</a>
+
+
+<a href="../solution/ph17.html" class="btn solution-button">View solution</a>
+<a href="../stats/ph17.html" class="btn">Stats</a>
+
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<h1 class="puzzle-title">
+    PH17: Juke Box Hero
+    
+</h1>
+
+<main class="puzzle-main clipboard-container">
+    
+
+    
+    <style>
+        .content-div img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .entry {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .entry * {
+            margin: 2px;
+        }
+
+        .entry input {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 30px;
+            font-weight: bold;
+            width: calc(1em + 4px);
+            background-color: white;
+            text-align: center;
+            padding: 0px;
+            border: 1px solid black;
+        }
+
+        .entry input.highlight {
+            background-color: lightgreen;
+        }
+
+        .content-div hr {
+            border-top: 1px solid black;
+        }
+
+        .nowrap {
+            white-space: nowrap;
+        }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var r = 0;
+
+    var state = localStorage.getItem("ph17");
+    if (state) { state = state.split("|"); }
+    var iItem = 0;
+
+    document.querySelectorAll(".entry").forEach(item => {
+        var dataentry = item.getAttribute("data-entry");
+
+        var cNew = 0;
+
+        var curWord = document.createElement("span");
+        curWord.classList.add("nowrap");
+
+        for (var c = 0; c < dataentry.length; c++) {
+            var cell;
+
+            if (dataentry[c] == '.' || dataentry[c] == '#') {
+                cell = document.createElement("input");
+                cell.classList.add("entryitem");
+                if (dataentry[c] == '#') {
+                    cell.classList.add("highlight");
+                }
+                cell.setAttribute("type", "text");
+                cell.setAttribute("minLength", "1");
+                cell.setAttribute("maxLength", "1");
+                if (state) cell.value = state[iItem++];
+
+                cell.id = "item" + (r+1) + "-" + (cNew+1);
+                cNew++;
+            } else {
+                cell = document.createElement("span");
+                if (dataentry[c] == ' ') {
+                    cell.innerHTML = "&nbsp;&nbsp;";
+                    item.appendChild(curWord);
+                    item.appendChild(cell);
+                    curWord = document.createElement("span");
+                    curWord.classList.add("nowrap");
+                } else if (dataentry[c] == "'") {
+                    cell.innerHTML = "&rsquo;";
+                } else {
+                    cell.innerText = dataentry[c];
+                }
+            }
+
+            if (dataentry[c] != ' ') { curWord.appendChild(cell); }
+        }
+        item.appendChild(curWord);
+        r++;
+    });
+
+    // Handle arrow keys
+    function move(elem, drow, dcol) {
+        var label = elem.id;
+        var row = parseInt(label.split("-")[0].substr(4)) + drow;
+        var col = parseInt(label.split("-")[1]) + dcol;
+
+        var newitem = document.getElementById("item" + row + "-" + col);
+        if (newitem) {
+            newitem.focus();
+            return true;
+        }
+
+        return false;
+    }
+
+    function setText(elem, text) {
+        elem.value = text;
+    }
+
+    document.querySelectorAll(".entryitem").forEach(item => {
+        // When an input box is selected, the appropriate clue(s) are highlighted too
+        item.addEventListener("keydown", e => {
+            if (e.keyCode == 37) { // left
+                move(e.target, 0, -1);
+            }
+            else if (e.keyCode == 38) { // up
+                move(e.target, -1, 0);
+            }
+            else if (e.keyCode == 39) { // right
+                move(e.target, 0, 1);
+            }
+            else if (e.keyCode == 40) { // down
+                move(e.target, 1, 0);
+            }
+            else if (e.keyCode == 8 || e.keyCode == 46) { // backspace/delete
+                if (e.target.value === "") {
+                    var label = e.target.id;
+                    var row = parseInt(label.split("-")[0].substr(4));
+                    var col = parseInt(label.split("-")[1]);
+
+                    move(e.target, 0, -1);
+                }
+                else {
+                    setText(e.target, "");
+                }
+            }
+            else if (e.target.value != "" && (e.keyCode >= 65 && e.keyCode <= 90)) { // clear existing letter for new one
+                setText(e.target, "");
+            }
+        });
+
+        item.addEventListener("keypress", e => {
+            if ((e.which >= 65 && e.which <= 90) || (e.which >= 97 && e.which <= 122)) { // A-Z
+                setText(e.target, e.key.toUpperCase());
+                move(e.target, 0, 1);
+            }
+            else { // don't allow other characters
+                var currVal = e.target.value;
+                if (currVal && !((currVal.charCodeAt(0) >= 65 && currVal.charCodeAt(0) <= 90) || (currVal.charCodeAt(0) >= 97 && currVal.charCodeAt(0) <= 122))) {
+                    setText(e.target, "");
+                }
+            }
+
+            e.preventDefault();
+        });
+    });
+});
+
+window.addEventListener('beforeunload', function(e) {
+    var state = [];
+    document.querySelectorAll(".entry input").forEach(item => {
+        state.push(item.value);
+    });
+    localStorage.setItem("ph17", state.join("|"));
+});
+</script>
+<body><div class="page-div"><div class="content-div"><img src="../static/puzzle_resources/ph17/A.png"/><div class="entry" data-entry="A..#....."></div><hr/><hr/><hr/><hr/><hr/><img src="../static/puzzle_resources/ph17/B.png"/><div class="entry" data-entry="B... .#. ...."></div><hr/><hr/><hr/><hr/><hr/><img src="../static/puzzle_resources/ph17/C.png"/><div class="entry" data-entry="C..'. .. .#. ......"></div><hr/><hr/><hr/><hr/><hr/><img src="../static/puzzle_resources/ph17/D.png"/><div class="entry" data-entry="D..'. ... ..#. .."></div><hr/><hr/><hr/><hr/><hr/><img src="../static/puzzle_resources/ph17/E.png"/><div class="entry" data-entry="E.... ..#...."></div><hr/><hr/><hr/><hr/><hr/><img src="../static/puzzle_resources/ph17/F.png"/><div class="entry" data-entry="F... #.."></div><hr/><hr/><hr/><hr/><hr/><img src="../static/puzzle_resources/ph17/G.png"/><div class="entry" data-entry="G.. ..#.."></div><hr/><hr/><hr/><hr/><hr/><img src="../static/puzzle_resources/ph17/H.png"/><div class="entry" data-entry="H...#.... ...."></div><hr/><hr/><hr/><hr/><hr/><img src="../static/puzzle_resources/ph17/I.png"/><div class="entry" data-entry="I.'. ... ... .. ... ..... .# .. .... .."></div><hr/><hr/><hr/><hr/><hr/><img src="../static/puzzle_resources/ph17/J.png"/><div class="entry" data-entry="J.. .. .#. ....."></div><hr/><hr/><hr/><hr/><hr/><img src="../static/puzzle_resources/ph17/K.png"/><div class="entry" data-entry="K.... #.. ......"></div><hr/><hr/><hr/><hr/><hr/><img src="../static/puzzle_resources/ph17/L.png"/><div class="entry" data-entry="L...#' .. .... ...."></div><hr/><hr/><hr/><hr/><hr/><img src="../static/puzzle_resources/ph17/M.png"/><div class="entry" data-entry="M.... ...... ..#."></div><hr/><hr/><hr/><hr/><hr/><img src="../static/puzzle_resources/ph17/N.png"/><div class="entry" data-entry="N.. .... ..... .. ..#."></div><hr/><hr/><hr/><hr/><hr/><img src="../static/puzzle_resources/ph17/O.png"/><div class="entry" data-entry="O.. .....#..."></div><hr/><hr/><hr/><hr/><hr/><img src="../static/puzzle_resources/ph17/P.png"/><div class="entry" data-entry="P... .... ..... .# .."></div><hr/><hr/><hr/><hr/><hr/><img src="../static/puzzle_resources/ph17/Q.png"/><div class="entry" data-entry="Q.... .. .#...."></div><hr/><hr/><hr/><hr/><hr/><img src="../static/puzzle_resources/ph17/R.png"/><div class="entry" data-entry="R...... .. .... .#.."></div><hr/><hr/><hr/><hr/><hr/><img src="../static/puzzle_resources/ph17/S.png"/><div class="entry" data-entry="S..... .... ...# ......"></div><hr/><hr/><hr/><hr/><hr/><img src="../static/puzzle_resources/ph17/T.png"/><div class="entry" data-entry="T...#"></div><hr/><hr/><hr/><hr/><hr/><img src="../static/puzzle_resources/ph17/U.png"/><div class="entry" data-entry="U ...'. ..... .#.."></div><hr/><hr/><hr/><hr/><hr/><img src="../static/puzzle_resources/ph17/V.png"/><div class="entry" data-entry="V.#.... ......."></div><hr/><hr/><hr/><hr/><hr/><img src="../static/puzzle_resources/ph17/W.png"/><div class="entry" data-entry="W. #.. ....."></div><hr/><hr/><hr/><hr/><hr/><img src="../static/puzzle_resources/ph17/X.png"/><div class="entry" data-entry="X ...' .#.. .. .. .."></div><hr/><hr/><hr/><hr/><hr/><img src="../static/puzzle_resources/ph17/Y.png"/><div class="entry" data-entry="Y..#.."></div><hr/><hr/><hr/><hr/><hr/><img src="../static/puzzle_resources/ph17/Z.png"/><div class="entry" data-entry="Z.... ......#."></div></div></div></body>
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

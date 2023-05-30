@@ -1,0 +1,418 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: The Telescope</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="../puzzle/the-telescope.html" class="btn">Back to the puzzle</a>
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: The Telescope
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer spoiler">SEATTLE COUNTY NAMESAKE DIES</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Kenny Young
+
+    </h2>
+
+    
+    <style>
+    :root {
+        --sudoku-clue-color: #d3d3d3;
+        --sudoku-text-color: #d3d3d3;
+        --sudoku-outline-color: #000000;
+        --galaxy-clue-color: #a4ffb1;
+        --galaxy-fill-dark-color: #4e7854;
+        --galaxy-fill-light-color: #7bbf85;
+        --masyu-clue-color: #ad6eff;
+        --masyu-path-color: #ad6eff;
+        --back-color: #666666;
+    }
+
+    .telescope {
+        width: 630px;
+        height: 630px;
+        margin: 0px auto;
+        position: relative;
+        background: var(--back-color);
+    }
+
+    .fills, .numbers, .grid, .paths, .dots {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 630px;
+        height: 630px;
+    }
+
+    .disabled {
+        pointer-events: none;
+    }
+
+    .extract {
+        margin: 0px auto;
+    }
+
+    .extract tr td {
+        width: 25px;
+        height: 25px;
+        padding: 0px;
+        margin: 0px;
+        font-size: 12px;
+        text-align: center;
+        border: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+
+    .extract tr:first-child td {
+        border-top: 3px solid black;
+    }
+
+    .extract tr:nth-child(3n) td {
+        border-bottom: 3px solid black;
+    }
+
+    .extract tr td:first-child {
+        border-left: 3px solid black;
+    }
+
+    .extract tr td:nth-child(3n) {
+        border-right: 3px solid black;
+    }
+
+    .numbers td {
+        width: 70px;
+        height: 70px;
+        padding: 0px;
+        margin: 0px;
+        border-bottom: none;
+        background: transparent;
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        border: none;
+        color: transparent;
+        text-shadow: 0 0 0 var(--sudoku-text-color), -1px -1px 0 var(--sudoku-outline-color), 0 -1px 0 var(--sudoku-outline-color), 1px -1px 0 var(--sudoku-outline-color), 1px 0 0 var(--sudoku-outline-color), 1px 1px 0 var(--sudoku-outline-color), 0 1px 0 var(--sudoku-outline-color), -1px 1px 0 var(--sudoku-outline-color), -1px 0 0 var(--sudoku-outline-color);
+    }
+
+    .grid line {
+        stroke: black;
+        stroke-width: 1px;
+    }
+
+    .grid line.thick {
+        stroke-width: 5px;
+    }
+
+    .dots circle {
+        stroke: black;
+        cursor: pointer;
+    }
+
+    .dots circle.big {
+        stroke-width: 5px;
+    }
+
+    .dots circle.small {
+        stroke-width: 5px;
+    }
+
+    .dots circle.closed {
+        fill: black;
+    }
+
+    .dots circle.open {
+        fill: white;
+    }
+
+    .dots circle.sudoku {
+        stroke: var(--sudoku-clue-color);
+    }
+
+    .dots circle.galaxy {
+        stroke: var(--galaxy-clue-color);
+    }
+
+    .dots circle.masyu {
+        stroke: var(--masyu-clue-color);
+    }
+
+    .fills rect {
+        fill: transparent;
+    }
+
+    .fills rect.dark {
+        fill: var(--galaxy-fill-dark-color);
+    }
+
+    .fills rect.light {
+        fill: var(--galaxy-fill-light-color);
+    }
+
+    .paths line {
+        stroke-width: 8px;
+        stroke: transparent;
+        stroke-linecap: round;
+    }
+
+    .paths line.path-on {
+        stroke: var(--masyu-path-color);
+    }
+
+    .extract {
+        font-family: monospace;
+        text-align: center;
+    }
+
+    .extract p {
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+    }
+
+    @media print {
+        body {
+            font-size: 14px;
+            line-height: 15px;
+        }
+
+        p {
+            margin-bottom: 6px;
+        }
+    }
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll(".telescope").forEach((t) => { new Telescope(t); });
+    });
+
+    function Telescope(t) {
+            this.container = t;
+            this.dots = this.container.querySelector(".dots");
+            this.fills = this.container.querySelector(".fills");
+            this.paths = this.container.querySelector(".paths");
+
+            this.createDot = function(cx, cy, r, cls, mode) {
+                if (mode == "M") { cls += " masyu"; }
+                if (mode == "G") { cls += " galaxy"; }
+                if (mode == "S") { cls += " sudoku"; }
+                var dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                dot.setAttributeNS(null, "cx", cx);
+                dot.setAttributeNS(null, "cy", cy);
+                dot.setAttributeNS(null, "r", r);
+                dot.setAttributeNS(null, "class", cls);
+                dot.addEventListener("mousedown",  e => { this.claimDot(e.target); });
+                this.dots.appendChild(dot);
+
+                return dot;
+            }
+
+            this.createHorzDot = function(x, y, open, mode) {
+                this.createDot(x * 100 + 50, y * 100, 10, "small " + (open ? "open" : "closed"), mode);
+            }
+
+            this.createVertDot = function(x, y, open, mode) {
+                this.createDot(x * 100, y * 100 + 50, 10, "small " + (open ? "open" : "closed"), mode);
+            }
+
+            this.createCenterDot = function(x, y, open, mode) {
+                this.createDot(x * 100 + 50, y * 100 + 50, 30, "big " + (open ? "open" : "closed"), mode);
+            }
+
+            this.createFill = function(x, y, cls) {
+                var rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+                rect.setAttributeNS(null, "x", x * 100);
+                rect.setAttributeNS(null, "y", y * 100);
+                rect.setAttributeNS(null, "width", 100);
+                rect.setAttributeNS(null, "height", 100);
+                rect.setAttributeNS(null, "class", cls);
+                this.fills.appendChild(rect);
+
+                return rect;
+            }
+
+            this.createPath = function(x1, y1, x2, y2) {
+                var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+                line.setAttributeNS(null, "x1", x1);
+                line.setAttributeNS(null, "y1", y1);
+                line.setAttributeNS(null, "x2", x2);
+                line.setAttributeNS(null, "y2", y2);
+                line.setAttributeNS(null, "class", "path-on");
+                this.paths.appendChild(line);
+
+                return line;
+            }
+
+            this.createHorzPath = function(x, y) {
+                this.createPath(x * 100 + 50, y * 100 - 50, x * 100 + 50, y * 100 + 50);
+            }
+
+            this.createVertPath = function(x, y) {
+                this.createPath(x * 100 - 50, y * 100 + 50, x * 100 + 50, y * 100 + 50);
+            }
+
+            const horzDots = ["11CS", "21OG", "72CS", "05CS", "35OS", "16OS", "77OG"];
+            horzDots.forEach((d) => { this.createHorzDot(parseInt(d[0]), parseInt(d[1]), d[2] == "O", d[3]); });
+
+            const vertDots = ["20CS", "40CG", "21CS", "42CG", "82CS", "74OG", "36OG", "66OS", "76OS", "86OS", "47CS", "78CG"];
+            vertDots.forEach((d) => { this.createVertDot(parseInt(d[0]), parseInt(d[1]), d[2] == "O", d[3]); });
+
+            const ctrDots = ["20CM", "40OM", "60OG", "70CM", "80CG", "02OM", "12OG", "22OM", "32CM", "62OG", "82OG", "43OG", "83OM", "14OG", "34OM", "44CG", "54CM", "15CG", "45CM", "65CM", "75CG", "06CM", "26OM", "46OM", "86OM", "47CG", "67OM", "87CG", "18CG", "38CM", "48OG", "68CM", "88OG"];
+            ctrDots.forEach((d) => { this.createCenterDot(parseInt(d[0]), parseInt(d[1]), d[2] == "O", d[3]); });
+
+            const fillData = ["...XX...X", "XX...XXX.", "X.XXXX.X.", "XXX...XX.", "...XXX..X", "XXX...XXX", "......X..", "...XXX..X", "XXX...XX."];
+            for (var r = 0; r < fillData.length; r++) {
+                for (var c = 0; c < fillData[r].length; c++) {
+                    this.createFill(c, r, (fillData[r][c] == ".") ? "light" : "dark");
+                }
+            }
+
+            const vertLines = ["10", "20", "40", "50", "60", "70", "42", "52", "82", "13", "33", "43", "53", "73", "14", "34", "44", "54", "84", "35", "45", "75", "85", "16", "26", "36", "66", "57", "48", "58", "78", "88"];
+            vertLines.forEach((l) => { this.createVertPath(parseInt(l[0]), parseInt(l[1])); });
+
+            const horzLines = ["10", "20", "30", "50", "60", "41", "12", "22", "32", "52", "13", "23", "73", "83", "64", "74", "35", "55", "65", "85", "46", "56", "76", "86", "17", "27", "47", "38", "48", "68", "78", "88" ];
+            horzLines.forEach((l) => { this.createHorzPath(parseInt(l[1]), parseInt(l[0])); });
+    }
+</script>
+<p>A good place to start this puzzle is in the lower right, where the open circle in the corner cannot be a Masyu clue and therefore must be a 1x1 galaxy touching dark galaxies on both sides. In that same 3x3 block, the three small white dots cannot all be Kropki dots, so one of them is a white galactic center and the cell they all touch must be white.</p>
+<p>Also, there is only 1 3x3 magic square with digits 1-9 (modulo rotation/reflection), and that square poses heavy constraints on Kropki dots within its 3x3 block.</p>
+<p>The grid solves to this:</p>
+<div class="telescope"><svg class="fills disabled" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 900 900"></svg><svg class="grid disabled" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 900 900"><line x1="0" y1="0" x2="900" y2="0" class="thick"/><line x1="0" y1="100" x2="900" y2="100"/><line x1="0" y1="200" x2="900" y2="200"/><line x1="0" y1="300" x2="900" y2="300" class="thick"/><line x1="0" y1="400" x2="900" y2="400"/><line x1="0" y1="500" x2="900" y2="500"/><line x1="0" y1="600" x2="900" y2="600" class="thick"/><line x1="0" y1="700" x2="900" y2="700"/><line x1="0" y1="800" x2="900" y2="800"/><line x1="0" y1="900" x2="900" y2="900" class="thick"/><line x1="0" y1="0" x2="0" y2="900" class="thick"/><line x1="100" y1="0" x2="100" y2="900"/><line x1="200" y1="0" x2="200" y2="900"/><line x1="300" y1="0" x2="300" y2="900" class="thick"/><line x1="400" y1="0" x2="400" y2="900"/><line x1="500" y1="0" x2="500" y2="900"/><line x1="600" y1="0" x2="600" y2="900" class="thick"/><line x1="700" y1="0" x2="700" y2="900"/><line x1="800" y1="0" x2="800" y2="900"/><line x1="900" y1="0" x2="900" y2="900" class="thick"/></svg><svg class="paths disabled" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 900 900"></svg><svg class="dots disabled" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 900 900"></svg><table class="numbers"><tr><td>6</td><td>2</td><td>1</td><td>8</td><td>3</td><td>4</td><td>5</td><td>7</td><td>9</td></tr><tr><td>7</td><td>4</td><td>8</td><td>1</td><td>5</td><td>9</td><td>6</td><td>2</td><td>3</td></tr><tr><td>9</td><td>3</td><td>5</td><td>6</td><td>7</td><td>2</td><td>1</td><td>4</td><td>8</td></tr><tr><td>5</td><td>7</td><td>4</td><td>9</td><td>2</td><td>3</td><td>8</td><td>1</td><td>6</td></tr><tr><td>2</td><td>6</td><td>9</td><td>4</td><td>8</td><td>1</td><td>3</td><td>5</td><td>7</td></tr><tr><td>1</td><td>8</td><td>3</td><td>5</td><td>6</td><td>7</td><td>4</td><td>9</td><td>2</td></tr><tr><td>4</td><td>9</td><td>2</td><td>3</td><td>1</td><td>8</td><td>7</td><td>6</td><td>5</td></tr><tr><td>3</td><td>5</td><td>7</td><td>2</td><td>4</td><td>6</td><td>9</td><td>8</td><td>1</td></tr><tr><td>8</td><td>1</td><td>6</td><td>7</td><td>9</td><td>5</td><td>2</td><td>3</td><td>4</td></tr></table></div>
+<p><br/><p>For final extraction, the answer proceeds clockwise along the path starting from the center of the grid, only using the dark-galaxy squares and shifting by the sudoku numbers (as noted by the instructions).</p></p>
+<div class="extract"><p>SJIPMNSSYYJZPDCZDRDIXVKMJFNBGARKXAHOKFQWLBWJBITULWKORIXDTAGKXSGR</p><P>84-3---46---2----1--7597----54---276-83---24--7-18-492-1-32-7--1</P><p>AN-S---WE---R----S--EATT----LE---COU-NT---YN--A-ME-SAK-E-DI-E--S</p></div>
+<p><br/><p>Thus the answer is SEATTLE COUNTY NAMESAKE DIES.</p></p>
+<h3>Appendix: Walkthrough</h3>
+<ol><li>R9C9 is not a Masyu clue, so it is a 1x1 galactic center.</li><li>R8C9 and R9C8 are in dark galaxies.</li><li>R7C8 is in a set of 3 white dots that cannot all be Kropki clues, one is a white galactic center so it is in a light galaxy.</li><li>R7C9 touches this white cell so it is a Masyu clue.</li><li>If R9C7 is a galactic center, then the three above it are white and R8C9 is a 1x1 galaxy. If it is not a galactic center, then it is a Masyu clue and this would prohibit R9C8 from being a Masyu clue. Either way, R8C9 is a 1x1 galaxy.</li><li>R7C9 and R8C8 are therefore light, and R9C7 is therefore dark.</li><li>R8C7 cannot be a light galactic center, so it is a Masyu clue.</li><li>The only 3x3 magic square is some rotate/transform of 816 357 492, which can have at most two white Kropki dots (between 3&4 and 6&7) and no black Kropki dots.</li><li>Since the center of every 3x3 magic square is 5, there can only be one per row/column.</li><li>In the right 3x3 column, it can't be on the bottom or the top, since the other small dots can't all be galactic centers.</li><li>So the right middle 3x3 is a Kropki, and you can put the 5 in R5C8 to remember this.</li><li>The white dot to the left of R5C8 is therefore a white galactic center, so R5C7 and R5C8 are white.</li><li>Now R6C8 must be dark colored since otherwise it would connect two galactic centers; by symmetry, R4C7 is dark too.</li><li>More Kropki magic square fun: The top left 3x3 cannot be the magic square because the small dots cannot all be galactic centers. Therefore the other magic squares are the top middle and the bottom left.</li><li>Put a 5 in R2C5 and R8C2, and mark the two black dots in the top middle as galactic centers because they can't be Kropki dots.</li><li>Those dots mean that R1C4-5 are dark, R3C4-5 are dark, and R2C4-5 are light and R4C4-5 are light.</li><li>R1C5 and C3C4 cannot be galactic centers, so they are Masyu clues.</li><li>R1C7 cannot be a Masyu clue since it would connect two Masyu clues of the same color, so it is a white galactic center and R2C7 is dark.</li><li>The dot to the left of R7C8 cannot be a galactic center, because it would connect to the light region above if so. Therefore, it's a Kropki clue and R7C7 is dark.</li><li>Now the clue to the left of R7C7 cannot be a galactic center, so it is also a Kropki clue.</li><li>By now, if the dot to the right of R7C8 was the galactic center, then R7C9 would be light, R6C9 would be dark, and there is no black center to connect it to that will have white centers available for alternate, therefore the dot below is the galactic center.</li><li>This means that R8C7 is light, and R8C6 and R6C9 are dark.</li><li>Now R9C7 cannot be a galactic center, so it is a Masyu clue.</li><li>Now, if R6C7 were light, the black region at R6C7-8 cannot find a valid center, so R6C7 is dark and R4C8 is as well by symmetry.</li><li>R6C7 now cannot be a galactic center, so it is a Masyu clue.</li><li>This means that R6C8 cannot be a Masyu clue, so it is a galactic center and R5C9 is dark, and R4C9, R6C6, and R7C6 are light.</li><li>R5C6 and R4C8 are dark.</li><li>By now, R9C6 cannot be dark, because there would be no sensible dark center to connect to that leaves valid light regions, so R9C6 is light and the dot to the right of R9C7 is a galactic center.</li><li>Now R8C5 is dark, and R9C4-5 are light.</li><li>R9C4 is now a Masyu clue.</li><li>Since R9C4 and R9C7 are both black Masyu clues, there is no room for R8C5 to be a Masyu clue, so it is a galactic center and R8C4 is black, R8C3, R7C3, R7C4 are light.</li><li>R9C5 has to be a galactic center because otherwise this group cannot find one.</li><li>Now R9C3 is dark, so is R9C2, and there is no other galactic center that can serve it and leave apropriate room for light galaxies other than R9C2 itself, so R9C1 is dark and R8C1-2 are light.</li><li>The only dot that can make a good galactic center for the light squares at R8C1-3 is the dot to the right of R7C3, so R7C1-3 are light, R6C4-5 are light, R6C1-3 are dark, and R5C4-5 are dark.</li><li>R6C5, R7C1, R7C3, and R7C5 are all Masyu clues, and the Masyu clues at R6C5 and R6C7 must not connect since they are the same color.</li><li>The Masyu clue at R7C1 has to point up and the clue at R9C4 must point right, otherwise they will form a small loop in the lower left</li><li>Now the Masyu clue at R9C7 must point right so that there are not two black clues in a row, meaning that the Masyu segment entering R9C6 will join with R8C5, R6C7 will have to point up, and R7C7 will have to snake up to R5C6.</li><li>R5C6 cannot be a galactic center, so it is a Masyu clue and points left. R5C4 cannot be a galactic center either, so it is also a Masyu clue and the path goes through that cell.</li><li>R5C5 has to be a galactic center, so R4C6 is light.</li><li>R6C2 cannot be a Masyu clue without connecting two black centers, so it is a galactic center and R5C1-3 are light.</li><li>R5C2 is the only valid galactic center for that group, so R4C1-3 are dark.</li><li>The only valid galactic center for R4C1-3 is the one to the right of R3C4, meaning that R3C3 is dark, R3C6 is dark, R2C6-8 are dark, R1C6-8 are light, and R2C9 is light.</li><li>R1C9 has to be a 1x1 galactic center, and R3C9 has to be a light galactic center so R3C8 is dark.</li><li>By symmetry, R3C1 is dark, R2C1-2 are dark, R2C3 is light, and R1C1-3 are light.</li><li>At this point, all dots can be assigned to their appropriate puzzle types, with the exception of R3C2 and R3C7 which are either both galactic centers or both Masyu clues.</li><li>In the course of solving the Masyu from the known Masyu clues, it will become apparent that R3C2 and R3C7 cannot be Masyu clues and therefore must be galactic centers.</li><li>At this point the Masyu and Galaxies puzzles are solved, and all that remains is the Kropki Sudoku with the locations of the three magic squares known.</li><li>The Kropki break-in is to note that in the upper left, R1C3 and R2C3 have to be 1 and 8, and R1C2 and R2C2 have to be 2 and 4.</li><li>Then, the only one of the eight magic square configurations in the bottom left 3x3 that does not have the 8 on the right, does not have the 1 in R7C2 (because the 2 is not available for the Kropki dot above), and leaves a row of 4 consecutive numbers for R7C6-9, is 492 357 816.</li><li>Now, since R7C2 is 9, R6C2 must be 8, and in the magicsquare at middle right, the 8 must be one of the top 2 corners so the 2 must be one of the bottom 2 corners.</li><li>The only remaining way to fill R5C1/R6C1 is 2/1.</li><li>In the bottom middle 3x3, the 6 cannot be on the bottom row and it cannot touch the Kropki dot since 3 is taken, so R8C6 must be the 6.</li><li>If R1C3 was 8, the only validconfiguration of the top magic square to avoid the 4 and 8 on top and 6 on right would be 672 159 834, where the 1 in R2C4 would conflict with the 1 in R2C3.</li><li>Therefore, R1C3=1, R1C2=2, R2C2=4, and R2C3=8.</li><li>The only magic square in the top middle that avoids 2 and 1 on top and avoids 6 on the right is 834 159 672.</li><li>Now R2C8=2, R3C8=4, R3C9=8.</li><li>Now R7C6-9 = 8765, and also R7C4=3 and R7C5=1.</li><li>R3C7 is the only place on R3 where the 1 can go.</li><li>Now the only configuration for the middle right magic square is 816 357 492.</li><li>The only pair of consecutive numbers remaining in C4 are 4 and 5, so R5C4=4 and R6C4=5.</li><li>Now the only way to satisfy the final Kropki circle is R8C4=2, R8C5=4, and everything solves via standard Sudoku techniques from here.</li></ol>
+
+    
+    
+
+    
+    
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

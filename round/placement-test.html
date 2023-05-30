@@ -1,0 +1,1348 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Placement Test</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+    
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"></div>
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="../departments.html" class="btn">All departments</a>
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+
+<h1>Placement Test</h1>
+
+
+
+
+
+<style>
+.big {
+    grid-column: span 2;
+}
+
+.plaquelist {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+}
+
+.plaque {
+    position: relative;
+    color: #ffc000;
+    margin: 5%;
+    aspect-ratio: 710/798;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../static/puzzle_resources/placement-test/plaque.png);
+}
+
+.plaqueanchor:hover {
+    color: yellow;
+    transform: scale(1.05, 1.05);
+    transform-origin: 50% 50%;
+}
+
+.plaqueanchor:hover .plaque {
+    color: yellow;
+}
+
+.big.plaque {
+    margin: 10%;
+    grid-column: span 2;
+}
+
+.plaqueevent {
+    position: absolute;
+    top: 60%;
+    left: 0%;
+    width: 100%;
+    height: 10%;
+    font-size: clamp(5px, 2vw, 20px);
+    text-align: center;
+}
+
+.big .plaqueevent {
+    top: 64%;
+    font-size: clamp(10px, 4vw, 40px);
+}
+
+.plaquename {
+    position: absolute;
+    top: 20%;
+    left: 23%;
+    width: 56%;
+    height: 20%;
+    font-size: clamp(5px, 1.4vw, 14px);
+    line-height: clamp(5px, 1.4vw, 14px);
+    text-align: center;
+}
+
+.big .plaquename {
+    font-size: clamp(8px, 2.4vw, 24px);
+    line-height: clamp(8px, 3.2vw, 32px);
+}
+
+.plaquenameinner {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.plaqueanswer {
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    width: 70%;
+    height: 20%;
+    font-size: clamp(5px, 1.6vw, 16px);
+    line-height: clamp(5px, 1.6vw, 16px);
+    text-align: center;
+}
+
+.big .plaqueanswer {
+    font-size: clamp(8px, 2.4vw, 24px);
+    line-height: clamp(8px, 3.2vw, 32px);
+}
+
+.plaqueyear {
+    position: absolute;
+    top: 72%;
+    left: 15%;
+    width: 70%;
+    height: 10%;
+    font-size: clamp(5px, 1.6vw, 16px);
+    line-height: clamp(5px, 1.6vw, 16px);
+    text-align: center;
+    font-style: italic;
+}
+
+.big .plaqueyear {
+    font-size: clamp(8px, 2.4vw, 24px);
+    line-height: clamp(8px, 3.2vw, 32px);
+}
+
+.plaquepic {
+    position: absolute;
+    width: 30%;
+    left: 35%;
+    max-height: 19%;
+    top: 42%;
+    object-fit: contain;
+}
+
+.big .plaquepic {
+    width: 50%;
+    left: 25%;
+    max-height: 30%;
+    top: 32%;
+}
+</style>
+
+<p>Welcome to Puzzle University&rsquo;s 2023 Placement Test. These tests, or puzzles if you will, are inspired by <a href="https://en.wikipedia.org/wiki/Microsoft_Puzzle_Hunt" target="_blank">students from previous years,</a> but no knowledge of them or their events is required. Note that Placement Test 123 has been broken into its component parts at the bottom of the page. Good luck!</p>
+    
+<div class="plaquelist">
+    
+    
+    <a class="plaqueanchor" href="../puzzle/ph1.html">
+        <div class="plaque">
+            <div class="plaquename"><div class="plaquenameinner">Vexillology</div></div>
+            
+            <div class="plaqueanswer hide-if-unsolved" data-puzzle-id="10001">MAN OVERBOARD</div>
+            <img class="plaquepic hide-if-solved" data-puzzle-id="10001" src="../static/puzzle_resources/placement-test/1.png"/>
+            
+            <div class="plaqueevent">PH1</div>
+            <div class="plaqueyear">1999</div>
+            
+        </div>
+    </a>
+    
+    
+    
+    <a class="plaqueanchor" href="../puzzle/ph2.html">
+        <div class="plaque">
+            <div class="plaquename"><div class="plaquenameinner">They&#x27;re Coming to Attack Your Village!</div></div>
+            
+            
+            <div class="plaqueanswer hide-if-unsolved" data-puzzle-id="10002">PERISH</div>
+            <img class="plaquepic hide-if-solved" data-puzzle-id="10002" src="../static/puzzle_resources/placement-test/2.png"/>
+            
+            <div class="plaqueevent">PH2</div>
+            <div class="plaqueyear">2000</div>
+            
+        </div>
+    </a>
+    
+    
+    
+    <a class="plaqueanchor" href="../puzzle/ph3.html">
+        <div class="plaque">
+            <div class="plaquename"><div class="plaquenameinner">Mr. Tambourine Man</div></div>
+            
+            
+            <div class="plaqueanswer hide-if-unsolved" data-puzzle-id="10003">WITCHY</div>
+            <img class="plaquepic hide-if-solved" data-puzzle-id="10003" src="../static/puzzle_resources/placement-test/3.png"/>
+            
+            <div class="plaqueevent">PH3</div>
+            <div class="plaqueyear">2000</div>
+            
+        </div>
+    </a>
+    
+    
+    
+    <a class="plaqueanchor" href="../puzzle/ph4.html">
+        <div class="plaque">
+            <div class="plaquename"><div class="plaquenameinner">Inspector Clue D&#x27;oh</div></div>
+            
+            
+            <div class="plaqueanswer hide-if-unsolved" data-puzzle-id="10004">MURDER</div>
+            <img class="plaquepic hide-if-solved" data-puzzle-id="10004" src="../static/puzzle_resources/placement-test/4.png"/>
+            
+            <div class="plaqueevent">PH4</div>
+            <div class="plaqueyear">2001</div>
+            
+        </div>
+    </a>
+    
+    
+    
+    <a class="plaqueanchor" href="../puzzle/ph5.html">
+        <div class="plaque">
+            <div class="plaquename"><div class="plaquenameinner">Mission: Langley Heist</div></div>
+            
+            
+            <div class="plaqueanswer hide-if-unsolved" data-puzzle-id="10005">DIRE</div>
+            <img class="plaquepic hide-if-solved" data-puzzle-id="10005" src="../static/puzzle_resources/placement-test/5.png"/>
+            
+            <div class="plaqueevent">PH5</div>
+            <div class="plaqueyear">2002</div>
+            
+        </div>
+    </a>
+    
+    
+    
+    <a class="plaqueanchor" href="../puzzle/ph6.html">
+        <div class="plaque">
+            <div class="plaquename"><div class="plaquenameinner">Time Frame</div></div>
+            
+            
+            <div class="plaqueanswer hide-if-unsolved" data-puzzle-id="10006">GRIM</div>
+            <img class="plaquepic hide-if-solved" data-puzzle-id="10006" src="../static/puzzle_resources/placement-test/6.png"/>
+            
+            <div class="plaqueevent">PH6</div>
+            <div class="plaqueyear">2003</div>
+            
+        </div>
+    </a>
+    
+    
+    
+    <a class="plaqueanchor" href="../puzzle/ph7.html">
+        <div class="plaque">
+            <div class="plaquename"><div class="plaquenameinner">Numerator, Denominator, Fascinator</div></div>
+            
+            
+            <div class="plaqueanswer hide-if-unsolved" data-puzzle-id="10007">BOO</div>
+            <img class="plaquepic hide-if-solved" data-puzzle-id="10007" src="../static/puzzle_resources/placement-test/7.png"/>
+            
+            <div class="plaqueevent">PH7</div>
+            <div class="plaqueyear">2004</div>
+            
+        </div>
+    </a>
+    
+    
+    
+    <a class="plaqueanchor" href="../puzzle/ph8.html">
+        <div class="plaque">
+            <div class="plaquename"><div class="plaquenameinner">Poker Table</div></div>
+            
+            
+            <div class="plaqueanswer hide-if-unsolved" data-puzzle-id="10008">DEAD MAN&rsquo;S HAND</div>
+            <img class="plaquepic hide-if-solved" data-puzzle-id="10008" src="../static/puzzle_resources/placement-test/8.png"/>
+            
+            <div class="plaqueevent">PH8</div>
+            <div class="plaqueyear">2005</div>
+            
+        </div>
+    </a>
+    
+    
+    
+    <a class="plaqueanchor" href="../puzzle/ph9.html">
+        <div class="plaque">
+            <div class="plaquename"><div class="plaquenameinner">Dynamic Duos</div></div>
+            
+            
+            <div class="plaqueanswer hide-if-unsolved" data-puzzle-id="10009">CHANGELING</div>
+            <img class="plaquepic hide-if-solved" data-puzzle-id="10009" src="../static/puzzle_resources/placement-test/9.png"/>
+            
+            <div class="plaqueevent">PH9</div>
+            <div class="plaqueyear">2005</div>
+            
+        </div>
+    </a>
+    
+    
+    
+    <a class="plaqueanchor" href="../puzzle/ph10.html">
+        <div class="plaque">
+            <div class="plaquename"><div class="plaquenameinner">Water Beds</div></div>
+            
+            
+            <div class="plaqueanswer hide-if-unsolved" data-puzzle-id="10010">THALASSOPHOBIA</div>
+            <img class="plaquepic hide-if-solved" data-puzzle-id="10010" src="../static/puzzle_resources/placement-test/10.png"/>
+            
+            <div class="plaqueevent">PHA</div>
+            <div class="plaqueyear">2007</div>
+            
+        </div>
+    </a>
+    
+    
+    
+    <a class="plaqueanchor" href="../puzzle/ph11.html">
+        <div class="plaque">
+            <div class="plaquename"><div class="plaquenameinner">Breakout</div></div>
+            
+            
+            <div class="plaqueanswer hide-if-unsolved" data-puzzle-id="10011">DOOM</div>
+            <img class="plaquepic hide-if-solved" data-puzzle-id="10011" src="../static/puzzle_resources/placement-test/11.png"/>
+            
+            <div class="plaqueevent">PH11</div>
+            <div class="plaqueyear">2007</div>
+            
+        </div>
+    </a>
+    
+    
+    
+    
+    
+    
+    
+    <a class="plaqueanchor" href="../puzzle/ph14.html">
+        <div class="plaque">
+            <div class="plaquename"><div class="plaquenameinner">Making Tracks</div></div>
+            
+            
+            <div class="plaqueanswer hide-if-unsolved" data-puzzle-id="10014">TERMINAL</div>
+            <img class="plaquepic hide-if-solved" data-puzzle-id="10014" src="../static/puzzle_resources/placement-test/14.png"/>
+            
+            <div class="plaqueevent">PH14</div>
+            <div class="plaqueyear">2011</div>
+            
+        </div>
+    </a>
+    
+    
+    
+    <a class="plaqueanchor" href="../puzzle/ph15.html">
+        <div class="plaque">
+            <div class="plaquename"><div class="plaquenameinner">The Bad, the Good, and the Beautiful</div></div>
+            
+            
+            <div class="plaqueanswer hide-if-unsolved" data-puzzle-id="10015">NIGHT OF THE LIVING DEAD</div>
+            <img class="plaquepic hide-if-solved" data-puzzle-id="10015" src="../static/puzzle_resources/placement-test/15.png"/>
+            
+            <div class="plaqueevent">PH15</div>
+            <div class="plaqueyear">2014</div>
+            
+        </div>
+    </a>
+    
+    
+    
+    <a class="plaqueanchor" href="../puzzle/ph16.html">
+        <div class="plaque">
+            <div class="plaquename"><div class="plaquenameinner">Intermediate Compositions</div></div>
+            
+            
+            <div class="plaqueanswer hide-if-unsolved" data-puzzle-id="10016">WAR</div>
+            <img class="plaquepic hide-if-solved" data-puzzle-id="10016" src="../static/puzzle_resources/placement-test/16.png"/>
+            
+            <div class="plaqueevent">PH16</div>
+            <div class="plaqueyear">2015</div>
+            
+        </div>
+    </a>
+    
+    
+    
+    <a class="plaqueanchor" href="../puzzle/ph17.html">
+        <div class="plaque">
+            <div class="plaquename"><div class="plaquenameinner">Juke Box Hero</div></div>
+            
+            
+            <div class="plaqueanswer hide-if-unsolved" data-puzzle-id="10017">HURT</div>
+            <img class="plaquepic hide-if-solved" data-puzzle-id="10017" src="../static/puzzle_resources/placement-test/17.png"/>
+            
+            <div class="plaqueevent">PH17</div>
+            <div class="plaqueyear">2016</div>
+            
+        </div>
+    </a>
+    
+    
+    
+    <a class="plaqueanchor" href="../puzzle/ph18.html">
+        <div class="plaque">
+            <div class="plaquename"><div class="plaquenameinner">To Serve Man</div></div>
+            
+            
+            <div class="plaqueanswer hide-if-unsolved" data-puzzle-id="10018">CASUALTY</div>
+            <img class="plaquepic hide-if-solved" data-puzzle-id="10018" src="../static/puzzle_resources/placement-test/18.png"/>
+            
+            <div class="plaqueevent">PH18</div>
+            <div class="plaqueyear">2017</div>
+            
+        </div>
+    </a>
+    
+    
+    
+    <a class="plaqueanchor" href="../puzzle/ph19.html">
+        <div class="plaque">
+            <div class="plaquename"><div class="plaquenameinner">Better Off Ned</div></div>
+            
+            
+            <div class="plaqueanswer hide-if-unsolved" data-puzzle-id="10019">POSSESSED</div>
+            <img class="plaquepic hide-if-solved" data-puzzle-id="10019" src="../static/puzzle_resources/placement-test/19.png"/>
+            
+            <div class="plaqueevent">PH19</div>
+            <div class="plaqueyear">2018</div>
+            
+        </div>
+    </a>
+    
+    
+    
+    <a class="plaqueanchor" href="../puzzle/ph20.html">
+        <div class="plaque">
+            <div class="plaquename"><div class="plaquenameinner">There&#x27;s No Business Like Show Business</div></div>
+            
+            
+            <div class="plaqueanswer hide-if-unsolved" data-puzzle-id="10020">WICKED</div>
+            <img class="plaquepic hide-if-solved" data-puzzle-id="10020" src="../static/puzzle_resources/placement-test/20.png"/>
+            
+            <div class="plaqueevent">PH20</div>
+            <div class="plaqueyear">2019</div>
+            
+        </div>
+    </a>
+    
+    
+    
+    <a class="plaqueanchor" href="../puzzle/ph21.html">
+        <div class="plaque">
+            <div class="plaquename"><div class="plaquenameinner">Introduction to Sprite Design</div></div>
+            
+            
+            <div class="plaqueanswer hide-if-unsolved" data-puzzle-id="10021">DARKNESS</div>
+            <img class="plaquepic hide-if-solved" data-puzzle-id="10021" src="../static/puzzle_resources/placement-test/21.png"/>
+            
+            <div class="plaqueevent">PH21</div>
+            <div class="plaqueyear">2021</div>
+            
+        </div>
+    </a>
+    
+    
+    
+    <a class="plaqueanchor" href="../puzzle/ph22.html">
+        <div class="plaque">
+            <div class="plaquename"><div class="plaquenameinner">Blue Moons</div></div>
+            
+            
+            <div class="plaqueanswer hide-if-unsolved" data-puzzle-id="10022">MELANCHOLY</div>
+            <img class="plaquepic hide-if-solved" data-puzzle-id="10022" src="../static/puzzle_resources/placement-test/22.png"/>
+            
+            <div class="plaqueevent">PH22</div>
+            <div class="plaqueyear">2022</div>
+            
+        </div>
+    </a>
+    
+    
+
+    <a class="plaqueanchor big" href="../puzzle/ph12.html">
+        <div class="plaque big">
+            <div class="plaquename">Final Jeopardy!</div>
+            
+            <div class="plaqueanswer hide-if-unsolved" data-puzzle-id="10012">THESE WORDS ARE OMINOUS</div>
+            <img class="plaquepic hide-if-solved" data-puzzle-id="10012" src="../static/puzzle_resources/placement-test/123.png"/>
+            
+            <div class="plaqueevent">PH123</div>
+            <div class="plaqueyear">2009</div>
+        </div>
+    </a>
+
+    
+    <a class="plaqueanchor big hide-if-locked" data-puzzle-id="10013" href="../puzzle/ph13.html">
+    
+    <div class="plaque big">
+        
+        <div class="plaquename">Web of Lies</div>
+        
+        <div class="plaqueanswer hide-if-unsolved" data-puzzle-id="10013">DEAN MARTIAN</div>
+        <img class="plaquepic hide-if-solved" data-puzzle-id="10013" src="../static/puzzle_resources/placement-test/123.png"/>
+    
+        <div class="plaqueevent">PH123</div>
+        <div class="plaqueyear">2009</div>
+        
+    </div>
+    
+    </a>
+    
+    <div class="plaque big hide-if-unlocked" data-puzzle-id="10013">
+        
+    </div>
+</div>
+
+
+
+<div class="puzzles-list-container">
+    <table class="puzzles-list">
+    
+<tbody class="puzzles-section">
+    
+    
+    <tr class="puzzle-row" id="ph1-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/ph1.html">
+                
+                
+                PH1: Vexillology
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>262</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/ph1.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="10001">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row" id="ph2-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/ph2.html">
+                
+                
+                PH2: They&#x27;re Coming to Attack Your Village!
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>80</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/ph2.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="10002">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row" id="ph3-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/ph3.html">
+                
+                
+                PH3: Mr. Tambourine Man
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>248</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/ph3.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="10003">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row" id="ph4-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/ph4.html">
+                
+                
+                PH4: Inspector Clue D&#x27;oh
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>229</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/ph4.html">Solution</a>
+            
+        </td>
+
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="10004">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row" id="ph5-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/ph5.html">
+                
+                
+                PH5: Mission: Langley Heist
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>287</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/ph5.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="10005">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row" id="ph6-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/ph6.html">
+                
+                
+                PH6: Time Frame
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>277</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/ph6.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="10006">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row" id="ph7-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/ph7.html">
+                
+                
+                PH7: Numerator, Denominator, Fascinator
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>193</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/ph7.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="10007">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row" id="ph8-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/ph8.html">
+                
+                
+                PH8: Poker Table
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>266</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/ph8.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="10008">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row" id="ph9-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/ph9.html">
+                
+                
+                PH9: Dynamic Duos
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>279</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/ph9.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="10009">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row" id="ph10-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/ph10.html">
+                
+                
+                PHA: Water Beds
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>251</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/ph10.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="10010">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row" id="ph11-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/ph11.html">
+                
+                
+                PH11: Breakout
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>214</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/ph11.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="10011">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row" id="ph12-row">
+        <td>
+            
+        </td>
+        <td>
+            <a href="../puzzle/ph12.html">
+                
+                <div class="puzzles-new">meta</div>
+                
+                
+                PH123: Final Jeopardy
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>246</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/ph12.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="10012">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="10013" id="ph13-row">
+        <td>
+            
+        </td>
+        <td>
+            <a href="../puzzle/ph13.html">
+                
+                <div class="puzzles-new">meta</div>
+                
+                
+                PH123: Web of Lies
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>242</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/ph13.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="10013">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row" id="ph14-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/ph14.html">
+                
+                
+                PH14: Making Tracks
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>182</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/ph14.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="10014">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row" id="ph15-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/ph15.html">
+                
+                
+                PH15: The Bad, the Good, and the Beautiful
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>235</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/ph15.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="10015">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row" id="ph16-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/ph16.html">
+                
+                
+                PH16: Intermediate Compositions
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>185</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/ph16.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="10016">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row" id="ph17-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/ph17.html">
+                
+                
+                PH17: Juke Box Hero
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>177</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/ph17.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="10017">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row" id="ph18-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/ph18.html">
+                
+                
+                PH18: To Serve Man
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>254</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/ph18.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="10018">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row" id="ph19-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/ph19.html">
+                
+                
+                PH19: Better Off Ned
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>140</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/ph19.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="10019">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row" id="ph20-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/ph20.html">
+                
+                
+                PH20: There&#x27;s No Business Like Show Business
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>134</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/ph20.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="10020">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row" id="ph21-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/ph21.html">
+                
+                
+                PH21: Introduction to Sprite Design
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>209</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/ph21.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="10021">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row" id="ph22-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/ph22.html">
+                
+                
+                PH22: Blue Moons
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>76</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/ph22.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="10022">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+
+</tbody>
+
+    </table>
+</div>
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,291 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: Counterpoint</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="../puzzle/counterpoint.html" class="btn">Back to the puzzle</a>
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: Counterpoint
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer spoiler">URBAN HEAT</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Amos Eshel
+
+    </h2>
+
+    
+    <style>
+  .puzzle-main pre {
+    margin: 0px;
+  }
+
+  li {
+    margin-top: -13px;
+  }
+
+  cpn {
+    color: silver;
+  }
+
+  rep {
+    color: red;
+  }
+
+  span.anote {
+    color: blue;
+  }
+</style>
+<p>
+  This puzzle starts as simply finding antonym pairs from a list of words, where the words have had an extra letter added
+  (often to make more than one possible word). Once a pair has been identified, the letters in parentheses can be alternated
+  to form a new word with an extra letter added (and another set of “random” letters still in parentheses). The alternation
+  starts with the alphabetically first of the pair.
+</p>
+<p>
+  Now we do the same thing again, except that the antonym pairs have become once removed, e.g. DARK and HEAVY are paired
+  because they are both antonyms of LIGHT. Alternating the letters still in parentheses provides another list of words
+  with an extra letter added.
+</p>
+<p>
+  Make antonym pairs one more time, except these are <b>twice</b> removed, e.g. WRONG and STAYED are paired because their
+  antonyms are RIGHT & LEFT respectively, which are themselves antonyms.
+</p>
+<p>
+  Once this final pairing occurs, there’s a pseudo-tournament bracket that involves eight level-1 words, four level-2 words,
+  and two-level 3 words that can all be grouped together. Looking at the 14 extra letters that come from this, one can see
+  that they are from a consecutive run of the alphabet (possibly looping from Z to A) but with one letter missing. Ordering
+  these by where in the run the missing letter is causes the missing letters to spell out RURAL / COLD, the antonyms of which
+  are <span class="spoiler">URBAN HEAT</span>.
+</p>
+<p>An example of one of the pseudo-tournaments is below. The extra letters here when alphabetized are <tt>ABCDPQSTUVWXYZ</tt>
+  which can be wrapped around to be nearly consecutive as <tt>PQ-STUVWXYZABCD</tt> with the R missing.
+<br />
+<pre>
+  JOY (B) ----\                                              /--- CRUEL (D)
+                ADULT (X) -\                      /-- DARK (P)
+  SORROW (Y) -/             \                    /           \---- KIND (S)
+                            WRONG (T) - STAYED (Z)
+  NARROW (V) -\             /                    \           /---- SICK (U)
+                MAJOR (Q) -/                      \- HEAVY (C)
+  WIDE (A) ---/                                              \- HEALTHY (W)
+  </pre>
+</p>
+<p>The other sequences look like this:</p>
+<div align="center"><pre>
+PQ-STUVWXYZABCD
+RST-VWXYZABCDEF
+NOPQ-STUVWXYZAB
+VWXYZ-BCDEFGHIJ
+FGHIJK-MNOPQRST
+TUVWXYZAB-DEFGH
+EFGHIJKLMN-PQRS
+ABCDEFGHIJK-MNO
+RSTUVWXYZABC-EF
+</pre></div>
+<p></p>
+<p>
+  Anything that looks like <span class="anote">this</span> below has nothing to do with actually solving the puzzle and
+  is simply a little note from the author if you mouse over it.
+</p>
+<h4>Level 1 pairs</h4>
+<li><rep>b</rep>ADMIT (SIE (O)) - DEN<rep>g</rep>Y (OBR (U)) <cpn>&rarr; SOIBER (OU)</cpn></li>
+<li><rep>g</rep>ALL (COE (W)) - NON<rep>c</rep>E (HM (E)) <cpn>&rarr; CHOME (WE)</cpn></li>
+<li><rep>b</rep>ALLY (CILN (MN)) - EN<rep>v</rep>EMY (EZIG (A)) <cpn>&rarr; CEIZLING (MAN)</cpn></li>
+<li>APART<rep>y</rep> (PAXT (E)) - TO<rep>j</rep>GETHER  (LCAE (I)) <cpn>&rarr; PLACXATE (EI)</cpn></li>
+<li>BA<rep>u</rep>CK (HED (G)) - FRON<rep>f</rep>T (DA (L)) <cpn>&rarr; HDEAD (GL)</cpn></li>
+<li>B<rep>j</rep>IG (FR (MS)) - <rep>f</rep>LITTLE (AM (I)) <cpn>&rarr; FARM (MIS)</cpn></li>
+<li>BLA<rep>n</rep>CK (TUT (RD)) - WH<rep>r</rep>ITE (RSH (U)) <cpn>&rarr; TRUSTH (RUD)</cpn></li>
+<li><rep>f</rep>BREAK (SAN (PN)) - F<rep>m</rep>IX (TID (O)) <cpn>&rarr; STAIND (PON)</cpn></li>
+<li>BUY<rep>e</rep> (LAY (EY)) - SELL<rep>f</rep> (HZ (S)) <cpn>&rarr; LHAZY (ESY)</cpn></li>
+<li><span class="anote" title="I was pretty happy anytime I could make it one of 3 possible words.">CHAOS<rep>e</rep></span> (UE (DN)) - <rep>w</rep>ORDER (SA (A)) <cpn>&rarr; USEA (DAN)</cpn></li>
+<li>C<rep>g</rep>LEAN (MLILY (DL)) - DIRT<rep>l</rep>Y (UTPE (U)) <cpn>&rarr; MULTIPLEY (DUL)</cpn></li>
+<li>CRE<rep>v</rep>ATE (SREE (FM)) - DE<rep>t</rep>STROY (EVR (OL)) <cpn>&rarr; SERVERE (FOML)</cpn></li>
+<li>CRU<rep>d</rep>EL (DAK (SZ)) - <rep>s</rep>KIND (PR (AD)) <cpn>&rarr; DPARK (SAZD)</cpn></li>
+<li>DAWN<rep>k</rep> (MASV (A)) - DUS<rep>c</rep>K (PSIE (O)) <cpn>&rarr; MPASSIVE (AO)</cpn></li>
+<li>DA<rep>d</rep>Y (SOP (E)) - N<rep>f</rep>IGHT (TW (T)) <cpn>&rarr; STOWP (ET)</cpn></li>
+<li>D<rep>v</rep>EEP (SPE (HTE)) - SH<rep>w</rep>ALLOW (UPR (EE)) <cpn>&rarr; SUPPER (HETEE)</cpn></li>
+<li>DOM<rep>b</rep>ESTIC (PDR (EY)) - FORE<rep>x</rep>IGN (OO (P)) <cpn>&rarr; PODOR (EPY)</cpn></li>
+<li>DOW<rep>a</rep>N (FON (I)) - <rep>x</rep>UP (PUD (O)) <cpn>&rarr; FPOUND (IO)</cpn></li>
+<li><rep>w</rep>EARLY (SAC (NA)) - LAT<rep>c</rep>E (PIY (R)) <cpn>&rarr; SPAICY (NRA)</cpn></li>
+<li><rep>b</rep>EAST (TLY (OD)) - <rep>z</rep>WEST (AL (SE)) <cpn>&rarr; TALLY (OSDE)</cpn></li>
+<li>FAL<rep>j</rep>SE (QNT (H)) - TRUE<rep>k</rep> (UIE (L)) <cpn>&rarr; QUNITE (HL)</cpn></li>
+<li>FEW<rep>w</rep> (TYE (O)) - <rep>z</rep>MANY (APD (D)) <cpn>&rarr; TAYPED (OD)</cpn></li>
+<li>HA<rep>z</rep>TE (TAEF (RK)) - LOV<rep>s</rep>E (BKOF (I)) <cpn>&rarr; TBAKEOFF (RIK)</cpn></li>
+<li><rep>w</rep>HEALTHY (HAY (Y)) - S<rep>u</rep>ICK (CEV (TE)) <cpn>&rarr; CHEAVY (TYE)</cpn></li>
+<li>HER<rep>s</rep>E (OET (K)) - <rep>o</rep>THERE (PN (S)) <cpn>&rarr; OPENT (KS)</cpn></li>
+<li>J<rep>b</rep>OY (ADL (WT)) - SORR<rep>y</rep>OW (XUT (O)) <cpn>&rarr; AXDULT (WOT)</cpn></li>
+<li>LE<rep>a</rep>SS (BAD (TT)) - MOR<rep>v</rep>E (LNE (M)) <cpn>&rarr; BLANDE (TMT)</cpn></li>
+<li>NA<rep>v</rep>RROW (MQO (RG)) - W<rep>a</rep>IDE (AJR (N)) <cpn>&rarr; MAQJOR (RNG)</cpn></li>
+<li><rep>v</rep>NOW (ETESV (F)) - THEN<rep>y</rep> (XPNIE (O)) <cpn>&rarr; EXTPENSIVE (FO)</cpn></li>
+<li><rep>q</rep>OFF (GAE (FL)) - O<rep>r</rep>N (LM (A)) <cpn>&rarr; GLAME (FAL)</cpn></li>
+<li>OFTEN<rep>d</rep> (LW (LD)) - SEL<rep>j</rep>DOM (ON (A)) <cpn>&rarr; LOWN (LAD)</cpn></li>
+<li><rep>s</rep>PEACE (LNG (LID)) - WAR<rep>x</rep> (OE (PD)) <cpn>&rarr; LONEG (LPIDD)</cpn></li>
+<li>PRIVAT<rep>c</rep>E (CAE (SW)) - <span class="anote" title="I used to live in Florida, now in Seattle; I miss Publix.">PUBLIC<rep>x</rep></span> (RGD (L)) <cpn>&rarr; CRAGED (SLW)</cpn></li>
+<li>P<rep>q</rep>ULL (RIS (TAN)) - PU<rep>b</rep>SH (ANE (RYD)) <cpn>&rarr; RAINSE (TRAYND)</cpn></li>
+<li>STRO<rep>u</rep>NG (TO (N)) - WE<rep>z</rep>AK (WN ()) <cpn>&rarr; TWON (N)</cpn></li>
+<li>THA<rep>i</rep>T (WRP (N)) - <span class="anote" title="I generally tried to add extra letters that made still pronounceable strings; this one works best in Sean Connery's voice.">THIS<rep>h</rep></span> (AM (I)) <cpn>&rarr; WARMP (NI)</cpn></li>
+<h4>Level 2 pairs</h4>
+<li>A<rep>x</rep>DULT (WOT) - <b>minor</b> - MA<rep>q</rep>JOR (RNG) <cpn>&rarr; WRONTG</cpn></li>
+<li>BLAND<rep>e</rep> (TMT) - <b>rich</b> - PO<rep>d</rep>OR (EPY) <cpn>&rarr; TEMPTY</cpn></li>
+<li>C<rep>r</rep>AGED (SLW) - <b>free</b> - <span class="anote" title="I was happy when a long one like this could actually have two possible words with opposites.">EX<rep>t</rep>PENSIVE</span> (FO) <cpn>&rarr; SFLOW</cpn></li>
+<li>CEI<rep>z</rep>LING (MAN) - <b>floor</b> - PLAC<rep>x</rep>ATE (EI) <cpn>&rarr; MEAIN</cpn></li>
+<li>C<rep>h</rep>OME (WE) - <b>go</b> - STO<rep>w</rep>P (ET) <cpn>&rarr; WEET</cpn></li>
+<li>D<rep>p</rep>ARK (SAZD) - <b>light</b> - <rep>c</rep>HEAVY (TYE) <cpn>&rarr; STAYZED</cpn></li>
+<li><rep>h</rep>DEAD (GL) - <b>live</b> - TA<rep>y</rep>PED (OD) <cpn>&rarr; GOLD</cpn></li>
+<li>FAR<rep>m</rep> (MIS) - <b>close</b> - OPEN<rep>t</rep> (KS) <cpn>&rarr; MKISS</cpn></li>
+<li>F<rep>p</rep>OUND (IO) - <b>lost</b> - <rep>t</rep>WON (N) <cpn>&rarr; INO</cpn></li>
+<li><rep>g</rep>LAME (FAL) - <b>cool</b> - <span class="anote" title="This was explicitly used in the puzzle so it couldn't serve as an antonym to COLD in the final phrase.">WARM<rep>p</rep></span> (NI) <cpn>&rarr; FNAIL</cpn></li>
+<li>L<rep>h</rep>AZY (ESY) - <b>active</b> - <rep>m</rep>PASSIVE (AO) <cpn>&rarr; EASOY</cpn></li>
+<li>LON<rep>e</rep>G (LPIDD) - <b>short</b> - TALL<rep>y</rep> (OSDE) <cpn>&rarr; LOPSIDDED</cpn></li>
+<li>LOW<rep>n</rep> (LAD) - <b>high</b> - SO<rep>i</rep>BER (OU) <cpn>&rarr; LOAUD</cpn></li>
+<li>MULTIPL<rep>e</rep>Y (DUL) - <b>divide</b> - <rep>q</rep>UNITE (HL) <cpn>&rarr; DHULL</cpn></li>
+<li>RAI<rep>n</rep>SE (TRAYND) - <b>lower</b> - <rep>s</rep>UPPER (HETEE) <cpn>&rarr; THREATYENED</cpn></li>
+<li><rep>u</rep>SEA (DAN) - <b>land</b> - T<rep>b</rep>AKE OFF (RIK) <cpn>&rarr; DRAINK</cpn></li>
+<li>SE<rep>r</rep>VERE (FOML) - <b>mild</b> - SP<rep>a</rep>ICY (NRA) <cpn>&rarr; FNORMAL</cpn></li>
+<li><span class="anote" title="It's Been Awhile... since I had thought about this band.">STA<rep>i</rep>ND</span> (PON) - <b>lie</b> - TRU<rep>s</rep>TH (RUD) <cpn>&rarr; PROUND</cpn></li>
+<h4>Level 3 pairs</h4>
+<li>DR<rep>a</rep>INK - <b>eat</b> - <b>fast</b> - S<rep>f</rep>LOW</li>
+<li>D<rep>h</rep>ULL - <b>sharp</b> - <b>flat</b> - <rep>p</rep>ROUND</li>
+<li>EAS<rep>o</rep>Y - <b>hard</b> - <b>soft</b> - LO<rep>a</rep>UD</li>
+<li><rep>t</rep>EMPTY - <b>full</b> - <b>new</b> - <rep>g</rep>OLD</li>
+<li>F<rep>n</rep>AIL - <b>pass</b> - <span class="anote" title="Originally written using pass/catch (football), an alpha tester and many solvers got the same pairing with pass/hit (blackjack)"><b>catch</b> or <b>hit</b></span> - M<rep>k</rep>ISS</li>
+<li>IN<rep>o</rep> - <b>out</b> - <b>safe</b> - THREAT<rep>y</rep>ENED</li>
+<li>LOPSID<rep>d</rep>ED - <b>even</b> - <b>odd</b> - <rep>f</rep>NORMAL</li>
+<li>MEA<rep>i</rep>N - <b>sweet</b> - <b>dry</b> - WE<rep>e</rep>T</li>
+<li>STAY<rep>z</rep>ED - <span class="anote" title="This was intended as the confirmation/break-in for this level."><b>left</b> - <b>right</b></span> - WRON<rep>t</rep>G</li>
+
+    
+    
+
+    
+    
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

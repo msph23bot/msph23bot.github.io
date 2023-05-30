@@ -1,0 +1,277 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: Ozymandias</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="../puzzle/ozymandias.html" class="btn">Back to the puzzle</a>
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: Ozymandias
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer spoiler">RUST</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Jonah Ostroff, Mike Sylvia
+
+    </h2>
+
+    
+    <p>The flavor text for the puzzle reads: “Look on my puzzle, ye mighty, and despair!” Like the pedestal in the 
+<a href="https://www.poetryfoundation.org/poems/46565/ozymandias">Shelley poem</a>, this text is accompanied by very little else: all 
+of the images on the page are broken (presumably due to linkrot), rendering the puzzle apparently unsolvable.</p>
+<p>At the bottom of the page is an “editor’s note”, explaining that the puzzle’s unsolvability must be due to its difficulty. 
+The note includes a link to a partial solution.</p>
+<p>The partial solution explains, with way more detail than necessary, what the puzzle was supposed to be: a 180° symmetric 
+crossword full of country names, where each clue is a picture of the country’s flag. It also says that every entry crosses 
+at least two others, and that the fully-checked central entry, which is not a country (and has no clue provided), is the 
+answer to the puzzle.</p>
+<p>Now that we know what the intended puzzle was, how do we solve it without the images of the flags? Returning to the puzzle 
+page, solvers may notice that the broken image frames have varying aspect ratios, 
+<a href="https://en.wikipedia.org/wiki/List_of_aspect_ratios_of_national_flags">just like national flags</a>. The next step, then, is 
+to assume that the missing flags have the same aspect ratios as the broken images.</p>
+<p>This idea is confirmed by 1-across: the image has a 7:11 aspect ratio, which can only be the flag of Estonia, and the 
+solution mentions that 1-across is a 7-letter country. The aspect ratio of the missing crossword grid also matches its 
+dimensions (23x10), although it is not necessary to assume this to solve the puzzle.</p>
+<p>A walkthrough of the logic is included in the Appendix. Once the grid is completed, the middle entry
+spells <span class="spoiler">RUST</span>.</p>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p><img src="../solution/invalidurl.png" alt="" width="100px" height="100px"/></p>
+    
+
+    
+    
+    <h2 id="appendix">
+Appendix: Logical solve path
+</h2>
+    <style>
+  table.grid {
+    width: auto;
+  }
+
+  table.grid td {
+    background-clip: padding-box;
+    width: 1.5em;
+    height: 1.5em;
+    border: none;
+    position: relative;
+    padding: 0px;
+    font-size: 0.8em;
+    text-align: center;
+    vertical-align: center;
+  }
+
+  div.centerer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+  }
+</style>
+<ol>
+<li>Six of the aspect ratios in this puzzle can immediately be assigned to a country:<ul>
+<li>1a (7:11) can only be ESTONIA.</li>
+<li>4a (4:5) can only be MONACO.</li>
+<li>2d (1:ϕ) can only be TOGO.</li>
+<li>6d (6:7) can only be NIGER.</li>
+<li>13d (18:25) can only be ICELAND.</li>
+<li>14a (4:7) could be IRAN or MEXICO. The nth across entry is always rotationally opposite the nth-to-last one. That 
+means 14a has the same length as MONACO, so it’s MEXICO.</li>
+</ul>
+</li>
+<li>
+<p>1a (ESTONIA) must go in the top row, and it must cross two down-entries. One of them is 1d, and the second must be 2d, 
+  TOGO, crossing at the T.
+<br />
+<div class="centerer"><table class="grid"><tr><td>E</td><td>S</td><td>T</td><td>O</td><td>N</td><td>I</td><td>A</td></tr><tr><td>⋮</td><td></td><td>O</td></tr><tr><td></td><td></td><td>G</td></tr><tr><td></td><td></td><td>O</td></tr></table><p>(we don't know how these two halves are aligned yet)</p><table class="grid"><tr><td></td><td></td><td></td><td></td><td>?</td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td>?</td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td>?</td><td></td><td>⋮</td></tr><tr><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td></tr></table></div></p>
+</li>
+<li>
+<p>Four of the down entries have numbers greater than 8, which is the central across entry. That means no down entry 
+  includes cells both above and below the middle row, so the four entries which check 8a either begin or end there.</p>
+</li>
+<li>
+<p>From here, we can determine 1d: the only countries starting with E that have 2:3 ratio flags are EGYPT, ECUADOR, 
+  ESWATINI, and EQUATORIAL GUINEA. However:</p>
+<ul>
+<li>It can’t be EGYPT or ESWATINI, because neither one would leave room for ICELAND to be the second-to-last down entry.</li>
+<li>It can’t be EQUATORIAL GUINEA, because there are no other 16-letter countries (so it would break rotational symmetry). 
+Or, if you don’t feel like counting, you can use the 23x10 grid size: EQUATORIAL GUINEA would cross the middle row, 
+contradicting step 3.</li>
+</ul>
+<p>That leaves ECUADOR, with ICELAND in the opposite spot:
+<br />
+<div class="centerer"><table class="grid"><tr><td>E</td><td>S</td><td>T</td><td>O</td><td>N</td><td>I</td><td>A</td></tr><tr><td>C</td><td></td><td>O</td></tr><tr><td>U</td><td></td><td>G</td></tr><tr><td>A</td><td></td><td>O</td></tr><tr><td>D</td></tr><tr><td>O</td></tr><tr><td>R</td></tr></table><p>(we don't know how these two halves are aligned yet)</p><table class="grid"><tr><td></td><td></td><td></td><td></td><td></td><td></td><td>I</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td>C</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td>E</td></tr><tr><td></td><td></td><td></td><td></td><td>?</td><td></td><td>L</td></tr><tr><td></td><td></td><td></td><td></td><td>?</td><td></td><td>A</td></tr><tr><td></td><td></td><td></td><td></td><td>?</td><td></td><td>N</td></tr><tr><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>D</td></tr></table></div></p>
+</li>
+<li>
+<p>IRELAND is the only 7-letter 1:2 country that ends in D, and CUBA is the only 4-letter 1:2 country that ends in A:
+<br />
+<div class="centerer"><table class="grid"><tr><td>E</td><td>S</td><td>T</td><td>O</td><td>N</td><td>I</td><td>A</td></tr><tr><td>C</td><td></td><td>O</td></tr><tr><td>U</td><td></td><td>G</td></tr><tr><td>A</td><td></td><td>O</td></tr><tr><td>D</td></tr><tr><td>O</td></tr><tr><td>R</td></tr></table><p>(we don't know how these two halves are aligned yet)</p><table class="grid"><tr><td></td><td></td><td></td><td></td><td></td><td></td><td>I</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td>C</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td>E</td></tr><tr><td></td><td></td><td></td><td></td><td>C</td><td></td><td>L</td></tr><tr><td></td><td></td><td></td><td></td><td>U</td><td></td><td>A</td></tr><tr><td></td><td></td><td></td><td></td><td>B</td><td></td><td>N</td></tr><tr><td>I</td><td>R</td><td>E</td><td>L</td><td>A</td><td>N</td><td>D</td></tr></table></div></p>
+</li>
+<li>
+<p>3a must cross both ECUADOR and TOGO (either at the U and G or the A and O), and similarly 16a must cross CUBA and 
+  ICELAND (at the C and L or the U and A). There are no 1:2 countries that can cross the C and L, so 3a is *U?G* and 16a 
+  is *U?A*. That means 3a can only be BULGARIA or LUXEMBOURG, and only BULGARIA allows for a symmetric choice at 16a: 
+  HONDURAS:
+<br />
+<div class="centerer"><table class="grid"><tr><td></td><td>E</td><td>S</td><td>T</td><td>O</td><td>N</td><td>I</td><td>A</td></tr><tr><td></td><td>C</td><td></td><td>O</td></tr><tr><td>B</td><td>U</td><td>L</td><td>G</td><td>A</td><td>R</td><td>I</td><td>A</td></tr><tr><td></td><td>A</td><td></td><td>O</td></tr><tr><td></td><td>D</td></tr><tr><td></td><td>O</td></tr><tr><td></td><td>R</td></tr></table><p>(we don't know how these two halves are aligned yet)</p><table class="grid"><tr><td></td><td></td><td></td><td></td><td></td><td></td><td>I</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td>C</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td>E</td></tr><tr><td></td><td></td><td></td><td></td><td>C</td><td></td><td>L</td></tr><tr><td>H</td><td>O</td><td>N</td><td>D</td><td>U</td><td>R</td><td>A</td><td>S</td></tr><tr><td></td><td></td><td></td><td></td><td>B</td><td></td><td>N</td></tr><tr><td>I</td><td>R</td><td>E</td><td>L</td><td>A</td><td>N</td><td>D</td></tr></table></div></p>
+</li>
+<li>
+<p>4a (MONACO) is the next number at the top part of the grid, and it can only connect at the O of ECUADOR, which means 
+  MEXICO symmetrically crosses the C of ICELAND:
+<br />
+<div class="centerer"><table class="grid"><tr><td></td><td>E</td><td>S</td><td>T</td><td>O</td><td>N</td><td>I</td><td>A</td></tr><tr><td></td><td>C</td><td></td><td>O</td></tr><tr><td>B</td><td>U</td><td>L</td><td>G</td><td>A</td><td>R</td><td>I</td><td>A</td></tr><tr><td></td><td>A</td><td></td><td>O</td></tr><tr><td></td><td>D</td></tr><tr><td>M</td><td>O</td><td>N</td><td>A</td><td>C</td><td>O</td></tr><tr><td></td><td>R</td></tr></table><p>(we don't know how these two halves are aligned yet)</p><table class="grid"><tr><td></td><td></td><td></td><td></td><td></td><td></td><td>I</td></tr><tr><td></td><td></td><td>M</td><td>E</td><td>X</td><td>I</td><td>C</td><td>O</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td>E</td></tr><tr><td></td><td></td><td></td><td></td><td>C</td><td></td><td>L</td></tr><tr><td>H</td><td>O</td><td>N</td><td>D</td><td>U</td><td>R</td><td>A</td><td>S</td></tr><tr><td></td><td></td><td></td><td></td><td>B</td><td></td><td>N</td></tr><tr><td>I</td><td>R</td><td>E</td><td>L</td><td>A</td><td>N</td><td>D</td></tr></table></div></p>
+</li>
+<li>
+<p>5d must start at the A, C, or O of MONACO, and the only 3:5 countries which can do this are COMOROS or COSTA RICA. The 
+  easiest way to rule out COSTA RICA is by considering the grid dimensions: if the height of the grid is 23, then COSTA RICA 
+  would extend past the middle row, violating the observation in step 3. Alternatively, one can reason about 6a: it must 
+  start with N (from NIGER), and cross 5d at its 5th to last letter, and only COMOROS fits. We can now attach the halves of 
+  the grid:
+<br />
+<div class="centerer"><table class="grid"><tr><td></td><td>E</td><td>S</td><td>T</td><td>O</td><td>N</td><td>I</td><td>A</td></tr><tr><td></td><td>C</td><td></td><td>O</td></tr><tr><td>B</td><td>U</td><td>L</td><td>G</td><td>A</td><td>R</td><td>I</td><td>A</td></tr><tr><td></td><td>A</td><td></td><td>O</td></tr><tr><td></td><td>D</td><td></tr><tr><td>M</td><td>O</td><td>N</td><td>A</td><td>C</td><td>O</td></tr><tr><td></td><td>R</td><td></td><td></td><td>O</td></tr><tr><td></td><td></td><td>N</td><td></td><td>M</td></tr><tr><td></td><td></td><td>I</td><td></td><td>O</td></tr><tr><td></td><td></td><td>G</td><td></td><td>R</td></tr><tr><td></td><td></td><td>E</td><td></td><td>O</td></tr><tr><td></td><td></td><td>R</td><td>?</td><td>S</td><td>?</td></tr><tr><td></td><td></td><td></td><td>?</td><td></td><td>?</td></tr><tr><td></td><td></td><td></td><td>?</td><td></td><td>?</td></tr><tr><td></td><td></td><td></td><td>?</td><td></td><td>?</td></tr><tr><td></td><td></td><td></td><td>?</td><td></td><td>?</td></tr><tr><td></td><td></td><td></td><td>?</td><td></td><td></td><td>I</td></tr><tr><td></td><td></td><td>M</td><td>E</td><td>X</td><td>I</td><td>C</td><td>O</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td>E</td></tr><tr><td></td><td></td><td></td><td></td><td>C</td><td></td><td>L</td></tr><tr><td>H</td><td>O</td><td>N</td><td>D</td><td>U</td><td>R</td><td>A</td><td>S</td></tr><tr><td></td><td></td><td></td><td></td><td>B</td><td></td><td>N</td></tr><tr><td>I</td><td>R</td><td>E</td><td>L</td><td>A</td><td>N</td><td>D</td></tr></table></div></p>
+</li>
+<li>
+<p>Now 6a must be NAMIBIA, and 9d must be UKRAINE, which makes 12a JAMAICA. Also, ALGERIA is the only 2:3 country which 
+  can cross NIGER and COMOROS without making a new down entry:
+<br />
+<div class="centerer"><table class="grid"><tr><td></td><td></td><td>E</td><td>S</td><td>T</td><td>O</td><td>N</td><td>I</td><td>A</td></tr><tr><td></td><td></td><td>C</td><td></td><td>O</td></tr><tr><td></td><td>B</td><td>U</td><td>L</td><td>G</td><td>A</td><td>R</td><td>I</td><td>A</td></tr><tr><td></td><td></td><td>A</td><td></td><td>O</td></tr><tr><td></td><td></td><td>D</td><td></tr><tr><td></td><td>M</td><td>O</td><td>N</td><td>A</td><td>C</td><td>O</td></tr><tr><td></td><td></td><td>R</td><td></td><td></td><td>O</td></tr><tr><td></td><td></td><td></td><td>N</td><td>A</td><td>M</td><td>I</td><td>B</td><td>I</td><td>A</td></tr><tr><td></td><td></td><td></td><td>I</td><td></td><td>O</td></tr><tr><td></td><td>A</td><td>L</td><td>G</td><td>E</td><td>R</td><td>I</td><td>A</td></tr><tr><td></td><td></td><td></td><td>E</td><td></td><td>O</td></tr><tr><td></td><td></td><td></td><td>R</td><td>U</td><td>S</td><td>?</td></tr><tr><td></td><td></td><td></td><td></td><td>K</td><td></td><td>?</td></tr><tr><td></td><td></td><td>?</td><td>?</td><td>R</td><td>?</td><td>?</td><td>?</td><td>?</td></tr><tr><td></td><td></td><td></td><td></td><td>A</td><td></td><td>?</td></tr><tr><td>J</td><td>A</td><td>M</td><td>A</td><td>I</td><td>C</td><td>A</td></tr><tr><td></td><td></td><td></td><td></td><td>N</td><td></td><td></td><td>I</td></tr><tr><td></td><td></td><td></td><td>M</td><td>E</td><td>X</td><td>I</td><td>C</td><td>O</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>E</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td>C</td><td></td><td>L</td></tr><tr><td></td><td>H</td><td>O</td><td>N</td><td>D</td><td>U</td><td>R</td><td>A</td><td>S</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td>B</td><td></td><td>N</td></tr><tr><td></td><td>I</td><td>R</td><td>E</td><td>L</td><td>A</td><td>N</td><td>D</td></tr></table></div></p>
+</li>
+<li>
+<p>11a could be BURUNDI or GERMANY, but only BURUNDI can cross with a 1:2 country at 10d, which must be TONGA. 
+  This completes the grid:
+<br />
+<div class="centerer"><table class="grid"><tr><td></td><td></td><td>E</td><td>S</td><td>T</td><td>O</td><td>N</td><td>I</td><td>A</td></tr><tr><td></td><td></td><td>C</td><td></td><td>O</td></tr><tr><td></td><td>B</td><td>U</td><td>L</td><td>G</td><td>A</td><td>R</td><td>I</td><td>A</td></tr><tr><td></td><td></td><td>A</td><td></td><td>O</td></tr><tr><td></td><td></td><td>D</td><td></tr><tr><td></td><td>M</td><td>O</td><td>N</td><td>A</td><td>C</td><td>O</td></tr><tr><td></td><td></td><td>R</td><td></td><td></td><td>O</td></tr><tr><td></td><td></td><td></td><td>N</td><td>A</td><td>M</td><td>I</td><td>B</td><td>I</td><td>A</td></tr><tr><td></td><td></td><td></td><td>I</td><td></td><td>O</td></tr><tr><td></td><td>A</td><td>L</td><td>G</td><td>E</td><td>R</td><td>I</td><td>A</td></tr><tr><td></td><td></td><td></td><td>E</td><td></td><td>O</td></tr><tr><td></td><td></td><td></td><td>R</td><td>U</td><td>S</td><td>T</td></tr><tr><td></td><td></td><td></td><td></td><td>K</td><td></td><td>O</td></tr><tr><td></td><td></td><td>B</td><td>U</td><td>R</td><td>U</td><td>N</td><td>D</td><td>I</td></tr><tr><td></td><td></td><td></td><td></td><td>A</td><td></td><td>G</td></tr><tr><td>J</td><td>A</td><td>M</td><td>A</td><td>I</td><td>C</td><td>A</td></tr><tr><td></td><td></td><td></td><td></td><td>N</td><td></td><td></td><td>I</td></tr><tr><td></td><td></td><td></td><td>M</td><td>E</td><td>X</td><td>I</td><td>C</td><td>O</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>E</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td>C</td><td></td><td>L</td></tr><tr><td></td><td>H</td><td>O</td><td>N</td><td>D</td><td>U</td><td>R</td><td>A</td><td>S</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td>B</td><td></td><td>N</td></tr><tr><td></td><td>I</td><td>R</td><td>E</td><td>L</td><td>A</td><td>N</td><td>D</td></tr></table></div>
+</p>
+</li>
+</ol>
+    
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

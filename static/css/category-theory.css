@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+html, body {
+	margin: 0;
+	padding: 0;
+	/*background: #000000;
+
+	font-family: sans-serif;
+	color: #FFFFFF;*/
+
+	background: #FFFFFF;
+
+	/*font-family: sans-serif;*/
+	font-family: monospace;
+	color: #000000;
+}
+
+.playarea {
+/*	max-width: calc(100vh * 1.7778);*/
+max-width: calc(100vh * 1.7778);
+	position: relative;
+}
+
+.wall {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	gap: 10px 10px;
+	padding: 30px;
+}
+.wall.player {
+	box-sizing: border-box;
+	width: 100%;
+	transition: width 1s ease;
+}
+.wall.editor {
+	grid-template-columns: repeat(4, 1fr) 2fr;
+}
+.wall.links {
+	grid-template-columns: 1fr;
+}
+@media screen and (orientation:landscape) {
+	.wall.player.won {
+		width: 66%;
+	}
+	.wall.links {
+		box-sizing: border-box;
+		width: 33%;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}
+
+.wall > div {
+	position: relative;
+}
+.wall.player .brick,
+.wall.links .link {
+	height: 100%;
+
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.wall.player .brick {
+	position: relative;
+	top: 0;
+	left: 0;
+	transition: top 1s ease, left 1s ease;
+}
+
+.brick {
+	border-radius: 5px;
+
+	color: #1D3C4C;
+	background: #91C3E4;
+}
+
+.brick.group0 {
+	color: #FFFFFF;
+	background: #054872;
+}
+.brick.group1 {
+	color: #FFFFFF;
+	background: #097B5A;
+}
+.brick.group2 {
+	color: #FFFFFF;
+	background: #572143;
+}
+.brick.group3 {
+	color: #FFFFFF;
+	background: #056F7C;
+}
+
+.link.group0 {
+	border: 2px solid #054872;
+}
+.link.group1 {
+	border: 2px solid #097B5A;
+}
+.link.group2 {
+	border: 2px solid #572143;
+}
+.link.group3 {
+	border: 2px solid #056F7C;
+}
+.link .hidden {
+	font-style: italic;
+}
+
+.wall.editor input {
+	box-sizing: border-box;
+	width:100%;
+	padding:3px;
+	background: transparent;
+	border: none;
+	outline: none;
+	color:#FFFFFF;
+}
+input[type=button] {
+	margin: 10px;
+	padding: 5px;
+	background: #FFFFFF;
+	border-radius: 5px;
+	outline: none;
+}
+textarea {
+	margin: 10px;
+	width: 800px;
+	height: 100px;
+	outline: none;
+}

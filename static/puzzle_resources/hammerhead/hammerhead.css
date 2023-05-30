@@ -1,0 +1,351 @@
+.print-only {
+  display: none;
+}
+
+@media only print {
+  .print-only {
+    display: block;
+  }
+
+  .screen-container * {
+    display: none;
+  }
+}
+
+@media screen {
+  .phone-contents::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .instaclam-container, .instaclam-container > * {
+    background: black;
+    font-family: "proxima-nova", sans-serif;
+    position: relative;
+  }
+
+  .instaclam-container .material-symbols-outlined {
+    cursor: default;
+  }
+
+  .page-container {
+    display: flex;
+    flex-direction: row;
+    transition: transform 150ms;
+    width: 200%;
+    position: absolute;
+  }
+
+  .instaclam-page {
+    width: 100%;
+  }
+
+  .instaclam-page::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  .instaclam-page::-webkit-scrollbar-track {
+    background: black; 
+  }
+   
+  .instaclam-page::-webkit-scrollbar-thumb {
+    background: white;
+  }
+
+  .instaclam-page::-webkit-scrollbar-thumb:hover {
+    background: #ccc; 
+  }
+
+  .instaclam-page {
+    max-height: 52.5em;
+    overflow-y: scroll;
+    padding-bottom: 3em;
+  }
+
+  .instaclam-main-page {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-bar {
+    align-items: center;
+    background: black;
+    color: white;
+    display: flex;
+    gap: 2rem;
+    padding: 1.5rem;
+    position: absolute;
+    width: calc(30em - 3rem);
+  }
+
+  .header-bar .action-icon {
+    font-size: 1.6em;
+  }
+
+  .header-bar .username {
+    flex-grow: 1;
+    font-family: "proxima-nova-condensed", sans-serif;
+    font-size: 1.3em;
+    font-weight: 700;
+    margin: 0 1rem;
+  }
+
+  .profile-bar {
+    align-items: center;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 7rem 4rem 1rem 2rem;
+  }
+
+  .profile-metric {
+    font-size: 1.3em;
+    font-weight: 600;
+  }
+
+  .profile-bar .metric-container {
+    text-align: center;
+  }
+
+  .profile-bar .profile-label {
+    font-size: 0.9em;
+  }
+
+  .profile-bar .profile-pic {
+    border-radius: 8em;
+    height: 6em;
+    width: 6em;
+  }
+
+  .profile-bio {
+    padding: 0 2rem;
+  }
+
+  .profile-bio .name {
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .profile-bio .description {
+    color: #ddd;
+    margin: 0;
+  }
+
+  .instaclam-button-row {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin: 1rem 2rem;
+  }
+
+  .instaclam-button-row .instaclam-button {
+    align-items: center;
+    background: #262626;
+    border-radius: 1.5rem;
+    color: white;
+    cursor: default;
+    display: flex;
+    justify-content: center;
+    padding: 0.7rem 1rem;
+  }
+
+  .instaclam-button-row .instaclam-button:not(:last-of-type) {
+    flex-grow: 1;
+  }
+
+  .instaclam-tab-row {
+    display: flex;
+    cursor: default;
+  }
+
+  .instaclam-tab {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 0.5em;
+  }
+
+  .instaclam-tab.posts {
+    color: white;
+    border-bottom: 1px solid white;
+  }
+
+  .instaclam-tab.tagged {
+    color: #989898;
+  }
+
+  .instaclam-tab .tab-icon {
+    font-size: 1.6em;
+  }
+
+  .instaclam-content-grid {
+    display: grid;
+    flex-grow: 1;
+    grid-template-columns: auto auto auto;
+  }
+
+  .instaclam-content-thumb {
+    background: #262626;
+    cursor: pointer;
+    height: 10em;
+    border: 1px solid black;
+  }
+
+  .instaclam-content-thumb img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .instaclam-footer {
+    background: black;
+    bottom: 0;
+    border-top: 1px solid #262626;
+    color: white;
+    display: flex;
+    gap: 1em;
+    justify-content: space-around;
+    padding: 1rem 0;
+    position: absolute;
+    width: 30em;
+  }
+
+  .instaclam-footer .action-icon {
+    color: white;
+    font-size: 1.6em;
+  }
+
+  .instaclam-posts-page {
+    width: 100%;
+  }
+
+  /** Posts page stylings. */
+
+  .posts-header-bar {
+    align-items: center;
+    background: black;
+    color: white;
+    display: flex;
+    gap: 2em;
+    padding-bottom: 0;
+    padding: 1.5rem;
+    position: absolute;
+    width: calc(30em - 3rem);
+    z-index: 15;
+  }
+
+  .posts-header-bar .action-icon {
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.6em;
+    margin: 0;
+    padding: 0;
+  }
+
+  .posts-header-bar .header {
+    font-family: "proxima-nova-condensed", sans-serif;
+    font-size: 1.3em;
+    font-weight: 700;
+  }
+
+  .posts-spacer {
+    height: 2em;
+    width: 100%;
+  }
+
+  /** Posts stylings. */
+  .post-header {    
+    align-items: center;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 1rem;
+    position: relative;
+    z-index: 5;
+
+  }
+
+  .image-post, .video-post {
+    padding-top: 1em;
+  }
+
+  .post-header .profile-pic {
+    width: 2em;
+    height: 2em;
+    border-radius: 2em;
+  }
+
+  .post-header .username {
+    flex-grow: 1;
+  }
+
+  .image-post img.post-body {
+    width: 100%;
+  }
+
+  .video-post .instaclam-vid {
+    cursor: pointer;
+    margin-top: -1em;
+    width: 100%;
+  }
+
+  .mute-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .video-post .toggle-mute {
+    background: #0006;
+    border-radius: 2rem;
+    bottom: 8rem;
+    color: white;
+    cursor: pointer;
+    float: right;
+    font-size: 1.3em;
+    padding: 0.6rem;
+    position: relative;
+    right: 1rem;
+  }
+
+  .video-post .toggle-mute:hover {
+    background: #000b;
+  }
+
+  .post-footer {
+    align-items: center;
+    display: flex;
+    padding: 0.5rem 1rem;
+    gap: 2rem;
+  }
+
+  .video-post .post-footer {
+    margin-top: -3em;
+  }
+
+  .post-footer .action-icon {
+    color: white;
+    font-size: 1.6em;
+  }
+
+  .post-footer .action-icon:nth-child(3) {
+    flex-grow: 1;
+  }
+
+  .post-comments {
+    color: white;
+    padding: 1rem;
+    font-weight: 400;
+  }
+
+  .post-comments .username {
+    font-weight: 600;
+  }
+
+  .post-comments p {
+    margin: 0;
+  }
+}

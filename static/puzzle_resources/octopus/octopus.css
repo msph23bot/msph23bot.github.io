@@ -1,0 +1,187 @@
+
+@media screen {
+  .phone-contents {
+    --theme-color: #84afcf;
+  }
+
+  table.grid {
+    width: auto;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 1px solid black;
+  }
+
+  table.grid td {
+    background-clip: padding-box;
+    text-align: center;
+    vertical-align: middle;
+    width: 2em;
+    height: 2em;
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  div.leftpad {
+    margin-left: 10px;
+  }
+
+  .phone-contents::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .phone-contents::-webkit-scrollbar-track {
+    background: black; 
+  }
+   
+  .phone-contents::-webkit-scrollbar-thumb {
+    background: #688aa3;
+  }
+
+  .phone-contents::-webkit-scrollbar-thumb:hover {
+    background: #59778c; 
+  }
+
+  .chumblr-container {
+    background-color: var(--theme-color);
+  }
+
+  .profile-header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+  }
+
+  .profile-header .action-bar {    
+      align-items: center;
+      background-color: rgba(0, 0, 0, .3);
+      color: white;
+      display: flex;
+      gap: 1rem;
+      height: 2.5em;
+      padding: 0 3% 0 6%;
+      position: absolute;
+      width: 87%;
+  }
+
+  .profile-header .username {
+    display: flex;
+    flex-grow: 1;
+    font-weight: 500;
+    justify-content: center;
+  }
+
+  .profile-header .profile-pic {
+    border: 0.5rem solid var(--theme-color);
+    height: 5em;
+    margin-top: 14em;
+    width: 5em;
+  }
+
+  .profile-header .account-name {
+    border: none;
+    color: #071b35;
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .profile-header .account-subtitle {
+    color: #364857;
+    font-size: 0.9em;
+    padding: 0 5em;
+    text-align: center;
+  }
+
+  .ask-button {
+    background: #071b35;
+    border-radius: 5em;
+    color: white;
+    font-size: 0.9em;
+    margin-bottom: 1rem;
+    padding: 0.2em 1em;
+  }
+
+  .chumblr-post {
+    background-color: #111;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+  }
+
+  .chumblr-post .post-header {
+    align-items: center;
+    display: flex;
+    padding: 1rem 1.2rem;
+  }
+
+  .chumblr-post .profile-pic {
+    height: 3em;
+    width: 3em;
+  }
+
+  .chumblr-post .account-name {
+    color: white;
+    flex-grow: 1;
+    margin: 0 1rem;
+  }
+
+  .chumblr-post .action-icon {
+    color: #bbb;
+  }
+
+  .chumblr-post .post-footer {
+    display: flex;
+    gap: 1.6em;
+    padding: 1rem 1.5rem;
+  }
+
+  .chumblr-post .post-notes {
+    color: #bbb;
+    flex-grow: 1;
+    margin: 0 0.2em;
+  }
+
+  .chumblr-post .post-contents img {
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .chumblr-post .post-contents p {
+    font-size: 1em;
+    margin: 0;
+    padding: 1em;
+  }
+
+  .chumblr-post .reblog-card {
+    align-items: center;
+    border-top: 0.2rem solid #0a0a0a;
+    display: flex;
+    padding: 1em;
+  }
+
+  .chumblr-post .reblog-pfp {
+    border-radius: 0.2rem;
+    height: 1.5em;
+    width: 1.5em;
+  }
+
+  .chumblr-post .reblog-icon {    
+    height: 1em;
+    margin-bottom: -2rem;
+    margin-left: -1rem;
+    width: 1em;
+  }
+
+  .chumblr-post .reblog-name {
+    margin: 0 1rem;
+  }
+
+  .chumblr-post .follow-button {
+    color: #00b8ff;
+    margin-left: 1rem;
+  }
+}

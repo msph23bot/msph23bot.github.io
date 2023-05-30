@@ -1,0 +1,312 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>PH6: Time Frame</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+<a href="../round/placement-test.html" class="btn">Placement Test</a>
+
+
+
+
+
+<a href="../post-hunt-solve/ph6.html" class="btn">Call in an answer</a>
+
+
+<a href="../solution/ph6.html" class="btn solution-button">View solution</a>
+<a href="../stats/ph6.html" class="btn">Stats</a>
+
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<h1 class="puzzle-title">
+    PH6: Time Frame
+    
+</h1>
+
+<main class="puzzle-main clipboard-container">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+<style>
+        .flavor { margin-left: 10%; margin-right: 10%; }
+        .piece { cursor: move; }
+        .board { position: relative; }
+        .piece div { position: absolute; border: 1px solid black; text-align: center; vertical-align: middle; line-height: 60px; }
+        .board div { position: absolute; border: 1px solid black; }
+        .error { background-color: red; }
+        .success { background-color: lightgreen; }
+        .gray div { background-color: lightgray; }
+        .S { background-image: url(../static/puzzle_resources/ph6/p_back.png); background-size: 60px; }
+        .C { background-image: url(../static/puzzle_resources/ph6/d_back.png); background-size: 60px; }
+        .T { background-image: url(../static/puzzle_resources/ph6/t_back.png); background-size: 60px; }
+        .s { background-image: url(../static/puzzle_resources/ph6/p_outline.png); background-size: 60px; }
+        .c { background-image: url(../static/puzzle_resources/ph6/d_outline.png); background-size: 60px; }
+        .t { background-image: url(../static/puzzle_resources/ph6/t_outline.png); background-size: 60px; }
+
+        @media print {
+            @page {
+                size: landscape;
+            }
+
+            .online-only {
+                display: none;
+            }
+
+            .pieces {
+                print-color-adjust: exact !important;
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+        }
+</style>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<body>
+    <p class="flavor">
+        Great Scott! Mysterious thing, Time. Powerful, and when meddled with, dangerous. Allons-y!
+    </p>
+    <div class="page-div">
+        <div class="content-div">
+            <p class="online-only">Note: These pieces are draggable in the online version of the puzzle.</p><br/>
+            <div class="pieces" style="width: 1080px; height: 600px;">
+                <div class="board" style="left: 780px; top: 60px;" description="C.T.S.C.S. C.T.C.C.S. T.C.S.T.C. C.C.T.C.S. T.S.C.T.S. T.T.S.T.S. T.C.T.T.C. C.S.C.C.T."></div>
+                <div class="piece" style="left: 660px; top: 0px" description="cR"></div>
+                <div class="piece" style="left: 660px; top: 120px" description="tU"></div>
+                <div class="piece" style="left: 540px; top: 420px" description="sI cU"></div>
+                <div class="piece" style="left: 660px; top: 420px" description="sI cU"></div>
+                <div class="piece" style="left: 540px; top: 240px" description="tN cU"></div>
+                <div class="piece" style="left: 540px; top: 60px" description="tH tL"></div>
+                <div class="piece" style="left: 660px; top: 240px" description="cN tD"></div>
+                <div class="piece" style="left: 360px; top: 0px" description="sOcG"></div>
+                <div class="piece" style="left: 360px; top: 120px" description="cLsY"></div>
+                <div class="piece" style="left: 360px; top: 240px" description="tHsA"></div>
+                <div class="piece" style="left: 360px; top: 360px" description="sUtS"></div>
+                <div class="piece" style="left: 360px; top: 480px" description="cDtS"></div>
+                <div class="piece" style="left: 240px; top: 0px" description="cT cO tN"></div>
+                <div class="piece" style="left: 180px; top: 420px" description="tSsC ..cH"></div>
+                <div class="piece" style="left: 0px; top: 60px" description="tH.. cYsA"></div>
+                <div class="piece" style="left: 180px; top: 240px" description="cSsV cM"></div>
+                <div class="piece" style="left: 0px; top: 240px" description="sT.. tRtC"></div>
+                <div class="piece" style="left: 0px; top: 420px" description="cO.. cHtO"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function buildfromdescription(element, size) {
+            var $e = $(element);
+
+            $e.empty();
+            var lines = $e.attr("description").split(" ");
+            for (var y = 0; y < lines.length; y++) {
+                for (var x = 0; x < lines[y].length; x += 2) {
+                    if (lines[y][x] != ".") {
+                        var $tile = $("<div></div>");
+                        $tile.css("left", x / 2 * size);
+                        $tile.css("top", y * size);
+                        $tile.css("width", size);
+                        $tile.css("height", size);
+                        $tile.addClass(lines[y][x]);
+                        if (lines[y][x+1] != ".") {
+                            $tile.text(lines[y][x+1]);
+                        }
+                        $e.append($tile);
+                    }
+                }
+            }
+        }
+
+        function checkforerrors()
+        {
+            var board = $(".board").first();
+            var boardLeft = parseInt($(board).css("left"), 10)/60;
+            var boardTop = parseInt($(board).css("top"), 10)/60;
+            
+            var boardstring = $(board).attr("description");
+            var boardlines = boardstring.split(" ");
+            var boardheight = boardlines.length;
+            var boardwidth = boardlines[0].length / 2;
+
+            var seen = Array(boardheight * boardwidth).fill(false);
+
+            $(".board div").each(function () {
+                $(this).removeClass("error");
+                $(this).removeClass("success");
+            });
+
+            $(".piece").each(function () {
+                $(this).addClass("gray");
+
+                var piecestring = $(this).attr("description");
+
+                var xStart = parseInt($(this).css("left"), 10) / 60 - boardLeft;
+                var yStart = parseInt($(this).css("top"), 10) / 60 - boardTop;
+                var lines = piecestring.split(" ");
+
+                for (var y = 0; y < lines.length; y++) {
+                    for (var x = 0; x < lines[y].length / 2; x++) {
+                        if (lines[y][x * 2] != ".") {
+                            var xAdj = x + xStart;
+                            var yAdj = y + yStart;
+
+                            if (xAdj < 0 || yAdj < 0 || xAdj >= boardwidth || yAdj >= boardheight) {
+                                continue;
+                            }
+
+                            $(this).removeClass("gray");
+                            $(board).children(":nth-child(" + (yAdj * boardwidth + xAdj + 1) + ")").addClass("success");
+
+                            var boardletter = boardlines[yAdj][xAdj * 2];
+                            var pieceletter = lines[y][x * 2].toUpperCase();
+
+                            if (seen[yAdj * boardwidth + xAdj] || boardletter != pieceletter) {
+                                $(board).children(":nth-child(" + (yAdj * boardwidth + xAdj + 1) + ")").removeClass("success");
+                                $(board).children(":nth-child(" + (yAdj * boardwidth + xAdj + 1) + ")").addClass("error");
+                            }
+
+                            seen[yAdj * boardwidth + xAdj] = true;
+                        }
+                    }
+                }
+            });
+        }
+
+        $(".piece").draggable({ grid: [60, 60], opacity: 0.75, stack: ".piece", stop: function (event, ui) { checkforerrors(); } });
+        $(".piece").each(function () { buildfromdescription($(this), 60); $(this).addClass("gray"); })
+        $(".board").each(function () { buildfromdescription($(this), 60); })
+
+        var state = localStorage.getItem("ph6");
+        if (state) {
+            state = state.split("|");
+            $(".piece").each(function(index, element) {
+                var dstate = state[index].split(",");
+                $(element).css("left", dstate[0]);
+                $(element).css("top", dstate[1]);
+            });
+            checkforerrors();
+        }
+
+        window.addEventListener('beforeunload', function(e) {
+            var state = [];
+            $(".piece").each(function(index, element) {
+                state.push($(element).css("left") + "," + $(element).css("top"));
+            });
+            localStorage.setItem("ph6", state.join("|"));
+        });
+    </script>
+</body>
+
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

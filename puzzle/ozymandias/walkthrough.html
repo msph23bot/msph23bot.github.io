@@ -1,0 +1,274 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+        <title>Puzzle University</title>
+    
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../../static/css/skeleton.css">
+    <link rel="stylesheet" href="../../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../../jsi18n/index.html"></script>
+    <script src="../../static/js/sorttable.js"></script>
+    <script src="../../static/js/tray.js"></script>
+    <script src="../../static/js/notify.js"></script>
+    <script src="../../static/js/time.js"></script>
+    <script src="../../static/js/menu-button-links.js"></script>
+    
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../../index.html">
+                    Home
+                </a>
+                <a href="../../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div class="menu-button-links">
+                    <button class="selected-tab" 
+                        id="puzzle-dropdown-button"
+                        aria-haspopup="true"
+                        aria-controls="Department-dropdown">
+                        Departments
+                        <span class="material-symbols-outlined back-icon no-copy">arrow_drop_down</span>
+                    </button>
+                    
+                    <div id="puzzle-dropdown"
+                         role="menu"
+                         aria-labelledby="puzzle-dropdown-button">
+                        <a role="menuitem" href="../../departments.html">
+                            All departments
+                        </a>
+                        <hr/>
+                        
+                        
+                        
+                            <a role="menuitem" href="../../round/placement-test.html">
+                                <div class="round-dropdown-value">
+                                    <span class="round-name">Placement Test</span>
+                                    
+                                </div>
+                            </a>
+                        
+                        
+                        
+                            <a role="menuitem" href="../../round/econ.html">
+                                <div class="round-dropdown-value">
+                                    <span class="round-name">Economics</span>
+                                    
+                                </div>
+                            </a>
+                        
+                        
+                        
+                            <a role="menuitem" href="../../round/music.html">
+                                <div class="round-dropdown-value">
+                                    <span class="round-name">Music</span>
+                                    
+                                </div>
+                            </a>
+                        
+                        
+                        
+                            <a role="menuitem" href="../../round/english.html">
+                                <div class="round-dropdown-value">
+                                    <span class="round-name">English</span>
+                                    
+                                </div>
+                            </a>
+                        
+                        
+                        
+                            <a role="menuitem" href="../../round/history.html">
+                                <div class="round-dropdown-value">
+                                    <span class="round-name">History</span>
+                                    
+                                </div>
+                            </a>
+                        
+                        
+                        
+                            <a role="menuitem" href="../../round/computer-science.html">
+                                <div class="round-dropdown-value">
+                                    <span class="round-name">Computer Science</span>
+                                    
+                                </div>
+                            </a>
+                        
+                        
+                        
+                            <a role="menuitem" href="../../round/math.html">
+                                <div class="round-dropdown-value">
+                                    <span class="round-name">Mathematics</span>
+                                    
+                                </div>
+                            </a>
+                        
+                        
+                        
+                            <a role="menuitem" href="../../round/classics.html">
+                                <div class="round-dropdown-value">
+                                    <span class="round-name">Classics</span>
+                                    
+                                </div>
+                            </a>
+                        
+                        
+                        
+                            <a role="menuitem" href="../../round/sociology.html">
+                                <div class="round-dropdown-value">
+                                    <span class="round-name">Sociology</span>
+                                    
+                                </div>
+                            </a>
+                        
+                        
+                        
+                            <a role="menuitem" href="../../round/interludes.html">
+                                <div class="round-dropdown-value">
+                                    <span class="round-name">Interludes</span>
+                                    
+                                </div>
+                            </a>
+                        
+                        
+                        
+                            <a role="menuitem" href="../../round/metameta.html">
+                                <div class="round-dropdown-value">
+                                    <span class="round-name">Metameta</span>
+                                    
+                                </div>
+                            </a>
+                        
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                <a href="../../teams.html">
+                    Directory
+                </a>
+                <a href="../../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="../ozymandias.html" class="btn">Back to the puzzle</a>
+
+            </div>
+        </span>
+        <div class="top-right-actions">
+        
+            <a href="../../login.html" class="btn" style="z-index: 100; position: relative;">Login</a>
+            <a href="../../register.html" class="btn" style="z-index: 100; position: relative;">Register</a>
+        
+        </div>
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<h1>Ozymandias Walkthrough</h1>
+
+<main class="puzzle-main clipboard-container">
+  <p>
+    Upon clicking on the puzzle, solvers first encounter a wondrous crossword grid. The grid perfectly adheres to every 
+    crossword rule known to man&mdash;it is a single connected set of entries with flawless 180-degree rotational symmetry, 
+    its numbers are precisely placed in exactly the right order, and every entry intersects at least two others. In fact, the 
+    central four-letter entry at 8-Across has a jaw-dropping 100% of its letters crossed by Down entries. This ties the world 
+    record for most-checked entry in a crossword!
+  </p>
+
+  <p>
+    But when solvers are finally able to bring themselves to look away from this marvel of a grid and scroll down, they are in 
+    for an unprecedented surprise twist. In the place where they would normally expect crossword clues, they instead face a 
+    bewildering array of strange, colorful rectangular images of various dimensions. What&rsquo;s worse, 8-Across&rsquo;s 
+    clue is simply a string of question marks. Now we see why the constructor went through the effort of ensuring every one 
+    of its letters was crossed&mdash;otherwise there&rsquo;s no way you could ever know them!
+  </p>
+
+  <p>
+    But how can we convert these rectangles into words? After much staring and a few hours of research, the cleverer and more 
+    cultured members of your team may finally recognize at least one of the images as a national flag, sparking the a-ha: this 
+    puzzle is all about identifying the flags of various countries. From there, the next leap is to consider the 
+    <em>names</em> of these countries; for example, 1-Across in the grid is seven letters, and the flag associated with 
+    1-Across is that of a country with a seven-letter name. As it happens, this pattern continues with every entry, such that 
+    you can fit the names of the countries into the grid, one letter per square, and all of the crossings work! Finally, all 
+    that remains is to read 8-Across, submit it as the final answer to the puzzle, and bask in the supreme satisfaction of 
+    overcoming this brilliantly devious mental challenge.
+  </p>
+</main>
+
+<script src="../../static/js/copyjack.js"></script>
+
+<button class="btn clipboard-button"></button>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

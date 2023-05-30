@@ -1,0 +1,279 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>PH9: Dynamic Duos</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+<a href="../round/placement-test.html" class="btn">Placement Test</a>
+
+
+
+
+
+<a href="../post-hunt-solve/ph9.html" class="btn">Call in an answer</a>
+
+
+<a href="../solution/ph9.html" class="btn solution-button">View solution</a>
+<a href="../stats/ph9.html" class="btn">Stats</a>
+
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<h1 class="puzzle-title">
+    PH9: Dynamic Duos
+    
+</h1>
+
+<main class="puzzle-main clipboard-container">
+    
+
+    
+    <style>
+        .oldpuzzlesize {
+            width: 796px;
+            height: 982px;
+            grid-template-columns: repeat(17, calc((796px - 16*12px)/17));
+            column-gap: 12px;
+            grid-template-rows: repeat(23, calc(982px/23));
+        }
+
+        .puzzle {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 24px;
+            text-align: center;
+            display: grid;
+            width: 671px;
+            height: 828px;
+            grid-template-columns: repeat(17, calc((671px - 16*12px)/17));
+            column-gap: 12px;
+            grid-template-rows: repeat(23, calc(828px/23));
+            background-size: contain;
+            background-image: url(../static/puzzle_resources/ph9/lines.png);
+            margin: 0px auto;
+            margin-top: 10px;
+            line-height: 3.4rem;
+            print-color-adjust: exact !important;
+            -webkit-print-color-adjust: exact !important;
+            color-adjust: exact !important;
+        }
+
+        .puzzle input {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 24px;
+            text-align: center;
+            text-transform: uppercase;
+            width: 100%;
+            height: 100%;
+            border-color: black;
+            padding: 0;
+            margin: 0;
+        }
+
+        .given {
+            border: 2px solid black;
+        }
+
+        .puzzle input.extract {
+            background: yellow;
+        }
+</style>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle arrow keys
+            function move(elem, drow, dcol) {
+                var label = elem.id;
+                var row = parseInt(label.split("-")[0].substr(4)) + drow * 2;
+                var col = parseInt(label.split("-")[1]) + dcol;
+
+                var newitem = document.getElementById("item" + row + "-" + col);
+                if (newitem && newitem.id.startsWith("item")) {
+                    newitem.focus();
+                    return true;
+                } else {
+                    row += drow * 2;
+                    col += dcol;
+                    newitem = document.getElementById("item" + row + "-" + col);
+                    if (newitem && newitem.id.startsWith("item")) {
+                        newitem.focus();
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+
+            function setText(elem, text) {
+                elem.value = text;
+            }
+
+            var state = localStorage.getItem("ph9");
+            if (state) { state = state.split("|"); }
+            var iItem = 0;
+
+            document.querySelectorAll(".puzzle input").forEach(item => {
+                if (state) item.value = state[iItem++];
+
+                item.setAttribute("minLength", "1");
+                item.setAttribute("maxLength", "1");
+                item.addEventListener("keydown", e => {
+                    if (e.keyCode == 37) { // left
+                        move(e.target, 0, -1);
+                    }
+                    else if (e.keyCode == 38) { // up
+                        move(e.target, -1, 0);
+                    }
+                    else if (e.keyCode == 39) { // right
+                        move(e.target, 0, 1);
+                    }
+                    else if (e.keyCode == 40) { // down
+                        move(e.target, 1, 0);
+                    }
+                    else if (e.keyCode == 8 || e.keyCode == 46) { // backspace/delete
+                        if (e.target.value === "") {
+                            move(e.target, 0, -1);
+                        }
+                        else {
+                            setText(e.target, "");
+                        }
+                    }
+                    else if (e.target.value != "" && (e.keyCode >= 65 && e.keyCode <= 90)) { // clear existing letter for new one
+                        setText(e.target, "");
+                    }
+                });
+
+                item.addEventListener("keypress", e => {
+                    if ((e.which >= 65 && e.which <= 90) || (e.which >= 97 && e.which <= 122)) { // A-Z
+                        setText(e.target, e.key.toUpperCase());
+                        move(e.target, 0, 1);
+                    }
+                    else { // don't allow other characters
+                        var currVal = e.target.value;
+                        if (currVal && !((currVal.charCodeAt(0) >= 65 && currVal.charCodeAt(0) <= 90) || (currVal.charCodeAt(0) >= 97 && currVal.charCodeAt(0) <= 122))) {
+                            setText(e.target, "");
+                        }
+                    }
+
+                    e.preventDefault();
+                });
+            });
+        });
+
+        window.addEventListener('beforeunload', function(e) {
+            var state = [];
+            document.querySelectorAll(".puzzle input").forEach(item => {
+                state.push(item.value);
+            });
+            localStorage.setItem("ph9", state.join("|"));
+        });
+</script>
+<body><div class="page-div"><div class="content-div"><div class="puzzle"><div class="given" style="grid-row: 1; grid-column: 2;">B</div><div class="given" style="grid-row: 1; grid-column: 3;">A</div><div class="given" style="grid-row: 1; grid-column: 4;">T</div><div class="given" style="grid-row: 1; grid-column: 5;">M</div><div class="given" style="grid-row: 1; grid-column: 6;">A</div><div class="given" style="grid-row: 1; grid-column: 7;">N</div><div style="grid-row: 1; grid-column: 8;">&amp;</div><div class="given" style="grid-row: 1; grid-column: 9;">R</div><div class="given" style="grid-row: 1; grid-column: 10;">O</div><div class="given" style="grid-row: 1; grid-column: 11;">B</div><div class="given" style="grid-row: 1; grid-column: 12;">I</div><div class="given" style="grid-row: 1; grid-column: 13;">N</div><input type="text" id="item3-1" style="grid-row: 3; grid-column: 1;"/><input type="text" id="item3-2" style="grid-row: 3; grid-column: 2;"/><input type="text" id="item3-3" style="grid-row: 3; grid-column: 3;"/><input type="text" id="item3-4" style="grid-row: 3; grid-column: 4;"/><input type="text" id="item3-5" style="grid-row: 3; grid-column: 5;"/><input type="text" id="item3-6" style="grid-row: 3; grid-column: 6;" class="extract"/><input type="text" id="item3-7" style="grid-row: 3; grid-column: 7;"/><div style="grid-row: 3; grid-column: 8;">&amp;</div><input type="text" id="item3-9" style="grid-row: 3; grid-column: 9;"/><input type="text" id="item3-10" style="grid-row: 3; grid-column: 10;"/><input type="text" id="item3-11" style="grid-row: 3; grid-column: 11;"/><input type="text" id="item3-12" style="grid-row: 3; grid-column: 12;"/><input type="text" id="item3-13" style="grid-row: 3; grid-column: 13;"/><input type="text" id="item3-14" style="grid-row: 3; grid-column: 14;"/><input type="text" id="item5-2" style="grid-row: 5; grid-column: 2;"/><input type="text" id="item5-3" style="grid-row: 5; grid-column: 3;"/><input type="text" id="item5-4" style="grid-row: 5; grid-column: 4;"/><input type="text" id="item5-5" style="grid-row: 5; grid-column: 5;"/><input type="text" id="item5-6" style="grid-row: 5; grid-column: 6;"/><input type="text" id="item5-7" style="grid-row: 5; grid-column: 7;"/><div style="grid-row: 5; grid-column: 8;">&amp;</div><input type="text" id="item5-9" style="grid-row: 5; grid-column: 9;" class="extract"/><input type="text" id="item5-10" style="grid-row: 5; grid-column: 10;"/><input type="text" id="item5-11" style="grid-row: 5; grid-column: 11;"/><input type="text" id="item5-12" style="grid-row: 5; grid-column: 12;"/><input type="text" id="item7-2" style="grid-row: 7; grid-column: 2;"/><input type="text" id="item7-3" style="grid-row: 7; grid-column: 3;"/><input type="text" id="item7-4" style="grid-row: 7; grid-column: 4;"/><input type="text" id="item7-5" style="grid-row: 7; grid-column: 5;"/><input type="text" id="item7-6" style="grid-row: 7; grid-column: 6;"/><input type="text" id="item7-7" style="grid-row: 7; grid-column: 7;" class="extract"/><div style="grid-row: 7; grid-column: 8;">&amp;</div><input type="text" id="item7-9" style="grid-row: 7; grid-column: 9;"/><input type="text" id="item7-10" style="grid-row: 7; grid-column: 10;"/><input type="text" id="item7-11" style="grid-row: 7; grid-column: 11;"/><input type="text" id="item7-12" style="grid-row: 7; grid-column: 12;"/><input type="text" id="item7-13" style="grid-row: 7; grid-column: 13;"/><input type="text" id="item7-14" style="grid-row: 7; grid-column: 14;"/><input type="text" id="item9-2" style="grid-row: 9; grid-column: 2;"/><input type="text" id="item9-3" style="grid-row: 9; grid-column: 3;"/><input type="text" id="item9-4" style="grid-row: 9; grid-column: 4;"/><input type="text" id="item9-5" style="grid-row: 9; grid-column: 5;"/><input type="text" id="item9-6" style="grid-row: 9; grid-column: 6;"/><input type="text" id="item9-7" style="grid-row: 9; grid-column: 7;" class="extract"/><div style="grid-row: 9; grid-column: 8;">&amp;</div><input type="text" id="item9-9" style="grid-row: 9; grid-column: 9;"/><input type="text" id="item9-10" style="grid-row: 9; grid-column: 10;"/><input type="text" id="item9-11" style="grid-row: 9; grid-column: 11;"/><input type="text" id="item9-12" style="grid-row: 9; grid-column: 12;"/><input type="text" id="item9-13" style="grid-row: 9; grid-column: 13;"/><input type="text" id="item9-14" style="grid-row: 9; grid-column: 14;"/><input type="text" id="item11-2" style="grid-row: 11; grid-column: 2;"/><input type="text" id="item11-3" style="grid-row: 11; grid-column: 3;"/><input type="text" id="item11-4" style="grid-row: 11; grid-column: 4;"/><input type="text" id="item11-5" style="grid-row: 11; grid-column: 5;"/><input type="text" id="item11-6" style="grid-row: 11; grid-column: 6;"/><input type="text" id="item11-7" style="grid-row: 11; grid-column: 7;"/><div style="grid-row: 11; grid-column: 8;">&amp;</div><input type="text" id="item11-9" style="grid-row: 11; grid-column: 9;" class="extract"/><input type="text" id="item11-10" style="grid-row: 11; grid-column: 10;"/><input type="text" id="item11-11" style="grid-row: 11; grid-column: 11;"/><input type="text" id="item11-12" style="grid-row: 11; grid-column: 12;"/><input type="text" id="item11-13" style="grid-row: 11; grid-column: 13;"/><input type="text" id="item11-14" style="grid-row: 11; grid-column: 14;"/><input type="text" id="item13-3" style="grid-row: 13; grid-column: 3;"/><input type="text" id="item13-4" style="grid-row: 13; grid-column: 4;"/><input type="text" id="item13-5" style="grid-row: 13; grid-column: 5;"/><input type="text" id="item13-6" style="grid-row: 13; grid-column: 6;"/><input type="text" id="item13-7" style="grid-row: 13; grid-column: 7;"/><div style="grid-row: 13; grid-column: 8;">&amp;</div><input type="text" id="item13-9" style="grid-row: 13; grid-column: 9;"/><input type="text" id="item13-10" style="grid-row: 13; grid-column: 10;"/><input type="text" id="item13-11" style="grid-row: 13; grid-column: 11;"/><input type="text" id="item13-12" style="grid-row: 13; grid-column: 12;"/><input type="text" id="item13-13" style="grid-row: 13; grid-column: 13;" class="extract"/><input type="text" id="item13-14" style="grid-row: 13; grid-column: 14;"/><input type="text" id="item15-4" style="grid-row: 15; grid-column: 4;" class="extract"/><input type="text" id="item15-5" style="grid-row: 15; grid-column: 5;"/><input type="text" id="item15-6" style="grid-row: 15; grid-column: 6;"/><input type="text" id="item15-7" style="grid-row: 15; grid-column: 7;"/><div style="grid-row: 15; grid-column: 8;">&amp;</div><input type="text" id="item15-9" style="grid-row: 15; grid-column: 9;"/><input type="text" id="item15-10" style="grid-row: 15; grid-column: 10;"/><input type="text" id="item15-11" style="grid-row: 15; grid-column: 11;"/><input type="text" id="item15-12" style="grid-row: 15; grid-column: 12;"/><input type="text" id="item15-13" style="grid-row: 15; grid-column: 13;"/><input type="text" id="item15-14" style="grid-row: 15; grid-column: 14;"/><input type="text" id="item17-2" style="grid-row: 17; grid-column: 2;"/><input type="text" id="item17-3" style="grid-row: 17; grid-column: 3;"/><input type="text" id="item17-4" style="grid-row: 17; grid-column: 4;"/><input type="text" id="item17-5" style="grid-row: 17; grid-column: 5;"/><input type="text" id="item17-6" style="grid-row: 17; grid-column: 6;" class="extract"/><input type="text" id="item17-7" style="grid-row: 17; grid-column: 7;"/><div style="grid-row: 17; grid-column: 8;">&amp;</div><input type="text" id="item17-9" style="grid-row: 17; grid-column: 9;"/><input type="text" id="item17-10" style="grid-row: 17; grid-column: 10;"/><input type="text" id="item17-11" style="grid-row: 17; grid-column: 11;"/><input type="text" id="item17-12" style="grid-row: 17; grid-column: 12;"/><div style="grid-row: 17; grid-column: 13;">-</div><input type="text" id="item17-14" style="grid-row: 17; grid-column: 14;"/><input type="text" id="item17-15" style="grid-row: 17; grid-column: 15;"/><input type="text" id="item17-16" style="grid-row: 17; grid-column: 16;"/><input type="text" id="item17-17" style="grid-row: 17; grid-column: 17;"/><input type="text" id="item19-2" style="grid-row: 19; grid-column: 2;"/><input type="text" id="item19-3" style="grid-row: 19; grid-column: 3;"/><input type="text" id="item19-4" style="grid-row: 19; grid-column: 4;"/><input type="text" id="item19-5" style="grid-row: 19; grid-column: 5;"/><input type="text" id="item19-6" style="grid-row: 19; grid-column: 6;"/><input type="text" id="item19-7" style="grid-row: 19; grid-column: 7;"/><div style="grid-row: 19; grid-column: 8;">&amp;</div><input type="text" id="item19-9" style="grid-row: 19; grid-column: 9;"/><input type="text" id="item19-10" style="grid-row: 19; grid-column: 10;"/><input type="text" id="item19-11" style="grid-row: 19; grid-column: 11;"/><input type="text" id="item19-12" style="grid-row: 19; grid-column: 12;"/><input type="text" id="item19-13" style="grid-row: 19; grid-column: 13;"/><input type="text" id="item19-14" style="grid-row: 19; grid-column: 14;" class="extract"/><input type="text" id="item21-4" style="grid-row: 21; grid-column: 4;"/><input type="text" id="item21-5" style="grid-row: 21; grid-column: 5;"/><input type="text" id="item21-6" style="grid-row: 21; grid-column: 6;"/><input type="text" id="item21-7" style="grid-row: 21; grid-column: 7;"/><div style="grid-row: 21; grid-column: 8;">&amp;</div><input type="text" id="item21-9" style="grid-row: 21; grid-column: 9;" class="extract"/><input type="text" id="item21-10" style="grid-row: 21; grid-column: 10;"/><input type="text" id="item21-11" style="grid-row: 21; grid-column: 11;"/><input type="text" id="item21-12" style="grid-row: 21; grid-column: 12;"/><input type="text" id="item21-13" style="grid-row: 21; grid-column: 13;"/><div class="given" style="grid-row: 23; grid-column: 1;">A</div><div class="given" style="grid-row: 23; grid-column: 2;">N</div><div class="given" style="grid-row: 23; grid-column: 3;">T</div><div style="grid-row: 23; grid-column: 4;">-</div><div class="given" style="grid-row: 23; grid-column: 5;">M</div><div class="given" style="grid-row: 23; grid-column: 6;">A</div><div class="given" style="grid-row: 23; grid-column: 7;">N</div><div style="grid-row: 23; grid-column: 8;">&amp;</div><div class="given" style="grid-row: 23; grid-column: 9;">T</div><div class="given" style="grid-row: 23; grid-column: 10;">H</div><div class="given" style="grid-row: 23; grid-column: 11;">E</div><div class="given" style="grid-row: 23; grid-column: 13;">W</div><div class="given" style="grid-row: 23; grid-column: 14;">A</div><div class="given" style="grid-row: 23; grid-column: 15;">S</div><div class="given" style="grid-row: 23; grid-column: 16;">P</div></div></div></div></body>
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,316 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>PH4: Inspector Clue D&#x27;oh</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+<a href="../round/placement-test.html" class="btn">Placement Test</a>
+
+
+
+
+
+<a href="../post-hunt-solve/ph4.html" class="btn">Call in an answer</a>
+
+
+<a href="../solution/ph4.html" class="btn solution-button">View solution</a>
+<a href="../stats/ph4.html" class="btn">Stats</a>
+
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<h1 class="puzzle-title">
+    PH4: Inspector Clue D&#x27;oh
+    
+</h1>
+
+<main class="puzzle-main clipboard-container">
+    
+
+    
+    <p class="flavor">Oops! It appears that all of the Usual Suspects have been killed!</p>
+<style>
+        :root {
+            --header-size: 140px;
+            --cell-size: 23px;
+        }
+
+        .flavor {
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-bottom: 10px;
+        }
+
+        .empty {
+            border: 0px solid black;
+        }
+
+        .content-div tr:last-child td {
+            border-bottom: 2px solid black;
+        }
+
+        .block {
+            border: 2px solid black;
+            user-select: none;
+            padding: 0px;
+        }
+
+        .leftcontainer {
+            display: grid;
+            grid-template: repeat(6, var(--cell-size)) / var(--header-size);
+            line-height: calc(var(--cell-size) - 2px);
+        }
+
+        .leftcontainer div {
+            border: 1px solid black;
+            padding: 2px;
+            text-align: right;
+        }
+
+        .topcontainer {
+            display: grid;
+            grid-template: var(--header-size) / repeat(6, var(--cell-size));
+            line-height: calc(var(--cell-size) - 2px);
+            print-color-adjust: exact !important;
+            -webkit-print-color-adjust: exact !important;
+            color-adjust: exact !important;
+        }
+
+        .topcontainer div {
+            border: 1px solid black;
+            height: calc(var(--header-size) - 4px);
+            padding: 2px;
+            writing-mode: vertical-lr;
+            text-align: right;
+        }
+
+        .lettercontainer {
+            display: grid;
+            grid-template: repeat(6, var(--cell-size)) / repeat(6, var(--cell-size))
+        }
+
+        .lettercontainer div {
+            border: 1px solid black;
+            color: #999999;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .lettercontainer div.letter-x {
+            background-color: #808080;
+        }
+
+        .lettercontainer div.letter-dot {
+            background-color: yellow;
+            color: black;
+        }
+
+        .clues {
+            font-size: 14px;
+            line-height: 2rem;
+        }
+
+        .clues p {
+            margin: 6px 24px;
+            cursor: pointer;
+        }
+
+        .clues p.seen {
+            text-decoration: line-through;
+        }
+
+        .content-div {
+            display: flex;
+            print-color-adjust: exact !important;
+            -webkit-print-color-adjust: exact !important;
+            color-adjust: exact !important;
+        }
+
+        @media print {
+            @page {
+                size: landscape;
+            }
+        }
+
+        @media screen and (max-width: 1050px) {
+            .content-div {
+                flex-wrap: wrap;
+            }
+        }
+</style>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var state = localStorage.getItem("ph4");
+            if (state) { state = state.split("|"); }
+            var iItem = 0;
+
+            document.querySelectorAll(".lettercontainer div").forEach(letter => {
+                if (state) {
+                    var c = state[iItem++];
+                    if (c == "X") { letter.classList.add("letter-x"); }
+                    if (c == "O") { letter.classList.add("letter-dot"); }
+                }
+
+                letter.addEventListener("contextmenu", event => { event.preventDefault(); });
+                letter.addEventListener("mousedown", event => {
+                    if (event.which > 1) {
+                        if (event.target.classList.contains("letter-dot")) {
+                            event.target.classList.remove("letter-dot");
+                            event.target.classList.add("letter-x");
+                        } else if (event.target.classList.contains("letter-x")) {
+                            event.target.classList.remove("letter-x");
+                        } else {
+                            event.target.classList.add("letter-dot");
+                        }
+                    } else {
+                        if (event.target.classList.contains("letter-x")) {
+                            event.target.classList.remove("letter-x");
+                            event.target.classList.add("letter-dot");
+                        } else if (event.target.classList.contains("letter-dot")) {
+                            event.target.classList.remove("letter-dot");
+                        } else {
+                            event.target.classList.add("letter-x");
+                        }
+                    }
+                });
+            });
+
+            var cluestate = localStorage.getItem("ph4-clue");
+            if (cluestate) { cluestate = cluestate.split("|"); }
+            var iClue = 0;
+
+            document.querySelectorAll(".clues p").forEach(clue => {
+                if (cluestate && cluestate[iClue++]) { clue.classList.add("seen"); }
+
+                clue.onclick = e => {
+                    e.target.classList.toggle("seen");
+                }
+            });
+        });
+
+        window.addEventListener('beforeunload', function(e) {
+            var state = [];
+            document.querySelectorAll(".lettercontainer div").forEach(item => {
+                state.push(item.classList.contains("letter-x") ? "X" : (item.classList.contains("letter-dot") ? "O" : ""));
+            });
+            localStorage.setItem("ph4", state.join("|"));
+
+            var cluestate = [];
+            document.querySelectorAll(".clues p").forEach(item => {
+                cluestate.push(item.classList.contains("seen") ? "X" : "");
+            });
+            localStorage.setItem("ph4-clue", cluestate.join("|"));
+        });
+</script>
+<body><div class="page-div"><div class="content-div"><table height="564px" width="564px"><tr><td class="empty"></td><td class="block"><div class="topcontainer"><div style="background-color: #FFDA66;">Colonel Mustard</div><div style="background-color: #FF9797;">Miss Scarlet</div><div style="background-color: #B5FFD6;">Mr. Green</div><div style="background-color: #BED7EF;">Mrs. Peacock</div><div style="background-color: #FFFFFF;">Mrs. White</div><div style="background-color: #D7AEC2;">Professor Plum</div></div></td><td class="block"><div class="topcontainer"><div>Ballroom</div><div>Billiard Room</div><div>Conservatory</div><div>Dining Room</div><div>Lounge</div><div>Study</div></div></td><td class="block"><div class="topcontainer"><div>Candlestick</div><div>Knife</div><div>Lead Pipe</div><div>Revolver</div><div>Rope</div><div>Wrench</div></div></td></tr><tr><td class="block"><div class="leftcontainer"><div>2PM</div><div>4PM</div><div>6PM</div><div>8PM</div><div>10PM</div><div>Midnight</div></div></td><td class="block"><div class="lettercontainer"><div>T</div><div>A</div><div>C</div><div>H</div><div>M</div><div>L</div><div>B</div><div>L</div><div>G</div><div>D</div><div>O</div><div>Y</div><div>S</div><div>I</div><div>N</div><div>V</div><div>U</div><div>R</div><div>E</div><div>W</div><div>F</div><div>P</div><div>I</div><div>N</div><div>H</div><div>R</div><div>E</div><div>K</div><div>Z</div><div>M</div><div>A</div><div>N</div><div>X</div><div>C</div><div>S</div><div>O</div></div></td><td class="block"><div class="lettercontainer"><div>R</div><div>N</div><div>A</div><div>D</div><div>L</div><div>I</div><div>P</div><div>I</div><div>T</div><div>J</div><div>E</div><div>N</div><div>V</div><div>E</div><div>G</div><div>E</div><div>N</div><div>P</div><div>N</div><div>C</div><div>O</div><div>Z</div><div>U</div><div>R</div><div>S</div><div>H</div><div>M</div><div>D</div><div>T</div><div>B</div><div>U</div><div>F</div><div>L</div><div>A</div><div>J</div><div>F</div></div></td><td class="block"><div class="lettercontainer"><div>I</div><div>O</div><div>N</div><div>K</div><div>Y</div><div>M</div><div>T</div><div>M</div><div>E</div><div>C</div><div>P</div><div>A</div><div>W</div><div>D</div><div>H</div><div>V</div><div>S</div><div>E</div><div>R</div><div>Y</div><div>G</div><div>V</div><div>Z</div><div>N</div><div>E</div><div>I</div><div>E</div><div>U</div><div>F</div><div>B</div><div>L</div><div>G</div><div>W</div><div>A</div><div>O</div><div>S</div></div></td></tr><tr><td class="block"><div class="leftcontainer"><div>Candlestick</div><div>Knife</div><div>Lead Pipe</div><div>Revolver</div><div>Rope</div><div>Wrench</div></div></td><td class="block"><div class="lettercontainer"><div>T</div><div>U</div><div>Y</div><div>E</div><div>G</div><div>R</div><div>P</div><div>N</div><div>A</div><div>F</div><div>I</div><div>X</div><div>D</div><div>R</div><div>L</div><div>W</div><div>R</div><div>L</div><div>B</div><div>E</div><div>M</div><div>S</div><div>K</div><div>O</div><div>O</div><div>V</div><div>A</div><div>Y</div><div>T</div><div>P</div><div>G</div><div>D</div><div>T</div><div>N</div><div>A</div><div>G</div></div></td><td class="block"><div class="lettercontainer"><div>V</div><div>S</div><div>K</div><div>E</div><div>L</div><div>R</div><div>I</div><div>N</div><div>X</div><div>T</div><div>Y</div><div>A</div><div>M</div><div>H</div><div>G</div><div>L</div><div>I</div><div>H</div><div>L</div><div>E</div><div>B</div><div>S</div><div>C</div><div>R</div><div>G</div><div>D</div><div>P</div><div>W</div><div>M</div><div>U</div><div>S</div><div>P</div><div>N</div><div>A</div><div>F</div><div>Q</div></div></td></tr><tr><td class="block"><div class="leftcontainer"><div>Ballroom</div><div>Billiard Room</div><div>Conservatory</div><div>Dining Room</div><div>Lounge</div><div>Study</div></div></td><td class="block"><div class="lettercontainer"><div>A</div><div>N</div><div>K</div><div>E</div><div>U</div><div>H</div><div>V</div><div>P</div><div>T</div><div>G</div><div>T</div><div>A</div><div>L</div><div>I</div><div>J</div><div>U</div><div>C</div><div>Y</div><div>N</div><div>K</div><div>R</div><div>Q</div><div>D</div><div>R</div><div>F</div><div>A</div><div>Z</div><div>S</div><div>X</div><div>M</div><div>O</div><div>D</div><div>T</div><div>B</div><div>L</div><div>E</div></div></td></tr></table><div class="clues"><p>1. Of the Wrench and Colonel Mustard, one was found at 8pm and the other was found in the Conservatory.</p><p>2. The rope wasn't found at 10pm.</p><p>3. Miss Scarlet wasn't found in the Study.</p><p>4. Colonel Mustard was found after the Candlestick.</p><p>5. A suspect was found in the Lounge 2 hours earlier than Professor Plum was found.</p><p>6. The Lead Pipe was found 2 hours after Professor Plum was found.</p><p>7. At 6pm and 10pm the Revolver and a suspect in the Billiard Room were found.</p><p>8. Either Mr. Green or the Rope was found in the Billiard Room.</p><p>9. Of the Conservatory and Study, Mrs. Peacock was found in one and a suspect was found at Midnight in the other.</p><p>10. The Wrench was found earlier than a suspect was found in the Dining Room.</p><p>11. The Revolver was found 2 hours before a suspect was found in the Ballroom.</p></div></div></div></body>
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

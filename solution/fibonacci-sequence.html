@@ -1,0 +1,263 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: MATH 122 The Fibonacci Sequence</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="../puzzle/fibonacci-sequence.html" class="btn">Back to the puzzle</a>
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: MATH 122 The Fibonacci Sequence
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer spoiler">MADAME BLANCHE</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Jonah Ostroff, Mike Sylvia
+
+    </h2>
+
+    
+    <style>
+  span.yellow {
+    font-weight: bold;
+    color: gold;
+  }
+
+  span.blue {
+    font-weight: bold;
+    color: dodgerblue;
+  }
+
+  span.spoiler:hover:not(.solved-title-answer) {
+    font-weight: bold;
+    color: olivedrab;
+  }
+
+  img.emoji {
+    height: 1em;
+    width: 1em;
+    margin: 0 .05em 0 .1em;
+    vertical-align: -0.1em;
+  }
+</style>
+
+<p>This is a sequence of 13 minipuzzles. The first two are about Fibonacci-like sequences:</p>
+<p><strong>Puzzle #1</strong>. These are sequences with the same recurrence as the Fibonacci numbers, where each number is the sum of the two
+before it. The first two terms in each sequence are replaced by green question marks. The ?s can be identified by working 
+backwards, and they can be read together as a two-digit number and converted to a letter (01=A, 26=Z) to get 
+<span class="spoiler">SHRIMP</span>.</p>
+<p><strong>Puzzle #2</strong>. This is another Fibonacci-like sequence, but you’re given the first few terms and must determine the 
+second-to-last 15-digit number. It’s 512052201201518, which can be converted to letters to spell 
+<span class="spoiler">ELEVATOR</span>.</p>
+<hr />
+<p>The remaining minipuzzles are a little unusual: each one doesn’t really make much sense on its own, and they all contain 
+yellow and blue elements (in addition to the same green that the first two used for extraction).</p>
+<p>At this point, solvers might notice that the third minipuzzle contains a shrimp and elevator emoji, so it’s natural to try to
+use those answers to make sense of the instruction “? → ?”.</p>
+<p>Indeed, this collection of minipuzzles is just like the Fibonacci sequence: each puzzle relies on the answers to the two 
+puzzles before it. Those answers must be “plugged in” to the yellow and blue parts of the puzzle, and the green part is the 
+answer. Specifically, the blue part corresponds to the previous answer, and the yellow part corresponds to the answer before 
+that.</p>
+<hr />
+<p><strong>Puzzle #3</strong>. Inputs: <span class="yellow">SHRIMP</span>, <span class="blue">ELEVATOR</span></p>
+<p>This puzzle features a maze of emoji. The path from the 🦐 to the 🛗 passes by the symbols 🎷 🐮 🧅 🪜 🐶 🧊 📰 🍇, whose 
+first letters spell <span class="spoiler">SCOLDING</span>.</p>
+<hr />
+<p><strong>Puzzle #4</strong>. Inputs: <span class="yellow">ELEVATOR</span>, <span class="blue">SCOLDING</span></p>
+<p>This puzzle consists of three rows of eight dots with various connecting arrows. Writing the eight-letter answers to the 
+previous puzzles in the corresponding yellow and blue rows results in arrows from N to O and C to D. If we suppose that each 
+other arrow also points from a letter to the one immediately after it in the alphabet, the green row spells 
+<span class="spoiler">BESWARMS</span>.</p>
+<hr />
+<p><strong>Puzzle #5</strong>. Inputs: <span class="yellow">SCOLDING</span>, <span class="blue">BESWARMS</span></p>
+<p>The input words can each be read as one word inside another word: COLD in SING, and WARM in BESS. Fill those words into the 
+corresponding spaces to get two clues: [Part that may SING like BESS] is a SOPRANO, and [Study of COLD and WARM] is 
+THERMODYNAMICS. Enter those answers in the blanks and read the resulting numbers to get <span class="spoiler">NANOMITES</span>.</p>
+<hr />
+<p><strong>Puzzle #6</strong>. Inputs: <span class="yellow">BESWARMS</span>, <span class="blue">NANOMITES</span></p>
+<p>Fill in the letters of NANOMITES in the blue grid. The instructions suggest starting at the start of the yellow answer (the “B” space), and then following the compass directions in the yellow answer (E, S, W, S). The letters along the path spell <span class="spoiler">ANIME</span>.</p>
+<hr />
+<p><strong>Puzzle #7</strong>. Inputs: <span class="yellow">NANOMITES</span>, <span class="blue">ANIME</span></p>
+<p>The instruction “Tarts ta Connill Notyuc” can have its words anagrammed to read “Start at Lincoln County”, but which one? The two input words can be anagrammed to spell MINNESOTA and MAINE. Follow the listed steps from Lincoln County in those states, and index into the counties along the path. In Minnesota, the sequence is Yellow <strong>M</strong>edicine, L<strong>a</strong>c qui Parle, <strong>S</strong>wift, Kandi<strong>y</strong>ohi,  Stea<strong>r</strong>ns, Do<strong>u</strong>glas, <strong>P</strong>ope. In Maine it's Saga<strong>d</strong>ahoc, <strong>A</strong>ndroscoggin, Ke<strong>n</strong>nebec, Waldo, <strong>H</strong>ancock, Penobsc<strong>o</strong>t, <strong>W</strong>ashington. This spells MASYRUP DAN HOW. Anagram each word one last time to get PYRAMUS AND WHO, which clues the answer <span class="spoiler">THISBE</span>.</p>
+<hr />
+<p><strong>Puzzle #8</strong>. Inputs: <span class="yellow">ANIME</span>, <span class="blue">THISBE</span></p>
+<p>The words ANIME and THISBE can be broken up into five of the hundred most common words in English (according to the Oxford 
+English Corpus): AN, I, ME, THIS, and BE. Place them in order and find the words before or after them as indicated in the 
+list, then read the numbered spaces to spell <span class="spoiler">ANGELO</span>.</p>
+<hr />
+<p><strong>Puzzle #9</strong>. Inputs: <span class="yellow">THISBE</span>, <span class="blue">ANGELO</span></p>
+<p>The two six-letter inputs can be written on the yellow and blue lines. Reading down, we have 2 out of 3 letters which are 
+described by rather vague clues for the words HAN, LEO, LAB, GIS, PAT, and SEC. Fill in the missing letters and the green 
+line spells <span class="spoiler">PASCAL</span>.</p>
+<hr />
+<p><strong>Puzzle #10</strong>. Inputs: <span class="yellow">ANGELO</span>, <span class="blue">PASCAL</span></p>
+<p>Place the yellow and blue inputs into their blanks to get two mystery functions: ANGEL ➜ ANGELO adds an O to the end of a 
+word, and PINGALA ➛ PASCAL replaces a surname of a person who invented a mathematical concept with the surname of the Blaise 
+after whom it was named. Apply the same functions to the third line to get BELLAS ➜ BELLASO ➛ 
+<span class="spoiler">VIGENERE</span>.</p>
+<hr />
+<p><strong>Puzzle #11</strong>. Inputs: <span class="yellow">PASCAL</span>, <span class="blue">VIGENERE</span></p>
+<p>This puzzle consists of three clues, and the last one suggests that they’re about chemical elements. The yellow A, B, and C 
+should be read as Pa, Sc, and Al, while the blue D, E, F, G, and H should be read as V, I, Ge, Ne, and Re. Resolve the clues 
+to identify the green I, J, and K as Se, Ne, and Ca, so the answer is <span class="spoiler">SENECA</span>.</p>
+<hr />
+<p><strong>Puzzle #12</strong>. Inputs: <span class="yellow">VIGENERE</span>, <span class="blue">SENECA</span></p>
+<p>VIGENERE is the lock, and SENECA is the key: decrypt the text XMSXJ using the Vigenère key SENECA to get the answer 
+<span class="spoiler">FIFTH</span>.</p>
+<hr />
+<p><strong>Puzzle #13</strong>. Inputs: <span class="yellow">SENECA</span>, <span class="blue">FIFTH</span></p>
+<p>This is a map of downtown Seattle. Carefully resize the image and overlay it on a map so that the yellow and blue lines are 
+Seneca St. and 5th Ave. while the upper-left X is the Space Needle. The other X lies on the tattoo parlor Letters + Lowlows,
+so the answer is <span class="spoiler">LETTERS</span>.</p>
+<hr />
+<p><strong>Meta</strong>. Just like the minipuzzles, the previous two answers tell us what to do: reading the fifth letters of SHRIMP, 
+ELEVATOR, SCOLDING, BESWARMS, NANOMITES, ANIME, THISBE, ANGELO, PASCAL, VIGENERE, SENECA, FIFTH, and LETTERS spells the final
+answer <span class="spoiler">MADAME BLANCHE</span>.</p>
+<script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+<script>
+  twemoji.parse(document.body);
+</script>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p>The original plan was to have this be a sequence of crossword clues, with the same overall structure where each answer feeds 
+into the next two clues. It turns out that this isn’t particularly easy to construct! Inspired by 
+<a href="https://puzzlehunt.club.cc.cmu.edu/puzzle/19036/">This Puzzle Will Unlock In…</a>, we instead went with a collection of 
+minipuzzles.</p>
+<p>Writing this puzzle, working backwards from the end, is like playing eleven very tiny games of 
+<a href="https://www.ericberlin.com/2022/01/04/spaghetti-time/">Spaghetti</a>. At each phase, you’ve got one constrained answer (e.g. 
+ANIME), and your job is to figure out a property of that answer which can become a puzzle (“It’s an anagram of a state!”). 
+We had to cheat a few times (especially with the Vigenère bit), but overall I’m pleased with the variety of answer usage.</p>
+<p>In early January, we noticed that this puzzle and <a href="../puzzle/ph22.html">Blue Moons</a> both contained the clue phrase FIFTH LETTERS. The puzzles were sufficiently far apart in the hunt that we decided not to do anything about it. Then, just a few weeks before the event, we solved <em>another</em> puzzle in <em>another</em> hunt with the same clue phrase. We now declare FIFTH LETTERS to be the official clue phrase of 2023, and we look forward to solving many more puzzles this year with the same extraction.</p>
+    
+
+    
+    
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

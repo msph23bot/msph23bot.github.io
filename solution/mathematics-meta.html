@@ -1,0 +1,166 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: Mathematics Meta</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="../puzzle/mathematics-meta.html" class="btn">Back to the puzzle</a>
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: Mathematics Meta
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer spoiler">RAM ALPHA WOLF</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Jonah Ostroff
+
+    </h2>
+
+    
+    <p>In the math department, every course is associated with a course number, some of which are rather unusual. The answers and course numbers are:</p>
+<table><tr><th>Course #</th><th>Answer</th></tr><tr><td>7</td><td>SAD FACE</td></tr><tr><td>15</td><td>SESAME CHICKEN</td></tr><tr><td>122</td><td>MADAME BLANCHE</td></tr><tr><td>200</td><td>MASS CLAIM</td></tr><tr><td>39.1666...</td><td>ADA KING</td></tr><tr><td>0.9</td><td>DEAD LABEL</td></tr><tr><td>-34012208</td><td>SEA LANE</td></tr></table>
+<p>Each answer consists of two words. The first word only uses letters from {E, M, D, A, S}, which are the five letters from PEMDAS that correspond to binary operations. The second word only uses letters from {A, B, C, E, F, G, H, I, K, L, M, N}, and is one letter longer than the first. Therefore, we can interleave the two words to make an expression with n variables and n-1 operations. For example, SAD FACE can be read as F-A+C/E, and SESAME CHICKEN can be read as C-H^I-C+K*E^N.</p>
+<p>We can then set each of these expressions equal to the associated course number to get a system of equations:</p>
+<table><tr><td>F-A+C/E = 7</td></tr><tr><td>C-H^I-C+K*E^N = 15</td></tr><tr><td>B*L+A/N+C*H^E = 122</td></tr><tr><td>C*L+A-I-M = 200</td></tr><tr><td>K+I/N+G = 39.1666...</td></tr><tr><td>L/A^B+E/L = 0.9</td></tr><tr><td>L-A^N+E = -34012208</td></tr></table>
+<p>This is a system with seven equations and twelve variables, so there must be an additional constraint. With the additional assumption that each variable is between 1 and 26, there&rsquo;s a unique solution:</p>
+<table><tr><th>Variable</th><th>Value</th><th>Letter</th></tr><tr><td>A</td><td>18</td><td>R</td></tr><tr><td>B</td><td>1</td><td>A</td></tr><tr><td>C</td><td>13</td><td>M</td></tr><tr><td>D</td><td>N/A</td><td></td></tr><tr><td>E</td><td>1</td><td>A</td></tr><tr><td>F</td><td>12</td><td>L</td></tr><tr><td>G</td><td>16</td><td>P</td></tr><tr><td>H</td><td>8</td><td>H</td></tr><tr><td>I</td><td>1</td><td>A</td></tr><tr><td>J</td><td>N/A</td><td></td></tr><tr><td>K</td><td>23</td><td>W</td></tr><tr><td>L</td><td>15</td><td>O</td></tr><tr><td>M</td><td>12</td><td>L</td></tr><tr><td>N</td><td>6</td><td>F</td></tr></table>
+<p>Reading down, the answer is RAM ALPHA WOLF.</p>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    
+<p>This meta was inspired by those viral &ldquo;6 ÷ 2(1+2)&rdquo; memes. The original idea was to just have answers using only letters from PEMDAS (with no repeats), giving a new order of operations, and applying them to expressions in the meta shell. There aren&rsquo;t a lot of words like that, however, so eventually I landed on the two-word concept.</p>
+<p>The blanks at D and J were added to allow for slightly better letters, but I was sad to lose the answer DAD JOKE. I had also hoped to include a few answers with pairs of Ps, like PAMPAS GRASS, but unfortunately none of them fit in the alphabetical range for the answer.</p>
+
+    
+
+    
+    
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

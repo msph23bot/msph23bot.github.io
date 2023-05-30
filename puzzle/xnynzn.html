@@ -1,0 +1,209 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>MATH 0.9 xⁿ + yⁿ = zⁿ</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+<a href="../round/math.html" class="btn">Mathematics</a>
+
+
+
+
+
+<a href="../post-hunt-solve/xnynzn.html" class="btn">Call in an answer</a>
+
+
+<a href="../solution/xnynzn.html" class="btn solution-button">View solution</a>
+<a href="../stats/xnynzn.html" class="btn">Stats</a>
+
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<h1 class="puzzle-title">
+    MATH 0.9 xⁿ + yⁿ = zⁿ
+    
+</h1>
+
+<main class="puzzle-main clipboard-container">
+    
+
+    
+    <p>22 clues have an extra word. These form clues to the elliptic curves.</p>
+<p>16 clues have entries similar to Fermat&rsquo;s proof.</p>
+<p>The number of words, n, in each of the remaining 9 clues is the appropriate integer to apply to the corresponding curve (left to right), in clue order.</p>
+<style>
+  .crossword-outer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .crossword-outer > * {
+    width: 48%;
+  }
+
+  /* Table grid properties. These will not copy on Firefox, so use for
+      styles that affect formatting for web (not copy-paste) only. */
+  table.grid {
+    border-collapse: collapse;
+    text-align: center;
+    width: auto;
+  }
+
+  table.grid td {
+    /* firefox is dumb af */
+    background-clip: padding-box;
+    height: 2em;
+    width: 2em;
+    padding: 0px;
+    border-left: 1px solid #777;
+    border-right: 1px solid #777;
+    border-top: 1px solid #777;
+    border-bottom: 1px solid #777;
+    position: relative; /* so that "position: absolute;" works below */
+  }
+
+  /* Crossword number format
+     Scale numbers with transform so that we don't mess with font sizes
+     when pasting. */
+  table.grid .number {
+    position: absolute;
+    width: min-content;
+    height: 33%;
+    text-align: left;
+    top: 0;
+    left: 0;
+    transform: scale(0.75);
+    transform-origin: top left;
+  }
+
+  div.centerer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* In Chrome, this must go on a <div>, not a <table>, to work. */
+  /* In Firefox, this must go on a <table>, not a <div>, to work. */
+  /* tl;dr - Use it on both containing div and inner table. */
+  .no-break {
+    break-inside: avoid;
+  }
+</style>
+<!--table xmlns="http://www.w3.org/1999/xhtml" style="width: 300px; height: 301.167px; margin: auto; font-size: 0.6rem;" class="animated fadeInDown"--><div class="centerer no-break"><table class="grid no-break"><tbody><tr><td  style="border-top:3px solid black; border-left:3px solid black;" ><div class="number">1</div></td><td  style="border-top:3px solid black; border-bottom:3px solid black;" ><div></div></td><td  style="border-top:3px solid black;" ><div class="number">2</div></td><td  style="border-top:3px solid black;" ><div class="number">3</div></td><td  style="border-top:3px solid black; border-bottom:3px solid black;" ><div></div></td><td  style="border-top:3px solid black;" ><div class="number">4</div></td><td  style="border-top:3px solid black; border-bottom:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-left:3px solid black; border-top:3px solid black;" ><div class="number">5</div></td><td  style="border-top:3px solid black;" ><div class="number">6</div></td><td  style="border-top:3px solid black; border-bottom:3px solid black;" ><div></div></td><td  style="border-top:3px solid black;" ><div class="number">7</div></td><td  style="border-top:3px solid black; border-bottom:3px solid black;" ><div></div></td><td  style="border-top:3px solid black; border-right:3px solid black;" ><div class="number">8</td></tr><tr><td  style="border-left:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-top:3px solid black; border-left:3px solid black; border-bottom:3px solid black;" ><div class="number">9</div></td><td   ><div></div></td><td   ><div></div></td><td  style="border-top:3px solid black; border-right:3px solid black;" ><div class="number">10</div></td><td  style="border-left:3px solid black;" ><div class="number">11</div></td><td  style="border-top:3px solid black; border-bottom:3px solid black;" ><div></div></td><td   ><div></div></td><td   ><div></div></td><td  style="border-top:3px solid black; border-bottom:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-left:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-top:3px solid black; border-left:3px solid black; border-right:3px solid black;" ><div class="number">12</div></td><td  style="border-left:3px solid black; border-right:3px solid black;" ><div></td></tr><tr><td  style="border-left:3px solid black;" ><div class="number">13</div></td><td  style="border-top:3px solid black; border-bottom:3px solid black;" ><div></div></td><td   ><div></div></td><td   ><div></div></td><td   ><div></div></td><td   ><div></div></td><td  style="border-top:3px solid black; border-bottom:3px solid black;" ><div></div></td><td   ><div></div></td><td   ><div></div></td><td  style="border-top:3px solid black; border-bottom:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-left:3px solid black;" ><div class="number">14</div></td><td   ><div></div></td><td  style="border-right:3px solid black;" ><div></td></tr><tr><td  style="border-left:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-top:3px solid black; border-left:3px solid black; border-bottom:3px solid black;" ><div class="number">15</div></td><td  style="border-bottom:3px solid black;" ><div></div></td><td  style="border-right:3px solid black;" ><div></div></td><td  style="border-left:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-left:3px solid black; border-bottom:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-top:3px solid black; border-left:3px solid black; border-right:3px solid black;" ><div class="number">16</div></td><td  style="border-left:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-left:3px solid black; border-bottom:3px solid black;" ><div class="number">17</div></td><td  style="border-top:3px solid black; border-bottom:3px solid black;" ><div></div></td><td   ><div></div></td><td   ><div></div></td><td  style="border-right:3px solid black; border-bottom:3px solid black;" ><div></td></tr><tr><td  style="border-left:3px solid black;" ><div class="number">18</div></td><td  style="border-top:3px solid black; border-bottom:3px solid black;" ><div></div></td><td  style="border-top:3px solid black;" ><div class="number">19</div></td><td   ><div></div></td><td  style="border-right:3px solid black;" ><div></div></td><td  style="border-top:3px solid black; border-left:3px solid black; border-bottom:3px solid black;" ><div class="number">20</div></td><td   ><div></div></td><td   ><div></div></td><td  style="border-top:3px solid black;" ><div class="number">21</div></td><td  style="border-top:3px solid black; border-bottom:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-left:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-left:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-top:3px solid black; border-left:3px solid black; border-right:3px solid black;" ><div class="number">22</td></tr><tr><td  style="border-left:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-top:3px solid black; border-left:3px solid black; border-bottom:3px solid black;" ><div class="number">23</div></td><td   ><div></div></td><td  style="border-bottom:3px solid black;" ><div></div></td><td   ><div></div></td><td  style="border-top:3px solid black; border-bottom:3px solid black;" ><div></div></td><td  style="border-right:3px solid black;" ><div></div></td><td  style="border-left:3px solid black;" ><div class="number">24</div></td><td   ><div></div></td><td  style="border-top:3px solid black; border-bottom:3px solid black;" ><div></div></td><td   ><div></div></td><td   ><div></div></td><td  style="border-right:3px solid black;" ><div></td></tr><tr><td  style="border-left:3px solid black;" ><div class="number">25</div></td><td  style="border-top:3px solid black;" ><div class="number">26</div></td><td   ><div></div></td><td  style="border-top:3px solid black; border-bottom:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-left:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-top:3px solid black; border-left:3px solid black; border-right:3px solid black;" ><div class="number">27</div></td><td  style="border-left:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-left:3px solid black; border-bottom:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-left:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-top:3px solid black; border-left:3px solid black; border-bottom:3px solid black;background-color: #efefef.aa925e; " ><div class="number">28</div></td><td   ><div></div></td><td  style="border-bottom:3px solid black;" ><div></div></td><td  style="border-right:3px solid black;" ><div></td></tr><tr><td  style="border-left:3px solid black;" ><div class="number">29</div></td><td   ><div></div></td><td   ><div></div></td><td  style="border-top:3px solid black; border-bottom:3px solid black;" ><div></div></td><td   ><div></div></td><td  style="border-right:3px solid black;" ><div></div></td><td  style="border-left:3px solid black;" ><div class="number">30</div></td><td  style="border-top:3px solid black; border-bottom:3px solid black;" ><div></div></td><td   ><div></div></td><td  style="border-top:3px solid black;" ><div class="number">31</div></td><td   ><div></div></td><td  style="border-top:3px solid black; border-bottom:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-left:3px solid black; border-right:3px solid black;" ><div></td></tr><tr><td  style="border-left:3px solid black; border-bottom:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-left:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-left:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-top:3px solid black; border-left:3px solid black; border-bottom:3px solid black;background-color: #efefef.a53dcb1; " ><div class="number">32</div></td><td  style="border-bottom:3px solid black;" ><div></div></td><td   ><div></div></td><td   ><div></div></td><td  style="border-top:3px solid black; border-bottom:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-left:3px solid black;" ><div class="number">33</div></td><td   ><div></div></td><td  style="border-bottom:3px solid black;" ><div></div></td><td  style="border-top:3px solid black; border-bottom:3px solid black;" ><div></div></td><td  style="border-right:3px solid black;" ><div></td></tr><tr><td  style="border-top:3px solid black; border-left:3px solid black;" ><div class="number">34</div></td><td   ><div></div></td><td   ><div></div></td><td  style="border-top:3px solid black; border-bottom:3px solid black;" ><div></div></td><td  style="border-top:3px solid black; border-right:3px solid black;" ><div class="number">35</div></td><td  style="border-left:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-left:3px solid black; border-bottom:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-top:3px solid black; border-left:3px solid black; border-right:3px solid black;background-color: #efefef.78; " ><div class="number">36</div></td><td  style="border-left:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-left:3px solid black;" ><div class="number">37</div></td><td  style="border-top:3px solid black;" ><div class="number">38</div></td><td  style="border-top:3px solid black; border-bottom:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-left:3px solid black; border-right:3px solid black;" ><div></td></tr><tr><td  style="border-left:3px solid black;" ><div class="number">39</div></td><td   ><div></div></td><td  style="border-right:3px solid black;" ><div></div></td><td  style="border-top:3px solid black; border-left:3px solid black; border-bottom:3px solid black;background-color: #efefef.e7b9612; " ><div class="number">40</div></td><td   ><div></div></td><td   ><div></div></td><td  style="border-top:3px solid black; border-bottom:3px solid black;" ><div></div></td><td   ><div></div></td><td   ><div></div></td><td   ><div></div></td><td   ><div></div></td><td  style="border-top:3px solid black; border-bottom:3px solid black;" ><div></div></td><td  style="border-right:3px solid black;" ><div></td></tr><tr><td  style="border-left:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-left:3px solid black; border-bottom:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-left:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-top:3px solid black; border-left:3px solid black; border-bottom:3px solid black;" ><div class="number">41</div></td><td   ><div></div></td><td   ><div></div></td><td  style="border-top:3px solid black; border-bottom:3px solid black;" ><div></div></td><td  style="border-right:3px solid black;" ><div></div></td><td  style="border-left:3px solid black; border-bottom:3px solid black;" ><div class="number">42</div></td><td   ><div></div></td><td   ><div></div></td><td  style="border-top:3px solid black; border-bottom:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-left:3px solid black; border-right:3px solid black;" ><div></td></tr><tr><td  style="border-bottom:3px solid black; border-left:3px solid black;" ><div class="number">43</div></td><td  style="border-top:3px solid black; border-bottom:3px solid black;" ><div></div></td><td  style="border-bottom:3px solid black;" ><div></div></td><td  style="border-top:3px solid black; border-bottom:3px solid black;" ><div></div></td><td  style="border-bottom:3px solid black;" ><div></div></td><td  style="border-bottom:3px solid black; border-right:3px solid black;" ><div></div></td><td  style="border-top:3px solid black; border-left:3px solid black; border-bottom:3px solid black;" ><div class="number">44</div></td><td  style="border-bottom:3px solid black;" ><div></div></td><td  style="border-top:3px solid black; border-bottom:3px solid black;" ><div></div></td><td  style="border-bottom:3px solid black;" ><div></div></td><td  style="border-bottom:3px solid black;" ><div></div></td><td  style="border-top:3px solid black; border-bottom:3px solid black;" ><div></div></td><td  style="border-bottom:3px solid black; border-right:3px solid black;" ><div></div></td></tr></tbody></table></div>
+<div class="crossword-outer"><div><h3>Across</h3><ol><li value="1 ">One who gets to hold lady is quivering artisan? </li><li value="5 ">Hitchcock film has all its characters in brace </li><li value="9 ">Biz Markie&rsquo;s third appearance after taking the lead of comedic opera&rsquo;s number one character met with second round of applause</li><li value="11 ">Minion&rsquo;s O.K. to a gutless dummy </li><li value="13 ">One loud party? Quiet! Something to celebrate? Who said to strike up the band?! (2 wds.)</li><li value="14 ">Oddly, Thutmose produced breadbaskets </li><li value="15 ">Pouch with some stickers and a decal (just the middle) </li><li value="17 ">Former temp reorganized, free from duty </li><li value="18 ">Group of larvae speeds after Big Apple </li><li value="20 ">Lawman saw things in corporate ethics </li><li value="23 ">Emperor in jeopardy, thrashing about a scare </li><li value="24 ">Computer brain machine&rsquo;s startup poky, doesn&rsquo;t set ambitious goals (2 wds.)</li><li value="25 ">Put down half-eaten corn at dance hall </li><li value="28 ">So, do I hold it together partially? </li><li value="29 ">Tree grew around <i>2001: A Space Odyssey</i> fan </li><li value="30 ">Those people love taking just a little bit off the top from businesses! (2 wds.)</li><li value="32 ">Cartographic book founder discovered Ararat last </li><li value="33 ">Older Spanish man embraced me </li><li value="34 ">Solo lecture played back somewhere at the airport </li><li value="37 ">Tower of Jezebel: really great </li><li value="39 ">Aboveground dweller extracting diesel oil </li><li value="40 ">Spooner&rsquo;s begging group for flying creature </li><li value="41 "><i>Grey&rsquo;s Anatomy</i> actress Leigh goofing off </li><li value="42 ">Street Fighter character grabbed Ryu&rsquo;s head (separate lead characters) </li><li value="43 ">Yard visitor said to have the most yardage </li><li value="44 ">Exotic, rare firs are Italian imports </li></ol></div><div><h3>Down</h3><ol><li value="1 ">&ldquo;Celtics follow legend of fruit, mesmerized,&rdquo; as the Reverend says (2 wds.)</li><li value="2 ">Wise dancing goat - it was heard in Animal House </li><li value="3 ">Doctor Eccher&rsquo;s nursery </li><li value="4 ">Early American sewer&rsquo;s cover lost on Orion craft site </li><li value="5 ">Poet misfortune, shouting, &ldquo;Pole! Fish!&rdquo; (2 wds.)</li><li value="6 ">Falco, who&rsquo;s acting chief of geodesic engineering? *croak* </li><li value="7 ">Increase stress following previous lover </li><li value="8 ">Theatrical Charlie attached dome to loudspeaker </li><li value="10 ">Architect pets risk soiled promotional materials (2 wds.)</li><li value="12 ">&ldquo;Ultimatum! Ultimatum!&rdquo; encapsulated outcry </li><li value="16 ">Cicero&rsquo;s truth, in abbreviated form: &ldquo;Value each repair mending injuries that are sustained&rdquo; </li><li value="19 ">Group of wolves getting old wall, presenting in a way to look more appealing </li><li value="21 ">Activity that takes hours multiplied by signing stuff (2 wds.)</li><li value="22 ">Author mix up prior to disaster </li><li value="26 ">Original thread-attached conversation &ldquo;So....naan?&rdquo; (2 wds.)</li><li value="27 ">Mark sandwich shop next to Cambridge ocean institution </li><li value="31 ">Miserable and hungry after morsel of meat </li><li value="34 ">One lyric&rsquo;s leading to like Adele&rsquo;s unrespected voice </li><li value="35 ">Bake-off judge&rsquo;s comedian didn&rsquo;t start with regrets </li><li value="36 ">A lot of money in holdings of revolutionary bugs Felipe </li><li value="38 ">Pokemon voice Abraham not one who plays it up for the audience </li></ol></div></div>
+<p style="text-align:center;"><b>Elliptic Curves</b></p>
+<p><button class="btn clipboard-button"></button></p>
+<p><img style="display: block; margin:0px auto;" src="../static/images/xnynzn/fermat.png" alt="[4] [7] [5] [9] [6] [5] [7] [11] [5]"/></p>
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

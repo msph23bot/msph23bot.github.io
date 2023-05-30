@@ -1,0 +1,662 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>History</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+    
+</head>
+<body>
+    
+<style>
+@media screen {
+    body {
+        background-color: black;
+        overflow-x: hidden;
+    }
+
+    .history-background-container {
+        width: 100vw;
+        height: 100vw;
+        position: absolute;
+        margin-top: -15vw;
+    }
+
+    .history-img {
+        width: 100%;
+        position: absolute;
+    }
+
+    .content {
+        background: #0e0e0e;
+        padding: 1em;
+        border-radius: 1em;
+        box-shadow: 0 0 1em white;
+        margin-top: 50%;
+        margin-bottom: 2em;
+    }
+
+    .content h1 {
+        display: none;
+    }
+
+    .puzzlink {
+        transition: filter 0.3s;
+    }
+
+    .puzzlink:hover:after {
+        background-color: #111;
+        border-radius: 0.5rem;
+        color: white;
+        filter: drop-shadow(0 0 1rem #aa0);
+        padding: 0.2rem 1rem;
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+    }
+
+    .puzzle-1 .puzzle-img {
+        left: 23%;;
+        top: 35%;
+        width: 13%;
+    }
+
+    .puzzle-1:hover:after {
+        content: "Learning from Our Old Mistakes";
+        left: 19%;
+        right: 61%;
+        top: 45%;
+    }
+
+    .puzzle-2 .puzzle-img {
+        left: 37.5%;
+        top: 35%;
+        width: 12.25%;
+    }
+
+    .puzzle-2:hover:after {
+        content: "The Twelve Knights of the Round Table";
+        left: 30%;
+        right: 44%;
+        top: 44.5%;
+    }
+
+    .puzzle-3 .puzzle-img {   
+        left: 50.2%;
+        top: 35.3%;
+        width: 12%;
+    }
+
+    .puzzle-3:hover:after {
+        content: "The Telescope";
+        left: 50%;
+        right: 37%;
+        top: 44.5%;
+    }
+
+    .puzzle-4 .puzzle-img {
+        left: 63.8%;
+        top: 35%;
+        width: 13%;
+    }
+
+    .puzzle-4:hover:after {
+        content: "The History of Crossword Puzzles";
+        left: 60%;
+        right: 20%;
+        top: 45%;
+    }
+
+    .puzzle-5 .puzzle-img {
+        left: 22.6%;
+        top: 46.2%;
+        width: 13.5%;
+    }
+
+    .puzzle-5:hover:after {
+        content: "Historic Preservation";
+        left: 23%;
+        right: 63%;
+        top: 57%;
+    }
+
+    .puzzle-6 .puzzle-img {
+        left: 63.4%;
+        top: 46.7%;
+        width: 13.1%;
+    }
+
+    .puzzle-6:hover:after {
+        content: "The Hundred Years' War";
+        left: 61%;
+        top: 57%;
+        right: 22%;
+    }
+
+    .puzzle-meta .puzzle-img {
+        left: 41.1%;
+        top: 48%;
+        width: 18%;
+    }
+
+    .puzzle-meta:hover:after {
+        content: "History Meta";
+        left: 45.5%;
+        right: 45.5%;
+        top: 56.5%;
+    }
+
+    .puzzle-img {
+        filter: brightness(0.7);
+        position: absolute;
+        transition: filter 0.3s;
+    }
+
+    .puzzle-img:hover {
+        filter: brightness(0.7) drop-shadow(0 0 1em #aa0);
+    }
+
+    .headline-container-1 {
+        background-color: grey;
+        height: 2%;
+        width: 10%;
+        left: 10%;
+        top: 30%;
+        position: absolute;
+    }
+
+    .puzzles-answer > :first-child {
+        border-color: #bbb;
+    }
+
+    a, h3, .puzzles-answer {
+        color: #ddd;
+        border-color: #ccc;
+    }
+
+    .puzzle-row {
+        color: #ddd;
+    }
+
+    .puzzles-new {
+        background-color: #ccc;
+        color: #111;
+    }
+
+    .halftone {
+        background: white;
+        position: absolute;
+        filter: contrast(225%);
+        overflow: hidden;
+        transform: translateZ(0); /* force a HW accelerated layer */
+    }
+
+    .halftone > img {
+        filter: brightness(0.5);
+    }
+
+    .halftone::after {
+        content: '';
+        position: absolute;
+        top: -100%;
+        left: -100%;
+        right: -100%;
+        bottom: -100%;
+        background-blend-mode: multiply;
+        background: radial-gradient(5px 5px, black, grey);
+        background-size: 5px 5px;
+        background-position: 0 0;
+        mix-blend-mode: screen;
+        pointer-events: none;
+        transform: rotate(11.25deg);
+        transition: 1s ease-in-out transform;
+        z-index: 1;
+    }
+
+    .top-right-actions {
+        color: #ddd;
+    }
+}
+</style>
+<div class="history-background-container halftone">
+    <img class="history-img" src="../static/puzzle_resources/history/history_background.png"></img>
+    <img class="history-img" src="../static/puzzle_resources/history/history_stand.png">
+
+    
+        
+        <a class="puzzlink puzzle-1 hide-if-locked" data-puzzle-id="139" href="../puzzle/learningfromouroldmistakes.html">
+            
+            <img class="puzzle-img hide-if-unsolved" data-puzzle-id="139" src="../static/puzzle_resources/history/history_puzzle_1_matu.png">
+            <img class="puzzle-img hide-if-solved" data-puzzle-id="139" src="../static/puzzle_resources/history/history_puzzle_1_blank.png">
+            
+        </a>
+        
+    
+
+    
+        
+        <a class="puzzlink puzzle-2 hide-if-locked" data-puzzle-id="71" href="../puzzle/the-twelve-knights-of-the-round-table.html">
+            
+            <img class="puzzle-img hide-if-unsolved" data-puzzle-id="71" src="../static/puzzle_resources/history/history_puzzle_2_cwtsb.png">
+            <img class="puzzle-img hide-if-solved" data-puzzle-id="71" src="../static/puzzle_resources/history/history_puzzle_2_blank.png">
+            
+        </a>
+        
+    
+
+    
+        
+        <a class="puzzlink puzzle-3 hide-if-locked" data-puzzle-id="91" href="../puzzle/the-telescope.html">
+            
+            <img class="puzzle-img hide-if-unsolved" data-puzzle-id="91" src="../static/puzzle_resources/history/history_puzzle_3_scnd.png">
+            <img class="puzzle-img hide-if-solved" data-puzzle-id="91" src="../static/puzzle_resources/history/history_puzzle_3_blank.png">
+            
+        </a>
+        
+    
+
+    
+        
+        <a class="puzzlink puzzle-4 hide-if-locked" data-puzzle-id="83" href="../puzzle/the-history-of-crossword-puzzles.html">
+            
+            <img class="puzzle-img hide-if-unsolved" data-puzzle-id="83" src="../static/puzzle_resources/history/history_puzzle_4_jgfots.png">
+            <img class="puzzle-img hide-if-solved" data-puzzle-id="83" src="../static/puzzle_resources/history/history_puzzle_4_blank.png">
+            
+        </a>
+        
+    
+
+    
+        
+        <a class="puzzlink puzzle-5 hide-if-locked" data-puzzle-id="39" href="../puzzle/historic-preservation.html">
+            
+            <img class="puzzle-img hide-if-unsolved" data-puzzle-id="39" src="../static/puzzle_resources/history/history_puzzle_5_bspd.png">
+            <img class="puzzle-img hide-if-solved" data-puzzle-id="39" src="../static/puzzle_resources/history/history_puzzle_5_blank.png">
+            
+        </a>
+        
+    
+
+    
+        
+        <a class="puzzlink puzzle-6 hide-if-locked" data-puzzle-id="148" href="../puzzle/the-hundred-years-war.html">
+            
+            <img class="puzzle-img hide-if-unsolved" data-puzzle-id="148" src="../static/puzzle_resources/history/history_puzzle_6_jap.png">
+            <img class="puzzle-img hide-if-solved" data-puzzle-id="148" src="../static/puzzle_resources/history/history_puzzle_6_blank.png">
+            
+        </a>
+        
+    
+
+    
+        
+        <a class="puzzlink puzzle-meta hide-if-locked" data-puzzle-id="60" href="../puzzle/history-meta.html">
+            <img class="puzzle-img" src="../static/puzzle_resources/history/history_puzzle_meta.png">
+        </a>
+        
+    
+
+    <div class="halftone">
+    </div>
+</div>
+
+
+
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"></div>
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="../departments.html" class="btn">All departments</a>
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+
+<h1>History</h1>
+
+
+
+
+
+
+
+
+<div class="puzzles-list-container">
+    <table class="puzzles-list">
+    
+<tbody class="puzzles-section">
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="139" id="learningfromouroldmistakes-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/learningfromouroldmistakes.html">
+                
+                
+                Learning from Our Old Mistakes
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>49</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/learningfromouroldmistakes.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="139">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="71" id="the-twelve-knights-of-the-round-table-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/the-twelve-knights-of-the-round-table.html">
+                
+                
+                The Twelve Knights of the Round Table
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>74</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/the-twelve-knights-of-the-round-table.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="71">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="91" id="the-telescope-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/the-telescope.html">
+                
+                
+                The Telescope
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>22</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/the-telescope.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="91">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="83" id="the-history-of-crossword-puzzles-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/the-history-of-crossword-puzzles.html">
+                
+                
+                The History of Crossword Puzzles
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>56</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/the-history-of-crossword-puzzles.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="83">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="39" id="historic-preservation-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/historic-preservation.html">
+                
+                
+                Historic Preservation
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>76</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/historic-preservation.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="39">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="148" id="the-hundred-years-war-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/the-hundred-years-war.html">
+                
+                
+                The Hundred Years&#x27; War
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>32</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/the-hundred-years-war.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="148">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="60" id="history-meta-row">
+        <td>
+            
+        </td>
+        <td>
+            <a href="../puzzle/history-meta.html">
+                
+                <div class="puzzles-new">meta</div>
+                
+                
+                History Meta
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>32</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/history-meta.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="60">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+
+</tbody>
+
+    </table>
+</div>
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

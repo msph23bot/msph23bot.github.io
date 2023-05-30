@@ -1,0 +1,709 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Music</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+    
+</head>
+<body>
+    
+<style>
+@font-face {
+  font-family: khiara;
+  src: url("../static/puzzle_resources/music/khiara_script.ttf");
+}
+
+@media screen {
+  body {
+    background-image: url("../static/puzzle_resources/music/music_bg.webp");
+    overflow-x: hidden;
+    background-repeat: repeat-y;
+  }
+
+  .music-background-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  .content {
+      background-color: white;
+      padding: 1em;
+      border: 2px solid #aaa;
+      border-radius: 1em;
+      box-shadow: 0 0 1em white;
+      margin-top: 55vw;
+      margin-bottom: 2em;
+  }
+
+  .content h1 {
+      display: none;
+  }
+
+  .music-img {
+    position: absolute;
+  }
+
+  .music-logo {
+    left: 0;
+    margin: auto;
+    min-width: 15em;
+    right: 0;
+    top: 5%;
+    width: 30%;
+  }
+
+  .ninetails {
+    left: 0;
+    margin: auto;
+    right: 0;
+    top: 25%;
+    width: 50%;
+  }
+
+  .puzzlink {
+    position: absolute;
+    text-decoration: none;
+    width: 17%;
+  }
+
+  .music-puzzle {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    z-index: 100;
+  }
+
+  .music-puzzle span {
+    transition: transform 0.3s, filter 0.3s;
+  }
+
+  .puzzle-title {
+    color: darkred;
+    font-family: khiara, cursive;
+    font-size: max(1em, 2vw);
+    line-height: max(1em, 2vw);
+    margin: 0.5rem 0;
+    margin-bottom: calc(1.320vw - 22.35px);
+  }
+
+  .puzzle-answer {
+    color: black;
+    filter: drop-shadow(0 0 1px white);
+    font-size: max(0.6em, 1.2vw);
+    text-shadow: 1px 1px 0 white;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .kitsunebi {
+    cursor: pointer;
+    transition: transform 0.3s, filter 0.3s;
+    width: 30%;
+  }
+
+  .music-puzzle:hover .kitsunebi {
+    filter: drop-shadow(0 0 3px orange);
+    transform: scale(1.02);
+  }
+
+  .music-puzzle:hover span {
+    filter: drop-shadow(0 0 3px orange);
+    transform: scale(1.02);
+  }
+
+  #transposition-sticker {
+    top: 42%;
+    right: 14%;
+  }
+
+  #the-british-invasion-sticker {
+    top: 42%;
+    left: 14%;
+  }
+
+  #the-music-of-taylor-swift-sticker {
+    top: 19%;
+    right: 22%;
+  }
+
+  #counterpoint-sticker {
+    top: 19%;
+    left: 22%;
+  }
+
+  #choreography-sticker {
+    top: 29%;
+    left: 14%;
+  }
+
+  #tour-management-sticker {
+    top: 29%;
+    right: 14%;
+  }
+
+  #the-music-of-rascal-flatts-sticker {
+    top: 14%;
+    right: 35%;
+  }
+
+  #key-changes-sticker {
+    top: 14%;
+    left: 35%;
+  }
+
+  .meta {
+    transition: filter 0.3s;
+  }
+
+  .meta-link:hover .meta {
+    filter: drop-shadow(0 0 3px orange);
+  }
+
+  .meta-link:hover:after {
+    content: "Music Meta";
+    background-color: #111;
+    border-radius: 0.5rem;
+    color: white;
+    filter: drop-shadow(0 0 1rem orange);
+    padding: 0.2rem 1rem;
+    position: absolute;
+    text-align: center;
+    z-index: 100;
+    left: 50%;
+    top: 55%;
+  }
+}
+
+@media print {
+  .music-img, .puzzlink {
+    display: none;
+  }
+
+  .content h1 {
+    display: block;
+  }
+
+  .content {
+    margin-top: 0;
+  }
+}
+
+</style>
+
+<div class="music-background-container">
+  <img class="music-img music-logo" src="../static/puzzle_resources/music/music_logo.png"></img>
+
+  
+    <a class="meta-link hide-if-locked" data-puzzle-id="80" href="../puzzle/music-meta.html">
+      <img class="music-img ninetails meta" src="../static/puzzle_resources/music/ninetails_m.png"></img>
+    </a>
+    <img class="music-img ninetails hide-if-unlocked" data-puzzle-id="80" src="../static/puzzle_resources/music/ninetails.png"></img>
+  
+
+
+  
+  <a class="puzzlink hide-if-locked" data-puzzle-id="143" id="transposition-sticker" href="../puzzle/transposition.html">
+    <div class="music-puzzle" id="transposition-icon">
+      <img class="kitsunebi" src="../static/puzzle_resources/music/kitsunebi.png"></img>
+      <span class="puzzle-title">Transposition</span>
+      <span class="puzzle-answer display-answer" data-puzzle-id="143"></span>
+    </div>
+  </a>
+  
+
+  
+  <a class="puzzlink hide-if-locked" data-puzzle-id="95" id="choreography-sticker" href="../puzzle/choreography.html">
+    <div class="music-puzzle" id="choreography-icon">
+      <img class="kitsunebi" src="../static/puzzle_resources/music/kitsunebi.png"></img>
+      <span class="puzzle-title">Choreography</span>
+      <span class="puzzle-answer display-answer" data-puzzle-id="95"></span>
+    </div>
+  </a>
+  
+
+  
+  <a class="puzzlink hide-if-locked" data-puzzle-id="74" id="tour-management-sticker" href="../puzzle/tour-management.html">
+    <div class="music-puzzle" id="tour-management-icon">
+      <img class="kitsunebi" src="../static/puzzle_resources/music/kitsunebi.png"></img>
+      <span class="puzzle-title">Tour Management</span>
+      <span class="puzzle-answer display-answer" data-puzzle-id="74"></span>
+    </div>
+  </a>
+  
+
+  
+  <a class="puzzlink hide-if-locked" data-puzzle-id="69" id="key-changes-sticker" href="../puzzle/key-changes.html">
+    <div class="music-puzzle" id="key-changes-icon">
+      <img class="kitsunebi" src="../static/puzzle_resources/music/kitsunebi.png"></img>
+      <span class="puzzle-title">Key Changes</span>
+      <span class="puzzle-answer display-answer" data-puzzle-id="69"></span>
+    </div>
+  </a>
+  
+
+  
+  <a class="puzzlink hide-if-locked" data-puzzle-id="85" id="the-music-of-rascal-flatts-sticker" href="../puzzle/the-music-of-rascal-flatts.html">
+    <div class="music-puzzle" id="the-music-of-rascal-flatts-icon">
+      <img class="kitsunebi" src="../static/puzzle_resources/music/kitsunebi.png"></img>
+      <span class="puzzle-title">The Music of Rascal Flatts</span>
+      <span class="puzzle-answer display-answer" data-puzzle-id="85"></span>
+    </div>
+  </a>
+  
+
+  
+  <a class="puzzlink hide-if-locked" data-puzzle-id="46" id="counterpoint-sticker" href="../puzzle/counterpoint.html">
+    <div class="music-puzzle" id="counterpoint-icon">
+      <img class="kitsunebi" src="../static/puzzle_resources/music/kitsunebi.png"></img>
+      <span class="puzzle-title">Counterpoint</span>
+      <span class="puzzle-answer display-answer" data-puzzle-id="46"></span>
+    </div>
+  </a>
+  
+
+  
+  <a class="puzzlink hide-if-locked" data-puzzle-id="94" id="the-music-of-taylor-swift-sticker" href="../puzzle/the-music-of-taylor-swift.html">
+    <div class="music-puzzle" id="the-music-of-taylor-swift-icon">
+      <img class="kitsunebi" src="../static/puzzle_resources/music/kitsunebi.png"></img>
+      <span class="puzzle-title">The Music of Taylor Swift</span>
+      <span class="puzzle-answer display-answer" data-puzzle-id="94"></span>
+    </div>
+  </a>
+  
+
+  
+  <a class="puzzlink hide-if-locked" data-puzzle-id="73" id="the-british-invasion-sticker" href="../puzzle/the-british-invasion.html">
+    <div class="music-puzzle" id="the-british-invasion-icon">
+      <img class="kitsunebi" src="../static/puzzle_resources/music/kitsunebi.png"></img>
+      <span class="puzzle-title">The British Invasion</span>
+      <span class="puzzle-answer display-answer" data-puzzle-id="73"></span>
+    </div>
+  </a>
+  
+</div>
+
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"></div>
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="../departments.html" class="btn">All departments</a>
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+
+<h1>Music</h1>
+
+
+
+
+
+
+
+<div class="puzzles-list-container">
+    <table class="puzzles-list">
+    
+<tbody class="puzzles-section">
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="143" id="transposition-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/transposition.html">
+                
+                
+                Transposition
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>194</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/transposition.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="143">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="95" id="choreography-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/choreography.html">
+                
+                
+                Choreography
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>178</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/choreography.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="95">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="74" id="tour-management-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/tour-management.html">
+                
+                
+                Tour Management
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>60</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/tour-management.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="74">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="69" id="key-changes-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/key-changes.html">
+                
+                
+                Key Changes
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>102</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/key-changes.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="69">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="85" id="the-music-of-rascal-flatts-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/the-music-of-rascal-flatts.html">
+                
+                
+                The Music of Rascal Flatts
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>115</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/the-music-of-rascal-flatts.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="85">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="46" id="counterpoint-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/counterpoint.html">
+                
+                
+                Counterpoint
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>30</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/counterpoint.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="46">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="94" id="the-music-of-taylor-swift-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/the-music-of-taylor-swift.html">
+                
+                
+                The Music of Taylor Swift
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>91</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/the-music-of-taylor-swift.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="94">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="73" id="the-british-invasion-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/the-british-invasion.html">
+                
+                
+                The British Invasion
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>46</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/the-british-invasion.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="73">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="80" id="music-meta-row">
+        <td>
+            
+        </td>
+        <td>
+            <a href="../puzzle/music-meta.html">
+                
+                <div class="puzzles-new">meta</div>
+                
+                
+                Music Meta
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>57</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/music-meta.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="80">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+
+</tbody>
+
+    </table>
+</div>
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

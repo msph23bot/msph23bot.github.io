@@ -1,0 +1,341 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>PH5: Mission: Langley Heist</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+<a href="../round/placement-test.html" class="btn">Placement Test</a>
+
+
+
+
+
+<a href="../post-hunt-solve/ph5.html" class="btn">Call in an answer</a>
+
+
+<a href="../solution/ph5.html" class="btn solution-button">View solution</a>
+<a href="../stats/ph5.html" class="btn">Stats</a>
+
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<h1 class="puzzle-title">
+    PH5: Mission: Langley Heist
+    
+</h1>
+
+<main class="puzzle-main clipboard-container">
+    
+
+    
+    <style>
+        @media print {
+            @page {
+                size: portrait;
+            }
+        }
+
+        .puzzle {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            justify-content: center;
+            column-gap: 40px;
+        }
+
+        .instructions {
+            border: 1px solid black;
+            background: lightgray;
+            padding: 10px;
+        }
+
+        .inputtable {
+            font-family: Consolas, "Courier New", Courier, monospace;
+            text-align: center;
+            text-transform: uppercase;
+            border: none;
+            print-color-adjust: exact !important;
+            -webkit-print-color-adjust: exact !important;
+            color-adjust: exact !important;
+        }
+
+        .inputtable td {
+            padding: 2px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .cluetable td {
+            border: 5px solid transparent;
+            padding: 2px;
+            font-size: 20px;
+        }
+
+        .cluetable td:nth-child(1) {
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        .content-div input {
+            font-size: 20px;
+            width: calc(4ch + 8px);
+            font-family: Consolas, "Courier New", Courier, monospace;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .toprow {
+            border: 5px solid black;
+            border-top: none;
+        }
+
+        .bottomrow {
+            border: 5px solid black;
+            border-bottom: none;
+        }
+
+        .inputrow {
+            border: 5px solid black;
+        }
+
+        .match {
+            background-color: lightsteelblue;
+        }
+
+        .error {
+            background-color: lightpink;
+        }
+
+        .first-letter {
+            background-image: linear-gradient(to right, red 0%, red 27%, transparent 27%, transparent 100%);
+        }
+
+        .second-letter {
+            background-image: linear-gradient(to right, transparent 0%, transparent 24%, red 24%, red 51%, transparent 51%, transparent 100%);
+        }
+
+        .third-letter {
+            background-image: linear-gradient(to right, transparent 0%, transparent 49%, red 49%, red 76%, transparent 76%, transparent 100%);
+        }
+
+        .fourth-letter {
+            background-image: linear-gradient(to right, transparent 0%, transparent 73%, red 73%, red 100%);
+        }
+
+        .checker {
+            border: 1px solid black;
+            padding: 10px;
+            background: lightyellow;
+        }
+
+        @media print {
+            .checker {
+                display: none;
+            }
+        }
+</style>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/sha256.js"></script>
+<script type="text/javascript" src="../static/js/crypto.js"></script>
+<script>
+        function updateMatches()
+        {
+            // clear all state
+            document.querySelectorAll("input").forEach(i => { i.classList.remove("match"); i.classList.remove("error"); });
+
+            var map = {};
+
+            // build a list of words in the ladder; show an error for any duplicated words
+            document.querySelectorAll(".inputtable input").forEach(i => {
+                var v = i.value.toUpperCase();
+                if (v.length === 4)
+                {
+                    if (map.hasOwnProperty(v)) {
+                        map[v].classList.add("error");
+                        i.classList.add("error");
+                    }
+                    else {
+                        map[v] = i;
+                    }
+                }
+            });
+
+            // show a match for any words that match in ladder and clues
+            document.querySelectorAll(".cluetable input").forEach(i => {
+                var v = i.value.toUpperCase();
+                if (v.length === 4 && map.hasOwnProperty(v)) {
+                    map[v].classList.add("match");
+                    i.classList.add("match");
+                }
+            });
+        }
+
+        var correctHashes = [
+            "0x12j3crv-ofqv4t4qlupp5h08ha-1tbbab8-1v4mbqg-q9e86d1v7d0ei",
+            "0x-7f6dro-agb34i-12lccrg-3j32b1-1icc2lr-1lruidpie8eo0-1qcdl5q",
+            "0xbbf50eoc43a0-20pic8-1a72hb3k92i6n-1md4b06-1pp4r9j-36n179",
+            "0x-1upgjts-76s2j51pf6qln-dib3ia1cdjudrra5sr4-1ioeonssno5o",
+            "0xdhb1k5-1kns597-cbhc92-q7gfbg13th8p0-36081s-1k8n15o-1utlkai",
+            "0x1vr6tmg-o1cpp3-qk0c6v1v37lr71p2dp8b13imf1oq4fnld15jls08",
+            "0x18lig1d-11opkiv1f0i75317njn62-gpkkg9-1hjrkn14a3uon1ld85bb",
+            "0x2o5ml187oi0s1tao574-1gq2eh81ms989a-1j10r701artbgu1u5epgb",
+            "0x-6o1q0t-7ppm3e-121rqpj-1smv5ng-ecsc0n-164v5n-lupuuf-jd8nim",
+            "0x-184sesa-113gj5g1shh8tlcjmegg1rim1d2rrh8he-1v5ftv6m073it",
+            "0x-1d56ln9-mifdk36l6dqk15ss7ob1fm5mqt1t6soc6l0kko-12lrvud",
+            "0x-qvet9f-pn5ekf-cs0tqv13q3ar51u6srta10jh9st-csjcrj-i7bt49",
+            "0x23r0l-1qrd3ve-7otj0-beigbq8lhu50-1kbb4v3-14a96aa-1cm40di",
+            "0x-8dkku81nh7oui-6lv7o0-1idvmpf-89j3l2-15418rr17ath7b17m7h9g",
+            "0x15pae1e-1vrd81nji0tpq-cbasdo-16nq4sa-9o29v7-bklf1a9et2ij",
+            "0xd4pcf2-1ic96g0-19o8j5h-1vqaipcopoakr-1950flj-mnb1k51n6t3fr",
+            "0x1vg91cf-kfa5tk-1l6a05v-pr1o28147sfpn1amoj541n026qpkfa6e6"
+        ];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById("check").addEventListener("click", (e) => {
+                var guess = document.getElementById("guess").value.toUpperCase().replace(/[^A-Z0-9]+/g, '');
+                var hash = encrypt(guess.replaceAll(" ", ""));
+                var result;
+                if (correctHashes.includes(hash)) {
+                    result = "Yes, " + guess + " is a part of the ladder.";
+                } else {
+                    result = "No, " + guess + " is not a part of the ladder.";
+                }
+                document.getElementById("result").innerText = result;
+                document.getElementById("guess").value = "";
+                e.preventDefault();
+            });
+
+            var state = localStorage.getItem("ph5");
+            if (state) { state = state.split("|"); }
+            var iItem = 0;
+
+            document.querySelectorAll(".puzzle input").forEach(i => {
+                i.value = state[iItem++];
+
+                i.onkeyup = function(e) {
+                    updateMatches();
+                };
+            });
+
+            updateMatches();
+        });
+
+        window.addEventListener('beforeunload', function(e) {
+            var state = [];
+            document.querySelectorAll(".puzzle input").forEach(item => {
+                state.push(item.value);
+            });
+            localStorage.setItem("ph5", state.join("|"));
+        });
+</script>
+<body><div class="page-div"><div class="content-div"><br/><form class="checker no-copy"><div style="display: flex;"><div style="flex-grow: 1; align-self: center; margin: 10px;">You can test whether a word fits in the ladder here.</div><input class="no-copy" id="guess" type="text" style="width: 200px; margin: 10px; font-size: 20px; text-transform: uppercase; border-color: black;"/><input class="no-copy" id="check" type="submit" style="margin: 10px; font-size: 20px; display: none" value="Guess"/></div><div id="result" style="text-align: right"></div></form><div class="puzzle"><div class="instructions"><p>Good morning, Mr. Hunt. We have quite a situation here. Your mission, Ethan, should you decide to accept it, is to descend from a ceiling <b>DUCT</b> via ladder and reach the list of covert agents on <b>FILE</b>.</p><p>Clues to the 17 four-letter words that are missing have been provided in alphabetical order of the answer word. Change one letter per rung. Never change the same letter position twice in a row.</p><p>This puzzle will <i>not</i> self-destruct in five seconds. Good luck, Ethan.</p></div><table class="cluetable no-copy" role="region" aria-label="Clues"><tr><td id="clue1" aria-hidden="true"><i>The Simpsons</i> character</td><td><input aria-labelledby="clue1" autocomplete="off" maxlength="4"></td></tr><tr><td id="clue2" aria-hidden="true"><i>Sesame Street</i> character</td><td><input aria-labelledby="clue2" autocomplete="off" maxlength="4"></td></tr><tr><td id="clue3" aria-hidden="true">Most excellent</td><td><input aria-labelledby="clue3" autocomplete="off" maxlength="4"></td></tr><tr><td id="clue4" aria-hidden="true">Storage device</td><td><input aria-labelledby="clue4" autocomplete="off" maxlength="4"></td></tr><tr><td id="clue5" aria-hidden="true">Type of bird</td><td><input aria-labelledby="clue5" autocomplete="off" maxlength="4"></td></tr><tr><td id="clue6" aria-hidden="true">Time of day</td><td><input aria-labelledby="clue6" autocomplete="off" maxlength="4"></td></tr><tr><td id="clue7" aria-hidden="true">Price to travel</td><td><input aria-labelledby="clue7" autocomplete="off" maxlength="4"></td></tr><tr><td id="clue8" aria-hidden="true">Break wind</td><td><input aria-labelledby="clue8" autocomplete="off" maxlength="4"></td></tr><tr><td id="clue9" aria-hidden="true">Zuko element</td><td><input aria-labelledby="clue9" autocomplete="off" maxlength="4"></td></tr><tr><td id="clue10" aria-hidden="true">Broadway musical</td><td><input aria-labelledby="clue10" autocomplete="off" maxlength="4"></td></tr><tr><td id="clue11" aria-hidden="true">Piece of jewelry</td><td><input aria-labelledby="clue11" autocomplete="off" maxlength="4"></td></tr><tr><td id="clue12" aria-hidden="true">Place to skate</td><td><input aria-labelledby="clue12" autocomplete="off" maxlength="4"></td></tr><tr><td id="clue13" aria-hidden="true">Board game</td><td><input aria-labelledby="clue13" autocomplete="off" maxlength="4"></td></tr><tr><td id="clue14" aria-hidden="true">Part of a ladder</td><td><input aria-labelledby="clue14" autocomplete="off" maxlength="4"></td></tr><tr><td id="clue15" aria-hidden="true">Smallest in a litter</td><td><input aria-labelledby="clue15" autocomplete="off" maxlength="4"></td></tr><tr><td id="clue16" aria-hidden="true">Relieve pressure</td><td><input aria-labelledby="clue16" autocomplete="off" maxlength="4"></td></tr><tr><td id="clue17" aria-hidden="true">Sleeveless garment</td><td><input aria-labelledby="clue17" autocomplete="off" maxlength="4"></td></tr></table><table class="copy-only"><tr><td><i>The Simpsons</i> character</td></tr><tr><td><i>Sesame Street</i> character</td></tr><tr><td>Most excellent</td></tr><tr><td>Storage device</td></tr><tr><td>Type of bird</td></tr><tr><td>Time of day</td></tr><tr><td>Price to travel</td></tr><tr><td>Break wind</td></tr><tr><td>Zuko element</td></tr><tr><td>Broadway musical</td></tr><tr><td>Piece of jewelry</td></tr><tr><td>Place to skate</td></tr><tr><td>Board game</td></tr><tr><td>Part of a ladder</td></tr><tr><td>Smallest in a litter</td></tr><tr><td>Relieve pressure</td></tr><tr><td>Sleeveless garment</td></tr></table><table class="inputtable" role="region" aria-label="Word Ladder"><tr><td class="toprow">DUCT</td></tr><tr><td class="inputrow"><input class="no-copy" autocomplete="off" maxlength="4"></td></tr><tr><td class="inputrow"><input class="no-copy" autocomplete="off" maxlength="4"></td></tr><tr><td class="inputrow"><input class="no-copy first-letter" autocomplete="off" maxlength="4"></td><td class="copy-only">1st letter</td></tr><tr><td class="inputrow"><input class="no-copy" autocomplete="off" maxlength="4"></td></tr><tr><td class="inputrow"><input class="no-copy" autocomplete="off" maxlength="4"></td></tr><tr><td class="inputrow"><input class="no-copy second-letter" autocomplete="off" maxlength="4"></td><td class="copy-only">2nd letter</td></tr><tr><td class="inputrow"><input class="no-copy" autocomplete="off" maxlength="4"></td></tr><tr><td class="inputrow"><input class="no-copy" autocomplete="off" maxlength="4"></td></tr><tr><td class="inputrow"><input class="no-copy" autocomplete="off" maxlength="4"></td></tr><tr><td class="inputrow"><input class="no-copy" autocomplete="off" maxlength="4"></td></tr><tr><td class="inputrow"><input class="no-copy" autocomplete="off" maxlength="4"></td></tr><tr><td class="inputrow"><input class="no-copy" autocomplete="off" maxlength="4"></td></tr><tr><td class="inputrow"><input class="no-copy third-letter" autocomplete="off" maxlength="4"></td><td class="copy-only">3rd letter</td></tr><tr><td class="inputrow"><input class="no-copy" autocomplete="off" maxlength="4"></td></tr><tr><td class="inputrow"><input class="no-copy" autocomplete="off" maxlength="4"></td></tr><tr><td class="inputrow"><input class="no-copy fourth-letter" autocomplete="off" maxlength="4"></td><td class="copy-only">4th letter</td></tr><tr><td class="inputrow"><input class="no-copy" autocomplete="off" maxlength="4"></td></tr><tr><td class="bottomrow">FILE</td></tr></table></div></div></div></body>
+<p><button class="btn clipboard-button"></button></p>
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

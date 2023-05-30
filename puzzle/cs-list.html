@@ -1,0 +1,310 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Log In Security Testing</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+<a href="../round/computer-science.html" class="btn">Computer Science</a>
+
+
+
+
+
+<a href="../post-hunt-solve/cs-list.html" class="btn">Call in an answer</a>
+
+
+<a href="../solution/cs-list.html" class="btn solution-button">View solution</a>
+<a href="../stats/cs-list.html" class="btn">Stats</a>
+
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<h1 class="puzzle-title">
+    Log In Security Testing
+    
+</h1>
+
+<main class="puzzle-main clipboard-container">
+    
+
+    
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  .puzzle-main {
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  .puzzle-main table td a span {
+    color: rgb(34, 34, 34);
+    font-weight: normal;
+    font-size: 1.75rem;
+    text-decoration: none;
+  }
+
+  /* In Chrome, this must go on a <div>, not a <table>, to work. */
+  /* In Firefox, this must go on a <table>, not a <div>, to work. */
+  /* tl;dr - Use it on both containing div and inner table. */
+  .no-break {
+    break-inside: avoid;
+  }
+
+  .puzzle-main .section-name {
+    font-weight: bold;
+    text-decoration-line: underline;
+    margin: 0px;
+  }
+
+  @media only print {
+    ol {
+      margin-left: 20px;
+    }
+  }
+</style>
+
+<p>puzzle LIST(input):</p>
+
+<div class="centerer no-break">
+  <table class="no-break">
+    <tr><td>RECOMMEND</td><td>BASEBALL</td><td>CATCHY</td><td>AGENDA</td><td>YOKE</td></tr>
+    <tr><td>URANIUM</td><td>WOK</td><td>HOWEVER</td><td>COBRAS</td><td>GEESE</td></tr>
+    <tr><td>TEXAS</td><td>DEATHLY</td><td><b><i>input</i></b></td><td>CONFUSE</td><td>GORBACHEV</td></tr>
+    <tr><td>WOMEN</td><td><a href="cs-empty.html">EMPTY(<span>cyst</span>)</a></td><td>WORD</td><td>CROP</td><td>SINUOUS</td></tr>
+    <tr><td><a href="cs-logic.html">LOGIC(<span>sloan</span>)</a></td><td><a href="cs-clues.html">CLUES(<span>firm</span>)</a></td><td>METER</td><td>OFFICE</td><td>EARNS</tr>
+  </table>
+</div>
+
+<p class="section-name">Notes</p>
+<ol style="list-style: upper-latin inside">
+  <li>All instructions cause a change to the grid of words.</li>
+  <li>Each instruction leaves the grid composed of English words.</li>
+  <ol style="list-style: lower-latin inside">
+    <li>Unless clearly implied, no change will result in a proper noun in the grid. Proper nouns are still considered words
+      for all purposes.</li>
+  </ol>
+  <li>Unless stated otherwise, instructions refer to the single grid word which meets the criteria.</li>
+  <li>The word interior refers to anything that isn&rsquo;t the first or last letter.</li>
+  <li>When center applies in a way that isn&rsquo;t technically possible, choose one of the two closest possibilities which forms 
+    a valid word, e.g. the two letters center of SWEAT are either WE or EA, so choose WE.</li>
+</ol>
+
+<p class="section-name">Instructions</p>
+<ol>
+  <li>
+    <div>Let foo & bar be 2 different words in the grid.</div>
+    <div>Let foo2 & bar2 be homophones of foo & bar respectively.</div>
+    <div>foo2 & bar2 have the same silent letter.</div>
+    <div>Let quz be this silent letter.</div>
+    <div>Replace foo with foo2 & bar with bar2.</div>
+  </li>
+  <li>
+    <div>Let foo be the word that appears in a Harry Potter novel title.</div>
+    <div>Replace foo with the word that comes after foo in the title.</div>
+  </li>
+  <li>
+    <div>Let foo be the word meaning help in the grid.</div>
+    <div>foo contains the same letter 3 times.</div>
+    <div>let bar be this letter.</div>
+    <div>Move bar to the front of 3 of the 4 orthogonally adjacent squares.</div>
+    <div>Now that foo is half its original length, move the 1st letter from the 4th of the orthogonally adjacent
+      squares to the front of foo.</div>
+    <div>(If done correctly, the letters in the grid have not changed, simply rearranged to form new words.)</div>
+  </li>
+  <li>
+    <div>Let foo be the word fully contained in bar.</div>
+    <div>Bar is another word in its column.</div>
+    <div>The letters of foo are in order but not necessarily consecutive.</div>
+    <div>Swap foo and bar.</div>
+  </li>
+  <li>
+    <div>Let foo be the word which is equal to the 1st letters of all the words in its column.</div>
+    <div>Let bar be the word which is an anagram of the 1st letters of the words in foo&rsquo;s row other than foo.</div>
+    <div>Replace foo with bar.</div>
+  </li>
+  <li>
+    <div>Let foo be the word which is the name of a few movies.</div>
+    <div>Let bar be the 2nd person to portray the title role.</div>
+    <div>Replace foo with bar&rsquo;s surname.</div>
+  </li>
+  <li>
+    <div>Let bar be the nickname (used for athletic teams) of the [largest] University of foo.</div>
+    <div>foo is a word in the grid, bar is not.</div>
+    <div>Replace foo with bar.</div>
+  </li>
+  <li>
+    <div>Let foo be the word in the center of the grid.</div>
+    <div>Let bar be the word in the same row which starts with the same letter as foo.</div>
+    <div>Let N be the number of letters of foo.</div>
+    <div>Replace the 1st letter of foo with the Nth letter of bar.</div>
+    <div>Replace bar with BAYOU.</div>
+  </li>
+  <li>
+    <div>Swap the locations of every pair of words which end in the same trigram.</div>
+  </li>
+  <li>
+    <div>Let foo be a word that begins with a 3-letter question, bar.</div>
+    <div>Move bar to the end of a different word in the grid.</div>
+  </li>
+  <li>
+    <div>Let foo be the word from the previous step that became shorter.</div>
+    <div>Replace foo with the word BOTH.</div>
+  </li>
+  <li>
+    <div>Let foo be a word in the 2nd row with one O.</div>
+    <div>Change the O to OO in foo.</div>
+  </li>
+  <li>
+    <div>For each major world leader's surname, replace it with their first name.</div>
+  </li>
+  <li>
+    <div>For each word foo with a repeated consecutive letter (e.g. ZZ), let bar be the letter repeated (e.g. Z).</div>
+    <div>If there is a word, baz, which contains bar, and baz is in the same row as foo, swap locations of foo and baz.</div>
+  </li>
+  <li>
+    <div>Remove all the BA bigrams in the 5th column.</div>
+  </li>
+  <li>
+    <div>Let foo & bar be 2 particular words in the grid.</div>
+    <div>When foo & bar are combined, they mean mercenary.</div>
+    <div>Swap foo and bar.</div>
+  </li>
+  <li>
+    <div>Let foo be a word in the 3rd column with a 3-letter word, bar, found backward in the center.</div>
+    <div>foo is 5 letters in length or longer.</div>
+    <div>Replace foo with bar.</div>
+  </li>
+  <li>
+    <div>For each 6-letter word, remove its second half.</div>
+  </li>
+  <li>
+    <div>Let foo be the word that is a homophone of a letter (bar).</div>
+    <div>Take all words orthogonally adjacent to foo which contain bar, and anagram them without any bars to form a new word.</div>
+    <div>Replace foo with this new word.</div>
+  </li>
+  <li>
+    <div>Let foo be the word in the top left corner.</div>
+    <div>Let bar be the word which starts with the interior letters of foo.</div>
+    <div>Replace bar with the first/last of foo.</div>
+  </li>
+  <li>
+    <div>Insert quz in the interior of a word in the middle column.</div>
+    <div>This new word is the <b><i>output</i></b>.</div>
+  </li>
+</ol>
+
+<button class="btn clipboard-button"></button>
+
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

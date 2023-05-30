@@ -1,0 +1,1083 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Sociology</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+    
+</head>
+<body>
+    
+<style>
+@media screen {
+    body {
+        background-color: black;
+        overflow-x: hidden;
+    }
+
+    .sociology-background-container {
+        width: 100vw;
+        height: 100vw;
+        position: absolute;
+        margin-top: 0vw;
+    }
+
+    .sociology-img {
+        width: 100%;
+        position: absolute;
+    }
+
+    .round-flavor {
+        text-align: center;
+        background-color: #fffa;
+        border-radius: 1vw;
+        display: flex;
+        flex-direction: column;
+        left: 0;
+        margin: auto;
+        padding: 0.5vw 2vw;
+        position: absolute;
+        right: 0;
+        top: 13%;
+        width: max-content;
+        font-style: italic;
+    }
+
+    .round-logo {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 30%;
+        top: 3%;
+    }
+
+    .round-flavor p {
+        margin: 0;
+        font-size: 1vw;
+        line-height: 1.4vw;
+    }
+
+    .content {
+        background: #0e0e0eaa;
+        padding: 1em;
+        border-radius: 1em;
+        box-shadow: 0 0 1em white;
+        margin-top: 100%;
+        margin-bottom: 2em;
+    }
+
+    .content h1 {
+        display: none;
+    }
+
+    .fish-image {
+        position: absolute;
+        transition: filter 0.3s;
+    }
+
+    .speech-bubble {    
+        background: white;
+        border-radius: 2vw;
+        display: flex;
+        flex-direction: column;
+        font-size: 1vw;
+        padding: 0.7vw 1.1vw;
+        position: absolute;
+        z-index: 5;
+    }
+
+    .bubble-tail {
+      border-left: 2vw solid transparent;
+      border-right: 2vw solid transparent;
+      border-top: 2vw solid white;
+      height: 0; 
+      position: absolute;
+      width: 0; 
+    }
+
+    .fish-image:hover {
+        filter: drop-shadow(3px 3px 1px white) drop-shadow(-3px -3px 1px white)
+    }
+
+    .fish-image.hammerhead {
+        height: 11%;
+        top: 14%;
+        left: 4%;
+    }
+
+    .hammerhead-tail {
+        top: 19%;
+        left: 19%;
+    }
+
+    .hammerhead-list {
+        top: 19%;
+        left: 21%;
+    }
+
+    .fish-image.salmon {
+        height: 8.5%;
+        top: 24%;
+        right: 9%;
+    }
+
+    .salmon-tail {
+        top: 29.5%;
+        right: 21%;
+    }
+
+    .salmon-list {
+        top: 29.5%;
+        right: 23%;
+    }
+
+    .fish-image.starfish {
+        height: 11%;
+        top: 37%;
+        left: 19%;
+    }
+
+    .starfish-tail {
+        top: 42%;
+        left: 28%;
+    }
+
+    .starfish-list {
+        top: 40.2%;
+        left: 30%;
+    }
+
+    .fish-image.octopus {
+        height: 12%;
+        top: 52%;
+        right: 16%;
+    }
+
+    .octopus-tail {
+        top: 55%;
+        right: 29%;
+    }
+
+    .octopus-list {
+        top: 51%;
+        right: 31%;
+    }
+
+    .fish-image.tuna {
+        height: 9%;
+        top: 62%;
+        left: 9%;
+    }
+
+    .tuna-tail {
+        top: 67%;
+        left: 20%;
+    }
+
+    .tuna-list {
+        top: 62%;
+        left: 22%;
+    }
+
+    .bullies {    
+        filter: drop-shadow(0 0 15px black);
+        left: 34%;
+        position: absolute;
+        top: 75%;
+        transition: filter 0.3s;
+        width: 28%;
+    }
+
+    .bullies:hover {
+        cursor: pointer;
+        filter: drop-shadow(0 0 15px red);
+    }
+
+    .puzzlink:hover:after {    
+        background-color: #111;
+        border-radius: 0.5rem;
+        color: white;
+        content: "Sociology Meta";
+        filter: drop-shadow(0 0 1rem red);
+        left: 0;
+        padding: 0.2rem 1rem;
+        position: absolute;
+        right: 3%;
+        text-align: center;
+        top: 88.5%;
+        width: 20rem;
+        margin: auto;
+        z-index: 100;
+    }
+
+    .speech-bubble p {
+        font-weight: 600;
+        line-height: 1.1vw;
+        margin: 0;
+    }
+
+    .socio-app-icon {
+        width: 6vw;
+    }
+
+    .socio-puzzle-list-container {
+        display: flex;
+        flex-direction:row;
+        margin-top: 0.5vw;
+    }
+
+    .socio-puzzle-list-container > a {
+        height: 6vw;
+    }
+
+    .socio-puzzle-list {
+        list-style-type: circle;
+        margin: 0;
+    }
+
+    .socio-puzzle-list .fish-puzzle-row {
+        align-items: center;
+        display: flex;
+        margin: 0 1.1vw;
+        line-height: 1.5vw;
+    }
+
+    .socio-puzzle-list a {
+        color: #384ba0;
+        font-family: 'myriad-pro-semi-condensed';
+        min-width: 15vw;
+    }
+
+    .socio-puzzle-list a:hover {
+        color: #3b8fc4;
+    }
+
+    .socio-puzzle-list .puzzle-answer {
+        align-items: center;
+        color: green;
+        font-family: monospace;
+    }
+
+    .puzzles-answer > :first-child {
+        border-color: #bbb;
+    }
+
+    .puzzles-list a:hover {
+        color: var(--link-hover-color);
+    }
+
+    .puzzles-list .puzzles-new:hover {
+        color: black;
+        background-color: var(--btn-hover-color);
+    }
+
+    .puzzles-list a,  h3, .puzzles-answer {
+        color: #ddd;
+        border-color: #ccc;
+    }
+
+    .puzzle-row {
+        color: #ddd;
+        transition: opacity 0.3s;
+    }
+
+    .top-right-actions {
+        color: #ddd;
+    }
+}
+</style>
+
+<div class="sociology-background-container">
+
+    
+    <img class="sociology-img hide-if-unlocked" data-puzzle-id="54" src="../static/puzzle_resources/sociology/sociology_bg.png"></img>
+    <img class="sociology-img hide-if-locked" data-puzzle-id="54" src="../static/puzzle_resources/sociology/sociology_bgm.png"></img>
+    
+
+    <img class="round-logo" src="../static/puzzle_resources/sociology/sociology_logo.png"></img>
+    <div class="round-flavor">
+        <p>Your 5 new school friends have shared their social media profiles with you to help fight the School Bullies!</p>
+        <p>Each puzzle will use content from the profiles of two friends.</p>
+    </div>
+    <a href="../sociology/hammerhead.html">
+        <img class="hammerhead fish-image"
+             src="../static/puzzle_resources/hammerhead/hammerhead.webp">
+    </a>
+    <div class="bubble-tail hammerhead-tail"></div>
+    <div class="speech-bubble hammerhead-list">
+        <p>Hi, I'm Hammerhead!</p>
+        <p>Follow me on Instaclam ✨</p>
+        <div class="socio-puzzle-list-container">
+            <a href="../sociology/hammerhead.html">
+                <img class="socio-app-icon" 
+                     src="../static/puzzle_resources/hammerhead/instaclam.webp">
+            </a>
+            <ul class="socio-puzzle-list" id="hammerhead-list">
+            </ul>
+        </div>
+    </div>
+    <a href="../sociology/octopus.html">
+        <img class="octopus fish-image" 
+             src="../static/puzzle_resources/octopus/octopus.webp">
+    </a>
+    <div class="bubble-tail octopus-tail"></div>
+    <div class="speech-bubble octopus-list">
+        <p>Hello! I'm Octopus!</p>
+        <p>Reblog my Chumblr posts!</p>
+        <div class="socio-puzzle-list-container">
+            <a href="../sociology/octopus.html">
+                <img class="socio-app-icon" 
+                     src="../static/puzzle_resources/octopus/chumblr.webp">
+             </a>
+            <ul class="socio-puzzle-list" id="octopus-list">
+            </ul>
+        </div>
+    </div>
+    <a href="../sociology/salmon.html">
+        <img class="salmon fish-image" 
+             src="../static/puzzle_resources/salmon/salmon.webp">
+    </a>
+    <div class="bubble-tail salmon-tail"></div>
+    <div class="speech-bubble salmon-list">
+        <p>Hiya, I'm Salmon~</p>
+        <p>Match with me on PokeCupid ♡</p>
+        <div class="socio-puzzle-list-container">
+            <a href="../sociology/salmon.html">
+                <img class="socio-app-icon" 
+                     src="../static/puzzle_resources/salmon/pokecupid.webp">
+             </a>
+            <ul class="socio-puzzle-list" id="salmon-list">
+            </ul>
+        </div>
+    </div>
+    <a href="../sociology/starfish.html">
+        <img class="starfish fish-image" 
+             src="../static/puzzle_resources/starfish/starfish.webp">
+        </a>
+    <div class="bubble-tail starfish-tail"></div>
+    <div class="speech-bubble starfish-list">
+        <p>Yo, I'm Starfish.</p>
+        <p>Connect with me on ReeledIn.</p>
+        <div class="socio-puzzle-list-container">
+            <a href="../sociology/starfish.html">
+                <img class="socio-app-icon" 
+                     src="../static/puzzle_resources/starfish/reeledin.webp">
+             </a>
+            <ul class="socio-puzzle-list" id="starfish-list">
+            </ul>
+        </div>
+    </div>
+    <a href="../sociology/tuna.html">
+        <img class="tuna fish-image" 
+             src="../static/puzzle_resources/tuna/tuna.webp">
+    </a>
+    <div class="bubble-tail tuna-tail"></div>
+    <div class="speech-bubble tuna-list">
+        <p>Heyo, I'm Tuna!</p>
+        <p>Check out my Codify playlist 🎵</p>
+        <div class="socio-puzzle-list-container">
+            <a href="../sociology/tuna.html">
+                <img class="socio-app-icon" 
+                     src="../static/puzzle_resources/tuna/codify.webp">
+             </a>
+            <ul class="socio-puzzle-list" id="tuna-list">
+            </ul>
+        </div>
+    </div>
+
+    
+        
+        <a class="puzzlink puzzle-meta hide-if-locked" data-puzzle-id="54" href="../puzzle/sociology-meta.html">
+            <img class="bullies" src="../static/puzzle_resources/sociology/school_bullies.png">
+        </a>
+        
+    
+</div>
+
+<script>
+const puzzMap = new Map();
+
+puzzMap.set('cryptosociology', {title: 'Cryptosociology', slug: 'cryptosociology'});
+if (isSolved(145)) { puzzMap.get('cryptosociology').answers = 'THE LISTENER'; }
+
+puzzMap.set('differences-in-emotional-expression', {title: 'Differences in Emotional Expression', slug: 'differences-in-emotional-expression'});
+if (isSolved(146)) { puzzMap.get('differences-in-emotional-expression').answers = 'TALK BACK'; }
+
+puzzMap.set('the-middle-class', {title: 'The Middle Class', slug: 'the-middle-class'});
+if (isSolved(87)) { puzzMap.get('the-middle-class').answers = 'BUSINESS'; }
+
+puzzMap.set('recognition-on-a-first-name-basis', {title: 'Recognition on a First-Name Basis', slug: 'recognition-on-a-first-name-basis'});
+if (isSolved(131)) { puzzMap.get('recognition-on-a-first-name-basis').answers = 'ARRIVAL'; }
+
+puzzMap.set('royal-society', {title: 'Royal Society', slug: 'royal-society'});
+if (isSolved(58)) { puzzMap.get('royal-society').answers = 'SHIITAKE'; }
+
+puzzMap.set('the-social-ladder-through-the-ages', {title: 'The Social Ladder through the Ages', slug: 'the-social-ladder-through-the-ages'});
+if (isSolved(128)) { puzzMap.get('the-social-ladder-through-the-ages').answers = 'EARLY CAMBRIAN'; }
+
+puzzMap.set('social-pathology', {title: 'Social Pathology', slug: 'social-pathology'});
+if (isSolved(130)) { puzzMap.get('social-pathology').answers = 'DEEP END'; }
+
+puzzMap.set('socio-logical-inquiry-into-commerce', {title: 'Socio-logical Inquiry Into Commerce', slug: 'socio-logical-inquiry-into-commerce'});
+if (isSolved(136)) { puzzMap.get('socio-logical-inquiry-into-commerce').answers = 'WILD ORCHIDS'; }
+
+puzzMap.set('sociology-of-education', {title: 'Sociology of Education', slug: 'sociology-of-education'});
+if (isSolved(129)) { puzzMap.get('sociology-of-education').answers = 'YOUNG AT HEART'; }
+
+puzzMap.set('transformative-social-change', {title: 'Transformative Social Change', slug: 'transformative-social-change'});
+if (isSolved(133)) { puzzMap.get('transformative-social-change').answers = 'WRACK ZONE'; }
+
+puzzMap.set('sociology-meta', {title: 'Sociology Meta', slug: 'sociology-meta'});
+if (isSolved(54)) { puzzMap.get('sociology-meta').answers = 'CLIQUE BAIT'; }
+
+
+const fishMap = new Map([
+    ['hammerhead', [
+            'differences-in-emotional-expression',
+            'the-social-ladder-through-the-ages',
+            'social-pathology',
+            'sociology-of-education',
+        ].map((slug) => puzzMap.get(slug))], 
+    ['octopus', [
+            'royal-society',
+            'the-social-ladder-through-the-ages',
+            'socio-logical-inquiry-into-commerce',
+            'transformative-social-change',
+        ].map((slug) => puzzMap.get(slug))],
+    ['salmon', [
+            'cryptosociology',
+            'differences-in-emotional-expression',
+            'the-middle-class',
+            'transformative-social-change',
+        ].map((slug) => puzzMap.get(slug))],
+    ['starfish', [
+            'cryptosociology',
+            'recognition-on-a-first-name-basis',
+            'socio-logical-inquiry-into-commerce',
+            'sociology-of-education',
+        ].map((slug) => puzzMap.get(slug))],
+    ['tuna', [
+            'the-middle-class',
+            'recognition-on-a-first-name-basis',
+            'royal-society',
+            'social-pathology',
+        ].map((slug) => puzzMap.get(slug))]
+]);
+
+function getTemplate(puzzle) {
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = 
+    `<li class="fish-puzzle-row">
+        <a href="../puzzle/${puzzle.slug}.html">${puzzle.title}</a>
+        <p class="puzzle-answer">${puzzle.answers ?? ''}</p>
+    </li>`;
+    return tempDiv.firstElementChild;
+}
+
+for (const [fish, puzzles] of fishMap) {
+    const list = document.getElementById(`${fish}-list`);
+    for (const puzzle of puzzles) {
+        list.append(getTemplate(puzzle));
+    }
+}
+</script>
+
+
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"></div>
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="../departments.html" class="btn">All departments</a>
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+
+<h1>Sociology</h1>
+
+
+
+
+
+
+<style>
+.header-container {
+    width: 100%;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-header.toggled,
+.table-header:hover {
+    filter: drop-shadow(0 0 4px #fff)
+}
+
+.table-header {
+    cursor: pointer;
+    transition: filter 0.3s;
+}
+
+</style>
+
+<div class="header-container">
+    <img class="table-header" 
+         id="hammerhead-header"
+         src="../static/puzzle_resources/hammerhead/hammerhead.webp"
+         style="height: 6em">
+    <img class="table-header" 
+         id="salmon-header" 
+         src="../static/puzzle_resources/salmon/salmon.webp"
+         style="height: 6em">
+    <img class="table-header" 
+         id="starfish-header" 
+         src="../static/puzzle_resources/starfish/starfish.webp"
+         style="width: 8em">
+    <img class="table-header" 
+         id="octopus-header" 
+         src="../static/puzzle_resources/octopus/octopus.webp"
+         style="height: 7em">
+    <img class="table-header" 
+         id="tuna-header" 
+         src="../static/puzzle_resources/tuna/tuna.webp"
+         style="height: 6em">
+</div>
+
+<script>
+
+const puzzles = document.getElementsByClassName('puzzle-row');
+const headers = document.getElementsByClassName('table-header');
+let highlightFish = undefined;
+let toggle = false;
+
+setTimeout(() => {
+    for (const [fish, puzzles] of fishMap) {
+        const puzzList = [];
+        for (const puzzle of puzzles) {
+            const puzzleRow = document.getElementById(`${puzzle.slug}-row`);
+            puzzleRow.classList.add(fish);
+        }
+
+        const header = document.getElementById(`${fish}-header`);
+        header.addEventListener('click',
+            (event) => toggleHeader(header, fish), false);
+        header.addEventListener('mouseenter',
+            (event) => {
+                if (!toggle) {
+                    highlightFish = fish;
+                    updateHighlight();
+                }
+            }, false);
+        header.addEventListener('mouseleave',
+            (event) => {
+                if (!toggle) {
+                    highlightFish = undefined;
+                    updateHighlight();
+                }
+            }, false);
+    }
+}, 0);
+
+function toggleHeader(header, fish) {
+    for (const fishHeader of headers) fishHeader.classList.remove('toggled');
+
+    if (fish === highlightFish) {
+        toggle = !toggle;
+    } else {
+        toggle = true;
+    }
+    highlightFish = toggle ? fish : undefined;
+    if (toggle) header.classList.add('toggled');
+    
+    updateHighlight();
+}
+
+function updateHighlight() {
+    if (highlightFish === undefined) {
+        for (const puzzle of puzzles) {
+            puzzle.style.opacity = '100%';
+        }
+    } else {
+        for (const puzzle of puzzles) {
+            const isRelevant = puzzle.classList.contains(highlightFish);
+            puzzle.style.opacity = isRelevant ? '100%' : '5%';
+        }
+    }
+}
+
+</script>
+
+
+<div class="puzzles-list-container">
+    <table class="puzzles-list">
+    
+<tbody class="puzzles-section">
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="145" id="cryptosociology-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/cryptosociology.html">
+                
+                
+                Cryptosociology
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>28</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/cryptosociology.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="145">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="146" id="differences-in-emotional-expression-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/differences-in-emotional-expression.html">
+                
+                
+                Differences in Emotional Expression
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>25</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/differences-in-emotional-expression.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="146">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="87" id="the-middle-class-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/the-middle-class.html">
+                
+                
+                The Middle Class
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>15</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/the-middle-class.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="87">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="131" id="recognition-on-a-first-name-basis-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/recognition-on-a-first-name-basis.html">
+                
+                
+                Recognition on a First-Name Basis
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>23</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/recognition-on-a-first-name-basis.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="131">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="58" id="royal-society-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/royal-society.html">
+                
+                
+                Royal Society
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>18</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/royal-society.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="58">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="128" id="the-social-ladder-through-the-ages-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/the-social-ladder-through-the-ages.html">
+                
+                
+                The Social Ladder through the Ages
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>36</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/the-social-ladder-through-the-ages.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="128">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="130" id="social-pathology-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/social-pathology.html">
+                
+                
+                Social Pathology
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>19</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/social-pathology.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="130">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="136" id="socio-logical-inquiry-into-commerce-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/socio-logical-inquiry-into-commerce.html">
+                
+                
+                Socio-logical Inquiry Into Commerce
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>34</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/socio-logical-inquiry-into-commerce.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="136">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="129" id="sociology-of-education-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/sociology-of-education.html">
+                
+                
+                Sociology of Education
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>32</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/sociology-of-education.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="129">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="133" id="transformative-social-change-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/transformative-social-change.html">
+                
+                
+                Transformative Social Change
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>19</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/transformative-social-change.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="133">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="54" id="sociology-meta-row">
+        <td>
+            
+        </td>
+        <td>
+            <a href="../puzzle/sociology-meta.html">
+                
+                <div class="puzzles-new">meta</div>
+                
+                
+                Sociology Meta
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>17</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/sociology-meta.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="54">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+
+</tbody>
+
+    </table>
+</div>
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

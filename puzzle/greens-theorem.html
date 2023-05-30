@@ -1,0 +1,587 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>MATH 7 Practical Applications of Green&#x27;s Theorem</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+<a href="../round/math.html" class="btn">Mathematics</a>
+
+
+
+
+
+<a href="../post-hunt-solve/greens-theorem.html" class="btn">Call in an answer</a>
+
+
+<a href="../solution/greens-theorem.html" class="btn solution-button">View solution</a>
+<a href="../stats/greens-theorem.html" class="btn">Stats</a>
+
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<h1 class="puzzle-title">
+    MATH 7 Practical Applications of Green&#x27;s Theorem
+    
+</h1>
+
+<main class="puzzle-main clipboard-container">
+    
+
+    
+    
+
+<style>
+  div.section-name {
+    font-weight: bold;
+  }
+
+  table.grid {
+    width: auto;
+  }
+
+  table.grid td {
+    background-clip: padding-box;
+    width: 2em;
+    height: 2em;
+    border: none;
+    position: relative;
+    padding: 0px;
+  }
+
+  table.grid td.yellow {
+    box-shadow: inset 50px 50px rgb(200, 182, 83);
+    background-color: rgb(200, 182, 83);
+  }
+
+  table.grid td.gray {
+    box-shadow: inset 50px 50px rgb(120, 124, 127);
+    background-color: rgb(120, 124, 127);
+  }
+    
+  @media (prefers-color-scheme: dark) {
+    table.grid td.yellow {
+      box-shadow: inset 50px 50px rgb(181, 159, 59);
+      background-color: rgb(181, 159, 59);
+    }
+
+    table.grid td.gray {
+      box-shadow: inset 50px 50px rgb(58, 58, 60);
+      background-color: rgb(58, 58, 60);
+    }
+  }
+
+  /* In Chrome, this must go on a <div>, not a <table>, to work. */
+  /* In Firefox, this must go on a <table>, not a <div>, to work. */
+  /* tl;dr - Use it on both containing div and inner table. */
+  .no-break {
+    break-inside: avoid;
+  }
+</style>
+
+<p class="flavor" data-copy-only-styles="text-align: initial">By now, word&rsquo;ll have gotten out about this course&mdash;whatever your initial impression might have been, it ain&rsquo;t easy...</p>
+
+<div class="section-name">A.</div>
+<div>Anthropocene or 00:00:00 January 1, 1970, e.g.</div>
+<div>Like Arts & Literature wedges, originally</div>
+<div>Pellucid</div>
+<div>Humors, with &ldquo;out&rdquo;</div>
+<div>Arête, or Ruffles feature</div><p></p>
+
+<div class="section-name">B.</div>
+<div>Spoken line directed towards the audience</div>
+<div>Overly vain</div>
+<div>Roil, or make butter</div>
+<div>Tiny folklore creature and lawn sculpture subject</div>
+<div>Non-Microsoft music players</div><p></p>
+
+<div class="section-name">C.</div>
+<div>Insignificant landmass, or pancreas region</div>
+<div>Not suitable, as for a position</div>
+<div>Ecclesiastical council</div>
+<div>German trepidation</div>
+<div>Record material</div><p></p>
+
+<div class="section-name">D.</div>
+<div>Eye color that&rsquo;s also a tree</div>
+<div>Every so ___</div>
+<div>Ninety-degree</div>
+<div>Spot between shin and foot</div>
+<div>Absolute peak, or indivisible</div><p></p>
+
+<div class="section-name">E.</div>
+<div>Nero&rsquo;s crime against Rome, allegedly</div>
+<div>Distances that are about 800ft longer at sea</div>
+<div>ROT-13 or Caesar cipher, e.g., but not Atbash</div>
+<div>Extremely valuable brick, sometimes</div>
+<div>Substance that helped preserve DNA in Jurassic Park</div><p></p>
+
+<div class="section-name">F.</div>
+<div>Cheese, yogurt, et al.</div>
+<div>Opposite of acme</div>
+<div>Reputation or picture</div>
+<div>Enduring trust, often religious</div>
+<div>Firefly emission</div><p></p>
+
+<div class="section-name">G.</div>
+<div>Of audio</div>
+<div>Roary&rsquo;s NFL team</div>
+<div>Above&rsquo;s opposite</div>
+<div>The Trammps&rsquo; genre</div>
+<div>Heartbeat</div><p></p>
+
+<div class="section-name">H.</div>
+<div>Results of brainstorming</div>
+<div>Exceeding, as violet or sound</div>
+<div>Ensurer of security</div>
+<div>Fingered appendages</div>
+<div>Otherworldly apparition</div><p></p>
+
+<div class="section-name">I.</div>
+<div>Unlikely to break the bank</div>
+<div>Relative of a shovel</div>
+<div>Participated in a modeling session</div>
+<div>In a gray-visaged state</div>
+<div>Colors that turn yellow into green</div><p></p>
+
+<div class="no-break">
+  <table class="grid no-break">
+    <tr>
+      <td>A.</td><td></td><td></td><td></td><td></td><td></td>
+      <td>B.</td><td></td><td></td><td></td><td></td><td></td>
+      <td>C.</td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="yellow" style="border-top: 1px solid black; border-left: 1px solid black"></td>
+      <td class="gray" style="border-top: 1px solid black"></td>
+      <td class="gray" style="border-top: 1px solid black"></td>
+      <td class="gray" style="border-top: 1px solid black"></td>
+      <td class="yellow" style="border-top: 1px solid black; border-right: 1px solid black"></td>
+      <td></td>
+      <td class="yellow" style="border-top: 1px solid black; border-left: 1px solid black"></td>
+      <td class="gray" style="border-top: 1px solid black"></td>
+      <td class="gray" style="border-top: 1px solid black"></td>
+      <td class="gray" style="border-top: 1px solid black"></td>
+      <td class="gray" style="border-top: 1px solid black; border-right: 1px solid black"></td>
+      <td></td>
+      <td class="yellow" style="border-top: 1px solid black; border-left: 1px solid black"></td>
+      <td class="yellow" style="border-top: 1px solid black"></td>
+      <td class="gray" style="border-top: 1px solid black"></td>
+      <td class="gray" style="border-top: 1px solid black"></td>
+      <td class="gray" style="border-top: 1px solid black; border-right: 1px solid black"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="gray" style="border-left: 1px solid black"></td>
+      <td class="yellow"></td>
+      <td class="gray"></td>
+      <td class="gray"></td>
+      <td class="gray" style="border-right: 1px solid black"></td>
+      <td></td>
+      <td class="gray" style="border-left: 1px solid black"></td>
+      <td class="yellow"></td>
+      <td class="yellow"></td>
+      <td class="gray"></td>
+      <td class="gray" style="border-right: 1px solid black"></td>
+      <td></td>
+      <td class="gray" style="border-left: 1px solid black"></td>
+      <td class="gray"></td>
+      <td class="gray"></td>
+      <td class="yellow"></td>
+      <td class="gray" style="border-right: 1px solid black"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="gray" style="border-left: 1px solid black"></td>
+      <td class="gray"></td>
+      <td class="yellow"></td>
+      <td class="gray"></td>
+      <td class="yellow" style="border-right: 1px solid black"></td>
+      <td></td>
+      <td class="gray" style="border-left: 1px solid black"></td>
+      <td class="gray"></td>
+      <td class="gray"></td>
+      <td class="yellow"></td>
+      <td class="yellow" style="border-right: 1px solid black"></td>
+      <td></td>
+      <td class="yellow" style="border-left: 1px solid black"></td>
+      <td class="yellow"></td>
+      <td class="gray"></td>
+      <td class="yellow"></td>
+      <td class="gray" style="border-right: 1px solid black"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="yellow" style="border-left: 1px solid black"></td>
+      <td class="yellow"></td>
+      <td class="gray"></td>
+      <td class="yellow"></td>
+      <td class="yellow" style="border-right: 1px solid black"></td>
+      <td></td>
+      <td class="yellow" style="border-left: 1px solid black"></td>
+      <td class="yellow"></td>
+      <td class="yellow"></td>
+      <td class="gray"></td>
+      <td class="gray" style="border-right: 1px solid black"></td>
+      <td></td>
+      <td class="gray" style="border-left: 1px solid black"></td>
+      <td class="gray"></td>
+      <td class="gray"></td>
+      <td class="yellow"></td>
+      <td class="gray" style="border-right: 1px solid black"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="yellow" style="border-bottom: 1px solid black; border-left: 1px solid black"></td>
+      <td class="gray" style="border-bottom: 1px solid black"></td>
+      <td class="gray" style="border-bottom: 1px solid black"></td>
+      <td class="gray" style="border-bottom: 1px solid black"></td>
+      <td class="yellow" style="border-bottom: 1px solid black; border-right: 1px solid black"></td>
+      <td></td>
+      <td class="gray" style="border-bottom: 1px solid black; border-left: 1px solid black"></td>
+      <td class="gray" style="border-bottom: 1px solid black"></td>
+      <td class="yellow" style="border-bottom: 1px solid black"></td>
+      <td class="gray" style="border-bottom: 1px solid black"></td>
+      <td class="gray" style="border-bottom: 1px solid black; border-right: 1px solid black"></td>
+      <td></td>
+      <td class="gray" style="border-bottom: 1px solid black; border-left: 1px solid black"></td>
+      <td class="yellow" style="border-bottom: 1px solid black"></td>
+      <td class="gray" style="border-bottom: 1px solid black"></td>
+      <td class="yellow" style="border-bottom: 1px solid black"></td>
+      <td class="gray" style="border-bottom: 1px solid black; border-right: 1px solid black"></td>
+    </tr>
+  </table>
+</div>
+<div class="no-break">
+  <table class="grid no-break">
+    <tr>
+      <td>D.</td><td></td><td></td><td></td><td></td><td></td>
+      <td>E.</td><td></td><td></td><td></td><td></td><td></td>
+      <td>F.</td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="gray" style="border-top: 1px solid black; border-left: 1px solid black"></td>
+      <td class="yellow" style="border-top: 1px solid black"></td>
+      <td class="yellow" style="border-top: 1px solid black"></td>
+      <td class="gray" style="border-top: 1px solid black; "></td>
+      <td class="gray" style="border-top: 1px solid black; border-right: 1px solid black"></td>
+      <td></td>
+      <td class="gray" style="border-top: 1px solid black; border-left: 1px solid black"></td>
+      <td class="gray" style="border-top: 1px solid black"></td>
+      <td class="gray" style="border-top: 1px solid black"></td>
+      <td class="gray" style="border-top: 1px solid black"></td>
+      <td class="gray" style="border-top: 1px solid black; border-right: 1px solid black"></td>
+      <td></td>
+      <td class="gray" style="border-top: 1px solid black; border-left: 1px solid black"></td>
+      <td class="gray" style="border-top: 1px solid black"></td>
+      <td class="gray" style="border-top: 1px solid black"></td>
+      <td class="yellow" style="border-top: 1px solid black"></td>
+      <td class="gray" style="border-top: 1px solid black; border-right: 1px solid black"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="yellow" style="border-left: 1px solid black"></td>
+      <td class="gray"></td>
+      <td class="gray"></td>
+      <td class="gray"></td>
+      <td class="gray" style="border-right: 1px solid black"></td>
+      <td></td>
+      <td class="yellow" style="border-left: 1px solid black"></td>
+      <td class="gray"></td>
+      <td class="gray"></td>
+      <td class="gray"></td>
+      <td class="gray" style="border-right: 1px solid black"></td>
+      <td></td>
+      <td class="gray" style="border-left: 1px solid black"></td>
+      <td class="gray"></td>
+      <td class="gray"></td>
+      <td class="gray"></td>
+      <td class="yellow" style="border-right: 1px solid black"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="yellow" style="border-left: 1px solid black"></td>
+      <td class="gray"></td>
+      <td class="gray"></td>
+      <td class="gray"></td>
+      <td class="gray" style="border-right: 1px solid black"></td>
+      <td></td>
+      <td class="gray" style="border-left: 1px solid black"></td>
+      <td class="gray"></td>
+      <td class="gray"></td>
+      <td class="gray"></td>
+      <td class="gray" style="border-right: 1px solid black"></td>
+      <td></td>
+      <td class="gray" style="border-left: 1px solid black"></td>
+      <td class="gray"></td>
+      <td class="gray"></td>
+      <td class="yellow"></td>
+      <td class="gray" style="border-right: 1px solid black"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="yellow" style="border-left: 1px solid black"></td>
+      <td class="gray"></td>
+      <td class="yellow"></td>
+      <td class="gray"></td>
+      <td class="gray" style="border-right: 1px solid black"></td>
+      <td></td>
+      <td class="gray" style="border-left: 1px solid black"></td>
+      <td class="gray"></td>
+      <td class="yellow"></td>
+      <td class="gray"></td>
+      <td class="gray" style="border-right: 1px solid black"></td>
+      <td></td>
+      <td class="gray" style="border-left: 1px solid black"></td>
+      <td class="gray"></td>
+      <td class="gray"></td>
+      <td class="yellow"></td>
+      <td class="yellow" style="border-right: 1px solid black"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="gray" style="border-bottom: 1px solid black; border-left: 1px solid black"></td>
+      <td class="yellow" style="border-bottom: 1px solid black"></td>
+      <td class="gray" style="border-bottom: 1px solid black"></td>
+      <td class="gray" style="border-bottom: 1px solid black"></td>
+      <td class="gray" style="border-bottom: 1px solid black; border-right: 1px solid black"></td>
+      <td></td>
+      <td class="gray" style="border-bottom: 1px solid black; border-left: 1px solid black"></td>
+      <td class="yellow" style="border-bottom: 1px solid black"></td>
+      <td class="yellow" style="border-bottom: 1px solid black"></td>
+      <td class="gray" style="border-bottom: 1px solid black"></td>
+      <td class="gray" style="border-bottom: 1px solid black; border-right: 1px solid black"></td>
+      <td></td>
+      <td class="gray" style="border-bottom: 1px solid black; border-left: 1px solid black"></td>
+      <td class="gray" style="border-bottom: 1px solid black"></td>
+      <td class="yellow" style="border-bottom: 1px solid black"></td>
+      <td class="yellow" style="border-bottom: 1px solid black"></td>
+      <td class="yellow" style="border-bottom: 1px solid black; border-right: 1px solid black"></td>
+    </tr>
+  </table>
+</div>
+<div class="no-break">
+  <table class="grid no-break">
+    <tr>
+      <td>G.</td><td></td><td></td><td></td><td></td><td></td>
+      <td>H.</td><td></td><td></td><td></td><td></td><td></td>
+      <td>I.</td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="yellow" style="border-top: 1px solid black; border-left: 1px solid black"></td>
+      <td class="yellow" style="border-top: 1px solid black"></td>
+      <td class="gray" style="border-top: 1px solid black"></td>
+      <td class="gray" style="border-top: 1px solid black"></td>
+      <td class="yellow" style="border-top: 1px solid black; border-right: 1px solid black"></td>
+      <td></td>
+      <td class="yellow" style="border-top: 1px solid black; border-left: 1px solid black"></td>
+      <td class="gray" style="border-top: 1px solid black"></td>
+      <td class="gray" style="border-top: 1px solid black"></td>
+      <td class="yellow" style="border-top: 1px solid black"></td>
+      <td class="gray" style="border-top: 1px solid black; border-right: 1px solid black"></td>
+      <td></td>
+      <td class="gray" style="border-top: 1px solid black; border-left: 1px solid black"></td>
+      <td class="gray" style="border-top: 1px solid black"></td>
+      <td class="gray" style="border-top: 1px solid black"></td>
+      <td class="gray" style="border-top: 1px solid black"></td>
+      <td class="yellow" style="border-top: 1px solid black; border-right: 1px solid black"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="gray" style="border-left: 1px solid black"></td>
+      <td class="gray"></td>
+      <td class="yellow"></td>
+      <td class="gray"></td>
+      <td class="yellow" style="border-right: 1px solid black"></td>
+      <td></td>
+      <td class="yellow" style="border-left: 1px solid black"></td>
+      <td class="gray"></td>
+      <td class="yellow"></td>
+      <td class="gray"></td>
+      <td class="yellow" style="border-right: 1px solid black"></td>
+      <td></td>
+      <td class="yellow" style="border-left: 1px solid black"></td>
+      <td class="yellow"></td>
+      <td class="gray"></td>
+      <td class="yellow"></td>
+      <td class="gray" style="border-right: 1px solid black"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="gray" style="border-left: 1px solid black"></td>
+      <td class="gray"></td>
+      <td class="gray"></td>
+      <td class="yellow"></td>
+      <td class="gray" style="border-right: 1px solid black"></td>
+      <td></td>
+      <td class="gray" style="border-left: 1px solid black"></td>
+      <td class="yellow"></td>
+      <td class="yellow"></td>
+      <td class="gray"></td>
+      <td class="gray" style="border-right: 1px solid black"></td>
+      <td></td>
+      <td class="yellow" style="border-left: 1px solid black"></td>
+      <td class="gray"></td>
+      <td class="yellow"></td>
+      <td class="gray"></td>
+      <td class="yellow" style="border-right: 1px solid black"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="gray" style="border-left: 1px solid black"></td>
+      <td class="gray"></td>
+      <td class="yellow"></td>
+      <td class="yellow"></td>
+      <td class="yellow" style="border-right: 1px solid black"></td>
+      <td></td>
+      <td class="gray" style="border-left: 1px solid black"></td>
+      <td class="yellow"></td>
+      <td class="yellow"></td>
+      <td class="gray"></td>
+      <td class="gray" style="border-right: 1px solid black"></td>
+      <td></td>
+      <td class="gray" style="border-left: 1px solid black"></td>
+      <td class="yellow"></td>
+      <td class="gray"></td>
+      <td class="gray"></td>
+      <td class="gray" style="border-right: 1px solid black"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="gray" style="border-bottom: 1px solid black; border-left: 1px solid black"></td>
+      <td class="gray" style="border-bottom: 1px solid black"></td>
+      <td class="gray" style="border-bottom: 1px solid black"></td>
+      <td class="yellow" style="border-bottom: 1px solid black"></td>
+      <td class="gray" style="border-bottom: 1px solid black; border-right: 1px solid black"></td>
+      <td></td>
+      <td class="gray" style="border-bottom: 1px solid black; border-left: 1px solid black"></td>
+      <td class="gray" style="border-bottom: 1px solid black"></td>
+      <td class="gray" style="border-bottom: 1px solid black"></td>
+      <td class="gray" style="border-bottom: 1px solid black"></td>
+      <td class="yellow" style="border-bottom: 1px solid black; border-right: 1px solid black"></td>
+      <td></td>
+      <td class="gray" style="border-bottom: 1px solid black; border-left: 1px solid black"></td>
+      <td class="gray" style="border-bottom: 1px solid black"></td>
+      <td class="gray" style="border-bottom: 1px solid black"></td>
+      <td class="gray" style="border-bottom: 1px solid black"></td>
+      <td class="yellow" style="border-bottom: 1px solid black; border-right: 1px solid black"></td>
+      <td></td>
+    </tr>
+  </table>
+</div>
+
+<button class="btn clipboard-button"></button>
+
+
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

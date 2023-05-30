@@ -1,0 +1,5670 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+        <title>Puzzle University</title>
+    
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="static/css/skeleton.css">
+    <link rel="stylesheet" href="static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="jsi18n/index.html"></script>
+    <script src="static/js/sorttable.js"></script>
+    <script src="static/js/tray.js"></script>
+    <script src="static/js/notify.js"></script>
+    <script src="static/js/time.js"></script>
+    <script src="static/js/menu-button-links.js"></script>
+    <script src="static/js/puzzledb.js"></script>
+    <script src="static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    <div class="background-image"></div>
+
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="index.html">
+                    Home
+                </a>
+                <a href="rules.html">
+                    Policies
+                </a>
+                
+                <a href="story.html">
+                    Story
+                </a>
+                
+                <div id="deptdropdownmenu"></div>
+
+                
+                <a class="selected-tab" href="teams.html">
+                    Directory
+                </a>
+                <a href="faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+<style>
+@media screen {
+    
+    .background-image {
+        background-image: url("static/images/stock/ms_campus.webp");
+        height: 30em;
+    }
+
+    
+
+    .page-header-background {
+        background-color: rgba(0, 0, 0, 0.7);
+        margin-top: -1em;
+        width: 100%;
+    }
+
+    .header-content {
+        color: white;
+        margin-top: 0;
+    }
+
+    .page-header-bar {
+        display: flex;
+        padding: 2em;
+    }
+
+    .page-header-bar .page-header-text {
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+    }
+
+    .page-header-bar .title {
+        font-size: 1.2em;
+        font-family: 'trajan-pro-3', serif;
+        margin-bottom: 1rem;
+    }
+
+    .page-header-bar .subtitle {
+        font-size: 2.8em;
+        font-family: 'myriad-pro-semi-condensed', sans-serif;
+        font-weight: 600;
+        padding-bottom: 1rem;
+    }
+
+    .page-header-bar img {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .top-right-actions {
+        color: #ddd;
+    }
+
+    .content-container {    
+        background-color: white;
+        border-radius: 1em;
+        box-shadow: 0 0 2rem #0006;
+        padding: 3em;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .page-header-background {
+        margin-top: -3.2em;
+    }
+}
+
+</style>
+
+<div class="page-header-background">
+    <div class="header-content">
+        <div class="page-header-bar">
+            
+                <img type="image/png" src="static/images/puzzu_logo.png">
+            
+            <div class="page-header-text">
+                <span class="title">Puzzle University</span>
+                <span class="subtitle">Student Directory</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="content">
+        
+    <div class="content-container">
+        
+
+<main>
+    <table class="list-table">
+        <col style="width: 10%">
+        
+            <col style="width: 60%">
+            <col style="width: 10%">
+            <col style="width: 20%">
+        
+        <tbody>
+            <tr>
+                <th>Rank</th>
+                <th>Team</th>
+                
+                    <th>Solves</th>
+                    <th>Finish time (PDT)</th>
+                
+            </tr>
+            
+            <tr >
+                <td>1</td>
+                <td>
+                    🎓 
+                    <a href="team/i'm+going+to+be+out+of+country+for+10+days+starting+tomorrow+so+i'll+drop+some+terrible+team+name+ideas+here+to+get+the+pot+going+(don't+use+them).html">i&#x27;m going to be out of country for 10 days starting tomorrow so i&#x27;ll drop some terrible team name ideas here to get the pot going (don&#x27;t use them):</a>
+                    🎓 
+                    
+                </td>
+                
+                    <td>118</td>
+                    <td><time datetime="2023-05-07T04:45:50.217263+00:00" data-format="M j, H:i">May 6, 21:45</time></td>
+                
+            </tr>
+            
+            <tr >
+                <td>2</td>
+                <td>
+                    🎓 
+                    <a href="team/🎓🎓🎓+Scholastic+Trendsetters+🎓🎓🎓.html">🎓🎓🎓 Scholastic Trendsetters 🎓🎓🎓</a>
+                    🎓 
+                    
+                </td>
+                
+                    <td>118</td>
+                    <td><time datetime="2023-05-07T08:38:55.200331+00:00" data-format="M j, H:i">May 7, 01:38</time></td>
+                
+            </tr>
+            
+            <tr >
+                <td>3</td>
+                <td>
+                    🎓 
+                    <a href="team/🔠🔠🔠+Stochastic+Test-guessers+🎲🎲🎲.html">🔠🔠🔠 Stochastic Test-guessers 🎲🎲🎲</a>
+                    🎓 
+                    
+                </td>
+                
+                    <td>118</td>
+                    <td><time datetime="2023-05-07T09:09:19.196548+00:00" data-format="M j, H:i">May 7, 02:09</time></td>
+                
+            </tr>
+            
+            <tr >
+                <td>4</td>
+                <td>
+                    🎓 
+                    <a href="team/Have+you+tried.html">Have you tried...? • Get help with solving the puzzle • Just solve the puzzle without help ◻️ Don&#x27;t show me this tip again</a>
+                    🎓 
+                    
+                </td>
+                
+                    <td>109</td>
+                    <td><time datetime="2023-05-07T09:52:57.962866+00:00" data-format="M j, H:i">May 7, 02:52</time></td>
+                
+            </tr>
+            
+            <tr >
+                <td>5</td>
+                <td>
+                    🎓 
+                    <a href="team/Intercollegiates+So+Meta+Even+This+Acronym.html">Intercollegiates So Meta Even This Acronym</a>
+                    🎓 
+                    
+                </td>
+                
+                    <td>114</td>
+                    <td><time datetime="2023-05-07T12:52:51.809638+00:00" data-format="M j, H:i">May 7, 05:52</time></td>
+                
+            </tr>
+            
+            <tr >
+                <td>6</td>
+                <td>
+                    🎓 
+                    <a href="team/𐌎+OLD+ITALIC+LETTER+FOUR-MONTH+SEMESTER+CALENDAR.html">𐌎 OLD ITALIC LETTER FOUR-MONTH SEMESTER CALENDAR</a>
+                    🎓 
+                    
+                </td>
+                
+                    <td>99</td>
+                    <td><time datetime="2023-05-07T19:43:25.605330+00:00" data-format="M j, H:i">May 7, 12:43</time></td>
+                
+            </tr>
+            
+            <tr >
+                <td>7</td>
+                <td>
+                    🎓 
+                    <a href="team/17th+Consecutive+All-Nighter.html">17th Consecutive All-Nighter</a>
+                    🎓 
+                    
+                </td>
+                
+                    <td>118</td>
+                    <td><time datetime="2023-05-07T20:29:52.765793+00:00" data-format="M j, H:i">May 7, 13:29</time></td>
+                
+            </tr>
+            
+            <tr >
+                <td>8</td>
+                <td>
+                    🎓 
+                    <a href="team/Escape+Characters.html">Escape Characters of \r\PictureGame</a>
+                    🎓 
+                    
+                </td>
+                
+                    <td>113</td>
+                    <td><time datetime="2023-05-07T21:40:18.709511+00:00" data-format="M j, H:i">May 7, 14:40</time></td>
+                
+            </tr>
+            
+            <tr >
+                <td>9</td>
+                <td>
+                    🎓 
+                    <a href="team/Plughology+101.html">Plughology 101</a>
+                    🎓 
+                    
+                </td>
+                
+                    <td>98</td>
+                    <td><time datetime="2023-05-07T22:18:32.593422+00:00" data-format="M j, H:i">May 7, 15:18</time></td>
+                
+            </tr>
+            
+            <tr >
+                <td>10</td>
+                <td>
+                    🎓 
+                    <a href="team/🌮🌮taquito.html">🌮🌮taquito</a>
+                    🎓 
+                    
+                </td>
+                
+                    <td>110</td>
+                    <td><time datetime="2023-05-07T23:05:42.121675+00:00" data-format="M j, H:i">May 7, 16:05</time></td>
+                
+            </tr>
+            
+            <tr >
+                <td>11</td>
+                <td>
+                    🎓 
+                    <a href="team/Mathemagicians’+Seminars+Prioritise+Hex.html">Mathemagicians’ Seminars Prioritise Hex</a>
+                    🎓 
+                    
+                </td>
+                
+                    <td>113</td>
+                    <td><time datetime="2023-05-07T23:51:22.415238+00:00" data-format="M j, H:i">May 7, 16:51</time></td>
+                
+            </tr>
+            
+            <tr >
+                <td>12</td>
+                <td>
+                    
+                    <a href="team/Teachers'+Salaries+Better+Increase!.html">Teachers&#x27; Salaries Better Increase!</a>
+                    
+                    
+                </td>
+                
+                    <td>110</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>13</td>
+                <td>
+                    
+                    <a href="team/Disassociating+in+the+Olive+Garden+Bathroom.html">Disassociating in the Olive Garden Bathroom</a>
+                    
+                    
+                </td>
+                
+                    <td>110</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>14</td>
+                <td>
+                    
+                    <a href="team/PLAFTET.html">PLAFTET</a>
+                    
+                    
+                </td>
+                
+                    <td>108</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>15</td>
+                <td>
+                    
+                    <a href="team/L’Académie+TLA.html">L’Académie TLA</a>
+                    
+                    
+                </td>
+                
+                    <td>105</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>16</td>
+                <td>
+                    
+                    <a href="team/Peaked+in+Puzzle+High+School.html">Peaked in Puzzle High School</a>
+                    
+                    
+                </td>
+                
+                    <td>104</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>17</td>
+                <td>
+                    
+                    <a href="team/Supercalifragilisticexpialidocious.html">Supercalifragilisticexpialidocious</a>
+                    
+                    
+                </td>
+                
+                    <td>100</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>18</td>
+                <td>
+                    
+                    <a href="team/Objects+in+Mirror.html">Objects in Mirror</a>
+                    
+                    
+                </td>
+                
+                    <td>98</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>19</td>
+                <td>
+                    
+                    <a href="team/Museum+of+School+Flavored+Things.html">Museum of School Flavored Things</a>
+                    
+                    
+                </td>
+                
+                    <td>96</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>20</td>
+                <td>
+                    
+                    <a href="team/The+Silly+Hat+Brigade.html">The Silly Hat Brigade</a>
+                    
+                    
+                </td>
+                
+                    <td>96</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>21</td>
+                <td>
+                    
+                    <a href="team/Mathemagicians+Attend+Graduation+in+Capes.html">Mathemagicians Attend Graduation in Capes</a>
+                    
+                    
+                </td>
+                
+                    <td>93</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>22</td>
+                <td>
+                    
+                    <a href="team/Boxfort+Brigands.html">Boxfort Brigands</a>
+                    
+                    
+                </td>
+                
+                    <td>92</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>23</td>
+                <td>
+                    
+                    <a href="team/Libra+Complexity.html">Libra Complexity</a>
+                    
+                    
+                </td>
+                
+                    <td>92</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>24</td>
+                <td>
+                    
+                    <a href="team/The+Usual+Suspects.html">The Usual Suspects</a>
+                    
+                    
+                </td>
+                
+                    <td>89</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>25</td>
+                <td>
+                    
+                    <a href="team/Buzz+Lime+Pi.html">Buzz Lime Pi</a>
+                    
+                    
+                </td>
+                
+                    <td>89</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>26</td>
+                <td>
+                    
+                    <a href="team/The+Blob+Wizards.html">The Blob Wizards</a>
+                    
+                    
+                </td>
+                
+                    <td>87</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>27</td>
+                <td>
+                    
+                    <a href="team/leannEMAThtournament.html">leannEMAThtournament</a>
+                    
+                    
+                </td>
+                
+                    <td>87</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>28</td>
+                <td>
+                    
+                    <a href="team/Needlessly+Eating+Skype.html">Needlessly Eating Skype</a>
+                    
+                    
+                </td>
+                
+                    <td>87</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>29</td>
+                <td>
+                    
+                    <a href="team/Sam+and+the+Gamgees.html">Sam and the Gamgees</a>
+                    
+                    
+                </td>
+                
+                    <td>85</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>30</td>
+                <td>
+                    
+                    <a href="team/Narwhal-Eager+Sailors.html">Narwhal-Eager Sailors</a>
+                    
+                    
+                </td>
+                
+                    <td>85</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>31</td>
+                <td>
+                    
+                    <a href="team/SCRuBBers.html">SCRuBBers</a>
+                    
+                    
+                </td>
+                
+                    <td>84</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>32</td>
+                <td>
+                    
+                    <a href="team/Dissertation+on+Anguilliform+Nomenclature.html">Dissertation on Anguilliform Nomenclature</a>
+                    
+                    
+                </td>
+                
+                    <td>83</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>33</td>
+                <td>
+                    
+                    <a href="team/PandaCubs.html">PandaCubs</a>
+                    
+                    
+                </td>
+                
+                    <td>82</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>34</td>
+                <td>
+                    
+                    <a href="team/Mystaswitch.html">Mystaswitch</a>
+                    
+                    
+                </td>
+                
+                    <td>79</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>35</td>
+                <td>
+                    
+                    <a href="team/PonX.html">PonX</a>
+                    
+                    
+                </td>
+                
+                    <td>79</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>36</td>
+                <td>
+                    
+                    <a href="team/Tuition+is+Expensive+🦆🦜🦅.html">Tuition is Expensive 🦆🦜🦅</a>
+                    
+                    
+                </td>
+                
+                    <td>78</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>37</td>
+                <td>
+                    
+                    <a href="team/U-niversity+Students.html">U-niversity Students</a>
+                    
+                    
+                </td>
+                
+                    <td>78</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>38</td>
+                <td>
+                    
+                    <a href="team/Not+Eligible+for+Extra+Credit.html">Not Eligible for Extra Credit</a>
+                    
+                    
+                </td>
+                
+                    <td>76</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>39</td>
+                <td>
+                    
+                    <a href="team/🥦+Broccoli+Brawlers+🥦.html">🥦 Broccoli Brawlers 🥦</a>
+                    
+                    
+                </td>
+                
+                    <td>76</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>40</td>
+                <td>
+                    
+                    <a href="team/Shenanigans.html">Shenanigans</a>
+                    
+                    
+                </td>
+                
+                    <td>76</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>41</td>
+                <td>
+                    
+                    <a href="team/🐆+Cheatahs+🐆.html">🐆 Cheatahs 🐆</a>
+                    
+                    
+                </td>
+                
+                    <td>75</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>42</td>
+                <td>
+                    
+                    <a href="team/Frumious.html">Frumious</a>
+                    
+                    
+                </td>
+                
+                    <td>74</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>43</td>
+                <td>
+                    
+                    <a href="team/Honey+Charts.html">Honey Charts</a>
+                    
+                    
+                </td>
+                
+                    <td>73</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>44</td>
+                <td>
+                    
+                    <a href="team/Zazzklok.html">Zazzklok</a>
+                    
+                    
+                </td>
+                
+                    <td>73</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>45</td>
+                <td>
+                    
+                    <a href="team/Mighty+Morphin+Puzzle+Rangers.html">Mighty Morphin Puzzle Rangers</a>
+                    
+                    
+                </td>
+                
+                    <td>73</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>46</td>
+                <td>
+                    
+                    <a href="team/Soft+Llama+Microfiber.html">Soft Llama Microfiber</a>
+                    
+                    
+                </td>
+                
+                    <td>72</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>47</td>
+                <td>
+                    
+                    <a href="team/Everyday+Heroes.html">Everyday Heroes</a>
+                    
+                    
+                </td>
+                
+                    <td>72</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>48</td>
+                <td>
+                    
+                    <a href="team/handstwelve.html">handstwelve</a>
+                    
+                    
+                </td>
+                
+                    <td>72</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>49</td>
+                <td>
+                    
+                    <a href="team/💕Chris+is+the+Best💕.html">💕Chris is the Best💕</a>
+                    
+                    
+                </td>
+                
+                    <td>71</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>50</td>
+                <td>
+                    
+                    <a href="team/Grier+Family+Picnic.html">Grier Family Picnic</a>
+                    
+                    
+                </td>
+                
+                    <td>70</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>51</td>
+                <td>
+                    
+                    <a href="team/aoeu.html">aoeu</a>
+                    
+                    
+                </td>
+                
+                    <td>70</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>52</td>
+                <td>
+                    
+                    <a href="team/CupOfTea.html">Cup&lt;T&gt;</a>
+                    
+                    
+                </td>
+                
+                    <td>68</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>53</td>
+                <td>
+                    
+                    <a href="team/Ngconceivable!.html">Ngconceivable!</a>
+                    
+                    
+                </td>
+                
+                    <td>67</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>54</td>
+                <td>
+                    
+                    <a href="team/Pi+Upsilon+Nu.html">Pi Upsilon Nu</a>
+                    
+                    
+                </td>
+                
+                    <td>67</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>55</td>
+                <td>
+                    
+                    <a href="team/Fish+In+A+Barrel.html">Fish In A Barrel</a>
+                    
+                    
+                </td>
+                
+                    <td>66</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>56</td>
+                <td>
+                    
+                    <a href="team/Quarantine+Decrypters.html">Quarantine Decrypters</a>
+                    
+                    
+                </td>
+                
+                    <td>65</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>57</td>
+                <td>
+                    
+                    <a href="team/Gnat+Sus.html">Gnat Sus</a>
+                    
+                    
+                </td>
+                
+                    <td>65</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>58</td>
+                <td>
+                    
+                    <a href="team/Underwater+Basketweavers.html">Underwater Basketweavers</a>
+                    
+                    
+                </td>
+                
+                    <td>63</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>59</td>
+                <td>
+                    
+                    <a href="team/Hope+We+Can+Change+This+Later.html">Hope We Can Change This Later</a>
+                    
+                    
+                </td>
+                
+                    <td>62</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>60</td>
+                <td>
+                    
+                    <a href="team/Sloopertroup.html">Sloopertroup</a>
+                    
+                    
+                </td>
+                
+                    <td>61</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>61</td>
+                <td>
+                    
+                    <a href="team/[Redacted].html">[Redacted]</a>
+                    
+                    
+                </td>
+                
+                    <td>60</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>62</td>
+                <td>
+                    
+                    <a href="team/Inter+Oves+Locum+Praesta.html">Inter Oves Locum Praesta</a>
+                    
+                    
+                </td>
+                
+                    <td>59</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>63</td>
+                <td>
+                    
+                    <a href="team/weeklies.enigmatics.org.html">weeklies.enigmatics.org</a>
+                    
+                    
+                </td>
+                
+                    <td>59</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>64</td>
+                <td>
+                    
+                    <a href="team/Pole+Position.html">Pole Position</a>
+                    
+                    
+                </td>
+                
+                    <td>58</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>65</td>
+                <td>
+                    
+                    <a href="team/The+Flemish+Institute+for+Biotechnology.html">The Flemish Institute for Biotechnology</a>
+                    
+                    
+                </td>
+                
+                    <td>58</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>66</td>
+                <td>
+                    
+                    <a href="team/Puzzkill.html">Puzzkill</a>
+                    
+                    
+                </td>
+                
+                    <td>58</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>67</td>
+                <td>
+                    
+                    <a href="team/Doppeldeaners.html">Doppeldeaners</a>
+                    
+                    
+                </td>
+                
+                    <td>58</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>68</td>
+                <td>
+                    
+                    <a href="team/Dr.+Teeth+and+the+Academic+Mayhem.html">Dr. Teeth and the Academic Mayhem</a>
+                    
+                    
+                </td>
+                
+                    <td>57</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>69</td>
+                <td>
+                    
+                    <a href="team/Les+Gaulois.html">Les Gaulois</a>
+                    
+                    
+                </td>
+                
+                    <td>56</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>70</td>
+                <td>
+                    
+                    <a href="team/Stumped+and+Furious.html">Stumped and Furious</a>
+                    
+                    
+                </td>
+                
+                    <td>55</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>71</td>
+                <td>
+                    
+                    <a href="team/XCloud.html">XCloud</a>
+                    
+                    
+                </td>
+                
+                    <td>54</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>72</td>
+                <td>
+                    
+                    <a href="team/helix.html">helix</a>
+                    
+                    
+                </td>
+                
+                    <td>54</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>73</td>
+                <td>
+                    
+                    <a href="team/196.html">196</a>
+                    
+                    
+                </td>
+                
+                    <td>53</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>74</td>
+                <td>
+                    
+                    <a href="team/Penguins+Can't+Fly.html">Penguins Can&#x27;t Fly</a>
+                    
+                    
+                </td>
+                
+                    <td>53</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>75</td>
+                <td>
+                    
+                    <a href="team/clueless.html">clueless</a>
+                    
+                    
+                </td>
+                
+                    <td>53</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>76</td>
+                <td>
+                    
+                    <a href="team/SMRT.html">SMRT</a>
+                    
+                    
+                </td>
+                
+                    <td>53</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>77</td>
+                <td>
+                    
+                    <a href="team/Aardvark.html">Aardvark</a>
+                    
+                    
+                </td>
+                
+                    <td>52</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>78</td>
+                <td>
+                    
+                    <a href="team/ProgChamps.html">ProgChamps</a>
+                    
+                    
+                </td>
+                
+                    <td>51</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>79</td>
+                <td>
+                    
+                    <a href="team/Cylon+and+Garfunkel.html">Cylon and Garfunkel</a>
+                    
+                    
+                </td>
+                
+                    <td>51</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>80</td>
+                <td>
+                    
+                    <a href="team/Here+for+the+Right+Reasons+🌹.html">Here for the Right Reasons 🌹</a>
+                    
+                    
+                </td>
+                
+                    <td>50</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>81</td>
+                <td>
+                    
+                    <a href="team/The+Metaphysical+Kids.html">The Metaphysical Kids</a>
+                    
+                    
+                </td>
+                
+                    <td>50</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>82</td>
+                <td>
+                    
+                    <a href="team/Weirdietols+United+2+(WUTs).html">Weirdietols United 2 (WUTs)</a>
+                    
+                    
+                </td>
+                
+                    <td>50</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>83</td>
+                <td>
+                    
+                    <a href="team/Insufficient+Disentanglers.html">Insufficient Disentanglers</a>
+                    
+                    
+                </td>
+                
+                    <td>49</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>84</td>
+                <td>
+                    
+                    <a href="team/Seven+of+Diamonds.html">Seven of Diamonds</a>
+                    
+                    
+                </td>
+                
+                    <td>49</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>85</td>
+                <td>
+                    
+                    <a href="team/Banach.html">Banach</a>
+                    
+                    
+                </td>
+                
+                    <td>48</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>86</td>
+                <td>
+                    
+                    <a href="team/Second+Breakfast.html">Second Breakfast</a>
+                    
+                    
+                </td>
+                
+                    <td>47</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>87</td>
+                <td>
+                    
+                    <a href="team/C4rnellian.html">C4rnellian</a>
+                    
+                    
+                </td>
+                
+                    <td>47</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>88</td>
+                <td>
+                    
+                    <a href="team/Argentum.html">Argentum</a>
+                    
+                    
+                </td>
+                
+                    <td>46</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>89</td>
+                <td>
+                    
+                    <a href="team/Chat-GPT+Ate+My+Homework.html">Chat-GPT Ate My Homework</a>
+                    
+                    
+                </td>
+                
+                    <td>46</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>90</td>
+                <td>
+                    
+                    <a href="team/Prickly+Pears.html">Prickly Pears</a>
+                    
+                    
+                </td>
+                
+                    <td>45</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>91</td>
+                <td>
+                    
+                    <a href="team/George+P.+Burdell.html">George P. Burdell</a>
+                    
+                    
+                </td>
+                
+                    <td>45</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>92</td>
+                <td>
+                    
+                    <a href="team/Pi+Iota+Epsilon.html">Pi Iota Epsilon</a>
+                    
+                    
+                </td>
+                
+                    <td>43</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>93</td>
+                <td>
+                    
+                    <a href="team/12+Monkeys.html">12 Monkeys</a>
+                    
+                    
+                </td>
+                
+                    <td>43</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>94</td>
+                <td>
+                    
+                    <a href="team/Antlion.html">Antlion</a>
+                    
+                    
+                </td>
+                
+                    <td>42</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>95</td>
+                <td>
+                    
+                    <a href="team/GAFE+Grads.html">GAFE Grads</a>
+                    
+                    
+                </td>
+                
+                    <td>42</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>96</td>
+                <td>
+                    
+                    <a href="team/SimpMeow.html">SimpMeow</a>
+                    
+                    
+                </td>
+                
+                    <td>42</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>97</td>
+                <td>
+                    
+                    <a href="team/come+back+to+us+later.html">come back to us later</a>
+                    
+                    
+                </td>
+                
+                    <td>42</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>98</td>
+                <td>
+                    
+                    <a href="team/lmao+thanks+we're+dumb.html">lmao thanks we&#x27;re dumb</a>
+                    
+                    
+                </td>
+                
+                    <td>42</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>99</td>
+                <td>
+                    
+                    <a href="team/[URGENT]+LOOK+AT+ME+I'M+A+PUZZLE+GRAD+STUDENT.html">[URGENT] LOOK AT ME I&#x27;M A PUZZLE GRAD STUDENT</a>
+                    
+                    
+                </td>
+                
+                    <td>41</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>100</td>
+                <td>
+                    
+                    <a href="team/AMAZON+EOTY+JUNKRAT+ONE+TRICK+GACHA+ADDICT+ACRIUS+SHIRAKAMI+FUBUKI+%231+FAN+AGU+++friends.html">AMAZON EOTY JUNKRAT ONE TRICK GACHA ADDICT ACRIUS SHIRAKAMI FUBUKI #1 FAN AGU + friends</a>
+                    
+                    
+                </td>
+                
+                    <td>41</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>101</td>
+                <td>
+                    
+                    <a href="team/Ctrl+++Alt+++Defeat.html">Ctrl + Alt + Defeat</a>
+                    
+                    
+                </td>
+                
+                    <td>41</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>102</td>
+                <td>
+                    
+                    <a href="team/Good+Puzzle+Team.html">Good Puzzle Team</a>
+                    
+                    
+                </td>
+                
+                    <td>41</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>103</td>
+                <td>
+                    
+                    <a href="team/Irascible+Coxwains.html">Irascible Coxwains</a>
+                    
+                    
+                </td>
+                
+                    <td>41</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>104</td>
+                <td>
+                    
+                    <a href="team/Team+Constructed+Adventures.html">Team Constructed Adventures</a>
+                    
+                    
+                </td>
+                
+                    <td>41</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>105</td>
+                <td>
+                    
+                    <a href="team/Good+Question.html">Good Question</a>
+                    
+                    
+                </td>
+                
+                    <td>40</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>106</td>
+                <td>
+                    
+                    <a href="team/Tiamat+Teaches+Typing.html">Tiamat Teaches Typing</a>
+                    
+                    
+                </td>
+                
+                    <td>40</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>107</td>
+                <td>
+                    
+                    <a href="team/Yuki.html">Yuki</a>
+                    
+                    
+                </td>
+                
+                    <td>39</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>108</td>
+                <td>
+                    
+                    <a href="team/astronaughts+ඞ.html">astronaughts ඞ</a>
+                    
+                    
+                </td>
+                
+                    <td>39</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>109</td>
+                <td>
+                    
+                    <a href="team/[title+of+team].html">[title of team]</a>
+                    
+                    
+                </td>
+                
+                    <td>38</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>110</td>
+                <td>
+                    
+                    <a href="team/Panic+at+the+Disc+Golf+Course.html">Panic at the Disc Golf Course</a>
+                    
+                    
+                </td>
+                
+                    <td>38</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>111</td>
+                <td>
+                    
+                    <a href="team/CheesyChokers.html">CheesyChokers</a>
+                    
+                    
+                </td>
+                
+                    <td>38</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>112</td>
+                <td>
+                    
+                    <a href="team/Password1234.html">Password1234</a>
+                    
+                    
+                </td>
+                
+                    <td>38</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>113</td>
+                <td>
+                    
+                    <a href="team/Recreation+Carpet.html">Recreation Carpet</a>
+                    
+                    
+                </td>
+                
+                    <td>37</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>114</td>
+                <td>
+                    
+                    <a href="team/Here+for+Beer.html">Here for Beer</a>
+                    
+                    
+                </td>
+                
+                    <td>36</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>115</td>
+                <td>
+                    
+                    <a href="team/IssaSquad.html">IssaSquad</a>
+                    
+                    
+                </td>
+                
+                    <td>36</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>116</td>
+                <td>
+                    
+                    <a href="team/Warm+&amp;+Fuzzy+Kitties.html">Warm &amp; Fuzzy Kitties</a>
+                    
+                    
+                </td>
+                
+                    <td>35</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>117</td>
+                <td>
+                    
+                    <a href="team/Eevee+League+of+Legends.html">Eevee League of Legends</a>
+                    
+                    
+                </td>
+                
+                    <td>35</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>118</td>
+                <td>
+                    
+                    <a href="team/Duoversity.html">Duoversity</a>
+                    
+                    
+                </td>
+                
+                    <td>35</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>119</td>
+                <td>
+                    
+                    <a href="team/FAST.html">FAST</a>
+                    
+                    
+                </td>
+                
+                    <td>34</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>120</td>
+                <td>
+                    
+                    <a href="team/Pangolin+Pajama+Party.html">Pangolin Pajama Party</a>
+                    
+                    
+                </td>
+                
+                    <td>34</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>121</td>
+                <td>
+                    
+                    <a href="team/Belmonsters.html">Belmonsters</a>
+                    
+                    
+                </td>
+                
+                    <td>33</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>122</td>
+                <td>
+                    
+                    <a href="team/Elemental+Guessing+Machine.html">Elemental Guessing Machine</a>
+                    
+                    
+                </td>
+                
+                    <td>33</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>123</td>
+                <td>
+                    
+                    <a href="team/Windogs+XD.html">Windogs XD</a>
+                    
+                    
+                </td>
+                
+                    <td>33</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>124</td>
+                <td>
+                    
+                    <a href="team/!.html">!</a>
+                    
+                    
+                </td>
+                
+                    <td>33</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>125</td>
+                <td>
+                    
+                    <a href="team/Eek!+Cave!+Chasm!.html">Eek! Cave! Chasm!</a>
+                    
+                    
+                </td>
+                
+                    <td>33</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>126</td>
+                <td>
+                    
+                    <a href="team/QuestionMarks.html">???</a>
+                    
+                    
+                </td>
+                
+                    <td>33</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>127</td>
+                <td>
+                    
+                    <a href="team/Acai.html">Acai</a>
+                    
+                    
+                </td>
+                
+                    <td>33</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>128</td>
+                <td>
+                    
+                    <a href="team/Happy+Birthday+Jimin.html">Happy Birthday Jimin</a>
+                    
+                    
+                </td>
+                
+                    <td>32</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>129</td>
+                <td>
+                    
+                    <a href="team/Masters+in+BS.html">Masters in BS</a>
+                    
+                    
+                </td>
+                
+                    <td>32</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>130</td>
+                <td>
+                    
+                    <a href="team/Independent+Study.html">Independent Study</a>
+                    
+                    
+                </td>
+                
+                    <td>32</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>131</td>
+                <td>
+                    
+                    <a href="team/Vanishing+Contingent.html">Vanishing Contingent</a>
+                    
+                    
+                </td>
+                
+                    <td>32</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>132</td>
+                <td>
+                    
+                    <a href="team/Team+Flaccid.html">Team Flaccid</a>
+                    
+                    
+                </td>
+                
+                    <td>32</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>133</td>
+                <td>
+                    
+                    <a href="team/Halibut+That+Bass.html">Halibut That Bass</a>
+                    
+                    
+                </td>
+                
+                    <td>32</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>134</td>
+                <td>
+                    
+                    <a href="team/StriketeamGPT™💬.html">StriketeamGPT™💬</a>
+                    
+                    
+                </td>
+                
+                    <td>31</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>135</td>
+                <td>
+                    
+                    <a href="team/Touring+Quest.html">Touring Quest</a>
+                    
+                    
+                </td>
+                
+                    <td>30</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>136</td>
+                <td>
+                    
+                    <a href="team/A+PKU+Kaitou+of+a+Rare+Utopia.html">A PKU Kaitou of a Rare Utopia</a>
+                    
+                    
+                </td>
+                
+                    <td>30</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>137</td>
+                <td>
+                    
+                    <a href="team/Hastings.html">Hastings</a>
+                    
+                    
+                </td>
+                
+                    <td>30</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>138</td>
+                <td>
+                    
+                    <a href="team/Whatever.html">Whatever</a>
+                    
+                    
+                </td>
+                
+                    <td>30</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>139</td>
+                <td>
+                    
+                    <a href="team/SpaceballsThePuzzleTeam.html">SpaceballsThePuzzleTeam</a>
+                    
+                    
+                </td>
+                
+                    <td>30</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>140</td>
+                <td>
+                    
+                    <a href="team/Coconut+Gun.html">Coconut Gun</a>
+                    
+                    
+                </td>
+                
+                    <td>29</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>141</td>
+                <td>
+                    
+                    <a href="team/Oscar+Mayer+Wieners.html">Oscar Mayer Wieners</a>
+                    
+                    
+                </td>
+                
+                    <td>29</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>142</td>
+                <td>
+                    
+                    <a href="team/Weird+Lex+&amp;+the+Aladdin+Chickenshackers.html">Weird Lex &amp; the Aladdin Chickenshackers</a>
+                    
+                    
+                </td>
+                
+                    <td>29</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>143</td>
+                <td>
+                    
+                    <a href="team/Team+to+be+named+at+a+later+date.html">Team to be named at a later date</a>
+                    
+                    
+                </td>
+                
+                    <td>29</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>144</td>
+                <td>
+                    
+                    <a href="team/Frozen+Tofu,+Beef+Short+Rib,+Spinach,+Garland+Chrysanthemum,+Oyster+Mushrooms,+and+sure,+throw+in+a+Crispy+Pork+Belly.html">Frozen Tofu, Beef Short Rib, Spinach, Garland Chrysanthemum, Oyster Mushrooms, and sure, throw in a Crispy Pork Belly</a>
+                    
+                    
+                </td>
+                
+                    <td>29</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>145</td>
+                <td>
+                    
+                    <a href="team/Partially+Gelatinated+Non-Dairy+Gum-Based+Beverage.html">Partially Gelatinated Non-Dairy Gum-Based Beverage</a>
+                    
+                    
+                </td>
+                
+                    <td>29</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>146</td>
+                <td>
+                    
+                    <a href="team/🐢.html">🐢</a>
+                    
+                    
+                </td>
+                
+                    <td>29</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>147</td>
+                <td>
+                    
+                    <a href="team/Our+Mohs+Scale+Goes+to+11.html">Our Mohs Scale Goes to 11</a>
+                    
+                    
+                </td>
+                
+                    <td>29</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>148</td>
+                <td>
+                    
+                    <a href="team/SPecial+oPS.html">SPecial oPS</a>
+                    
+                    
+                </td>
+                
+                    <td>29</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>149</td>
+                <td>
+                    
+                    <a href="team/I+forget+to+take+my+pills+sometimes..html">I forget to take my pills sometimes.</a>
+                    
+                    
+                </td>
+                
+                    <td>29</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>150</td>
+                <td>
+                    
+                    <a href="team/bagel.html">bagel</a>
+                    
+                    
+                </td>
+                
+                    <td>28</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>151</td>
+                <td>
+                    
+                    <a href="team/Tapirs+for+Hope.html">Tapirs for Hope</a>
+                    
+                    
+                </td>
+                
+                    <td>28</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>152</td>
+                <td>
+                    
+                    <a href="team/Benoit+Blanc.html">Benoit Blanc</a>
+                    
+                    
+                </td>
+                
+                    <td>28</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>153</td>
+                <td>
+                    
+                    <a href="team/DragonEngineer.html">DragonEngineer</a>
+                    
+                    
+                </td>
+                
+                    <td>28</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>154</td>
+                <td>
+                    
+                    <a href="team/cozy+puzzle+party.html">cozy puzzle party</a>
+                    
+                    
+                </td>
+                
+                    <td>27</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>155</td>
+                <td>
+                    
+                    <a href="team/JanglerNPL.html">JanglerNPL</a>
+                    
+                    
+                </td>
+                
+                    <td>27</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>156</td>
+                <td>
+                    
+                    <a href="team/Conformiti.html">Conformiti</a>
+                    
+                    
+                </td>
+                
+                    <td>27</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>157</td>
+                <td>
+                    
+                    <a href="team/fckng+plague+bus.html">fckng plague bus</a>
+                    
+                    
+                </td>
+                
+                    <td>27</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>158</td>
+                <td>
+                    
+                    <a href="team/The+Companion+Cubes.html">The Companion Cubes</a>
+                    
+                    
+                </td>
+                
+                    <td>27</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>159</td>
+                <td>
+                    
+                    <a href="team/Quandrix+Apprentices.html">Quandrix Apprentices</a>
+                    
+                    
+                </td>
+                
+                    <td>27</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>160</td>
+                <td>
+                    
+                    <a href="team/Squid+Squad.html">Squid Squad</a>
+                    
+                    
+                </td>
+                
+                    <td>27</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>161</td>
+                <td>
+                    
+                    <a href="team/Baby+Velociraptor+and+the+Professor+from+the+Black+Lagoon.html">Baby Velociraptor and the Professor from the Black Lagoon</a>
+                    
+                    
+                </td>
+                
+                    <td>27</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>162</td>
+                <td>
+                    
+                    <a href="team/honkerino+poggerino+and+friends.html">honkerino poggerino and friends</a>
+                    
+                    
+                </td>
+                
+                    <td>27</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>163</td>
+                <td>
+                    
+                    <a href="team/ZeebersTTV.html">ZeebersTTV</a>
+                    
+                    
+                </td>
+                
+                    <td>26</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>164</td>
+                <td>
+                    
+                    <a href="team/Ultimate+Brownies.html">Ultimate Brownies</a>
+                    
+                    
+                </td>
+                
+                    <td>26</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>165</td>
+                <td>
+                    
+                    <a href="team/Median.html">Median</a>
+                    
+                    
+                </td>
+                
+                    <td>26</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>166</td>
+                <td>
+                    
+                    <a href="team/WASLaplace.html">WASLaplace</a>
+                    
+                    
+                </td>
+                
+                    <td>26</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>167</td>
+                <td>
+                    
+                    <a href="team/Lil+Blue's+Clues.html">Lil Blue&#x27;s Clues</a>
+                    
+                    
+                </td>
+                
+                    <td>26</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>168</td>
+                <td>
+                    
+                    <a href="team/And+The+Worms+Ate+Into+His+Brain.html">And The Worms Ate Into His Brain</a>
+                    
+                    
+                </td>
+                
+                    <td>26</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>169</td>
+                <td>
+                    
+                    <a href="team/Herpetology+Majors.html">Herpetology Majors</a>
+                    
+                    
+                </td>
+                
+                    <td>26</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>170</td>
+                <td>
+                    
+                    <a href="team/Acca.html">Acca</a>
+                    
+                    
+                </td>
+                
+                    <td>26</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>171</td>
+                <td>
+                    
+                    <a href="team/PPP.html">PPP</a>
+                    
+                    
+                </td>
+                
+                    <td>26</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>172</td>
+                <td>
+                    
+                    <a href="team/Richie+Bear.html">Richie Bear</a>
+                    
+                    
+                </td>
+                
+                    <td>26</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>173</td>
+                <td>
+                    
+                    <a href="team/Pepsimen.html">Pepsimen</a>
+                    
+                    
+                </td>
+                
+                    <td>26</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>174</td>
+                <td>
+                    
+                    <a href="team/Stressful+Shapes.html">Stressful Shapes</a>
+                    
+                    
+                </td>
+                
+                    <td>26</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>175</td>
+                <td>
+                    
+                    <a href="team/Pristine+Metropolitans.html">Pristine Metropolitans</a>
+                    
+                    
+                </td>
+                
+                    <td>26</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>176</td>
+                <td>
+                    
+                    <a href="team/I+can+totally+solo+100+puzzles.html">I can totally solo 100 puzzles</a>
+                    
+                    
+                </td>
+                
+                    <td>26</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>177</td>
+                <td>
+                    
+                    <a href="team/Team+SILAJAT.html">Team SILAJAT</a>
+                    
+                    
+                </td>
+                
+                    <td>25</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>178</td>
+                <td>
+                    
+                    <a href="team/Callie's+Enterprise.html">Callie&#x27;s Enterprise</a>
+                    
+                    
+                </td>
+                
+                    <td>25</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>179</td>
+                <td>
+                    
+                    <a href="team/Meta+Puzzlers.html">Meta Puzzlers</a>
+                    
+                    
+                </td>
+                
+                    <td>25</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>180</td>
+                <td>
+                    
+                    <a href="team/Cat+Ladies.html">Cat Ladies</a>
+                    
+                    
+                </td>
+                
+                    <td>25</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>181</td>
+                <td>
+                    
+                    <a href="team/Bananarama.html">Bananarama</a>
+                    
+                    
+                </td>
+                
+                    <td>25</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>182</td>
+                <td>
+                    
+                    <a href="team/Team+Spam.html">Team Spam</a>
+                    
+                    
+                </td>
+                
+                    <td>25</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>183</td>
+                <td>
+                    
+                    <a href="team/The+Fighting+Mongooses+(Susan).html">The Fighting Mongooses (Susan)</a>
+                    
+                    
+                </td>
+                
+                    <td>25</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>184</td>
+                <td>
+                    
+                    <a href="team/I+Can+Solve+My+Puzzles+with+No+Handlebars.html">I Can Solve My Puzzles with No Handlebars</a>
+                    
+                    
+                </td>
+                
+                    <td>24</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>185</td>
+                <td>
+                    
+                    <a href="team/dylanamite.html">dylanamite</a>
+                    
+                    
+                </td>
+                
+                    <td>24</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>186</td>
+                <td>
+                    
+                    <a href="team/animal+abusers.html">animal abusers</a>
+                    
+                    
+                </td>
+                
+                    <td>24</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>187</td>
+                <td>
+                    
+                    <a href="team/DECIPHER.html">DECIPHER</a>
+                    
+                    
+                </td>
+                
+                    <td>24</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>188</td>
+                <td>
+                    
+                    <a href="team/The+Builders'+Guild.html">The Builders&#x27; Guild</a>
+                    
+                    
+                </td>
+                
+                    <td>24</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>189</td>
+                <td>
+                    
+                    <a href="team/Puzzle+Together+Separately.html">Puzzle Together Separately</a>
+                    
+                    
+                </td>
+                
+                    <td>24</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>190</td>
+                <td>
+                    
+                    <a href="team/The+25+Venters.html">The 25 Venters</a>
+                    
+                    
+                </td>
+                
+                    <td>24</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>191</td>
+                <td>
+                    
+                    <a href="team/SnapDragon.html">SnapDragon</a>
+                    
+                    
+                </td>
+                
+                    <td>24</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>192</td>
+                <td>
+                    
+                    <a href="team/Animated+Ammenate.html">Animated Ammenate</a>
+                    
+                    
+                </td>
+                
+                    <td>23</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>193</td>
+                <td>
+                    
+                    <a href="team/Nonmedical+Rutabaga.html">Nonmedical Rutabaga</a>
+                    
+                    
+                </td>
+                
+                    <td>23</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>194</td>
+                <td>
+                    
+                    <a href="team/ND.html">ND</a>
+                    
+                    
+                </td>
+                
+                    <td>23</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>195</td>
+                <td>
+                    
+                    <a href="team/Penguin+Platoon.html">Penguin Platoon</a>
+                    
+                    
+                </td>
+                
+                    <td>23</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>196</td>
+                <td>
+                    
+                    <a href="team/purple_meese.html">purple_meese</a>
+                    
+                    
+                </td>
+                
+                    <td>23</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>197</td>
+                <td>
+                    
+                    <a href="team/Speculative+Execution.html">Speculative Execution</a>
+                    
+                    
+                </td>
+                
+                    <td>23</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>198</td>
+                <td>
+                    
+                    <a href="team/PenguinSlide.html">PenguinSlide</a>
+                    
+                    
+                </td>
+                
+                    <td>23</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>199</td>
+                <td>
+                    
+                    <a href="team/BestBeans.html">BestBeans</a>
+                    
+                    
+                </td>
+                
+                    <td>23</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>200</td>
+                <td>
+                    
+                    <a href="team/The+Puzzledome.html">The Puzzledome</a>
+                    
+                    
+                </td>
+                
+                    <td>23</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>201</td>
+                <td>
+                    
+                    <a href="team/dootdoot.html">dootdoot</a>
+                    
+                    
+                </td>
+                
+                    <td>22</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>202</td>
+                <td>
+                    
+                    <a href="team/Mataronci.html">Mataronci</a>
+                    
+                    
+                </td>
+                
+                    <td>22</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>203</td>
+                <td>
+                    
+                    <a href="team/queer+peers.html">queer peers</a>
+                    
+                    
+                </td>
+                
+                    <td>22</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>204</td>
+                <td>
+                    
+                    <a href="team/Chill+Puzzlers.html">Chill Puzzlers</a>
+                    
+                    
+                </td>
+                
+                    <td>22</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>205</td>
+                <td>
+                    
+                    <a href="team/Midnab.html">Midnab</a>
+                    
+                    
+                </td>
+                
+                    <td>22</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>206</td>
+                <td>
+                    
+                    <a href="team/Alpha+Sigma+Epsilon.html">Alpha Sigma Epsilon</a>
+                    
+                    
+                </td>
+                
+                    <td>22</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>207</td>
+                <td>
+                    
+                    <a href="team/Team+Chaotix.html">Team Chaotix</a>
+                    
+                    
+                </td>
+                
+                    <td>22</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>208</td>
+                <td>
+                    
+                    <a href="team/Intentionally+Puzzling+2023.html">Intentionally Puzzling 2023</a>
+                    
+                    
+                </td>
+                
+                    <td>22</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>209</td>
+                <td>
+                    
+                    <a href="team/dpad.html">dpad</a>
+                    
+                    
+                </td>
+                
+                    <td>22</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>210</td>
+                <td>
+                    
+                    <a href="team/Up+Late.html">Up Late</a>
+                    
+                    
+                </td>
+                
+                    <td>21</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>211</td>
+                <td>
+                    
+                    <a href="team/High+Five.html">High Five</a>
+                    
+                    
+                </td>
+                
+                    <td>21</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>212</td>
+                <td>
+                    
+                    <a href="team/Wednesday+==+Pink+Shirts.html">Wednesday == Pink Shirts</a>
+                    
+                    
+                </td>
+                
+                    <td>21</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>213</td>
+                <td>
+                    
+                    <a href="team/🐱.html">🐱</a>
+                    
+                    
+                </td>
+                
+                    <td>21</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>214</td>
+                <td>
+                    
+                    <a href="team/SS+Estonia.html">SS Estonia</a>
+                    
+                    
+                </td>
+                
+                    <td>21</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>215</td>
+                <td>
+                    
+                    <a href="team/TimeBound.html">TimeBound</a>
+                    
+                    
+                </td>
+                
+                    <td>20</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>216</td>
+                <td>
+                    
+                    <a href="team/Puzzlebrains.html">Puzzlebrains</a>
+                    
+                    
+                </td>
+                
+                    <td>20</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>217</td>
+                <td>
+                    
+                    <a href="team/Tc.html">Tc</a>
+                    
+                    
+                </td>
+                
+                    <td>20</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>218</td>
+                <td>
+                    
+                    <a href="team/East+(Coast)+Meets+West+(Coast).html">East (Coast) Meets West (Coast)</a>
+                    
+                    
+                </td>
+                
+                    <td>20</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>219</td>
+                <td>
+                    
+                    <a href="team/Vehemence.html">Vehemence</a>
+                    
+                    
+                </td>
+                
+                    <td>20</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>220</td>
+                <td>
+                    
+                    <a href="team/TripleM.html">TripleM</a>
+                    
+                    
+                </td>
+                
+                    <td>19</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>221</td>
+                <td>
+                    
+                    <a href="team/Mobius+Strippers.html">Mobius Strippers</a>
+                    
+                    
+                </td>
+                
+                    <td>19</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>222</td>
+                <td>
+                    
+                    <a href="team/Happy+Egg.html">Happy Egg</a>
+                    
+                    
+                </td>
+                
+                    <td>19</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>223</td>
+                <td>
+                    
+                    <a href="team/ForeverAlone.html">ForeverAlone</a>
+                    
+                    
+                </td>
+                
+                    <td>19</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>224</td>
+                <td>
+                    
+                    <a href="team/Why+did+the+chicken+cross+the+road.html">Why did the chicken cross the road?</a>
+                    
+                    
+                </td>
+                
+                    <td>18</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>225</td>
+                <td>
+                    
+                    <a href="team/kwargers.html">kwargers</a>
+                    
+                    
+                </td>
+                
+                    <td>18</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>226</td>
+                <td>
+                    
+                    <a href="team/I'm+just+here+so+I+won't+get+fined.html">I&#x27;m just here so I won&#x27;t get fined</a>
+                    
+                    
+                </td>
+                
+                    <td>18</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>227</td>
+                <td>
+                    
+                    <a href="team/Team+BLT.html">Team BLT</a>
+                    
+                    
+                </td>
+                
+                    <td>18</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>228</td>
+                <td>
+                    
+                    <a href="team/Kapsized+Kayaks.html">Kapsized Kayaks</a>
+                    
+                    
+                </td>
+                
+                    <td>17</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>229</td>
+                <td>
+                    
+                    <a href="team/Cult+of+Idiotic+Avians.html">Cult of Idiotic Avians</a>
+                    
+                    
+                </td>
+                
+                    <td>17</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>230</td>
+                <td>
+                    
+                    <a href="team/Punzzle.html">Punzzle</a>
+                    
+                    
+                </td>
+                
+                    <td>17</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>231</td>
+                <td>
+                    
+                    <a href="team/Jaws+of+the+Leopard.html">Jaws of the Leopard</a>
+                    
+                    
+                </td>
+                
+                    <td>17</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>232</td>
+                <td>
+                    
+                    <a href="team/Transpersonal+Pigeons.html">Transpersonal Pigeons</a>
+                    
+                    
+                </td>
+                
+                    <td>17</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>233</td>
+                <td>
+                    
+                    <a href="team/[ominous+synth+music].html">[ominous synth music]</a>
+                    
+                    
+                </td>
+                
+                    <td>16</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>234</td>
+                <td>
+                    
+                    <a href="team/Puzzlehunt+Doctorate.html">Puzzlehunt Doctorate</a>
+                    
+                    
+                </td>
+                
+                    <td>16</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>235</td>
+                <td>
+                    
+                    <a href="team/KaBaL.html">KaBaL</a>
+                    
+                    
+                </td>
+                
+                    <td>16</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>236</td>
+                <td>
+                    
+                    <a href="team/TCG.html">TCG</a>
+                    
+                    
+                </td>
+                
+                    <td>16</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>237</td>
+                <td>
+                    
+                    <a href="team/Team+Turtle.html">Team Turtle</a>
+                    
+                    
+                </td>
+                
+                    <td>16</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>238</td>
+                <td>
+                    
+                    <a href="team/Fig+Newton.html">Fig Newton</a>
+                    
+                    
+                </td>
+                
+                    <td>16</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>239</td>
+                <td>
+                    
+                    <a href="team/solonius+monk.html">solonius monk</a>
+                    
+                    
+                </td>
+                
+                    <td>16</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>240</td>
+                <td>
+                    
+                    <a href="team/AnyosTeam.html">AnyosTeam</a>
+                    
+                    
+                </td>
+                
+                    <td>15</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>241</td>
+                <td>
+                    
+                    <a href="team/Lazlo+Hollyfeld.html">Lazlo Hollyfeld</a>
+                    
+                    
+                </td>
+                
+                    <td>15</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>242</td>
+                <td>
+                    
+                    <a href="team/The+More+You+Know.html">The More You Know</a>
+                    
+                    
+                </td>
+                
+                    <td>15</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>243</td>
+                <td>
+                    
+                    <a href="team/Chicken+Magnetic.html">Chicken Magnetic</a>
+                    
+                    
+                </td>
+                
+                    <td>15</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>244</td>
+                <td>
+                    
+                    <a href="team/Puzzlebusters.html">Puzzlebusters</a>
+                    
+                    
+                </td>
+                
+                    <td>13</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>245</td>
+                <td>
+                    
+                    <a href="team/apples.html">apples</a>
+                    
+                    
+                </td>
+                
+                    <td>13</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>246</td>
+                <td>
+                    
+                    <a href="team/Terraformers.html">Terraformers</a>
+                    
+                    
+                </td>
+                
+                    <td>12</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>247</td>
+                <td>
+                    
+                    <a href="team/Enigma.html">Enigma</a>
+                    
+                    
+                </td>
+                
+                    <td>12</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>248</td>
+                <td>
+                    
+                    <a href="team/10,000+onions.html">10,000 onions</a>
+                    
+                    
+                </td>
+                
+                    <td>11</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>249</td>
+                <td>
+                    
+                    <a href="team/Fresh.html">Fresh</a>
+                    
+                    
+                </td>
+                
+                    <td>11</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>250</td>
+                <td>
+                    
+                    <a href="team/slinky.html">slinky</a>
+                    
+                    
+                </td>
+                
+                    <td>11</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>251</td>
+                <td>
+                    
+                    <a href="team/gatorland.html">gatorland</a>
+                    
+                    
+                </td>
+                
+                    <td>11</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>252</td>
+                <td>
+                    
+                    <a href="team/Riddle+Me+This.html">Riddle Me This</a>
+                    
+                    
+                </td>
+                
+                    <td>11</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>253</td>
+                <td>
+                    
+                    <a href="team/Lustin+Djinn.html">Lustin Djinn</a>
+                    
+                    
+                </td>
+                
+                    <td>11</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>254</td>
+                <td>
+                    
+                    <a href="team/Livin'+Covida+Loca.html">Livin&#x27; Covida Loca</a>
+                    
+                    
+                </td>
+                
+                    <td>11</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>255</td>
+                <td>
+                    
+                    <a href="team/microegg.html">microegg</a>
+                    
+                    
+                </td>
+                
+                    <td>10</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>256</td>
+                <td>
+                    
+                    <a href="team/SMRB.html">SMRB</a>
+                    
+                    
+                </td>
+                
+                    <td>9</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>257</td>
+                <td>
+                    
+                    <a href="team/Rainbow+Ravens.html">Rainbow Ravens</a>
+                    
+                    
+                </td>
+                
+                    <td>9</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>258</td>
+                <td>
+                    
+                    <a href="team/Coming+to+the+main+stage+!!!+BELINDA+CHINASHOP+!!!.html">Coming to the main stage !!! BELINDA CHINASHOP !!!</a>
+                    
+                    
+                </td>
+                
+                    <td>9</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>259</td>
+                <td>
+                    
+                    <a href="team/Lil+stoop.html">Lil stoop</a>
+                    
+                    
+                </td>
+                
+                    <td>9</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>260</td>
+                <td>
+                    
+                    <a href="team/Tutte.html">Tutte</a>
+                    
+                    
+                </td>
+                
+                    <td>9</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>261</td>
+                <td>
+                    
+                    <a href="team/PuzzleGPT.html">PuzzleGPT</a>
+                    
+                    
+                </td>
+                
+                    <td>9</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>262</td>
+                <td>
+                    
+                    <a href="team/Adarshams.html">Adarshams</a>
+                    
+                    
+                </td>
+                
+                    <td>9</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>263</td>
+                <td>
+                    
+                    <a href="team/The+Late+Late+Puzzle+Hunters.html">The Late Late Puzzle Hunters</a>
+                    
+                    
+                </td>
+                
+                    <td>8</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>264</td>
+                <td>
+                    
+                    <a href="team/i+caro-kan't+do+puzzles.html">i caro-kan&#x27;t do puzzles</a>
+                    
+                    
+                </td>
+                
+                    <td>8</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>265</td>
+                <td>
+                    
+                    <a href="team/Internet+Explorers.html">Internet Explorers</a>
+                    
+                    
+                </td>
+                
+                    <td>8</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>266</td>
+                <td>
+                    
+                    <a href="team/Rejects+in+the+Arctic.html">Rejects in the Arctic</a>
+                    
+                    
+                </td>
+                
+                    <td>7</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>267</td>
+                <td>
+                    
+                    <a href="team/Just_Me.html">Just_Me</a>
+                    
+                    
+                </td>
+                
+                    <td>7</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>268</td>
+                <td>
+                    
+                    <a href="team/uiop.html">uiop</a>
+                    
+                    
+                </td>
+                
+                    <td>7</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>269</td>
+                <td>
+                    
+                    <a href="team/Alpaca+Puzzles.html">Alpaca Puzzles</a>
+                    
+                    
+                </td>
+                
+                    <td>7</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>270</td>
+                <td>
+                    
+                    <a href="team/Possibly+Puzzlers.html">Possibly Puzzlers</a>
+                    
+                    
+                </td>
+                
+                    <td>7</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>271</td>
+                <td>
+                    
+                    <a href="team/Wizards+Club.html">Wizards Club</a>
+                    
+                    
+                </td>
+                
+                    <td>7</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>272</td>
+                <td>
+                    
+                    <a href="team/Lobsters+of+Death.html">Lobsters of Death</a>
+                    
+                    
+                </td>
+                
+                    <td>6</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>273</td>
+                <td>
+                    
+                    <a href="team/standalone.html">standalone</a>
+                    
+                    
+                </td>
+                
+                    <td>6</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>274</td>
+                <td>
+                    
+                    <a href="team/AThousandQuestions.html">AThousandQuestions</a>
+                    
+                    
+                </td>
+                
+                    <td>6</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>275</td>
+                <td>
+                    
+                    <a href="team/Square+Hearty+Crackers.html">Square Hearty Crackers</a>
+                    
+                    
+                </td>
+                
+                    <td>6</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>276</td>
+                <td>
+                    
+                    <a href="team/CasualPuzzlers.html">CasualPuzzlers</a>
+                    
+                    
+                </td>
+                
+                    <td>5</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>277</td>
+                <td>
+                    
+                    <a href="team/endymion.html">endymion</a>
+                    
+                    
+                </td>
+                
+                    <td>5</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>278</td>
+                <td>
+                    
+                    <a href="team/gravel.html">gravel</a>
+                    
+                    
+                </td>
+                
+                    <td>5</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>279</td>
+                <td>
+                    
+                    <a href="team/One+guy+in+a+trenchcoat.html">One guy in a trenchcoat</a>
+                    
+                    
+                </td>
+                
+                    <td>5</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>280</td>
+                <td>
+                    
+                    <a href="team/Maya's+Team.html">Maya&#x27;s Team</a>
+                    
+                    
+                </td>
+                
+                    <td>5</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>281</td>
+                <td>
+                    
+                    <a href="team/Trapped+in+Nourishment.html">Trapped in Nourishment</a>
+                    
+                    
+                </td>
+                
+                    <td>5</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>282</td>
+                <td>
+                    
+                    <a href="team/awdc.html">awdc</a>
+                    
+                    
+                </td>
+                
+                    <td>4</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>283</td>
+                <td>
+                    
+                    <a href="team/Team+Friendship.html">Team Friendship</a>
+                    
+                    
+                </td>
+                
+                    <td>4</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>284</td>
+                <td>
+                    
+                    <a href="team/BadAtPuzzles.html">BadAtPuzzles</a>
+                    
+                    
+                </td>
+                
+                    <td>3</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>285</td>
+                <td>
+                    
+                    <a href="team/Maze+Explorers.html">Maze Explorers</a>
+                    
+                    
+                </td>
+                
+                    <td>3</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>286</td>
+                <td>
+                    
+                    <a href="team/Chow+Nation.html">Chow Nation</a>
+                    
+                    
+                </td>
+                
+                    <td>3</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>287</td>
+                <td>
+                    
+                    <a href="team/the_team.html">the_team</a>
+                    
+                    
+                </td>
+                
+                    <td>3</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>288</td>
+                <td>
+                    
+                    <a href="team/spl237.html">spl237</a>
+                    
+                    
+                </td>
+                
+                    <td>3</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>289</td>
+                <td>
+                    
+                    <a href="team/ICEA+Farms.html">ICEA Farms</a>
+                    
+                    
+                </td>
+                
+                    <td>3</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>290</td>
+                <td>
+                    
+                    <a href="team/@.html">@</a>
+                    
+                    
+                </td>
+                
+                    <td>2</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>291</td>
+                <td>
+                    
+                    <a href="team/Are+you+not+into+trains.html">Are you not into trains?</a>
+                    
+                    
+                </td>
+                
+                    <td>2</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>292</td>
+                <td>
+                    
+                    <a href="team/All+For+Nautilus.html">All For Nautilus</a>
+                    
+                    
+                </td>
+                
+                    <td>2</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>293</td>
+                <td>
+                    
+                    <a href="team/94cancan.html">94cancan</a>
+                    
+                    
+                </td>
+                
+                    <td>2</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>294</td>
+                <td>
+                    
+                    <a href="team/Gooey+Butter+Cake.html">Gooey Butter Cake</a>
+                    
+                    
+                </td>
+                
+                    <td>2</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>295</td>
+                <td>
+                    
+                    <a href="team/georgsendomorphism.html">georgsendomorphism</a>
+                    
+                    
+                </td>
+                
+                    <td>1</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>296</td>
+                <td>
+                    
+                    <a href="team/nandq.html">nandq</a>
+                    
+                    
+                </td>
+                
+                    <td>1</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>297</td>
+                <td>
+                    
+                    <a href="team/toofargone.html">toofargone</a>
+                    
+                    
+                </td>
+                
+                    <td>1</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>298</td>
+                <td>
+                    
+                    <a href="team/dMeister99.html">dMeister99</a>
+                    
+                    
+                </td>
+                
+                    <td>1</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>299</td>
+                <td>
+                    
+                    <a href="team/Mostly+Harmless.html">Mostly Harmless</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>300</td>
+                <td>
+                    
+                    <a href="team/Bepis+Reunited.html">Bepis Reunited</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>301</td>
+                <td>
+                    
+                    <a href="team/Planet+Express.html">Planet Express</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>302</td>
+                <td>
+                    
+                    <a href="team/The+Funky+Town+Monkey+Pimps.html">The Funky Town Monkey Pimps</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>303</td>
+                <td>
+                    
+                    <a href="team/Nine+Percent.html">Nine Percent</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>304</td>
+                <td>
+                    
+                    <a href="team/𝍣Fantastic+Four𝍣.html">𝍣Fantastic Four𝍣</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>305</td>
+                <td>
+                    
+                    <a href="team/Cgigic.html">Cgigic</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>306</td>
+                <td>
+                    
+                    <a href="team/msl001+solo+adventure.html">msl001 solo adventure</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>307</td>
+                <td>
+                    
+                    <a href="team/Mere+QAts.html">Mere QAts</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>308</td>
+                <td>
+                    
+                    <a href="team/Thunderzshock.html">Thunderzshock</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>309</td>
+                <td>
+                    
+                    <a href="team/Stooli.html">Stooli</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>310</td>
+                <td>
+                    
+                    <a href="team/my_machine_.html">my_machine_</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>311</td>
+                <td>
+                    
+                    <a href="team/sweetangst.html">sweetangst</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>312</td>
+                <td>
+                    
+                    <a href="team/Soloist.html">Soloist</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>313</td>
+                <td>
+                    
+                    <a href="team/Lux.html">Lux</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>314</td>
+                <td>
+                    
+                    <a href="team/Team+Jo.html">Team Jo</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>315</td>
+                <td>
+                    
+                    <a href="team/Sniperwizard69.html">Sniperwizard69</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>316</td>
+                <td>
+                    
+                    <a href="team/The+Mothriders.html">The Mothriders</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>317</td>
+                <td>
+                    
+                    <a href="team/The+Kookaburra+Express.html">The Kookaburra Express</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>318</td>
+                <td>
+                    
+                    <a href="team/Mildertia.html">Mildertia</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>319</td>
+                <td>
+                    
+                    <a href="team/Random+Bullsh1ts+Go.html">Random Bullsh1ts Go</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>320</td>
+                <td>
+                    
+                    <a href="team/Team+Papaya.html">Team Papaya</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>321</td>
+                <td>
+                    
+                    <a href="team/SV+Lebowski.html">SV Lebowski</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>322</td>
+                <td>
+                    
+                    <a href="team/Literally+Animal+Farm.html">Literally Animal Farm</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>323</td>
+                <td>
+                    
+                    <a href="team/NPComplete.html">NPComplete</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>324</td>
+                <td>
+                    
+                    <a href="team/Sama+Family.html">Sama Family</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>325</td>
+                <td>
+                    
+                    <a href="team/simplicissimus.html">simplicissimus</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>326</td>
+                <td>
+                    
+                    <a href="team/anonymous+squids.html">anonymous squids</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>327</td>
+                <td>
+                    
+                    <a href="team/puzzer.html">puzzer</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>328</td>
+                <td>
+                    
+                    <a href="team/invictus.html">invictus</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>329</td>
+                <td>
+                    
+                    <a href="team/🎓🐼+Puzzled+Pandas+🐼🎓.html">🎓🐼 Puzzled Pandas 🐼🎓</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>330</td>
+                <td>
+                    
+                    <a href="team/Great+Puzzle+Team.html">Great Puzzle Team</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>331</td>
+                <td>
+                    
+                    <a href="team/Team+LadBraun.html">Team LadBraun</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>332</td>
+                <td>
+                    
+                    <a href="team/SFYY.html">SFYY</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>333</td>
+                <td>
+                    
+                    <a href="team/Sigma.html">Sigma</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>334</td>
+                <td>
+                    
+                    <a href="team/Puzzy+Solvers.html">Puzzy Solvers</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>335</td>
+                <td>
+                    
+                    <a href="team/Fuzziest+Planets.html">Fuzziest Planets</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>336</td>
+                <td>
+                    
+                    <a href="team/We+like+big+puzzles+and+cannot+lie.html">We like big puzzles and cannot lie</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>337</td>
+                <td>
+                    
+                    <a href="team/We+are+going+on+a+puzzle+hunt.html">We are going on a puzzle hunt</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>338</td>
+                <td>
+                    
+                    <a href="team/QIXL.html">QIXL</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>339</td>
+                <td>
+                    
+                    <a href="team/Funny+Face.html">Funny Face</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>340</td>
+                <td>
+                    
+                    <a href="team/Puzzle+Guzzlers.html">Puzzle Guzzlers</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>341</td>
+                <td>
+                    
+                    <a href="team/Juiced.html">Juiced</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>342</td>
+                <td>
+                    
+                    <a href="team/Team+Shruggo.html">Team Shruggo</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>343</td>
+                <td>
+                    
+                    <a href="team/Donuts.html">Donuts</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>344</td>
+                <td>
+                    
+                    <a href="team/Dynamite+Applications.html">Dynamite Applications</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>345</td>
+                <td>
+                    
+                    <a href="team/🐍🐟🐱🦔🐦🦆🐞🦠🧠🦉🐤🍬.html">🐍🐟🐱🦔🐦🦆🐞🦠🧠🦉🐤🍬</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>346</td>
+                <td>
+                    
+                    <a href="team/Late+to+the+Party.html">Late to the Party</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>347</td>
+                <td>
+                    
+                    <a href="team/SS+Googie.html">SS Googie</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>348</td>
+                <td>
+                    
+                    <a href="team/你们这什么群啊+我孩子的未来都被你们毁了.html">你们这什么群啊 我孩子的未来都被你们毁了</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>349</td>
+                <td>
+                    
+                    <a href="team/UniPuzzlers.html">UniPuzzlers</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>350</td>
+                <td>
+                    
+                    <a href="team/Cat+4nd+Mouse.html">Cat 4nd Mouse</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>351</td>
+                <td>
+                    
+                    <a href="team/Yumping+Ymminys.html">Yumping Ymminys</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>352</td>
+                <td>
+                    
+                    <a href="team/cruciverbalists.html">cruciverbalists</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>353</td>
+                <td>
+                    
+                    <a href="team/Perduts.html">Perduts</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>354</td>
+                <td>
+                    
+                    <a href="team/SGX2023.html">SGX2023</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>355</td>
+                <td>
+                    
+                    <a href="team/CrypticCracker.html">CrypticCracker</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>356</td>
+                <td>
+                    
+                    <a href="team/Outsider.html">Outsider</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>357</td>
+                <td>
+                    
+                    <a href="team/FizzWorld.html">FizzWorld</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>358</td>
+                <td>
+                    
+                    <a href="team/418+I'm+a+coffee+pot.html">418 I&#x27;m a coffee pot</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>359</td>
+                <td>
+                    
+                    <a href="team/Meomeo.html">Meomeo</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>360</td>
+                <td>
+                    
+                    <a href="team/A+Man+A+Plan+A+Canal+Panama.html">A Man A Plan A Canal Panama</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>361</td>
+                <td>
+                    
+                    <a href="team/mayorkga.html">mayorkga</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>362</td>
+                <td>
+                    
+                    <a href="team/Joe.html">Joe</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>363</td>
+                <td>
+                    
+                    <a href="team/password1234backup.html">password1234backup</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>364</td>
+                <td>
+                    
+                    <a href="team/sliinky.html">sliinky</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>365</td>
+                <td>
+                    
+                    <a href="team/Weenus.html">Weenus</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>366</td>
+                <td>
+                    
+                    <a href="team/The+Mega+Passwords.html">The Mega Passwords</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>367</td>
+                <td>
+                    
+                    <a href="team/Happy+Birthday+Jimin!.html">Happy Birthday Jimin!</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>368</td>
+                <td>
+                    
+                    <a href="team/PreventRage.html">PreventRage</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>369</td>
+                <td>
+                    
+                    <a href="team/Chenglo.html">Chenglo</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>370</td>
+                <td>
+                    
+                    <a href="team/Probably+Puzzled.html">Probably Puzzled</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>371</td>
+                <td>
+                    
+                    <a href="team/teamname2.html">teamname2</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>372</td>
+                <td>
+                    
+                    <a href="team/maybemaybemaybe.html">maybemaybemaybe</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>373</td>
+                <td>
+                    
+                    <a href="team/tests.html">tests</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>374</td>
+                <td>
+                    
+                    <a href="team/testingabc.html">testingabc</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>375</td>
+                <td>
+                    
+                    <a href="team/testing+stuff+with+SERVER+ERROR+500.html">testing stuff with SERVER ERROR 500</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>376</td>
+                <td>
+                    
+                    <a href="team/HelpImTrappedInA500ServerError.html">HelpImTrappedInA500ServerError</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>377</td>
+                <td>
+                    
+                    <a href="team/Waxing+Gibbons.html">Waxing Gibbons</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>378</td>
+                <td>
+                    
+                    <a href="team/puzzle+examiners.html">puzzle examiners</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>379</td>
+                <td>
+                    
+                    <a href="team/V.+M.+Varga.html">V. M. Varga</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>380</td>
+                <td>
+                    
+                    <a href="team/nekoteam.html">nekoteam</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>381</td>
+                <td>
+                    
+                    <a href="team/Flying+Penguin.html">Flying Penguin</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>382</td>
+                <td>
+                    
+                    <a href="team/simps.html">simps</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>383</td>
+                <td>
+                    
+                    <a href="team/Ahidajat.html">Ahidajat</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>384</td>
+                <td>
+                    
+                    <a href="team/Mooving+On+Up.html">Mooving On Up</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>385</td>
+                <td>
+                    
+                    <a href="team/testingteam.html">testingteam</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>386</td>
+                <td>
+                    
+                    <a href="team/meomeo.html">meomeo</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>387</td>
+                <td>
+                    
+                    <a href="team/Puzzle+Dog.html">Puzzle Dog</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>388</td>
+                <td>
+                    
+                    <a href="team/hello123.html">hello123</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+            <tr >
+                <td>389</td>
+                <td>
+                    
+                    <a href="team/The+Owl+Theory.html">The Owl Theory</a>
+                    
+                    
+                </td>
+                
+                    <td>0</td>
+                    <td></td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+</main>
+
+
+    </div>
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

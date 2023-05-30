@@ -1,0 +1,876 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>The Telescope</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+<a href="../round/history.html" class="btn">History</a>
+
+
+
+
+
+<a href="../post-hunt-solve/the-telescope.html" class="btn">Call in an answer</a>
+
+
+<a href="../solution/the-telescope.html" class="btn solution-button">View solution</a>
+<a href="../stats/the-telescope.html" class="btn">Stats</a>
+
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<h1 class="puzzle-title">
+    The Telescope
+    
+</h1>
+
+<main class="puzzle-main clipboard-container">
+    
+
+    
+    <style>
+    :root {
+        --sudoku-clue-color: #d3d3d3;
+        --sudoku-text-color: #d3d3d3;
+        --sudoku-outline-color: #000000;
+        --galaxy-clue-color: #a4ffb1;
+        --galaxy-fill-dark-color: #4e7854;
+        --galaxy-fill-light-color: #7bbf85;
+        --masyu-clue-color: #ad6eff;
+        --masyu-path-color: #ad6eff;
+        --back-color: #666666;
+    }
+
+    .telescope {
+        width: 710px;
+        height: 650px;
+        margin: 0px auto;
+        position: relative;
+        background: var(--back-color);
+    }
+
+    .fills, .numbers, .grid, .paths, .dots {
+        position: absolute;
+        top: 10px;
+        left: 70px;
+        width: 630px;
+        height: 630px;
+    }
+
+    .chips {
+        position: absolute;
+        top: 10px;
+        left: 0px;
+        width: 70px;
+        height: 630px;
+    }
+
+    .chips div {
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+        border: 3px solid transparent;
+        padding: 5px;
+    }
+
+    .chips svg {
+        pointer-events: none;
+    }
+
+    .chips div.selected {
+        border: 3px solid black;
+    }
+
+    .disabled {
+        pointer-events: none;
+    }
+
+    .extract {
+        margin: 0px auto;
+    }
+
+    .extract tr td {
+        width: 25px;
+        height: 25px;
+        padding: 0px;
+        margin: 0px;
+        font-size: 12px;
+        text-align: center;
+        border: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+
+    .extract tr:first-child td {
+        border-top: 3px solid black;
+    }
+
+    .extract tr:nth-child(3n) td {
+        border-bottom: 3px solid black;
+    }
+
+    .extract tr td:first-child {
+        border-left: 3px solid black;
+    }
+
+    .extract tr td:nth-child(3n) {
+        border-right: 3px solid black;
+    }
+
+    .numbers td {
+        width: 70px;
+        height: 70px;
+        padding: 0px;
+        margin: 0px;
+        border-bottom: none;
+        background: transparent;
+    }
+
+    .numbers input {
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        color: transparent;
+        text-shadow: 0 0 0 var(--sudoku-text-color), -1px -1px 0 var(--sudoku-outline-color), 0 -1px 0 var(--sudoku-outline-color), 1px -1px 0 var(--sudoku-outline-color), 1px 0 0 var(--sudoku-outline-color), 1px 1px 0 var(--sudoku-outline-color), 0 1px 0 var(--sudoku-outline-color), -1px 1px 0 var(--sudoku-outline-color), -1px 0 0 var(--sudoku-outline-color);
+        pointer-events: none;
+    }
+
+    .numbers input.candidate-mode {
+        font-size: 16px;
+    }
+
+    .numbers input:focus {
+        border: 1px solid red;
+    }
+
+    .grid line {
+        stroke: black;
+        stroke-width: 1px;
+    }
+
+    .grid line.thick {
+        stroke-width: 5px;
+    }
+
+    .dots circle {
+        stroke: black;
+        cursor: pointer;
+    }
+
+    .dots circle.big {
+        stroke-width: 5px;
+    }
+
+    .dots circle.small {
+        stroke-width: 5px;
+    }
+
+    .dots circle.closed {
+        fill: black;
+    }
+
+    .dots circle.open {
+        fill: white;
+    }
+
+    .dots circle.sudoku {
+        stroke: var(--sudoku-clue-color);
+    }
+
+    .dots circle.galaxy {
+        stroke: var(--galaxy-clue-color);
+    }
+
+    .dots circle.masyu {
+        stroke: var(--masyu-clue-color);
+    }
+
+    .fills rect {
+        fill: transparent;
+    }
+
+    .fills rect.dark {
+        fill: var(--galaxy-fill-dark-color);
+    }
+
+    .fills rect.light {
+        fill: var(--galaxy-fill-light-color);
+    }
+
+    .paths line {
+        stroke-width: 8px;
+        stroke: transparent;
+        stroke-linecap: round;
+    }
+
+    .paths line.path-on {
+        stroke: var(--masyu-path-color);
+    }
+
+    @media print {
+        .thetelescope {
+            font-size: 14px;
+            line-height: 15px;
+        }
+
+        .thetelescope p {
+            margin-bottom: 6px;
+        }
+
+        .chips {
+            display: none;
+        }
+
+        .telescope {
+            page-break-after: always;
+        }
+
+        .telescope {
+            width: 630px;
+            height: 630px;
+        }
+
+        .fills, .numbers, .grid, .paths, .dots {
+            top: 0px;
+            left: 0px;
+            width: 630px;
+            height: 630px;
+        }
+
+        .instructions {
+            display: none;
+        }
+    }
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll(".telescope").forEach((t) => { new Telescope(t); });
+
+            window.addEventListener('beforeunload', function(e) {
+                document.querySelectorAll(".telescope").forEach(t => {
+                    t.telescope.saveState();
+            });
+        });
+    });
+
+    function Telescope(t) {
+            this.container = t;
+            this.container.telescope = this;
+            this.fShift = false;
+            this.fControl = false;
+            this.dots = this.container.querySelector(".dots");
+            this.fills = this.container.querySelector(".fills");
+            this.paths = this.container.querySelector(".paths");
+            this.mode = "sudoku";
+            this.mousedown = false;
+            this.currentFill = "";
+            this.lastCol = 0;
+            this.lastRow = 0;
+            this.undoStack = [];
+            this.redoStack = [];
+
+            this.horzLineDots = {};
+            this.vertLineDots = {};
+            this.centerDots = {};
+            this.galaxyFills = {};
+            this.horzPaths = {};
+            this.vertPaths = {};
+
+            this.redoUnit = function(unit) {
+                var elem = unit.elem;
+
+                if (unit.adds) {
+                    unit.adds.forEach((a) => { elem.classList.add(a); });
+                }
+
+                if (unit.removes) {
+                    unit.removes.forEach((a) => { elem.classList.remove(a); });
+                }
+
+                if (unit.oldValue || unit.newValue) {
+                    elem.value = unit.newValue;
+                }
+            }
+
+            this.undoUnit = function(unit) {
+                var elem = unit.elem;
+
+                if (unit.adds) {
+                    unit.adds.forEach((a) => { elem.classList.remove(a); });
+                }
+
+                if (unit.removes) {
+                    unit.removes.forEach((a) => { elem.classList.add(a); });
+                }
+
+                if (unit.oldValue || unit.newValue) {
+                    elem.value = unit.oldValue;
+                }
+            }
+
+            this.undo = function() {
+                if (this.undoStack.length == 0) { return; }
+
+                var unit = this.undoStack.pop();
+                this.undoUnit(unit);
+                this.redoStack.push(unit);
+            }
+
+            this.redo = function() {
+                if (this.redoStack.length == 0) { return; }
+
+                var unit = this.redoStack.pop();
+                this.redoUnit(unit);
+                this.undoStack.push(unit);
+            }
+
+            this.modifyClass = function(elem, adds, removes, newValue) {
+                var trueAdds = [];
+                var trueRemoves = [];
+
+                adds.forEach((a) => { if (a && !elem.classList.contains(a)) { trueAdds.push(a); }});
+                removes.forEach((r) => { if (r && elem.classList.contains(r)) { trueRemoves.push(r); }});
+
+                if (trueAdds.length == 0 && trueRemoves.length == 0 && newValue == null) { return; }
+
+                var unit = { "elem": elem };
+                if (trueAdds.length > 0) { unit.adds = trueAdds; }
+                if (trueRemoves.length > 0) { unit.removes = trueRemoves; }
+                if (newValue != null) { unit.oldValue = elem.value; unit.newValue = newValue; }
+
+                this.redoUnit(unit);
+                this.undoStack.push(unit);
+                this.redoStack = [];
+            }
+
+            this.move = function(elem, drow, dcol) {
+                    var td = elem.parentElement;
+                    var col = Array.prototype.indexOf.call(td.parentElement.children, td);
+                    var row = Array.prototype.indexOf.call(td.parentElement.parentElement.children, td.parentElement);
+
+                    if (this.fShift) {
+                        if (dcol == -1 && col > 0) {
+                            this.toggleVertPath(col, row);
+                        } else if (dcol == 1 && col < 8) {
+                            this.toggleVertPath(col + dcol, row);
+                        } else if (drow == -1 && row > 0) {
+                            this.toggleHorzPath(col, row);
+                        } else if (drow == 1 && row < 8) {
+                            this.toggleHorzPath(col, row + drow);
+                        }
+                    }
+
+                    if (this.fControl) {
+                        if (dcol == -1 && col > 0) {
+                            this.claimDotXY(this.vertLineDots, col, row);
+                        } else if (dcol == 1 && col < 8) {
+                            this.claimDotXY(this.vertLineDots, col + dcol, row);
+                        } else if (drow == -1 && row > 0) {
+                            this.claimDotXY(this.horzLineDots, col, row);
+                        } else if (drow == 1 && row < 8) {
+                            this.claimDotXY(this.horzLineDots, col, row + drow);
+                        }
+                    }
+
+                    var newitem = this.container.querySelector("tr:nth-child(" + (row + drow + 1) + ") td:nth-child(" + (col + dcol + 1) + ") input");
+
+                    if (!newitem) {
+                            return false;
+                    }
+
+                    newitem.focus();
+                    return true;
+            }
+
+            this.rotateFill = function(td, backwards) {
+                    var col = Array.prototype.indexOf.call(td.parentElement.children, td);
+                    var row = Array.prototype.indexOf.call(td.parentElement.parentElement.children, td.parentElement);
+
+                    if (this.fControl) {
+                        this.claimDotXY(this.centerDots, col, row);
+                        return;
+                    }
+
+                    var cls = this.getFill(col, row);
+
+                    if (backwards) {
+                        if (cls == "") { cls = "light"; }
+                        else if (cls == "light") { cls = "dark"; }
+                        else { cls = ""; }
+                    } else {
+                        if (cls == "") { cls = "dark"; }
+                        else if (cls == "dark") { cls = "light"; }
+                        else { cls = ""; }
+                    }
+
+                    this.setFill(col, row, cls);
+                    this.currentFill = cls;
+            }
+
+            this.setCurrentFill = function(td) {
+                    var col = Array.prototype.indexOf.call(td.parentElement.children, td);
+                    var row = Array.prototype.indexOf.call(td.parentElement.parentElement.children, td.parentElement);
+
+                    this.setFill(col, row, this.currentFill);
+            }
+
+            this.setPathStart = function(td) {
+                    this.lastCol = Array.prototype.indexOf.call(td.parentElement.children, td);
+                    this.lastRow = Array.prototype.indexOf.call(td.parentElement.parentElement.children, td.parentElement);
+            }
+
+            this.drawPath = function(td) {
+                    var col = Array.prototype.indexOf.call(td.parentElement.children, td);
+                    var row = Array.prototype.indexOf.call(td.parentElement.parentElement.children, td.parentElement);
+
+                    if (col == this.lastCol) {
+                        if (row == this.lastRow - 1) {
+                            this.toggleHorzPath(col, this.lastRow);
+                        }
+                        else if (row == this.lastRow + 1) {
+                            this.toggleHorzPath(col, row);
+                        }
+                    } else if (row == this.lastRow) {
+                        if (col == this.lastCol - 1) {
+                            this.toggleVertPath(this.lastCol, row);
+                        }
+                        else if (col == this.lastCol + 1) {
+                            this.toggleVertPath(col, row);
+                        }
+                    }
+
+                    this.lastCol = col;
+                    this.lastRow = row;
+            }
+
+            this.keyDown = function(e) {
+                    if (e.keyCode == 9) { // tab
+                        return;
+                    } else if (e.keyCode == 37 || e.keyCode == 65) { // left/A
+                            this.move(e.target, 0, -1);
+                    } else if (e.keyCode == 38 || e.keyCode == 87) { // up/W
+                            this.move(e.target, -1, 0);
+                    } else if (e.keyCode == 39 || e.keyCode == 68) { // right/D
+                            this.move(e.target, 0, 1);
+                    } else if (e.keyCode == 40 || e.keyCode == 83) { // down/S
+                            this.move(e.target, 1, 0);
+                    } else if (e.keyCode == 32) { // space
+                            this.rotateFill(e.target.parentElement, this.fShift);
+                    } else if (e.keyCode == 8 || e.keyCode == 46) { // backspace/delete
+                            this.modifyClass(e.target, [], [], "");
+                    } else if ((e.keyCode >= 49 && e.keyCode <= 57) || (e.keyCode >= 97 && e.keyCode <= 105)) { // 1-9
+                            var ch = (e.keyCode % 48).toString();
+
+                            if (this.fShift) {
+                                    var val = e.target.value;
+                                    if (!val.includes(ch)) {
+                                            val = val + ch;
+                                    } else {
+                                            val = val.replace(ch, "");
+                                    }
+                                    this.modifyClass(e.target, ["candidate-mode"], [], val);
+                            } else {
+                                    this.modifyClass(e.target, [], ["candidate-mode"], ch);
+                            }
+                    } else if (e.keyCode == 77) { // M
+                        this.setMode("masyu");
+                    } else if (e.keyCode == 71) { // G
+                        this.setMode("galaxy");
+                    } else if (e.keyCode == 75) { // K
+                        this.setMode("sudoku");
+                    } else if (e.keyCode == 90) { // Z
+                        if (e.ctrlKey) { this.undo(); }
+                    } else if (e.keyCode == 89) { // Y
+                        if (e.ctrlKey) { this.redo(); }
+                    }
+
+                    e.preventDefault();
+            }
+
+            this.claimDot = function(dot) {
+                this.modifyClass(dot, [this.mode], ["masyu", "galaxy", "sudoku"], null);
+            }
+
+            this.claimDotXY = function(dots, x, y) {
+                var dot = dots[y * 9 + x];
+
+                if (dot) {
+                    this.claimDot(dot);
+                }
+            }
+
+            this.setMode = function(mode) {
+                this.mode = mode;
+
+                this.container.querySelectorAll(".chips div").forEach((c) => {
+                    if (c.getAttribute("data-mode") == mode) {
+                        c.classList.add("selected");
+                    } else {
+                        c.classList.remove("selected");
+                    }
+                });
+            }
+
+            this.mouseDownOnChip = function(e) {
+                this.setMode(e.target.getAttribute("data-mode"));
+            }
+
+            this.updateModifiers = function(e) {
+                var updateCursor = (this.fControl != e.ctrlKey);
+
+                this.fShift = e.shiftKey;
+                this.fControl = e.ctrlKey;
+
+                if (updateCursor) {
+                    if (this.fControl) {
+                        this.container.querySelector(".numbers").classList.add("disabled");
+                        this.container.querySelector(".dots").classList.remove("disabled");
+                    } else {
+                        this.container.querySelector(".numbers").classList.remove("disabled");
+                        this.container.querySelector(".dots").classList.add("disabled");
+                    }
+                }
+            }
+
+            this.createDot = function(cx, cy, r, cls) {
+                var dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                dot.setAttributeNS(null, "cx", cx);
+                dot.setAttributeNS(null, "cy", cy);
+                dot.setAttributeNS(null, "r", r);
+                dot.setAttributeNS(null, "class", cls);
+                dot.addEventListener("mousedown",  e => { this.claimDot(e.target); });
+                this.dots.appendChild(dot);
+
+                return dot;
+            }
+
+            this.createHorzDot = function(x, y, open) {
+                this.horzLineDots[y * 9 + x] = this.createDot(x * 100 + 50, y * 100, 10, "small " + (open ? "open" : "closed"));
+            }
+
+            this.createVertDot = function(x, y, open) {
+                this.vertLineDots[y * 9 + x] = this.createDot(x * 100, y * 100 + 50, 10, "small " + (open ? "open" : "closed"));
+            }
+
+            this.createCenterDot = function(x, y, open) {
+                this.centerDots[y * 9 + x] = this.createDot(x * 100 + 50, y * 100 + 50, 30, "big " + (open ? "open" : "closed"));
+            }
+
+            this.createFill = function(x, y) {
+                var rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+                rect.setAttributeNS(null, "x", x * 100);
+                rect.setAttributeNS(null, "y", y * 100);
+                rect.setAttributeNS(null, "width", 100);
+                rect.setAttributeNS(null, "height", 100);
+                this.fills.appendChild(rect);
+                this.galaxyFills[y * 9 + x] = rect;
+
+                return rect;
+            }
+
+            this.getFill = function(x, y) {
+                var rect = this.galaxyFills[y * 9 + x];
+
+                if (!rect) {
+                    return "";
+                }
+
+                return rect.getAttributeNS(null, "class");
+            }
+
+            this.setFill = function(x, y, cls) {
+                var rect = this.galaxyFills[y * 9 + x];
+
+                if (!rect) {
+                    rect = this.createFill(x, y);
+                }
+
+                this.modifyClass(rect, [cls], ["dark", "light"], null);
+            }
+
+            this.createPath = function(x1, y1, x2, y2) {
+                var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+                line.setAttributeNS(null, "x1", x1);
+                line.setAttributeNS(null, "y1", y1);
+                line.setAttributeNS(null, "x2", x2);
+                line.setAttributeNS(null, "y2", y2);
+                this.paths.appendChild(line);
+
+                return line;
+            }
+
+            this.createHorzPath = function(x, y) {
+                this.horzPaths[y * 9 + x] = this.createPath(x * 100 + 50, y * 100 - 50, x * 100 + 50, y * 100 + 50);
+            }
+
+            this.createVertPath = function(x, y) {
+                this.vertPaths[y * 9 + x] = this.createPath(x * 100 - 50, y * 100 + 50, x * 100 + 50, y * 100 + 50);
+            }
+
+            this.toggleHorzPath = function(x, y) {
+                if (!this.horzPaths[y * 9 + x]) {
+                    this.createHorzPath(x, y);
+                }
+
+                var path = this.horzPaths[y * 9 + x];
+                if (path.classList.contains("path-on")) {
+                    this.modifyClass(path, [], ["path-on"], null);
+                } else {
+                    this.modifyClass(path, ["path-on"], [], null);
+                }
+            }
+
+            this.toggleVertPath = function(x, y) {
+                if (!this.vertPaths[y * 9 + x]) {
+                    this.createVertPath(x, y);
+                }
+
+                var path = this.vertPaths[y * 9 + x];
+                if (path.classList.contains("path-on")) {
+                    this.modifyClass(path, [], ["path-on"], null);
+                } else {
+                    this.modifyClass(path, ["path-on"], [], null);
+                }
+            }
+
+            this.mouseDown = function(e) {
+                this.mousedown = true;
+
+                if (this.mode == "galaxy") {
+                    this.rotateFill(e.currentTarget, e.which != 1 || this.fShift);
+                } else if (this.mode == "masyu") {
+                    this.setPathStart(e.currentTarget);
+                }
+
+                e.currentTarget.querySelector("input").focus();
+                e.preventDefault();
+            }
+
+            this.mouseEnter = function(e) {
+                if (this.mousedown) {
+                    if (this.mode == "galaxy") {
+                        this.setCurrentFill(e.currentTarget);
+                    } else if (this.mode == "masyu") {
+                        this.drawPath(e.currentTarget);
+                    }
+
+                    e.currentTarget.querySelector("input").focus();
+                }
+            }
+
+            this.saveState = function() {
+                var state = [];
+                this.container.querySelectorAll("td").forEach(td => {
+                    var col = Array.prototype.indexOf.call(td.parentElement.children, td);
+                    var row = Array.prototype.indexOf.call(td.parentElement.parentElement.children, td.parentElement);
+
+                    var val = td.querySelector("input").value;
+                    var fill = this.getFill(col, row);
+                    var f = fill == "light" ? "L" : (fill == "dark" ? "D" : "");
+                    var hPath = this.horzPaths[row * 9 + col];
+                    var h = (hPath && hPath.classList.contains("path-on")) ? "H" : "";
+                    var vPath = this.vertPaths[row * 9 + col];
+                    var v = (vPath && vPath.classList.contains("path-on")) ? "V" : "";
+                    state.push(val + "," + f + "," + h + "," + v);
+                });
+                localStorage.setItem("telescope", state.join("|"));
+
+                var dotState = [];
+                this.container.querySelectorAll("circle").forEach(dot => {
+                    if (dot.classList.contains("masyu")) { dotState.push("M"); }
+                    else if (dot.classList.contains("galaxy")) { dotState.push("G"); }
+                    else if (dot.classList.contains("sudoku")) { dotState.push("S"); }
+                    else { dotState.push(""); }
+                })
+                localStorage.setItem("telescope-dots", dotState.join("|"));
+            }
+
+            this.loadState = function() {
+                var state = localStorage.getItem("telescope");
+                if (!state) return;
+                state = state.split("|");
+
+                var iTd = 0;
+                this.container.querySelectorAll("td").forEach(td => {
+                    var col = Array.prototype.indexOf.call(td.parentElement.children, td);
+                    var row = Array.prototype.indexOf.call(td.parentElement.parentElement.children, td.parentElement);
+
+                    var tdState = state[iTd++].split(",");
+                    var input = td.querySelector("input");
+                    input.value = tdState[0];
+                    if (input.value.length > 1) { input.classList.add("candidate-mode"); }
+                    if (tdState[1]) {
+                        var f = this.createFill(col, row);
+                        f.classList.add(tdState[1] == "L" ? "light" : "dark");
+                    }
+                    if (tdState[2]) {
+                        this.createHorzPath(col, row);
+                        this.horzPaths[row * 9 + col].classList.add("path-on");
+                    }
+                    if (tdState[3]) {
+                        this.createVertPath(col, row);
+                        this.vertPaths[row * 9 + col].classList.add("path-on");
+                    }
+                });
+
+                var dotState = localStorage.getItem("telescope-dots");
+                if (!dotState) return;
+                dotState = dotState.split("|");
+
+                var iDot = 0;
+                this.container.querySelectorAll("circle").forEach(dot => {
+                    var d = dotState[iDot++];
+                    if (d == "M") { dot.classList.add("masyu"); }
+                    else if (d == "G") { dot.classList.add("galaxy"); }
+                    else if (d == "S") { dot.classList.add("sudoku"); }
+                })
+            }
+
+            this.container.querySelectorAll("td").forEach((td) => {
+                    var cell = document.createElement("input");
+                    cell.setAttribute("type", "text");
+                    cell.addEventListener("keydown",  e => { this.keyDown(e); });
+                    td.appendChild(cell);
+                    td.addEventListener("mousedown",  e => { this.mouseDown(e); });
+                    td.addEventListener("mouseenter",  e => { this.mouseEnter(e); });
+                    td.addEventListener("contextmenu",  e => { e.preventDefault(); });
+            });
+
+            const horzDots = ["11C", "21O", "72C", "05C", "35O", "16O", "77O"];
+            horzDots.forEach((d) => { this.createHorzDot(parseInt(d[0]), parseInt(d[1]), d[2] == "O"); });
+
+            const vertDots = ["20C", "40C", "21C", "42C", "82C", "74O", "36O", "66O", "76O", "86O", "47C", "78C"];
+            vertDots.forEach((d) => { this.createVertDot(parseInt(d[0]), parseInt(d[1]), d[2] == "O"); });
+
+            const ctrDots = ["20C", "40O", "60O", "70C", "80C", "02O", "12O", "22O", "32C", "62O", "82O", "43O", "83O", "14O", "34O", "44C", "54C", "15C", "45C", "65C", "75C", "06C", "26O", "46O", "86O", "47C", "67O", "87C", "18C", "38C", "48O", "68C", "88O"];
+            ctrDots.forEach((d) => { this.createCenterDot(parseInt(d[0]), parseInt(d[1]), d[2] == "O"); });
+
+            this.loadState();
+
+            this.container.querySelectorAll(".chips div").forEach((c) => {
+                    c.addEventListener("mousedown",  e => { this.mouseDownOnChip(e); });
+            });
+
+            window.addEventListener("mouseup", e => {this.mousedown = false; });
+            document.addEventListener("keyup", e => { this.updateModifiers(e); });
+            document.addEventListener("keydown", e => { this.updateModifiers(e);});
+    }
+</script>
+<div class="thetelescope"><p>The large grid celebrates three moments in telescope history. Each circular clue must be assigned to exactly one of the following three puzzles, <i>though it might also be a valid clue in another</i>:</p><ul><li><b>Galileo Discovers Saturn&rsquo;s Rings:</b> Draw a closed path within the grid through some of the large dots, following Masyu rules <b>but also</b> alternating dot colors between black and white.</li><li><b>Messier Catalogs the First-known Galaxies:</b> Fill the grid with Spiral Galaxies, where a dot of either size is at the 180-degree rotational center of each galaxy <b>but also</b> where orthogonally-adjacent galaxies must have centers of different colors.</li><li><b>MAGIC Detects Gamma-ray Bursts in the Crab Nebula:</b> Place a digit 1-9 in each grid cell to form a dots-optional Kropki Sudoku using some of the small dots, <b>but also</b> form a 3x3 magic square in three of the nine 3x3 boxes. Not all edges that could have dots will in fact have dots.</li></ul><div class="instructions"><p>The puzzle below is interactive and supports undo/redo. No validation will be performed. You can also print this page for a low-ink/toner version.</p><ul><li>Enter Masyu mode by typing M or clicking the purple (top) button. In this mode, draw a path by dragging from one cell to another, or by holding Shift and using the arrow keys.</li><li>Enter Galaxies mode by typing G or clicking the green (middle) button. In this mode, color cells by clicking them (or right/Shift-clicking them), or with Space/Shift-Space. You can drag the mouse to color multiple cells.</li><li>Enter Kropki Sudoku mode by typing K or clicking the gray (bottom) button. In this mode, type any digit, or hold Shift while typing to toggle candidate digits.</li><li>You can color the outer ring of a clue to match the current mode by Ctrl-clicking on it, or use Ctrl-Space and Ctrl-arrows.</li><li>You can use WASD in place of the arrow keys (which will be necessary on a Mac since Ctrl-arrows are undetectable)</li><li>You can undo with Ctrl+Z and redo with Ctrl+Y.</li></ul></div><div class="telescope"><svg class="fills disabled" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 900 900"></svg><svg class="grid disabled" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 900 900"><line x1="0" y1="0" x2="900" y2="0" class="thick"/><line x1="0" y1="100" x2="900" y2="100"/><line x1="0" y1="200" x2="900" y2="200"/><line x1="0" y1="300" x2="900" y2="300" class="thick"/><line x1="0" y1="400" x2="900" y2="400"/><line x1="0" y1="500" x2="900" y2="500"/><line x1="0" y1="600" x2="900" y2="600" class="thick"/><line x1="0" y1="700" x2="900" y2="700"/><line x1="0" y1="800" x2="900" y2="800"/><line x1="0" y1="900" x2="900" y2="900" class="thick"/><line x1="0" y1="0" x2="0" y2="900" class="thick"/><line x1="100" y1="0" x2="100" y2="900"/><line x1="200" y1="0" x2="200" y2="900"/><line x1="300" y1="0" x2="300" y2="900" class="thick"/><line x1="400" y1="0" x2="400" y2="900"/><line x1="500" y1="0" x2="500" y2="900"/><line x1="600" y1="0" x2="600" y2="900" class="thick"/><line x1="700" y1="0" x2="700" y2="900"/><line x1="800" y1="0" x2="800" y2="900"/><line x1="900" y1="0" x2="900" y2="900" class="thick"/></svg><svg class="paths disabled" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 900 900"></svg><svg class="dots disabled" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 900 900"></svg><table class="numbers"><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table><div class="chips"><div style="background: var(--masyu-clue-color)" data-mode="masyu"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="30px" height="30px" viewBox="0 0 30 30"><path d="M 25 15 V 5 H 5 V 25 H 25" stroke="black" stroke-width="1px" fill="none"/><circle cx="5" cy="25" r="3" stroke="black" stroke-width="1"/><circle cx="15" cy="5" r="3" stroke="black" stroke-width="1" fill="white"/></svg></div><div style="background: var(--galaxy-clue-color)" data-mode="galaxy"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="30px" height="30px" viewBox="0 0 30 30"><rect x="0" y="5" width="30" height="20" stroke="black" stroke-width="1px" fill="none"/><rect x="0" y="15" width="10" height="10" stroke="black" stroke-width="1px" fill="none"/><rect x="20" y="5" width="10" height="10" stroke="black" stroke-width="1px" fill="none"/><circle cx="15" cy="15" r="2" stroke="black" stroke-width="1" fill="white"/><circle cx="5" cy="20" r="3" stroke="black" stroke-width="1"/><circle cx="25" cy="10" r="3" stroke="black" stroke-width="1"/></svg></div><div style="background: var(--sudoku-clue-color)" class="selected" data-mode="sudoku"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="30px" height="30px" viewBox="0 0 30 30"><rect x="0" y="0" width="20" height="30" stroke="black" stroke-width="1px" fill="none"/><rect x="10" y="0" width="20" height="30" stroke="black" stroke-width="1px" fill="none"/><rect x="0" y="0" width="30" height="20" stroke="black" stroke-width="1px" fill="none"/><rect x="0" y="10" width="30" height="20" stroke="black" stroke-width="1px" fill="none"/><circle cx="10" cy="5" r="2" stroke="black" stroke-width="1"/><circle cx="25" cy="20" r="2" stroke="black" stroke-width="1" fill="white"/></svg></div></div></div><br/><p>When all three puzzles are solved, proceed clockwise along the path, and for every cell along the path that is in a galaxy with a black center, shift the corresponding letter in the grid below by the digit in the Sudoku. The starting point is for you to determine.</p><table class="extract"><tr><td>J</td><td>F</td><td>N</td><td>F</td><td>Q</td><td>W</td><td>L</td><td>B</td><td>N</td></tr><tr><td>M</td><td>X</td><td>B</td><td>K</td><td>F</td><td>L</td><td>H</td><td>W</td><td>F</td></tr><tr><td>K</td><td>Q</td><td>G</td><td>O</td><td>H</td><td>A</td><td>U</td><td>J</td><td>B</td></tr><tr><td>V</td><td>X</td><td>A</td><td>R</td><td>K</td><td>X</td><td>W</td><td>L</td><td>I</td></tr><tr><td>D</td><td>I</td><td>I</td><td>J</td><td>S</td><td>R</td><td>K</td><td>U</td><td>T</td></tr><tr><td>R</td><td>M</td><td>P</td><td>M</td><td>N</td><td>G</td><td>O</td><td>R</td><td>I</td></tr><tr><td>D</td><td>Z</td><td>C</td><td>D</td><td>S</td><td>S</td><td>X</td><td>Y</td><td>X</td></tr><tr><td>C</td><td>Z</td><td>L</td><td>P</td><td>S</td><td>Y</td><td>K</td><td>Q</td><td>D</td></tr><tr><td>E</td><td>K</td><td>X</td><td>Z</td><td>J</td><td>Y</td><td>G</td><td>A</td><td>T</td></tr></table></div>
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

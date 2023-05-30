@@ -1,0 +1,204 @@
+@media screen {
+  .phone-contents::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .phone-contents::-webkit-scrollbar-track {
+    background: black; 
+  }
+   
+  .phone-contents::-webkit-scrollbar-thumb {
+    background: #e2569e;
+  }
+
+  .phone-contents::-webkit-scrollbar-thumb:hover {
+    background: #a84076; 
+  }
+
+  .pokecupid-container {
+    background-color: #f0f2f6;
+    padding-bottom: 1.5rem;
+  }
+
+  /** Photo carousel styles. */
+
+  .photo-scroll-container {
+    background: white;
+    height: 25em;
+    position: relative;
+  }
+
+  div#photo-scroll-clip {
+    width: 100%;
+  }
+
+  div#photo-scroll-content {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    transition: transform 150ms;
+  }
+
+  div#photo-scroll-content img {
+    position: absolute;
+    width: 100%;
+  }
+
+  .sliding-pagination-button {
+    align-items: center;
+    background-color: black;
+    border-radius: 5em;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    filter: drop-shadow(0 0 0.5rem #000b);
+    justify-content: center;
+    min-height: 5em;
+    padding: 0;
+    position: absolute;
+    top: 18em;
+    width: 5em;
+    z-index: 5;
+  }
+
+  .sliding-pagination-button .action-icon {
+    color: white;
+    font-size: 4em;
+  }
+
+  .sliding-pagination-button.next {
+    right: 1em;
+  }
+
+  .sliding-pagination-button.prev {
+    left: 1em;
+  }
+
+  /** Profile card styles. */
+
+  .profile-header {
+    background-color: white;
+    padding: 1em;
+  }
+
+  .profile-header .name {
+    color: black;
+    font-size: 1.6em;
+    margin: 0;
+    padding: 0;
+  }
+
+  .profile-header .location {
+    margin: 0;
+    font-size: 0.9em;
+    padding-top: 0.5rem;
+    color: #808080;
+  }
+
+  .profile-card {
+    background: white;
+    border-radius: 1rem;
+    margin: 1.5rem;
+  }
+
+  .profile-card-header {
+    align-items: center;
+    background: black;
+    border-radius: 1rem 1rem 0 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+
+  .profile-card-header .arrow {
+    cursor: default;
+    font-size: 2em;
+  }
+
+  .profile-card-header .card-title-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile-card-header .card-title {
+    text-transform: uppercase;
+    color: #808080;
+    font-size: 0.85em;
+    font-weight: 600;
+  }
+
+  .profile-card-header .card-subtitle {
+    font-size: 1.1em;
+  }
+
+  .profile-card-content {
+    padding: 1.5rem;
+  }
+
+  .phone-contents .profile-card-content p {
+    line-height: 1.5em;
+  }
+
+  .profile-card-content p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .profile-card-content .question {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .detail-card {
+    display: flex;
+    font-size: 0.9em;
+    gap: 1rem;
+  }
+
+  .detail-card:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+
+  .detail-card .detail-label {
+    flex-grow: 1;
+  }
+
+  .detail-card .detail-dropdown {
+    position: relative;
+  }
+
+  .detail-dropdown .dropdown-button {
+    border: none;
+    color: #e2569e;
+    margin: 0;
+    padding: 0;
+  }
+
+  .detail-dropdown .dropdown-content {
+    background: #eee;
+    border-radius: 1rem;
+    display: none;
+    filter: drop-shadow(0.2rem 0.2rem 0.3rem #0006);
+    margin-top: -0.5rem;
+    min-width: 12em;
+    position: absolute;   
+    right: 0;
+    z-index: 5;
+  }
+
+  .dropdown-item {
+    cursor: not-allowed;
+    padding: 0.5rem 1rem;
+  }
+
+  .dropdown-item:hover {
+    background: #ddd;
+  }
+
+  .dropdown-item.na-item {
+    background: #ddd;
+    cursor: pointer;
+    font-weight: 600;
+    color: #e2569e;
+  }
+}

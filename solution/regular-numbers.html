@@ -1,0 +1,248 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: MATH 39.166666 Regular Numbers</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="../puzzle/regular-numbers.html" class="btn">Back to the puzzle</a>
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: MATH 39.166666 Regular Numbers
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer spoiler">ADA KING</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Amos Eshel
+
+    </h2>
+
+    
+    <style>
+  .puzzle-main .monospace {
+    font-family: monospace;
+  }
+
+  span.gray-background {
+    box-shadow: inset 50px 50px lightgray;
+    background-color: lightgray;
+  }
+
+  div.centerer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  table.number-words {
+    border-collapse: collapse;
+  }
+
+  table.number-words tr > *:not(:first-child) {
+    padding-left: 30px;
+  }
+
+  table.number-words td {
+    border: none;
+    padding: 5px;
+    vertical-align: middle;
+  }
+
+  .puzzle-main pre {
+    margin: 0px;
+  }
+
+  table.hr td {
+    background-color: gray;
+  }
+
+  div.leftpad {
+    margin-left: 30px;
+  }
+
+  span.red {
+    color: red;
+    font-weight: bold;
+  }
+</style>
+
+<p>This puzzle is composed of math expressions that equate a number which is also a regular expression for that number. The 
+flavortext expression is meant to show how order of operations works, namely 
+<span class="monospace">14 + 3^3 + 2*(11-6) + 7^2= 100</span>, and as a regular expression: 
+<span class="monospace">{ONE}{H}{UND}{}{R}{E}{D}</span>.</p>
+<p>Each group is composed of 3 expressions that you must solve, where each “answer” is in increasing order. Once the 3
+expressions have been solved, do it one more time with the expressions at the bottom (also in increasing order).
+Finally convert these last 7 numbers via A1-Z26 and order by the original mini-puzzles for the answer: 
+<span class="spoiler">ADA KING</span>. Individual solutions below.</p>
+<pre>SEVEN = .[<span class="gray-background">FIVE</span>]*[<span class="gray-background">FOURTEEN</span>]</pre>
+<pre>FOURTEEN = [<span class="gray-background">FOUR</span>]*.[<span class="gray-background">FIVE</span>]*[<span class="gray-background">SEVEN</span>]</pre>
+<pre>TWENTY = [<span class="gray-background">TWO</span>]+[<span class="gray-background">NINE</span>]+[<span class="gray-background">THREE</span>][^<span class="gray-background">TWO</span>]</pre>
+<div class="leftpad"><span class="monospace"><span class="red">A</span> = ONE = [<span class="gray-background">FOURTEEN</span>]+[<span class="gray-background">SEVEN</span>-<span class="gray-background">TWENTY</span>]</span> (Expression 2)</div>
+<p></p>
+<pre>TWO = [<span class="gray-background">TWENTY</span>]*.[<span class="gray-background">ONE</span>]</pre>
+<pre>FOUR = .[<span class="gray-background">ONE</span>]+[<span class="gray-background">THIRTEEN</span>]*.[<span class="gray-background">THREE</span>]</pre>
+<pre>FIVE = [<span class="gray-background">FIFTEEN</span>]+[<span class="gray-background">SEVEN</span>]+[<span class="gray-background">THREE</span>-<span class="gray-background">TWENTY</span>]</pre>
+<div class="leftpad"><span class="monospace"><span class="red">D</span> = FOUR = [<span class="gray-background">FIVE</span>]*[<span class="gray-background">TWO</span>]*.[<span class="gray-background">FOUR</span>]</span> (Expression 3)</div>
+<p></p>
+<pre>ZERO = .[<span class="gray-background">THREE</span>]*[<span class="gray-background">ZERO</span>]</pre>
+<pre>ONE = .[<span class="gray-background">FOUR</span>]*[<span class="gray-background">FIVE</span>]*.[<span class="gray-background">FIVE</span>]</pre>
+<pre>FORTY = [<span class="gray-background">FOURTEEN</span>]+[<span class="gray-background">TWENTYSIX</span>]</pre>
+<div class="leftpad"><span class="monospace"><span class="red">A</span> = ONE = [<span class="gray-background">FORTY</span>][^<span class="gray-background">ZERO</span>]*[<span class="gray-background">ONE</span>]</span> (Expression 1)</div>
+<p></p>
+<pre>TWELVE = [<span class="gray-background">THREE</span>]+[<span class="gray-background">TWO</span>][^<span class="gray-background">TWO</span>]+[<span class="gray-background">FIVE</span>]</pre>
+<pre>NINETYTHREE = [<span class="gray-background">THIRTYONE</span>]*[<span class="gray-background">THREE</span>]</pre>
+<pre>NINTEYFOUR = [<span class="gray-background">THIRTEEN</span>]+[<span class="gray-background">THREE</span>][^<span class="gray-background">THREE</span>]*[<span class="gray-background">THREE</span>]</pre>
+<div class="leftpad"><span class="monospace"><span class="red">K</span> = ELEVEN = [<span class="gray-background">TWELVE</span>]+[<span class="gray-background">NINETYTHREE</span>-<span class="gray-background">NINTEYFOUR</span>]</span> (Expression 6)</div>
+<p></p>
+<pre>THREE = [<span class="gray-background">FIFTEEN</span>]*.[<span class="gray-background">FOUR</span>]*.[<span class="gray-background">FIVE</span>]</pre>
+<pre>SIX = [<span class="gray-background">TWELVE</span>]*.[<span class="gray-background">FIVE</span>][^<span class="gray-background">ONE</span>]</pre>
+<pre>TEN = [<span class="gray-background">THREE</span>]+[<span class="gray-background">SEVEN</span>]</pre>
+<div class="leftpad"><span class="monospace"><span class="red">I</span> = NINE = .[<span class="gray-background">SIX</span>]*[<span class="gray-background">TEN</span>]+[<span class="gray-background">THREE</span>]</span> (Expression 5)</div>
+<p></p>
+<pre>THREE = [<span class="gray-background">TWO</span>]+[<span class="gray-background">EIGHT</span>]*[<span class="gray-background">ZERO</span>]+[<span class="gray-background">ONE</span>]</pre>
+<pre>FOUR = .[<span class="gray-background">TWO</span>][^<span class="gray-background">TWO</span>]*[<span class="gray-background">ONEHUNDRED</span>]</pre>
+<pre>SEVEN = .[<span class="gray-background">FIVE</span>]*[<span class="gray-background">TWELVE</span>]+[<span class="gray-background">ONE</span>]</pre>
+<div class="leftpad"><span class="monospace"><span class="red">N</span> = FOURTEEN = [<span class="gray-background">FOUR</span>]+[<span class="gray-background">THREE</span>]+[<span class="gray-background">SEVEN</span>]</span> (Expression 7)</div>
+<p></p>
+<pre>ONE = [<span class="gray-background">TWO</span>]*.[<span class="gray-background">FIVE</span>]</pre>
+<pre>FIVE = [<span class="gray-background">FIFTY</span>]*.[<span class="gray-background">ONE</span>]</pre>
+<pre>TWELVE = [<span class="gray-background">TWO</span>]+[<span class="gray-background">ELEVEN</span>]+[<span class="gray-background">TWO</span>-<span class="gray-background">THREE</span>]</pre>
+<div class="leftpad"><span class="monospace"><span class="red">G</span> = SEVEN = .[<span class="gray-background">FIVE</span>]+[<span class="gray-background">TWELVE</span>]+[<span class="gray-background">ONE</span>]</span> (Expression 4)</div>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    
+Credit for the idea from Jonah Ostroff who came up with the original <span class="monospace">[THREE]+[SEVEN]=TEN</span>,
+with inspiration from Jack Lance.
+
+    
+
+    
+    
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

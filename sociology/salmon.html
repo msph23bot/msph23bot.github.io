@@ -1,0 +1,330 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+  <link rel="stylesheet" href="../static/css/sociology-base.css">
+  <link rel="stylesheet" href="../static/puzzle_resources/salmon/salmon.css">
+  <title>Salmon's PokeCupid page</title>
+
+    
+  <link rel="icon" type="image/png" href="../static/puzzle_resources/salmon/pokecupid.webp">
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+ <div id="deptdropdownmenu"></div>
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="../round/sociology.html" class="btn">Back to Sociology</a>
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<script>
+function refreshTime() {
+    const timeDisplay = document.getElementById('notif-time');
+    const dateString = new Date().toLocaleTimeString();
+    timeDisplay.textContent = dateString.substring(0, dateString.indexOf(':', 3));
+}
+setInterval(refreshTime, 1000);
+</script>
+<style>
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.screen-container {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen {
+    .media-icon, .fish-icon {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+    }
+
+    .media-icon {
+        height: 12em;
+        right: 1em;
+        top: 3em;
+        transform: rotate(15deg);
+        width: 12em;
+        z-index: 0;
+    }
+
+    .fish-icon {
+        z-index: 20;
+    }
+
+    .phone-container {
+        background-color: black;
+        border-radius: 30px;
+        height: 60em;
+        overflow: hidden;
+        padding: 3em 1em 1em;
+        position: relative;
+        width: 30em;
+    }
+
+    .phone-screen {
+        background-color: white;
+        border-radius: 20px;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .phone-notification-bar {
+        align-items: center;
+        display: flex;
+        background-color: #050505;
+        height: 2em;
+        justify-content: space-between;
+        padding: 0 2%;
+    }
+
+    .notif-text{
+        color: white;
+        font-size: 1em;
+        padding: 0 1%;
+    }
+
+    .notif-gap {
+        flex-grow: 1;
+    }
+
+    .notif-icon {
+        color: white;
+        font-size: 1em;
+    }
+
+    .phone-nav-bar {
+        align-items: center;
+        display: flex;
+        background-color: #050505;
+        gap: 25%;
+        height: 2.5em;
+        justify-content: center;
+    }
+
+    .nav-icon {
+        color: white;
+        font-size: 1.5em;
+    }
+
+    .phone-contents {
+        height: calc(100% - 4.5em);
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+
+    .phone-contents h1 {
+        background-color: transparent;
+        border: none;
+        font-size: 1.6em;
+    }
+  
+    .phone-contents h2 {
+        background-color: transparent;
+        border: none;
+        font-size: 1.4em;
+    }
+  
+    .phone-contents h3 {
+        background-color: transparent;
+        border: none;
+        font-size: 1.2em;
+    }
+  
+    .phone-contents h4 {
+        background-color: transparent;
+        border: none;
+        font-size: 1em;
+    }
+
+    .phone-contents p {
+        font-size: 0.9em;
+        line-height: 1.2em;
+    }
+}
+
+</style>
+
+
+  <h1>Salmon's PokeCupid page</h1>
+  <button class="btn clipboard-button" data-skip-inline-styles="true"></button>
+
+  <script>
+  </script>
+
+
+<main class="screen-container">
+    
+
+    <div class="media-icon"></div>
+    <div class="fish-icon"></div>
+    <div class="phone-container">
+        <div class="phone-screen">
+            <div class="phone-notification-bar">
+                <span class="notif-text" id="notif-time"></span>
+                <span class="notif-gap"></span>
+                <span class="material-symbols-outlined notif-icon">network_wifi</span>
+                <span class="material-symbols-outlined notif-icon">network_cell</span>
+                <span class="notif-text" id="notif-time">100%</span>
+                <span class="material-symbols-outlined notif-icon">battery_full</span>
+            </div>
+            <div class="phone-contents">
+                
+                
+                    <style>
+@media screen {
+  .media-icon {
+      background-image: url("../static/puzzle_resources/salmon/pokecupid.webp");
+  }
+
+  .fish-icon {
+      background-image: url("../static/puzzle_resources/salmon/salmon.webp");
+      height: 12em;
+      left: 2em;
+      top: -1em;
+      transform: rotate(-35deg) scaleX(-1);
+      width: 18em;
+      pointer-events: none;
+  }
+}
+</style>
+<div class="pokecupid-container clipboard-container"><div class="photo-scroll-container"><button class="sliding-pagination-button prev" aria-label="Previous"><span class="material-symbols-outlined action-icon no-copy">chevron_left</span></button><div id="photo-scroll-clip"><div id="photo-scroll-content"><img style="left: 0" src="../static/puzzle_resources/salmon/1.webp"/><img style="left: 100%" src="../static/puzzle_resources/salmon/2.webp"/><img style="left: 200%" src="../static/puzzle_resources/salmon/3.webp"/><img style="left: 300%" src="../static/puzzle_resources/salmon/4.webp"/><img style="left: 400%" src="../static/puzzle_resources/salmon/5.webp"/><img style="left: 500%" src="../static/puzzle_resources/salmon/6.webp"/><img style="left: 600%" src="../static/puzzle_resources/salmon/7.webp"/><img style="left: 700%" src="../static/puzzle_resources/salmon/8.webp"/><img style="left: 800%" src="../static/puzzle_resources/salmon/9.webp"/><img style="left: 900%" src="../static/puzzle_resources/salmon/10.webp"/></div></div><button class="sliding-pagination-button next no-copy" aria-label="Next"><span class="material-symbols-outlined action-icon">chevron_right</span></button></div><div class="profile-header"><h2 class="name" no-copy>Salmon</h2><h4 class="location" no-copy>Seattle, Washington</h4></div><!-- About me --><div class="profile-card"><div class="profile-card-header"><div class="card-title-container"><div class="card-title">About me</div><div class="card-subtitle">My self-summary</div></div><span class="material-symbols-outlined arrow no-copy">chevron_right</span></div><div class="profile-card-content"><p>
+        School mate at Puzzle University~ 🧩🎓
+      </p></div></div><!-- About me --><div class="profile-card"><div class="profile-card-header"><div class="card-title-container"><div class="card-subtitle">Details</div></div><span class="material-symbols-outlined arrow no-copy">chevron_right</span></div><div class="profile-card-content"><div class="detail-card"><span class="material-symbols-outlined no-copy">work</span><div class="detail-label" data-copy-only-styles="font-weight: bold">Occupation</div><span style="color: black; font-weight: normal; font-style: normal; font-size: 1em;"></span><div class="detail-fill no-copy">Prefer not to say</div><div class="detail-dropdown occupation-button"><button class="dropdown-button" onclick="openDropdown('occupation', event)"><span class="material-symbols-outlined no-copy">edit</span></button><div class="dropdown-content occupation-dropdown"><!-- Really hacky code that breaks for multi-word options. --><div class="dropdown-item">Banker</div><div class="dropdown-item">Beheader</div><div class="dropdown-item">Broadcaster</div><div class="dropdown-item">Doctor</div><div class="dropdown-item">Principal</div><div class="dropdown-item na-item">Prefer not to say</div><div class="copy-spacer"><p></p></div></div></div></div><div class="detail-card"><span class="material-symbols-outlined no-copy">school</span><div class="detail-label" data-copy-only-styles="font-weight: bold">Alma Mater</div><span style="color: black; font-weight: normal; font-style: normal; font-size: 1em;"></span><div class="detail-fill no-copy">Prefer not to say</div><div class="detail-dropdown almamater-button"><button class="dropdown-button" onclick="openDropdown('almamater', event)"><span class="material-symbols-outlined no-copy">edit</span></button><div class="dropdown-content almamater-dropdown"><!-- Really hacky code that breaks for multi-word options. --><div class="dropdown-item">Harvard</div><div class="dropdown-item">Brown</div><div class="dropdown-item">Yale</div><div class="dropdown-item">Princeton</div><div class="dropdown-item">Dartmouth</div><div class="dropdown-item">Columbia</div><div class="dropdown-item">Cornell</div><div class="dropdown-item">UPenn</div><div class="dropdown-item na-item">Prefer not to say</div><div class="copy-spacer"><p></p></div></div></div></div><div class="detail-card"><span class="material-symbols-outlined no-copy">person</span><div class="detail-label" data-copy-only-styles="font-weight: bold">Age</div><span style="color: black; font-weight: normal; font-style: normal; font-size: 1em;"></span><div class="detail-fill no-copy">Prefer not to say</div><div class="detail-dropdown age-button"><button class="dropdown-button" onclick="openDropdown('age', event)"><span class="material-symbols-outlined no-copy">edit</span></button><div class="dropdown-content age-dropdown"><!-- Really hacky code that breaks for multi-word options. --><div class="dropdown-item">Egg</div><div class="dropdown-item">Alevin</div><div class="dropdown-item">Fry</div><div class="dropdown-item">Parr</div><div class="dropdown-item">Adult</div><div class="dropdown-item na-item">Prefer not to say</div><div class="copy-spacer"><p></p></div></div></div></div><div class="detail-card"><span class="material-symbols-outlined no-copy">location_on</span><div class="detail-label" data-copy-only-styles="font-weight: bold">Location</div><span style="color: black; font-weight: normal; font-style: normal; font-size: 1em;"></span><div class="detail-fill no-copy">Prefer not to say</div><div class="detail-dropdown location-button"><button class="dropdown-button" onclick="openDropdown('location', event)"><span class="material-symbols-outlined no-copy">edit</span></button><div class="dropdown-content location-dropdown"><!-- Really hacky code that breaks for multi-word options. --><div class="dropdown-item">Arctic</div><div class="dropdown-item">Atlantic</div><div class="dropdown-item">Pacific</div><div class="dropdown-item">Southern</div><div class="dropdown-item na-item">Prefer not to say</div><div class="copy-spacer"><p></p></div></div></div></div><div class="detail-card"><span class="material-symbols-outlined no-copy">star</span><div class="detail-label" data-copy-only-styles="font-weight: bold">Zodiac Sign</div><span style="color: black; font-weight: normal; font-style: normal; font-size: 1em;"></span><div class="detail-fill no-copy">Prefer not to say</div><div class="detail-dropdown zodiacsign-button"><button class="dropdown-button" onclick="openDropdown('zodiacsign', event)"><span class="material-symbols-outlined no-copy">edit</span></button><div class="dropdown-content zodiacsign-dropdown"><!-- Really hacky code that breaks for multi-word options. --><div class="dropdown-item">Aquarius</div><div class="dropdown-item">Pisces</div><div class="dropdown-item">Aries</div><div class="dropdown-item">Taurus</div><div class="dropdown-item">Gemini</div><div class="dropdown-item">Cancer</div><div class="dropdown-item">Leo</div><div class="dropdown-item">Virgo</div><div class="dropdown-item">Libra</div><div class="dropdown-item">Scorpio</div><div class="dropdown-item">Sagittarius</div><div class="dropdown-item">Capricorn</div><div class="dropdown-item na-item">Prefer not to say</div><div class="copy-spacer"><p></p></div></div></div></div><div class="detail-card"><span class="material-symbols-outlined no-copy">church</span><div class="detail-label" data-copy-only-styles="font-weight: bold">Religion</div><span style="color: black; font-weight: normal; font-style: normal; font-size: 1em;"></span><div class="detail-fill no-copy">Prefer not to say</div><div class="detail-dropdown religion-button"><button class="dropdown-button" onclick="openDropdown('religion', event)"><span class="material-symbols-outlined no-copy">edit</span></button><div class="dropdown-content religion-dropdown"><!-- Really hacky code that breaks for multi-word options. --><div class="dropdown-item">Atheism</div><div class="dropdown-item">Christianity</div><div class="dropdown-item">Judaism</div><div class="dropdown-item">Hinduism</div><div class="dropdown-item">Islam</div><div class="dropdown-item na-item">Prefer not to say</div><div class="copy-spacer"><p></p></div></div></div></div><div class="detail-card"><span class="material-symbols-outlined no-copy">category</span><div class="detail-label" data-copy-only-styles="font-weight: bold">Variety</div><span style="color: black; font-weight: normal; font-style: normal; font-size: 1em;"></span><div class="detail-fill no-copy">Prefer not to say</div><div class="detail-dropdown variety-button"><button class="dropdown-button" onclick="openDropdown('variety', event)"><span class="material-symbols-outlined no-copy">edit</span></button><div class="dropdown-content variety-dropdown"><!-- Really hacky code that breaks for multi-word options. --><div class="dropdown-item">King</div><div class="dropdown-item">Sockeye</div><div class="dropdown-item">Coho</div><div class="dropdown-item">Pink</div><div class="dropdown-item">Chinook</div><div class="dropdown-item na-item">Prefer not to say</div><div class="copy-spacer"><p></p></div></div></div></div><div class="detail-card"><span class="material-symbols-outlined no-copy">restaurant_menu</span><div class="detail-label" data-copy-only-styles="font-weight: bold">Diet</div><span style="color: black; font-weight: normal; font-style: normal; font-size: 1em;"></span><div class="detail-fill no-copy">Prefer not to say</div><div class="detail-dropdown diet-button"><button class="dropdown-button" onclick="openDropdown('diet', event)"><span class="material-symbols-outlined no-copy">edit</span></button><div class="dropdown-content diet-dropdown"><!-- Really hacky code that breaks for multi-word options. --><div class="dropdown-item">Herring</div><div class="dropdown-item">Krill</div><div class="dropdown-item">Shrimp</div><div class="dropdown-item">Squid</div><div class="dropdown-item">Grasshoppers</div><div class="dropdown-item na-item">Prefer not to say</div><div class="copy-spacer"><p></p></div></div></div></div><div class="detail-card"><span class="material-symbols-outlined no-copy">transgender</span><div class="detail-label" data-copy-only-styles="font-weight: bold">Sexuality</div><span style="color: black; font-weight: normal; font-style: normal; font-size: 1em;"></span><div class="detail-fill no-copy">Prefer not to say</div><div class="detail-dropdown sexuality-button"><button class="dropdown-button" onclick="openDropdown('sexuality', event)"><span class="material-symbols-outlined no-copy">edit</span></button><div class="dropdown-content sexuality-dropdown"><!-- Really hacky code that breaks for multi-word options. --><div class="dropdown-item">Straight</div><div class="dropdown-item">Bisexual</div><div class="dropdown-item">Gay</div><div class="dropdown-item">Lesbian</div><div class="dropdown-item">Pansexual</div><div class="dropdown-item">Asexual</div><div class="dropdown-item na-item">Prefer not to say</div><div class="copy-spacer"><p></p></div></div></div></div><div class="detail-card"><span class="material-symbols-outlined no-copy">campaign</span><div class="detail-label" data-copy-only-styles="font-weight: bold">Pronouns</div><span style="color: black; font-weight: normal; font-style: normal; font-size: 1em;"></span><div class="detail-fill no-copy">Prefer not to say</div><div class="detail-dropdown pronouns-button"><button class="dropdown-button" onclick="openDropdown('pronouns', event)"><span class="material-symbols-outlined no-copy">edit</span></button><div class="dropdown-content pronouns-dropdown"><!-- Really hacky code that breaks for multi-word options. --><div class="dropdown-item">She/her/hers</div><div class="dropdown-item">He/him/his</div><div class="dropdown-item">They/them/theirs</div><div class="dropdown-item">Ze/hir/hirs</div><div class="dropdown-item na-item">Prefer not to say</div><div class="copy-spacer"><p></p></div></div></div></div><div class="detail-card"><span class="material-symbols-outlined no-copy">how_to_vote</span><div class="detail-label" data-copy-only-styles="font-weight: bold">Politics</div><span style="color: black; font-weight: normal; font-style: normal; font-size: 1em;"></span><div class="detail-fill no-copy">Prefer not to say</div><div class="detail-dropdown politics-button"><button class="dropdown-button" onclick="openDropdown('politics', event)"><span class="material-symbols-outlined no-copy">edit</span></button><div class="dropdown-content politics-dropdown"><!-- Really hacky code that breaks for multi-word options. --><div class="dropdown-item">Independent</div><div class="dropdown-item">Democratic</div><div class="dropdown-item">Republican</div><div class="dropdown-item">Green</div><div class="dropdown-item">Libertarian</div><div class="dropdown-item na-item">Prefer not to say</div><div class="copy-spacer"><p></p></div></div></div></div></div></div><!-- Current goals --><div class="profile-card"><div class="profile-card-header"><div class="card-title-container"><div class="card-title" data-copy-only-styles="font-weight: bold">Aspirations</div><div class="card-subtitle" data-copy-only-styles="font-weight: bold">Current goals</div></div><span class="material-symbols-outlined arrow no-copy">chevron_right</span></div><span style="color: black; font-weight: normal; font-style: normal; font-size: 1em;"></span><div class="profile-card-content"><p>
+        This year, I&rsquo;d like to appear on Grandmaster Puzzles, get a little hotter, and stop showing my age. I also
+        want to become thinner and more refined, run away from home, and wear green instead of purple. Furthermore, I 
+        want to write the second half of that song, finally delete that number, and get a promotion.
+      </p><p>In the long term, I&rsquo;d like to periodically take a step back, make some Flash games, and get a monkey.</p><p>My ultimate goal is to move one step to the southeast.</p></div></div><div class="copy-only"><br/></div><!-- Questions --><div class="profile-card"><div class="profile-card-header"><div class="card-title-container"><div class="card-title" data-copy-only-styles="font-weight: bold">Questions</div><div class="card-subtitle" data-copy-only-styles="font-weight: bold">More things about me</div></div><span class="material-symbols-outlined arrow no-copy">chevron_right</span></div><span style="color: black; font-weight: normal; font-style: normal; font-size: 1em;"></span><div class="profile-card-content"><p class="question">
+        When you eat a hamburger, do you put the tomato directly under the top bun?
+      </p><p class="answer">Sometimes</p><p class="question">
+        (This is a red flag!) Is there a golf ball near you?
+      </p><p class="answer">Sometimes</p><p class="question">
+        Does your watch say that it's 10:10?
+      </p><p class="answer">Sometimes</p><p class="question">
+        Do you bring a racket when you play tennis?
+      </p><p class="answer">Sometimes</p><p class="question">
+        Do you like olives on pizza?
+      </p><p class="answer">Sometimes</p><p class="question">
+        Do you find it hard to get a date, specifically?
+      </p><p class="answer">Sometimes</p><p class="question">
+        Can you juggle four balls at once?
+      </p><p class="answer">Sometimes</p><p class="question">
+        When you look in the mirror, do you see an ellipse?
+      </p><p class="answer">Sometimes</p></div></div></div>
+<script src="../static/puzzle_resources/salmon/salmon.js"></script>
+                
+            </div>
+            <div class="phone-nav-bar">
+                <span class="material-symbols-outlined nav-icon">arrow_back_ios</span>
+                <span class="material-symbols-outlined nav-icon">circle</span>
+                <span class="material-symbols-outlined nav-icon">menu</span>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

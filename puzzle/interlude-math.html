@@ -1,0 +1,265 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Interlude: Mathematics</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script><script src="../static/js/interludes.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+<a href="../round/interludes.html" class="btn">Interludes</a>
+
+
+
+
+
+<a href="../post-hunt-solve/interlude-math.html" class="btn">Call in an answer</a>
+
+
+<a href="../solution/interlude-math.html" class="btn solution-button">View solution</a>
+<a href="../stats/interlude-math.html" class="btn">Stats</a>
+
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<h1 class="puzzle-title">
+    Interlude: Mathematics
+    
+</h1>
+
+<main class="puzzle-main clipboard-container">
+    
+
+    
+    
+<style>
+  .checker {
+    border: 1px solid black;
+    padding: 10px;
+    background: lightyellow;
+  }
+
+  div.labeled-inputs {
+    display: grid;
+    grid-template-columns: fit-content(5px) auto;
+  }
+
+  input.box {
+    width: 200px; 
+    margin: 10px; 
+    font-size: 20px; 
+    border-color: black;
+  }
+</style>
+
+<form class="checker no-copy" onsubmit="checkInterlude(event)">
+    <div>Enter your numbers:</div>
+    <div class="labeled-inputs">
+      <label for="a">A:</label>
+      <input id="a" type="text" class="box"/>
+      <label for="b">B:</label>
+      <input id="b" type="text" class="box"/>
+      <label for="c">C:</label>
+      <input id="c" type="text" class="box"/>
+      <label for="d">D:</label>
+      <input id="d" type="text" class="box"/>
+      <label for="e">E:</label>
+      <input id="e" type="text" class="box"/>
+      <label for="f">F:</label>
+      <input id="f" type="text" class="box"/>
+      <label for="g">G:</label>
+      <input id="g" type="text" class="box"/>
+      <label for="h">H:</label>
+      <input id="h" type="text" class="box"/>
+      <label for="i">I:</label>
+      <input id="i" type="text" class="box"/>
+      <label for="j">J:</label>
+      <input id="j" type="text" class="box"/>
+      <label for="k">K:</label>
+      <input id="k" type="text" class="box"/>
+      <label for="l">L:</label>
+      <input id="l" type="text" class="box"/>
+      <label for="m">M:</label>
+      <input id="m" type="text" class="box"/>
+      <input id="check" type="submit" style="margin: 10px; font-size: 20px; display: none" value="Guess"/>
+    </div>
+    <div id="error"></div>
+  <div id="result" style="text-align: right"></div>
+</form>
+
+<script>
+  // https://docs.djangoproject.com/en/dev/ref/csrf/#ajax
+  function getCookie(name) {
+    var cookieValue = '';
+    if (document.cookie && document.cookie !== '') {
+      var cookies = document.cookie.split(';');
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+        // Does this cookie string begin with the name we want?
+        if (cookie.substring(0, name.length + 1) === (name + '=')) {
+          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+          break;
+        }
+      }
+    }
+    return cookieValue;
+  }
+
+  async function sendPostReq(endpoint, body) {
+    try {
+      const csrftoken = getCookie('csrftoken');
+      const result = await fetch(endpoint, {
+        method: 'POST',
+        mode: 'same-origin',
+        headers: { 'X-CSRFToken': csrftoken },
+        body: JSON.stringify(body)
+      });
+      return result.json();
+    } catch {}
+  }
+
+  let guesses= [];
+  const guessBox =  document.getElementById('guess');
+  const errors = document.getElementById('error');
+  const table = document.getElementById('result');
+
+  function checkInterlude(e) {
+    e.preventDefault();
+    for (char of 'abcdefghijklm') {
+      if (document.getElementById(char).value.trim().length === 0) {
+        return;
+      }
+    }
+    const dataToSend = {};
+    guess = [];
+    for (char of 'abcdefghijklm') {
+      dataToSend[char] = document.getElementById(char).value;
+      guess.push(dataToSend[char])
+    }
+    
+    guess = '(' + guess.join(", ") + ')';
+    guesses.push(guess);
+    const tr = document.createElement('tr');
+    data = math(dataToSend)
+
+        if ('error' in data) {
+          document.getElementById('error').innerText = data.error;
+        } else {
+          const td1 = document.createElement('td');
+          td1.innerText = guess;
+          const td2 = document.createElement('td');
+          td2.innerText = data.output;
+          tr.appendChild(td1);
+          tr.appendChild(td2);
+          table.prepend(tr);
+        }
+      }
+</script>
+
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

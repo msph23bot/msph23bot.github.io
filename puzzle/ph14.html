@@ -1,0 +1,600 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>PH14: Making Tracks</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+<a href="../round/placement-test.html" class="btn">Placement Test</a>
+
+
+
+
+
+<a href="../post-hunt-solve/ph14.html" class="btn">Call in an answer</a>
+
+
+<a href="../solution/ph14.html" class="btn solution-button">View solution</a>
+<a href="../stats/ph14.html" class="btn">Stats</a>
+
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<h1 class="puzzle-title">
+    PH14: Making Tracks
+    
+</h1>
+
+<main class="puzzle-main clipboard-container">
+    
+
+    
+    <style>
+.content-div
+{
+    font-family: Tahoma, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+.content-div table {
+    border-collapse: collapse;
+    user-select: none;
+    margin: 0;
+}
+
+.content-div td {
+    padding: 0px;
+    margin: 0px;
+    border: 0px solid black;
+}
+
+.griddy td {
+    width: 49px;
+    height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    -webkit-text-stroke: 1px black;
+    border: 2px solid black;
+    text-align: center;
+    padding: 0;
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+}
+
+.griddy tr:last-child td {
+    border-bottom: 2px solid black;
+}
+
+.griddy.clues td {
+    background: white;
+    color: black;
+}
+
+.griddy.clues td.correct {
+    background: #b0ffb0;
+}
+
+.griddy.clues td.incorrect {
+    background: #ffb0b0;
+}
+
+#maingrid td {
+    background: white;
+}
+
+#maingrid td:hover {
+    cursor: pointer;
+}
+
+#maingrid td.left, #maingrid td.right, #maingrid td.top, #maingrid td.bottom, #maingrid td.used {
+    background: url(../static/puzzle_resources/ph14/Tracks.png);
+    background-color: #c0c0c0;
+    background-size: 200px;
+}
+
+#maingrid td.left {
+    background-position-y: 100px;
+}
+
+#maingrid td.right {
+    background-position-y: 150px;
+}
+
+#maingrid td.left.right {
+    background-position-y: 50px;
+}
+
+#maingrid td.top {
+    background-position-x: 100px;
+}
+
+#maingrid td.bottom {
+    background-position-x: 150px;
+}
+
+#maingrid td.top.bottom {
+    background-position-x: 50px;
+}
+
+#maingrid td.empty {
+    background-color: #b0ffb0;
+}
+
+#maingrid.griddy td:hover {
+    cursor: pointer;
+}
+
+#maingrid.griddy td.portalcell:hover {
+    cursor: default;
+}
+
+@media screen {
+    #maingrid td.given-left.given-right, #maingrid td.given-left.given-top, #maingrid td.given-left.given-bottom, #maingrid td.given-right.given-top, #maingrid td.given-right.given-bottom, #maingrid td.given-bottom.given-top {
+        background-color: #b97a57;
+    }    
+}
+
+@media print {
+    p {
+        line-height: 2rem;
+    }
+
+    .online-only {
+        display: none;
+    }
+
+    .griddy td {
+        width: 39px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    #maingrid td.left, #maingrid td.right, #maingrid td.top, #maingrid td.bottom, #maingrid td.used {
+        background-size: 160px;
+    }
+
+    #maingrid td.left {
+        background-position-y: 80px;
+    }
+
+    #maingrid td.right {
+        background-position-y: 120px;
+    }
+
+    #maingrid td.left.right {
+        background-position-y: 40px;
+    }
+
+    #maingrid td.top {
+        background-position-x: 80px;
+    }
+
+    #maingrid td.bottom {
+        background-position-x: 120px;
+    }
+
+    #maingrid td.top.bottom {
+        background-position-x: 40px;
+    }
+
+    .griddy.clues td.correct {
+        background: white;
+    }
+}
+</style>
+<script>
+var fShift = false;
+var currentCell = null;
+var fSolved = false;
+
+// set init to null if no init state
+var init = [
+        "RAILROADTICKETB",
+        "O1XC49ARENGINEE",
+        "168RL2OCOMOTIVE",
+        "68CONDUCTORPASS",
+        "ENGERTUNNE49LUN",
+        "COUPLEMETRO2LIN",
+        "ERFREIGHTS4c8WI",
+        "T5849CHBRAKEMAN",
+        "C2OM2MUTERSTA58",
+        "TIONALLABOARD2W",
+        "HISTLESTOPJUN1C",
+        "TIONSL58EEPI4aN",
+        "GCAR1T2RANSCONT",
+        "9INE68NTALCOACH",
+        "2ST58EAMCABOOSE",
+];
+
+var vertClues = [14, 9, 7, 8, 10, 9, 5, 5, 3, 2, 6, 5, 2, 6, 6];
+
+var horzClues = [5, 7, 9, 3, 4, 5, 8, 6, 6, 8, 8, 7, 11, 5, 5];
+
+document.addEventListener('DOMContentLoaded', function() {
+
+        var topfragment = document.createDocumentFragment();
+        var tr = document.createElement("tr");
+        for (var j = 0; j < vertClues.length; j++) {
+                var td = document.createElement("td");
+                td.textContent = vertClues[j].toString();
+                tr.appendChild(td);
+        }
+
+        topfragment.appendChild(tr);
+
+        document.getElementById("topcluestable").appendChild(topfragment);
+
+        var leftfragment = document.createDocumentFragment();
+        for (var i = 0; i < horzClues.length; i++) {
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.textContent = horzClues[i].toString();
+                tr.appendChild(td);
+
+                leftfragment.appendChild(tr);
+        }
+
+        document.getElementById("leftcluestable").appendChild(leftfragment);
+
+        var state = localStorage.getItem("ph14");
+        if (state) { state = state.split("|"); }
+
+        var mainfragment = document.createDocumentFragment();
+        for (var i = 0; i < horzClues.length; i++) {
+                var tr = document.createElement("tr");
+                var line = init[i];
+                for (var j = 0; j < vertClues.length; j++) {
+                        var td = document.createElement("td");
+                        if ((line[j] <= 9 && line[j] >= 0) || (line[j] <= 'f' && line[j] >= 'a')) {
+                                var num = parseInt(line[j], 16);
+                                if (num & 8) { td.classList.add("left"); td.classList.add("given-left"); }
+                                if (num & 4) { td.classList.add("right"); td.classList.add("given-right"); }
+                                if (num & 2) { td.classList.add("top"); td.classList.add("given-top"); }
+                                if (num & 1) { td.classList.add("bottom"); td.classList.add("given-bottom"); }
+                        }
+                        else { td.textContent = line[j]; }
+
+                        if (state) {
+                            var num = state[i * vertClues.length + j];
+                            if (num & 32) { td.classList.add("empty"); }
+                            if (num & 16) { td.classList.add("used"); }
+                            if (num & 8) { td.classList.add("left"); }
+                            if (num & 4) { td.classList.add("right"); }
+                            if (num & 2) { td.classList.add("top"); }
+                            if (num & 1) { td.classList.add("bottom"); }
+                        }
+                        tr.appendChild(td);
+                }
+
+                mainfragment.appendChild(tr);
+        }
+
+        document.getElementById("maingridtable").appendChild(mainfragment);
+
+        for (var i = 0; i < horzClues.length; i++) {
+                CheckRow(i, true);
+        }
+
+        for (var j = 0; j < vertClues.length; j++) {
+                CheckCol(j, true);
+        }
+
+        function IsFullyLinked(cell) {
+                var linkCount = 0;
+                if (cell.classList.contains("left")) linkCount++;
+                if (cell.classList.contains("right")) linkCount++;
+                if (cell.classList.contains("top")) linkCount++;
+                if (cell.classList.contains("bottom")) linkCount++;
+
+                return (linkCount >= 2);
+        }
+
+        function LinkCellsDirectional(cellFrom, directionFrom, cellTo, directionTo) {
+                if (!cellFrom.classList.contains(directionFrom) && !cellTo.classList.contains(directionTo) && !IsFullyLinked(cellFrom) && !IsFullyLinked(cellTo)) {
+                        cellFrom.classList.add(directionFrom);
+                        cellTo.classList.add(directionTo);
+                        return true;
+                }
+                else if (cellFrom.classList.contains(directionFrom) && cellTo.classList.contains(directionTo) && !cellFrom.classList.contains("given-" + directionFrom) && !cellTo.classList.contains("given-" + directionTo)) {
+                        cellFrom.classList.remove(directionFrom);
+                        cellTo.classList.remove(directionTo);
+                        return true;
+                }
+
+                return false;
+        }
+
+        function LinkCells(cellFrom, cellTo)
+        {
+                var colFrom = Array.prototype.indexOf.call(cellFrom.parentElement.children, cellFrom);
+                var rowFrom = Array.prototype.indexOf.call(cellFrom.parentElement.parentElement.children, cellFrom.parentElement);
+                var colTo = Array.prototype.indexOf.call(cellTo.parentElement.children, cellTo);
+                var rowTo = Array.prototype.indexOf.call(cellTo.parentElement.parentElement.children, cellTo.parentElement);
+                var linked = false;
+
+                if (colFrom === colTo) {
+                        if (rowFrom === rowTo - 1) {
+                                linked = LinkCellsDirectional(cellFrom, "bottom", cellTo, "top");
+                        }
+                        else if (rowFrom === rowTo + 1) {
+                                linked = LinkCellsDirectional(cellFrom, "top", cellTo, "bottom");
+                        }
+                }
+                else if (rowFrom === rowTo) {
+                        if (colFrom === colTo - 1) {
+                                linked = LinkCellsDirectional(cellFrom, "right", cellTo, "left");
+                        }
+                        else if (colFrom === colTo + 1) {
+                                linked = LinkCellsDirectional(cellFrom, "left", cellTo, "right");
+                        }
+                }
+
+                if (linked) {
+                        CheckCol(colFrom, true);
+                        if (colFrom !== colTo) CheckCol(colTo, true);
+                        CheckRow(rowFrom, true);
+                        if (rowFrom !== rowTo) CheckRow(rowTo, true);
+                }
+
+                return linked;
+        }
+
+        function DirectionalLink(cell, dx, dy)
+        {
+                var col = Array.prototype.indexOf.call(cell.parentElement.children, cell);
+                var row = Array.prototype.indexOf.call(cell.parentElement.parentElement.children, cell.parentElement);
+
+                if (dx === -1 && col <= 0) { return; }
+                if (dx === 1 && col >= cell.parentElement.children.length) { return; }
+                if (dy === -1 && row <= 0) { return; }
+                if (dy === 1 && row >= cell.parentElement.parentElement.children.length) { return; }
+
+                LinkCells(cell, cell.parentElement.parentElement.children[row + dy].children[col + dx]);
+        }
+
+        function CheckCol(col, update)
+        {
+                var count = 0;
+
+                document.querySelectorAll("#maingridtable tr td:nth-child(" + (col + 1) + ")").forEach(cell => {
+                        if (cell.classList.contains("left") || cell.classList.contains("right") || cell.classList.contains("top") || cell.classList.contains("bottom") || cell.classList.contains("used")) {
+                                count++;
+                        }
+                });
+
+                var result = CheckCount(count, vertClues[col]);
+
+                if (update) {
+                        document.querySelectorAll("#topcluestable tr td:nth-child(" + (col + 1) + ")").forEach(cell => {
+                                cell.classList.remove("correct");
+                                cell.classList.remove("incorrect");
+
+                                if (result == 1) { cell.classList.add("correct"); }
+                                if (result == -1) { cell.classList.add("incorrect"); }
+                        });
+                }
+
+                return result;
+        }
+
+        function CheckRow(row, update)
+        {
+                var count = 0;
+
+                document.querySelectorAll("#maingridtable tr:nth-child(" + (row + 1) + ") td").forEach(cell => {
+                        if (cell.classList.contains("left") || cell.classList.contains("right") || cell.classList.contains("top") || cell.classList.contains("bottom") || cell.classList.contains("used")) {
+                                count++;
+                        }
+                });
+
+                var result = CheckCount(count, horzClues[row]);
+
+                if (update) {
+                        document.querySelectorAll("#leftcluestable tr:nth-child(" + (row + 1) + ") td").forEach(cell => {
+                                cell.classList.remove("correct");
+                                cell.classList.remove("incorrect");
+
+                                if (result == 1) { cell.classList.add("correct"); }
+                                if (result == -1) { cell.classList.add("incorrect"); }
+                        });
+                }
+
+                return result;
+        }
+
+        function CheckCount(currentCount, desiredCount)
+        {
+                if (currentCount < desiredCount) { return 0; }
+                else if (currentCount > desiredCount) { return -1; }
+                else { return 1; }
+        }
+
+        [].forEach.call(document.querySelectorAll("#maingrid td"), function(cell) {
+                cell.onmousedown = function(e) { currentCell = e.target; };
+                cell.onmouseenter = function(e) { if (currentCell === null) return; LinkCells(currentCell, e.target); currentCell = e.target; };
+                cell.onmouseup = function(e) {
+                        if (currentCell === e.target) {
+                                if (e.offsetX < 5) {
+                                        DirectionalLink(e.target, -1, 0);
+                                }
+                                else if (e.offsetX >= cell.offsetWidth - 5) {
+                                        DirectionalLink(e.target, 1, 0);
+                                }
+                                else if (e.offsetY < 5) {
+                                        DirectionalLink(e.target, 0, -1);
+                                }
+                                else if (e.offsetY >= cell.offsetHeight - 5) {
+                                        DirectionalLink(e.target, 0, 1);
+                                }
+                                else if (!currentCell.classList.contains("left") && !currentCell.classList.contains("right") && !currentCell.classList.contains("top") && !currentCell.classList.contains("bottom")) {
+                                        var currentCellType;
+
+                                        if (fShift || e.which != 1)
+                                        {
+                                                if (currentCell.classList.contains("empty")) { currentCellType = "used"; }
+                                                else if (currentCell.classList.contains("used")) { currentCellType = null; }
+                                                else { currentCellType = "empty"; }
+                                        }
+                                        else
+                                        {
+                                                if (currentCell.classList.contains("used")) { currentCellType = "empty"; }
+                                                else if (currentCell.classList.contains("empty")) { currentCellType = null; }
+                                                else { currentCellType = "used"; }
+                                        }
+
+                                        currentCell.classList.remove("empty");
+                                        currentCell.classList.remove("used");
+                                        if (currentCellType !== null) { currentCell.classList.add(currentCellType); }
+
+                                        var col = Array.prototype.indexOf.call(cell.parentElement.children, cell);
+                                        var row = Array.prototype.indexOf.call(cell.parentElement.parentElement.children, cell.parentElement);
+                                        CheckCol(col, true);
+                                        CheckRow(row, true);                
+                                }
+                        }
+                        currentCell = null;
+                };
+
+                cell.oncontextmenu = function(e) { return false; };
+                });
+
+
+        window.addEventListener('beforeunload', function(e) {
+            var state = [];
+            document.querySelectorAll("#maingridtable td").forEach(td => {
+                var num = 0;
+                if (td.classList.contains("empty")) num |= 32;
+                if (td.classList.contains("used")) num |= 16;
+                if (td.classList.contains("left")) num |= 8;
+                if (td.classList.contains("right")) num |= 4;
+                if (td.classList.contains("top")) num |= 2;
+                if (td.classList.contains("bottom")) num |= 1;
+                state.push(num);
+            });
+            localStorage.setItem("ph14", state.join("|"));
+        });
+
+        window.onmouseup = function(e) { currentCell = null; };
+
+        document.addEventListener("keyup", function(e) { fShift = e.shiftKey; });
+        document.addEventListener("keydown", function(e) { fShift = e.shiftKey; });
+});
+</script>
+<div class="page-div"><div class="content-div"><div style="display: flex; align-items: center;"><div style="flex-grow: 1"><p>
+                    The train enters on the left, connects all the given pieces, and exits on the bottom. The numbers indicate the total number of segments of track in that row or column. Track pieces can be straight or make a 90 degree turn. The track cannot cross itself. Gray squares on the main grid must contain a track. 
+                </p><p class="online-only">
+                    To lay down tracks, you can either drag between cells or click on the edge between two cells. You can also click the interior of a cell to mark it as being on the track, or right-click to mark it as being off the track.
+                </p><p>
+                    Read every seventh letter along the track to get the answer.
+                </p></div></div><div style="clear: both; height: 10px;"></div><table><tr><td id="topclues" class="griddy clues vertlines"><table id="topcluestable"></table></td><td></td></tr><tr><td id="maingrid" class="griddy vertlines horzlines"><table id="maingridtable"></table></td><td id="leftclues" class="griddy clues horzlines"><table id="leftcluestable"></table></td></tr></table></div></div>
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

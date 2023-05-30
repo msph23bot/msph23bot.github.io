@@ -1,0 +1,539 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+	<link rel="stylesheet" href="../static/css/sociology-base.css">
+	<title>Starfish's ReeledIn page</title>
+
+    
+    <link rel="icon" type="image/png" href="../static/puzzle_resources/starfish/reeledin.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+ <div id="deptdropdownmenu"></div>
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="../round/sociology.html" class="btn">Back to Sociology</a>
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<script>
+function refreshTime() {
+    const timeDisplay = document.getElementById('notif-time');
+    const dateString = new Date().toLocaleTimeString();
+    timeDisplay.textContent = dateString.substring(0, dateString.indexOf(':', 3));
+}
+setInterval(refreshTime, 1000);
+</script>
+<style>
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.screen-container {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen {
+    .media-icon, .fish-icon {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+    }
+
+    .media-icon {
+        height: 12em;
+        right: 1em;
+        top: 3em;
+        transform: rotate(15deg);
+        width: 12em;
+        z-index: 0;
+    }
+
+    .fish-icon {
+        z-index: 20;
+    }
+
+    .phone-container {
+        background-color: black;
+        border-radius: 30px;
+        height: 60em;
+        overflow: hidden;
+        padding: 3em 1em 1em;
+        position: relative;
+        width: 30em;
+    }
+
+    .phone-screen {
+        background-color: white;
+        border-radius: 20px;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .phone-notification-bar {
+        align-items: center;
+        display: flex;
+        background-color: #050505;
+        height: 2em;
+        justify-content: space-between;
+        padding: 0 2%;
+    }
+
+    .notif-text{
+        color: white;
+        font-size: 1em;
+        padding: 0 1%;
+    }
+
+    .notif-gap {
+        flex-grow: 1;
+    }
+
+    .notif-icon {
+        color: white;
+        font-size: 1em;
+    }
+
+    .phone-nav-bar {
+        align-items: center;
+        display: flex;
+        background-color: #050505;
+        gap: 25%;
+        height: 2.5em;
+        justify-content: center;
+    }
+
+    .nav-icon {
+        color: white;
+        font-size: 1.5em;
+    }
+
+    .phone-contents {
+        height: calc(100% - 4.5em);
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+
+    .phone-contents h1 {
+        background-color: transparent;
+        border: none;
+        font-size: 1.6em;
+    }
+  
+    .phone-contents h2 {
+        background-color: transparent;
+        border: none;
+        font-size: 1.4em;
+    }
+  
+    .phone-contents h3 {
+        background-color: transparent;
+        border: none;
+        font-size: 1.2em;
+    }
+  
+    .phone-contents h4 {
+        background-color: transparent;
+        border: none;
+        font-size: 1em;
+    }
+
+    .phone-contents p {
+        font-size: 0.9em;
+        line-height: 1.2em;
+    }
+}
+
+</style>
+
+
+  <h1>Starfish's ReeledIn page</h1>
+
+
+<main class="screen-container">
+    
+
+    <div class="media-icon"></div>
+    <div class="fish-icon"></div>
+    <div class="phone-container">
+        <div class="phone-screen">
+            <div class="phone-notification-bar">
+                <span class="notif-text" id="notif-time"></span>
+                <span class="notif-gap"></span>
+                <span class="material-symbols-outlined notif-icon">network_wifi</span>
+                <span class="material-symbols-outlined notif-icon">network_cell</span>
+                <span class="notif-text" id="notif-time">100%</span>
+                <span class="material-symbols-outlined notif-icon">battery_full</span>
+            </div>
+            <div class="phone-contents">
+                
+                
+                    <style>
+@media screen {
+  .phone-contents h1, .phone-contents h2, .phone-contents h3, .phone-contents h4 {
+    background-color: transparent;
+    border:  none;
+    color: black;
+    font-family: system-ui;
+    margin: 0;
+    padding: 0;
+  }
+
+  .media-icon {
+      background-image: url("../static/puzzle_resources/starfish/reeledin.webp");
+  }
+
+  .fish-icon {
+      background-image: url("../static/puzzle_resources/starfish/starfish.webp");
+      height: 15em;
+      width: 15em;
+      transform: rotate(-25deg) scaleX(-1);
+      left: 5em;
+      top: -3em;
+  }
+
+  .reeledin-container {
+    background-color: #e9e5df;
+  }
+
+  .search-bar {
+    background-color: white;
+    display: flex;
+    height: 2.3em;
+    padding: 0.4em;
+    width: 100%;
+  }
+
+  .search-bar .material-symbols-outlined {
+    color: #676767;
+  }
+
+  .search-bar .back-icon {
+    font-size: 2em;
+    padding: 0 0.2em;
+  }
+
+  .search-bar .search-icon {
+    padding: 0 1rem;
+    font-size: 1.2em;
+    font-weight: 800;
+  }
+
+  .search-bar .search-input {
+    align-items: center;
+    background-color: #eef2f7;
+    border-radius: 0.6rem;
+    display: flex;
+    flex-grow: 1;
+    margin-right: 2em;
+    height: 100%;
+  }
+
+  .profile-header {
+    background-image: url("../static/puzzle_resources/starfish/reeledin_cover.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: white;
+    padding: 1rem;
+  }
+
+  .profile-header .headshot {
+    background-image: url("../static/puzzle_resources/starfish/starfish_headshot.webp");
+    background-size: cover;
+    width: 7em;
+    height: 7em;
+    border-radius: 8em;
+    border: 4px solid white;
+    margin-top: 2em;
+  }
+
+  .profile-header .name {    
+    font-size: 1.8em;
+    font-weight: 500;
+    margin-top: 1rem;
+  }
+
+  .profile-header .title {
+    font-size: 1em;
+  }
+
+  .profile-header .company {
+    font-size: 0.9em;
+    margin-top: 1em;
+  }
+
+  .profile-header .location {
+    color: #676767;
+    font-size: 0.9em;
+  }
+
+  .button-row {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: 1em 0 0.6em;
+  }
+
+  .reeledin-button {
+    align-items: center;
+    height: 1.5em;
+    display: flex;
+    gap: 0.4em;
+    justify-content: center;
+    border: 0.2rem solid #2967b2;
+    border-radius: 4em;
+    padding: 0.5rem;
+    cursor: default;
+  }
+
+  .reeledin-button .material-symbols-outlined {
+    font-size: 1.4em;
+  }
+
+  .message-button, .follow-button {
+    min-width: 10em;
+  }
+
+  .message-button, .message-button h4 {
+    background-color: #2967b2;
+    color: white;
+    font-weight: 400;
+  }
+
+  .follow-button, .follow-button h4 {
+    color: #2967b2;
+    font-weight: 500;
+  }
+
+  .menu-button {
+    width: 1.5em;
+  }
+
+  .menu-button {
+    border-color: #676767;
+    color: #676767;
+  }
+
+  .reeledin-card {
+    background-color: white;
+    margin-top: 0.8rem;
+    padding: 1rem;
+  }
+
+  .reeledin-card h2 {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin: 0.4em 0;
+  }
+
+  .experience-card:not(:last-child) {
+    border-bottom: 0.1em solid #eee;
+  }
+
+  .experience-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1em 0;
+  }
+
+  .experience-card .job-title {
+    font-size: 1em;
+    font-weight: 500;
+  }
+
+  .experience-card .job-type {
+    font-size: 0.9em;
+    font-weight: 400;
+    margin-bottom: 1em;
+  }
+
+  .experience-card .course-heading {
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-bottom: 0.3em;
+  }
+
+  .experience-card p {
+    color: #222;
+    margin: 0;
+  }
+
+  .experience-card .experience-image {
+    background-size: cover;
+    height: 3.5em;
+    min-width: 3.5em;
+  }
+
+  .experience-image.default-image {
+    background-image: url("../static/puzzle_resources/starfish/reeledin_company.webp");
+  }
+
+  .experience-image.school-image {
+    background-image: url("../static/images/puzzu_logo.png");
+  }
+
+  .endorsement-card {
+    border-bottom: 0.1em solid #eee;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.9em;
+  }
+
+  .endorsement-card h4 {
+    font-size: 1em;
+    font-weight: 500;
+  }
+
+  .endorsements {
+    display: flex;
+    align-items: center;
+    color: #676767;
+    font-size: 1.6rem;
+    margin: 0.7em 0;
+  }
+
+  .endorsement-card .endorsements:before {
+    content: 'groups';
+    font-family: 'Material Symbols Outlined';
+    font-size: 1.5em;
+    margin-right: 0.7rem;
+  }
+
+  .endorsement-card .endorsements:after {
+    content: 'endorsements';
+    margin-left: 0.3rem;
+  }
+
+    .phone-contents::-webkit-scrollbar {
+      width: 0.5em;
+    }
+
+    .phone-contents::-webkit-scrollbar-track {
+      background: #f1f1f1; 
+    }
+
+    .phone-contents::-webkit-scrollbar-thumb {
+      background: #aaa; 
+    }
+
+    .phone-contents::-webkit-scrollbar-thumb:hover {
+      background: #888;
+    }
+}
+</style>
+<div class="clipboard-container reeledin-container"><div class="search-bar"><span class="material-symbols-outlined back-icon no-copy">arrow_back</span><div class="search-input"><span class="material-symbols-outlined search-icon no-copy">search</span><h4>Starfish</h4></div></div><div class="profile-header"><div class="headshot"></div><h1 class="name">Starfish</h1><h3 class="title">Schoolmate at Puzzle University</h3><h4 class="company">Puzzle University</h4><h4 class="location">Seattle, Washington, United States</h4><div class="button-row"><div class="message-button reeledin-button no-copy"><span class="material-symbols-outlined">send</span><h4>Message</h4></div><div class="follow-button reeledin-button no-copy"><span class="material-symbols-outlined">add</span><h4>Follow</h4></div><div class="menu-button reeledin-button no-copy"><span class="material-symbols-outlined">more_horiz</span></div></div></div><div class="reeledin-card"><h2>About</h2><span style="color: black; font-weight: normal; font-style: normal; font-size: 1em"></span><p>Current school mate at Puzzle University.</p></div><div class="reeledin-card"><h2>Experience</h2><div class="experience-card"><div class="experience-image default-image"></div><div class="experience-text"><h3 class="job-title">Cryptographer</h3><h4 class="job-type">Full-time</h4><span style="color: black; font-weight: normal; font-style: normal; font-size: 1em"></span><p>Secret of Keanu, ____ god (6)</p><p>____ surrounded by positive things to make adjustments (12)</p><p>____ clam at sea (4)</p><p>____&rsquo;s treasury fanatic (8)</p><p>Mitt secures ____ primary (5)</p><p>Greg (____) tails Garnet and Amethyst (4)</p><p>The lengthy part for ____ who can stretch (5)</p><p>Posts about ____ (5)</p><p>Risk pie crust with ____ guts (5)</p><p>Conceive slender ____ (5)</p><p>Charming woman&rsquo;s choice word to a ___ (5)</p></div></div><div class="experience-card"><div class="experience-image default-image"></div><div class="experience-text"><h3 class="job-title">Flower salesman</h3><h4 class="job-type">Full-time</h4><span style="color: black; font-weight: normal; font-style: normal; font-size: 1em"></span><p>Managed seven different flower sales to seven different customers, including Stefanie.</p><p>Sold between 1 and 8 (inclusive) flowers to each customer, for a total of 35 flowers.</p><p>Delivered flowers to houses numbered 1 through 7 on a single street.</p><p>Entered names and flower purchases into our customer index.</p></div></div></div><div class="reeledin-card"><div class="experience-card"><div class="experience-image school-image"></div><div class="experience-text"><h3 class="job-title">Puzzle University</h3><h4 class="job-type">B.A. in Enigmatology (infima cum laude)</h4><h3 class="course-heading">Relevant courses</h3><span style="color: black; font-weight: normal; font-style: normal; font-size: 1em"></span><p>The Telescope (4.0)</p><p>Macroeconomics (2.0)</p><p>Lie Groups (3.0)</p><p>How the Other Half Lives (3.0)</p><p>To Serve Man (4.0)</p><p>Pyramid Schemes (4.0)</p><p>Themes and Counterthemes (3.0)</p><p>Alternative Orthographonology (4.0)</p><p>Choreography (4.0)</p><p>Mr. Tambourine Man (4.0)</p><p>Practical Applications of Green&rsquo;s Theorem (1.0)</p><p>The Olympics (4.0)</p></div></div></div><div class="reeledin-card"><h2>Skills</h2><span style="color: black; font-weight: normal; font-style: normal; font-size: 1em"></span><div class="endorsement-card"><h4>Vitality</h4><div class="endorsements">5</div></div><div class="endorsement-card"><h4>Vision</h4><div class="endorsements">5</div></div><div class="endorsement-card"><h4>Sufficiency</h4><div class="endorsements">2</div></div><div class="endorsement-card"><h4>Neighborliness</h4><div class="endorsements">6</div></div><div class="endorsement-card"><h4>Presence</h4><div class="endorsements">3</div></div><div class="endorsement-card"><h4>Brightness</h4><div class="endorsements">4</div></div><div class="endorsement-card"><h4>Late shifts</h4><div class="endorsements">2</div></div></div></div>
+<p><button class="btn clipboard-button" data-skip-inline-styles="true"></button></p>
+                
+            </div>
+            <div class="phone-nav-bar">
+                <span class="material-symbols-outlined nav-icon">arrow_back_ios</span>
+                <span class="material-symbols-outlined nav-icon">circle</span>
+                <span class="material-symbols-outlined nav-icon">menu</span>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,235 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: PH22: Blue Moons</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="../puzzle/ph22.html" class="btn">Back to the puzzle</a>
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: PH22: Blue Moons
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer spoiler">MELANCHOLY</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Dana Young
+
+    </h2>
+
+    
+    <style>
+    .crossword {
+        margin: 20px auto;
+    }
+
+    .crossword td {
+        width: 40px;
+        height: 40px;
+        padding: 0px;
+        border-bottom: none;
+        text-align: center;
+        font-size: 32px;
+        font-weight: bold;
+        color: black;
+        text-transform: uppercase;
+    }
+
+    .crossword td.border {
+        border: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+
+    .crossword td.mask {
+        background: gray;
+    }
+
+    .crossword td.highlight {
+        background: lightcoral;
+    }
+
+    img {
+        display: block;
+        margin: 20px auto;
+    }
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll(".crossword").forEach((c) => { new Crossword(c); });
+    });
+
+    function Crossword(c) {
+        this.container = c;
+
+        var shape = this.container.getAttribute("data-shape").split("|");
+        var mask = this.container.getAttribute("data-mask").split("|");
+
+        for (var r = 0; r < shape.length; r++) {
+            var tr = document.createElement("tr");
+
+            for (var c = 0; c < shape[r].length; c++) {
+                var td = document.createElement("td");
+
+                if (shape[r][c] != "#") {
+                    td.innerText = shape[r][c];
+                    td.classList.add("border");
+                    if (mask[r][c] == "#") {
+                        td.classList.add("mask");
+                    } else if (mask[r][c] == "!") {
+                        td.classList.add("highlight");
+                    }
+                }
+                tr.appendChild(td);
+            }
+
+            this.container.appendChild(tr);
+        }
+    }
+</script>
+<h3>DARK WORLD</h3>
+<table class="crossword" data-shape=" 55  5   53|6 87 8 75 4|68  8 76  5|  77     6 |5   77987  | 6  7 78 7 |6  5  6 6 4| 8      675|6  6 677   |  7 77  786|35 544 5 6 " data-mask="#### #### #|## #### ###|####### # #|#### ### ##|#  ####### |## # #### #|##### # ###|###  # ## #|## ##### ##|##### #####|# ## ## ###"></table>
+<p>The Dark World solves to this mask, which will be applied to the other two grids.</p>
+<h3>JURASSIC WORLD</h3>
+<p>Find NATO phonetic letters in this word search.</p>
+<p><img src="ph22/ph22Jurassic.png"/><p>The leftover letters spell FIFTH LETTERS.</p></p>
+<table class="crossword" data-shape="    I    R |  D    L   |       M S |    E   C  | BE       I|  L F    E |     L I   |   EE K  O |  K     X  |     B     | H  N  G   " data-mask="#### #### #|## #### ###|#######!# #|#### ### ##|# !####### |## # #### #|#####!# ###|###  # ##!#|## ##### ##|##### #####|# ##!## ###"></table>
+<p>Every fifth letter on the masked Jurassic World grid spells: MELON</p>
+<h3>BINARY WORLD</h3>
+<p>Connect each clue on the left with one on the right by adding &ldquo;And&rdquo; or &ldquo;Or&rdquo; in the middle.</p>
+<p><img src="ph22/ph22Binary.png"/><p>The crossed letters spell COUNT BY PI.</p></p>
+<table class="crossword" data-shape="    T    E |  C    O   |         N |        I  | FL       L|  O T    B |       Y   |   IP N  W |  K     O  |     D     | I  S  E   " data-mask="#### #### #|##!####!###|####### # #|#### ### ##|# !#######!|## # #### #|##### # ###|###! # ## #|## ##### ##|##### #####|# ## ##!###"></table>
+<p>Counting visible letters (ignoring blanks) by digits of pi on masked Binary World spells: COLLIE</p>
+<h3>FEELING BLUE</h3>
+<p>Combine both MELON and COLLIE to get the answer, MELANCHOLY.</p>
+
+    
+    
+
+    
+    
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

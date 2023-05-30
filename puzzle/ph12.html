@@ -1,0 +1,562 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>PH123: Final Jeopardy</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+    
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+<a href="../round/placement-test.html" class="btn">Placement Test</a>
+
+
+
+
+
+<a href="../post-hunt-solve/ph12.html" class="btn">Call in an answer</a>
+
+
+<a href="../solution/ph12.html" class="btn solution-button">View solution</a>
+<a href="../stats/ph12.html" class="btn">Stats</a>
+
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<h1 class="puzzle-title">
+    PH123: Final Jeopardy
+    
+</h1>
+
+<main class="puzzle-main clipboard-container">
+    
+
+    
+    <style>
+        @media print {
+            @page {
+                size: landscape;
+            }
+        }
+
+        @font-face {
+            font-family: copper;
+            src: url(../static/puzzle_resources/ph12/COPRGTB.TTF);
+        }
+
+        .wrapper {
+            padding: 10px;
+            background-color: black;
+        }
+
+        .board {
+            display: grid;
+            height: 100vh;
+            grid-template-columns: repeat(5, 20%);
+            grid-template-rows: 5% 11% 21% 21% 21% 21%;
+        }
+
+        .tv {
+            background-color: #060ce9;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            height: 100%;
+        }
+
+        .cat {
+            font-size: 32px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-shadow: 2px 2px black;
+        }
+
+        .item {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 35% 45% 20%;
+            height: 100%;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .money {
+            font-size: 48px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: #ffcc00;
+            text-shadow: 4px 4px black;
+        }
+
+        .answer {
+            font-size: 12px;
+            font-family: copper;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+            text-shadow: 2px 2px black;
+            margin: 0px 5px;
+            line-height: 1.7rem;
+        }
+
+        .letterentry {
+            font-size: 18px;
+            font-family: copper;
+            font-weight: bold;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .letterindex {
+            color: white;
+            text-shadow: 2px 2px black;
+        }
+
+        input.letterbox {
+            width: 30px;
+            font-size: 18px;
+            font-family: copper;
+            font-weight: bold;
+            margin-left: 5px;
+            color: black;
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 1px 1px white;
+            border: 2px solid lightgray;
+            padding: 0px;
+            height: 24px;
+        }
+
+        input.row1 {
+            background-color: silver;
+        }
+
+        input.row2 {
+            background-color: coral;
+        }
+
+        input.row3 {
+            background-color: yellowgreen;
+        }
+
+        input.row4 {
+            background-color: violet;
+        }
+
+        .extract {
+            grid-column: 1/-1;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .extractbox {
+            background-color: #060ce9;
+            font-size: 35px;
+            font-family: copper;
+            font-weight: bold;
+            height: 40px;
+            width: 45px;
+            color: #ffcc00;
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 2px 2px black;
+            border: 1px solid #ffcc00;
+            line-height: 3.4rem;
+        }
+</style>
+<script>
+        function setExtract(box) {
+            var extractid = box.getAttribute("data-extract");
+            document.getElementById("extract" + extractid).innerText = (box.value == "" ? "?" : box.value);
+        }
+
+        function setText(box, text) {
+            box.value = text;
+            setExtract(box);
+        }
+
+        // Handle arrow keys
+        function move(elem, drow, dcol) {
+            var label = elem.id;
+            var row = parseInt(label.split("-")[0].substr(3)) + drow;
+            var col = parseInt(label.split("-")[1]) + dcol;
+
+            var newitem = document.getElementById("box" + row + "-" + col);
+            if (newitem) {
+                newitem.focus();
+                return true;
+            }
+
+            return false;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll(".letterbox").forEach(box => {
+                setExtract(box);
+
+                box.addEventListener("keydown", e => {
+                    if (e.keyCode == 37) { // left
+                        move(e.target, 0, -1);
+                    }
+                    else if (e.keyCode == 38) { // up
+                        move(e.target, -1, 0);
+                    }
+                    else if (e.keyCode == 39) { // right
+                        move(e.target, 0, 1);
+                    }
+                    else if (e.keyCode == 40) { // down
+                        move(e.target, 1, 0);
+                    }
+                    else if (e.target.value != "" && (e.keyCode == 8 || e.keyCode == 46)) { // backspace/delete
+                        setText(e.target, "");
+                    }
+                    else if (e.target.value != "" && (e.keyCode >= 65 && e.keyCode <= 90)) { // clear existing letter for new one
+                        setText(e.target, "");
+                    }
+                });
+
+                box.addEventListener("keypress", e => {
+                    if ((e.which >= 65 && e.which <= 90) || (e.which >= 97 && e.which <= 122)) { // A-Z
+                        setText(e.target, e.key.toUpperCase());
+                    }
+
+                    e.preventDefault();
+                });
+            });
+        });
+</script>
+<div class="page-div">
+    <div class="content-div">
+        <div class="wrapper">
+            <div class="board">
+                <div class="extract">
+                    <div id="extractbox-1" class="extractbox">?</div>
+                    <div id="extractbox-2" class="extractbox">?</div>
+                    <div id="extractbox-3" class="extractbox">?</div>
+                    <div id="extractbox-4" class="extractbox">?</div>
+                    <div id="extractbox-5" class="extractbox">?</div>
+                    <div id="extractbox-6" class="extractbox">?</div>
+                    <div id="extractbox-7" class="extractbox">?</div>
+                    <div id="extractbox-8" class="extractbox">?</div>
+                    <div id="extractbox-9" class="extractbox">?</div>
+                    <div id="extractbox-10" class="extractbox">?</div>
+                    <div id="extractbox-11" class="extractbox">?</div>
+                    <div id="extractbox-12" class="extractbox">?</div>
+                    <div id="extractbox-13" class="extractbox">?</div>
+                    <div id="extractbox-14" class="extractbox">?</div>
+                    <div id="extractbox-15" class="extractbox">?</div>
+                    <div id="extractbox-16" class="extractbox">?</div>
+                    <div id="extractbox-17" class="extractbox">?</div>
+                    <div id="extractbox-18" class="extractbox">?</div>
+                    <div id="extractbox-19" class="extractbox">?</div>
+                    <div id="extractbox-20" class="extractbox">?</div>
+                </div>
+
+                <div class="wrapper"><div class="tv"><div class="center"><div class="cat">HODGEPODGE</div></div></div></div>
+                <div class="wrapper"><div class="tv"><div class="center"><div class="cat">MISHMASH</div></div></div></div>
+                <div class="wrapper"><div class="tv"><div class="center"><div class="cat">MIXED BAG</div></div></div></div>
+                <div class="wrapper"><div class="tv"><div class="center"><div class="cat">ODDS & ENDS</div></div></div></div>
+                <div class="wrapper"><div class="tv"><div class="center"><div class="cat">POTPOURRI</div></div></div></div>
+        
+                <div class="wrapper"><div class="tv"><div class="item">
+                    <div class="center"><div class="money">$100</div></div>
+                    <div class="center"><div class="answer">It&rsquo;s the answer to PH16: Intermediate Compositions</div></div>
+                    <div class="letterentry">
+                        <div class="letterindex">6/20:</div>
+                        <input type="text" id="box1-1" data-extract="box-6" class="letterbox row1 hide-if-unsolved" data-puzzle-id="10016" minlength="1" maxlength="1" value="W"/>
+                        <input type="text" id="box1-1" data-extract="box-6" class="letterbox row1 hide-if-solved" data-puzzle-id="10016" minlength="1" maxlength="1"/>
+                    </div>
+                </div></div></div>
+                <div class="wrapper"><div class="tv"><div class="item">
+                    <div class="center"><div class="money">$200</div></div>
+                    <div class="center"><div class="answer">It&rsquo;s the answer to PH3: Mr. Tambourine Man</div></div>
+                    <div class="letterentry">
+                        <div class="letterindex">16/20:</div>
+                        <input type="text" id="box1-2" data-extract="box-16" class="letterbox row1 hide-if-unsolved" data-puzzle-id="10003" minlength="1" maxlength="1" value="I"/>
+                        <input type="text" id="box1-2" data-extract="box-16" class="letterbox row1 hide-if-solved" data-puzzle-id="10003" minlength="1" maxlength="1"/>
+                    </div>
+                </div></div></div>
+                <div class="wrapper"><div class="tv"><div class="item">
+                    <div class="center"><div class="money">$100</div></div>
+                    <div class="center"><div class="answer">It&rsquo;s the answer to PH15: The Bad, the Good, and the Beautiful</div></div>
+                    <div class="letterentry">
+                        <div class="letterindex">17/20:</div>
+                        <input type="text" id="box1-3" data-extract="box-17" class="letterbox row1 hide-if-unsolved" data-puzzle-id="10015" minlength="1" maxlength="1" value="N"/>
+                        <input type="text" id="box1-3" data-extract="box-17" class="letterbox row1 hide-if-solved" data-puzzle-id="10015" minlength="1" maxlength="1"/>
+                    </div>
+                </div></div></div>
+                <div class="wrapper"><div class="tv"><div class="item">
+                    <div class="center"><div class="money">$200</div></div>
+                    <div class="center"><div class="answer">It&rsquo;s the answer to PH22: Blue Moons</div></div>
+                    <div class="letterentry">
+                        <div class="letterindex">3/20:</div>
+                        <input type="text" id="box1-4" data-extract="box-3" class="letterbox row1 hide-if-unsolved" data-puzzle-id="10022" minlength="1" maxlength="1" value="E"/>
+                        <input type="text" id="box1-4" data-extract="box-3" class="letterbox row1 hide-if-solved" data-puzzle-id="10022" minlength="1" maxlength="1"/>
+                    </div>
+                </div></div></div>
+                <div class="wrapper"><div class="tv"><div class="item">
+                    <div class="center"><div class="money">$500</div></div>
+                    <div class="center"><div class="answer">It&rsquo;s the answer to PH2: They&rsquo;re Coming to Attack Your Village!</div></div>
+                    <div class="letterentry">
+                        <div class="letterindex">20/20:</div>
+                        <input type="text" id="box1-5" data-extract="box-20" class="letterbox row1 hide-if-unsolved" data-puzzle-id="10002" minlength="1" maxlength="1" value="S"/>
+                        <input type="text" id="box1-5" data-extract="box-20" class="letterbox row1 hide-if-solved" data-puzzle-id="10002" minlength="1" maxlength="1"/>
+                    </div>
+                </div></div></div>
+        
+                <div class="wrapper"><div class="tv"><div class="item">
+                    <div class="center"><div class="money">$400</div></div>
+                    <div class="center"><div class="answer">It&rsquo;s the answer to PH6: Time Frame</div></div>
+                    <div class="letterentry">
+                        <div class="letterindex">15/20:</div>
+                        <input type="text" id="box2-1" data-extract="box-15" class="letterbox row2 hide-if-unsolved" data-puzzle-id="10006" minlength="1" maxlength="1" value="M"/>
+                        <input type="text" id="box2-1" data-extract="box-15" class="letterbox row2 hide-if-solved" data-puzzle-id="10006" minlength="1" maxlength="1"/>
+                    </div>
+                </div></div></div>
+                <div class="wrapper"><div class="tv"><div class="item">
+                    <div class="center"><div class="money">$300</div></div>
+                    <div class="center"><div class="answer">It&rsquo;s the answer to PH7: Numerator, Denominator, Fascinator</div></div>
+                    <div class="letterentry">
+                        <div class="letterindex">18/20:</div>
+                        <input type="text" id="box2-2" data-extract="box-18" class="letterbox row2 hide-if-unsolved" data-puzzle-id="10007" minlength="1" maxlength="1" value="O"/>
+                        <input type="text" id="box2-2" data-extract="box-18" class="letterbox row2 hide-if-solved" data-puzzle-id="10007" minlength="1" maxlength="1"/>
+                    </div>
+                </div></div></div>
+                <div class="wrapper"><div class="tv"><div class="item">
+                    <div class="center"><div class="money">$200</div></div>
+                    <div class="center"><div class="answer">It&rsquo;s the answer to PH11: Breakout</div></div>
+                    <div class="letterentry">
+                        <div class="letterindex">14/20:</div>
+                        <input type="text" id="box2-3" data-extract="box-14" class="letterbox row2 hide-if-unsolved" data-puzzle-id="10011" minlength="1" maxlength="1" value="O"/>
+                        <input type="text" id="box2-3" data-extract="box-14" class="letterbox row2 hide-if-solved" data-puzzle-id="10011" minlength="1" maxlength="1"/>
+                    </div>
+                </div></div></div>
+                <div class="wrapper"><div class="tv"><div class="item">
+                    <div class="center"><div class="money">$300</div></div>
+                    <div class="center"><div class="answer">It&rsquo;s the answer to PH19: Better Off Ned</div></div>
+                    <div class="letterentry">
+                        <div class="letterindex">4/20:</div>
+                        <input type="text" id="box2-4" data-extract="box-4" class="letterbox row2 hide-if-unsolved" data-puzzle-id="10019" minlength="1" maxlength="1" value="S"/>
+                        <input type="text" id="box2-4" data-extract="box-4" class="letterbox row2 hide-if-solved" data-puzzle-id="10019" minlength="1" maxlength="1"/>
+                    </div>
+                </div></div></div>
+                <div class="wrapper"><div class="tv"><div class="item">
+                    <div class="center"><div class="money">$600</div></div>
+                    <div class="center"><div class="answer">It&rsquo;s the answer to PH9: Dynamic Duos</div></div>
+                    <div class="letterentry">
+                        <div class="letterindex">5/20:</div>
+                        <input type="text" id="box2-5" data-extract="box-5" class="letterbox row2 hide-if-unsolved" data-puzzle-id="10009" minlength="1" maxlength="1" value="E"/>
+                        <input type="text" id="box2-5" data-extract="box-5" class="letterbox row2 hide-if-solved" data-puzzle-id="10009" minlength="1" maxlength="1"/>
+                    </div>
+                </div></div></div>
+        
+                <div class="wrapper"><div class="tv"><div class="item">
+                    <div class="center"><div class="money">$400</div></div>
+                    <div class="center"><div class="answer">It&rsquo;s the answer to PH17: Juke Box Hero</div></div>
+                    <div class="letterentry">
+                        <div class="letterindex">1/20:</div>
+                        <input type="text" id="box3-1" data-extract="box-1" class="letterbox row3 hide-if-unsolved" data-puzzle-id="10017" minlength="1" maxlength="1" value="T"/>
+                        <input type="text" id="box3-1" data-extract="box-1" class="letterbox row3 hide-if-solved" data-puzzle-id="10017" minlength="1" maxlength="1"/>
+                    </div>
+                </div></div></div>
+                <div class="wrapper"><div class="tv"><div class="item">
+                    <div class="center"><div class="money">$400</div></div>
+                    <div class="center"><div class="answer">It&rsquo;s the answer to PH1: Vexillology</div></div>
+                    <div class="letterentry">
+                        <div class="letterindex">7/20:</div>
+                        <input type="text" id="box3-2" data-extract="box-7" class="letterbox row3 hide-if-unsolved" data-puzzle-id="10001" minlength="1" maxlength="1" value="O"/>
+                        <input type="text" id="box3-2" data-extract="box-7" class="letterbox row3 hide-if-solved" data-puzzle-id="10001" minlength="1" maxlength="1"/>
+                    </div>
+                </div></div></div>
+                <div class="wrapper"><div class="tv"><div class="item">
+                    <div class="center"><div class="money">$300</div></div>
+                    <div class="center"><div class="answer">It&rsquo;s the answer to PH5: Mission: Langley Heist</div></div>
+                    <div class="letterentry">
+                        <div class="letterindex">8/20:</div>
+                        <input type="text" id="box3-3" data-extract="box-8" class="letterbox row3 hide-if-unsolved" data-puzzle-id="10005" minlength="1" maxlength="1" value="R"/>
+                        <input type="text" id="box3-3" data-extract="box-8" class="letterbox row3 hide-if-solved" data-puzzle-id="10005" minlength="1" maxlength="1"/>
+                    </div>
+                </div></div></div>
+                <div class="wrapper"><div class="tv"><div class="item">
+                    <div class="center"><div class="money">$400</div></div>
+                    <div class="center"><div class="answer">It&rsquo;s the answer to PH18: To Serve Man</div></div>
+                    <div class="letterentry">
+                        <div class="letterindex">19/20:</div>
+                        <input type="text" id="box3-4" data-extract="box-19" class="letterbox row3 hide-if-unsolved" data-puzzle-id="10018" minlength="1" maxlength="1" value="U"/>
+                        <input type="text" id="box3-4" data-extract="box-19" class="letterbox row3 hide-if-solved" data-puzzle-id="10018" minlength="1" maxlength="1"/>
+                    </div>
+                </div></div></div>
+                <div class="wrapper"><div class="tv"><div class="item">
+                    <div class="center"><div class="money">$700</div></div>
+                    <div class="center"><div class="answer">It&rsquo;s the answer to PH21: Introduction to Sprite Design</div></div>
+                    <div class="letterentry">
+                        <div class="letterindex">10/20:</div>
+                        <input type="text" id="box3-5" data-extract="box-10" class="letterbox row3 hide-if-unsolved" data-puzzle-id="10021" minlength="1" maxlength="1" value="S"/>
+                        <input type="text" id="box3-5" data-extract="box-10" class="letterbox row3 hide-if-solved" data-puzzle-id="10021" minlength="1" maxlength="1"/>
+                    </div>
+                </div></div></div>
+        
+                <div class="wrapper"><div class="tv"><div class="item">
+                    <div class="center"><div class="money">$1000</div></div>
+                    <div class="center"><div class="answer">It&rsquo;s the answer to PH10: Water Beds</div></div>
+                    <div class="letterentry">
+                        <div class="letterindex">2/20:</div>
+                        <input type="text" id="box4-1" data-extract="box-2" class="letterbox row4 hide-if-unsolved" data-puzzle-id="10010" minlength="1" maxlength="1" value="H"/>
+                        <input type="text" id="box4-1" data-extract="box-2" class="letterbox row4 hide-if-solved" data-puzzle-id="10010" minlength="1" maxlength="1"/>
+                    </div>
+                </div></div></div>
+                <div class="wrapper"><div class="tv"><div class="item">
+                    <div class="center"><div class="money">$500</div></div>
+                    <div class="center"><div class="answer">It&rsquo;s the answer to PH20: There&rsquo;s No Business Like Show Business</div></div>
+                    <div class="letterentry">
+                        <div class="letterindex">13/20:</div>
+                        <input type="text" id="box4-2" data-extract="box-13" class="letterbox row4 hide-if-unsolved" data-puzzle-id="10020" minlength="1" maxlength="1" value="E"/>
+                        <input type="text" id="box4-2" data-extract="box-13" class="letterbox row4 hide-if-solved" data-puzzle-id="10020" minlength="1" maxlength="1"/>
+                    </div>
+                </div></div></div>
+                <div class="wrapper"><div class="tv"><div class="item">
+                    <div class="center"><div class="money">$700</div></div>
+                    <div class="center"><div class="answer">It&rsquo;s the answer to PH14: Making Tracks</div></div>
+                    <div class="letterentry">
+                        <div class="letterindex">11/20:</div>
+                        <input type="text" id="box4-3" data-extract="box-11" class="letterbox row4 hide-if-unsolved" data-puzzle-id="10014" minlength="1" maxlength="1" value="A"/>
+                        <input type="text" id="box4-3" data-extract="box-11" class="letterbox row4 hide-if-solved" data-puzzle-id="10014" minlength="1" maxlength="1"/>
+                    </div>
+                </div></div></div>
+                <div class="wrapper"><div class="tv"><div class="item">
+                    <div class="center"><div class="money">$600</div></div>
+                    <div class="center"><div class="answer">It&rsquo;s the answer to PH4: Inspector Clue D&rsquo;oh</div></div>
+                    <div class="letterentry">
+                        <div class="letterindex">12/20:</div>
+                        <input type="text" id="box4-4" data-extract="box-12" class="letterbox row4 hide-if-unsolved" data-puzzle-id="10004" minlength="1" maxlength="1" value="R"/>
+                        <input type="text" id="box4-4" data-extract="box-12" class="letterbox row4 hide-if-solved" data-puzzle-id="10004" minlength="1" maxlength="1"/>
+                    </div>
+                </div></div></div>
+                <div class="wrapper"><div class="tv"><div class="item">
+                    <div class="center"><div class="money">$1200</div></div>
+                    <div class="center"><div class="answer">It&rsquo;s the answer to PH8: Poker Table</div></div>
+                    <div class="letterentry">
+                        <div class="letterindex">9/20:</div>
+                        <input type="text" id="box4-5" data-extract="box-9" class="letterbox row4 hide-if-unsolved" data-puzzle-id="10008" minlength="1" maxlength="1" value="D"/>
+                        <input type="text" id="box4-5" data-extract="box-9" class="letterbox row4 hide-if-solved" data-puzzle-id="10008" minlength="1" maxlength="1"/>
+                    </div>
+                </div></div></div>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

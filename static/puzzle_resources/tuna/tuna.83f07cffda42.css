@@ -1,0 +1,337 @@
+/* Default font */
+@font-face {
+  font-family: 'CircularSp';
+  src: url('circularsp.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'CircularSpTitleBold';
+  src: url('circularsp-title-bold.woff2') format('woff2');
+}
+
+/* Copy to clipboard button */
+button.clipboard-button {
+  border-radius: 5px;
+  font-family: 'CircularSp', sans-serif;
+}
+
+/* A11y */
+.hidden-visually {
+  clip: rect(0 0 0 0);
+  border: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* Default body style */
+body {
+  background: rgb(18, 18, 18);
+  color: rgb(179, 179, 179);
+  font-family: 'CircularSp', sans-serif;
+}
+
+/* Top portion */
+div.top {
+  height: 30vh;
+  max-height: 500px;
+  min-height: 340px;
+  background-color: rgb(22, 22, 78);
+}
+
+div.topflex {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: start;
+  gap: 10px;
+}
+
+img.playlist-img {
+  width: 192px;
+  height: 192px;
+}
+
+div.topflex div.text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+h1 {
+  font-family: 'CircularSpTitleBold', sans-serif;
+  margin: 0.08em 0px 0.12em;
+  visibility: visible;
+  width: 100%;
+  font-size: 4.5rem;
+  color: white;
+}
+
+img.profilepic {
+  width: 22px;
+  height: 22px;
+  transform: translate(0, 3px);
+  margin-right: 5px;
+}
+
+/* Playlist section */
+div.playlist-header {
+  border-bottom: 1px solid transparent;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 36px;
+  padding: 0 16px;
+  position: sticky;
+  /* z-index: 2; */
+}
+
+div.main {
+  background: linear-gradient(rgb(22, 22, 78), rgb(18, 18, 18) 20%);
+  grid-gap: 16px;
+  display: grid;
+  padding: 0 16px;
+  /* grid-template-columns: [index] 16px [first] 4fr [var1] 2fr [last] minmax(120px,1fr); */
+}
+
+div.main > div {
+  grid-gap: 16px;
+  display: grid;
+  padding: 0 16px;
+  grid-template-columns: [index] 16px [first] 4fr [last] minmax(120px,1fr);
+}
+
+div.playlist-header {
+  color: white;
+}
+
+div.main > div.playlist-header {
+  border-bottom: 1px solid hsla(0,0%,100%,.1);
+}
+
+div.main > div > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+div.playlist-row:hover, div.playlist-row:focus {
+  background-color: hsla(0,0%,100%,.1);
+}
+
+div.playlist-row > div {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  height: 56px;
+  position: relative;
+}
+
+div.playlist-row > *:first-child {
+  text-align: center;
+  position: relative; /* Needed for play button */
+}
+
+div.playlist-row button.play-button {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  background: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  filter: invert(1);
+  left: 0px;
+  top: 28px;
+  transform: translate(-50%, -50%);
+}
+
+div.playlist-row:hover button.play-button, div.playlist-row:focus-within button.play-button {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+div.playlist-row:hover span.id-number, div.playlist-row:focus-within span.id-number {
+  opacity: 0;
+}
+
+/* Now playing footer */
+footer img, svg {
+  fill: currentColor;
+}
+
+div#footer-pusher {
+  display: none; /* Becomes block */
+  height: 80px;
+}
+
+footer {
+  display: none; /* Becomes display: grid */
+  background-color: #181818;
+  border-top: 1px solid #282828;
+  grid-template-columns: repeat(3, 1fr);
+  height: auto;
+  min-width: 620px;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  border-top: 1px solid hsla(0,0%,100%,.1);
+}
+
+footer div.now-playing-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 10px;
+}
+
+footer div.audio-controls {
+  max-width: 722px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer div.audio-controls > div.top-controls-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 8px;
+}
+
+footer div.audio-controls > div.top-controls-row > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+button.control-button-skip-back, button.control-button-skip-forward {
+  background: 0px;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  color: rgb(179, 179, 179);
+}
+
+button.control-button-skip-back:disabled, button.control-button-skip-forward:disabled {
+  color: rgb(100, 100, 100);
+}
+
+footer div.center-button button {
+  grid-area: center;
+  background-color: #fff;
+  border: none;
+  border-radius: 32px;
+  color: #000;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+  -webkit-transition: none 33ms cubic-bezier(.3,0,.7,1);
+  transition: none 33ms cubic-bezier(.3,0,.7,1);
+  -webkit-transition-property: all;
+  transition-property: all;
+  width: 32px;
+}
+
+div.playback-bar {
+  grid-area: bar;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+div#progress-bar {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+div#playback-position, div#playback-duration {
+  min-width: 40px; /* Use constant width so playback bar is always centered. */
+}
+
+div#playback-position {
+  text-align: right;
+}
+
+div#playback-progressbar {
+  height: 12px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+div.progress-bar-background {
+  background-color: hsla(0,0%,100%,.3);
+}
+
+div.progress-bar-background, div.progress-bar-shading-container {
+  border-radius: 2px;
+  height: 4px;
+  width: 100%;
+}
+
+div.progress-bar-shading-container {
+  overflow: hidden;
+}
+
+div.progress-bar-shading {
+  background-color: white;
+  border-radius: 2px;
+  height: 4px;
+  -webkit-transform: translateX(calc(-100% + var(--progress-bar-transform)));
+  transform: translateX(calc(-100% + var(--progress-bar-transform)));
+  width: 100%;
+}
+
+div#playback-progressbar:hover div.progress-bar-shading {
+  background-color: #1db954;
+}
+
+div#progress-handle {
+  background-color: #fff;
+  border: 0;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2px 4px 0 rgb(0 0 0 / 50%);
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 50%);
+  display: none;
+  height: 12px;
+  left: var(--progress-bar-transform);
+  margin-left: -6px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 12px;
+  z-index: 100;
+}
+
+div#progress-handle.dragging {
+  -webkit-transform: translateY(-50%) scale(1.15);
+  transform: translateY(-50%) scale(1.15);
+}
+
+div#playback-progressbar:hover div#progress-handle {
+  display: block;
+}

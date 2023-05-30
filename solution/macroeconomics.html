@@ -1,0 +1,260 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: Macroeconomics</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="../puzzle/macroeconomics.html" class="btn">Back to the puzzle</a>
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: Macroeconomics
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer spoiler">CARDINAL</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Kenny Young
+
+    </h2>
+
+    
+    <p>The $ signs can be replaced with:</p>
+<pre><code>#define a      set
+#define n c ## math
+#define v      typeinfo
+#define d      vector
+
+#define b      short
+#define c      sizeof
+#define e      template
+#define f      int
+#define g      class
+#define h      erase
+#define i      at
+#define j      public
+#define k      begin
+#define l      else
+#define m      if
+#define o      find
+#define p      do
+#define q      std
+#define r      insert
+#define s      for
+#define t      while
+#define u      name
+#define w      size
+#define x      void
+#define y      end
+#define z      typeid
+#define B      return
+#define C      sqrt
+#define D      printf
+#define E      unsigned
+#define F      char
+#define G      main
+#define H      auto
+#define I      long
+</code></pre>
+<p>so the code expands to:</p>
+<pre><code>#include &lt;cstdio&gt;
+#include &lt;set&gt;
+#include &lt;cmath&gt;
+#include &lt;typeinfo&gt;
+#include &lt;vector&gt;
+
+class Helper
+{
+public:
+    template&lt;class T&gt;
+    void RemoveDups(std::vector&lt;T&gt;&amp; v)
+    {
+        // remove duplicates
+        std::set&lt;T&gt; seen;
+        unsigned int x = 0;
+        do
+        {
+            T y = v.at(x);
+            if (seen.find(y) != seen.end())
+            {
+                v.erase(v.begin() + x);
+            }
+            else
+            {
+                seen.insert(y);
+                x++;
+            }
+        } while (x &lt; v.size());
+    }
+};
+
+int main()
+{
+    std::vector&lt;int&gt; nums = { 25, 18, 25, 9, 3, 6, 18, 20, 17, 26, 4, 9, 22, 14, 2, 3, 1, 5, 3, 5, 6, 23, 3 };
+
+    Helper h;
+    h.RemoveDups(nums);
+
+    // s == 'v' in MSVC and gcc
+    char s = *(typeid(void).name());
+
+    // output nonsquares shifted
+    if (sizeof(char) &lt; sizeof(unsigned short int) &amp;&amp; sizeof(unsigned short int) &lt;= sizeof(unsigned long int))
+    {
+        int count = 0;
+        for (auto it = nums.begin(); it != nums.end(); it++)
+        {
+            // skip squares
+            if (((int)sqrt(*it) * (int)sqrt(*it)) != *it)
+            {
+                printf(&quot;%c &quot;, ((*it + (unsigned int)s - 'a') % 26) + 'a');
+                count++;
+            }
+
+            s++;
+        }
+
+        printf(&quot;(%d%)\n&quot;, count - 3);
+    }
+
+    return 0;
+}
+</code></pre>
+<p>Compiling and running that code prints this result:</p>
+<pre><code>o b f u s c a t i n g (8)
+</code></pre>
+<p>If you replace each letter with the keyword it represents, you get this phrase:</p>
+<pre><code>find short int name for sizeof set while at math class (8)
+</code></pre>
+<p>In mathematics, the size of a set is its cardinal number, also known as its cardinality. The shorter (and 8-letter) one of these is CARDINAL.</p>
+
+    
+    
+
+    
+    
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

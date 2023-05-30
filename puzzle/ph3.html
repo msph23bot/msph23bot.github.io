@@ -1,0 +1,604 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>PH3: Mr. Tambourine Man</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+<a href="../round/placement-test.html" class="btn">Placement Test</a>
+
+
+
+
+
+<a href="../post-hunt-solve/ph3.html" class="btn">Call in an answer</a>
+
+
+<a href="../solution/ph3.html" class="btn solution-button">View solution</a>
+<a href="../stats/ph3.html" class="btn">Stats</a>
+
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<h1 class="puzzle-title">
+    PH3: Mr. Tambourine Man
+    
+</h1>
+
+<main class="puzzle-main clipboard-container">
+    
+
+    
+    <style>
+:root {
+        --item-size: 36px;
+        --cols: 17;
+        --rows: 18;
+        --focus-color: rgba(255, 255, 116, .5);
+}
+
+/* Board and Highlighting */
+.crossword-board-container {
+        position: relative;
+        background: #FFFFFF;
+        width: calc(var(--cols) * var(--item-size));
+        height: calc(var(--rows) * var(--item-size));
+}
+.crossword-board {
+        position: absolute;
+        z-index: 1;
+        background: transparent;
+        border: 1px solid #000000;
+        width: calc(var(--cols) * var(--item-size));
+        height: calc(var(--rows) * var(--item-size));
+        display: grid;
+        grid-template: repeat(var(--rows),calc(100% / var(--rows))) / repeat(var(--cols),calc(100% / var(--cols)));
+        list-style-type: none;
+        padding: 0;
+        margin: 0 auto;
+        z-index: 100;
+        print-color-adjust: exact !important;
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+}
+.extraction {
+        border: 1px solid #000000;
+        width: calc(20 * var(--item-size));
+        height: var(--item-size);
+        display: grid;
+        grid-template: repeat(1, 100%) / repeat(20, 5%);
+        list-style-type: none;
+        padding: 0;
+        margin: 0 auto;
+}
+.crossword-board__item, .extraction__item {
+        border: 1px solid #000000;
+        background: transparent;
+        position: relative;
+        z-index: 100;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+}
+.extraction__item {
+    border: 1px solid #000000;
+    line-height: var(--item-size);
+    vertical-align: middle;
+    background: rgba(0, 0, 255, 0.25);
+}
+
+.crossword-board__item.extract {
+    background: rgba(0, 0, 255, 0.25);
+}
+
+.crossword-board__item.marked {
+        background: var(--focus-color);
+}
+
+.crossword-board__item:focus
+{
+        background: var(--focus-color);
+        border: 1px solid #000000;
+        outline: 1px solid #000000;
+}
+.crossword-board__item.extract:focus {
+        background: rgba(102, 255, 102, 0.25);
+}
+
+
+.crossword-board__item--blank {
+        background: black;
+        border: 1px solid #000000;
+        outline: 1px solid #000000;
+}
+
+/* Item Labels */
+.crossword-board--labels {
+        position: absolute;
+        z-index: 60;
+}
+.crossword-board__item-label {
+        position: relative;
+}
+.crossword-board__item-label-text {
+        position: absolute;
+        margin-top: 2px;
+        margin-left: 2px;
+        font-size: 10px;
+        line-height: 1;
+}
+
+.crossword-board input {
+    height: var(--item-size);
+    background: none;
+    margin: 0px 0px;
+}
+
+/* Clues List */
+.crossword-clues {
+        min-width: 200px;
+        margin-left: calc(var(--item-size) * var(--cols) + 60px);
+        font-size: 16px;
+}
+.crossword-clues__list {
+        padding: 0;
+        margin-bottom: 10px;
+}
+.crossword-clues__list-title {
+        font-weight: bold;
+}
+.crossword-clues__list-item {
+        margin: 0;
+        padding: 0;
+}
+.crossword-clues__list-item:before {
+        content: attr(data-number) '. ';
+}
+.crossword-clues__list-item.strikethrough {
+        text-decoration: line-through;
+}
+.crossword-clues__list-item:hover, .crossword-clues__list-item.marked {
+        background-color: var(--focus-color);
+}
+
+@media print {
+        @page {
+                size: portrait;
+        }
+
+        .crossword-board__item--blank {
+                background: #aaaaaa;
+                border: none;
+                outline: none;
+        }
+
+        .crossword-board input {
+                border: 1px solid black;
+        }
+}
+</style>
+<script>
+var typingDirection = "across";
+var fShift = false;
+var boarddata =
+[
+    "........B.#######",
+    "###.#############",
+    "#L....#.#########",
+    "###.###.#########",
+    "###M###.#.......I",
+    ".Q..###.#.#.#.###",
+    ".##.###.#.....J##",
+    ".##...D...#.#.###",
+    ".######.#E#K#.##.",
+    ".#O####F#.###.##.",
+    ".#.######.#.#.##.",
+    "....G..#..R...##.",
+    ".#.######.#.#.##P",
+    ".#.####.#.#A#.##.",
+    ".#.####.#.....T..",
+    "H######S#.#.#C###",
+    ".#####..N.###.###",
+    "#########.#######"
+];
+
+document.addEventListener('DOMContentLoaded', function() {
+    var board = document.getElementById("crossword-board");
+        for (var r = 0; r < boarddata.length; r++) {
+            for (var c = 0; c < boarddata[r].length; c++) {
+                var cell;
+
+                if (boarddata[r][c] == '#') {
+                    cell = document.createElement("span");
+                    cell.classList.add("crossword-board__item--blank");
+                } else {
+                    cell = document.createElement("input");
+                    cell.classList.add("crossword-board__item");
+                    cell.setAttribute("type", "text");
+                    cell.setAttribute("minLength", "1");
+                    cell.setAttribute("maxLength", "1");
+                    cell.setAttribute("required", "required");
+                    if (boarddata[r][c] >= "A" && boarddata[r][c] <= "Z") {
+                        var index = boarddata[r][c].charCodeAt(0) - 65;
+                        cell.classList.add("extract");
+                        cell.setAttribute("extract-id", "extraction-" + index);
+                    }
+                }
+
+                cell.id = "item" + (r+1) + "-" + (c+1);
+                board.appendChild(cell);
+            }
+        }
+
+        var extraction = document.getElementById("extraction");
+        for (var c = 0; c < 20; c++) {
+            var cell;
+
+            cell = document.createElement("div");
+            cell.classList.add("extraction__item");
+            cell.id = "extraction-" + c;
+            extraction.appendChild(cell);
+        }
+
+        document.querySelectorAll("dd").forEach(dd => {
+                // When a clue is right clicked, cross it out (or un-cross it)
+                dd.oncontextmenu = e => {
+                        e.target.classList.toggle("strikethrough");
+                        return false;
+                };
+
+                // When a clue is hovered, highlight its squares in the grid
+                dd.onmouseenter = e => {
+                        var label = document.getElementById("label-" + e.target.getAttribute("data-number"));
+                        var row = parseInt(label.style.gridRowStart);
+                        var col = parseInt(label.style.gridColumnStart);
+
+                        var across = e.target.className.indexOf("across") >= 0;
+                        var square = document.getElementById("item" + row.toString() + "-" + col.toString());
+                        while (square != null && square.classList.contains("crossword-board__item")) {
+                                square.classList.add("marked");
+
+                                if (across) col += 1;
+                                else row += 1;
+                                square = document.getElementById("item" + row.toString() + "-" + col.toString());
+                        }
+                };
+
+                // And remove on exit
+                dd.onmouseleave = e => {
+                        document.querySelectorAll(".crossword-board__item").forEach(item => { item.classList.remove("marked"); });
+                };
+
+                // Focus on grid on clue click
+                dd.onclick = e => {
+                        // Skip if this is actually a double-click
+                        if (e.detail > 1)
+                                return;
+
+                        var label = document.getElementById("label-" + e.target.getAttribute("data-number"));
+                        var row = parseInt(label.style.gridRowStart);
+                        var col = parseInt(label.style.gridColumnStart);
+
+                        var across = e.target.className.indexOf("across") >= 0;
+                        if (across)
+                                typingDirection = "across";
+                        else
+                                typingDirection = "down";
+
+                        var square = document.getElementById("item" + row.toString() + "-" + col.toString());
+                        if (!square.classList.contains("crossword-board__item--blank")) {
+                                square.focus();
+                        }
+                };
+        });
+
+        function FindLabelVertical(row, col) {
+                var square = document.getElementById("item" + (row-1).toString() + "-" + col.toString());
+
+                while (square != null && square.classList.contains("crossword-board__item")) {
+                        row -= 1;
+                        square = document.getElementById("item" + (row-1).toString() + "-" + col.toString());
+                }
+                return document.querySelector(".crossword-clues__list--down dd[data-row='" + row.toString() + "'][data-col='" + col.toString() + "']");
+        }
+
+        function FindLabelHorizontal(row, col) {
+                var square = document.getElementById("item" + row.toString() + "-" + (col-1).toString());
+                while (square != null && square.classList.contains("crossword-board__item")) {
+                        col -= 1;
+                        square = document.getElementById("item" + row.toString() + "-" + (col-1).toString());
+                }
+                return document.querySelector(".crossword-clues__list--across dd[data-row='" + row.toString() + "'][data-col='" + col.toString() + "']");
+        }
+
+        // Handle arrow keys
+        function move(elem, drow, dcol) {
+                var label = elem.id;
+                var row = parseInt(label.split("-")[0].substr(4)) + drow;
+                var col = parseInt(label.split("-")[1]) + dcol;
+
+                while (true) {
+                        var newitem = document.getElementById("item" + row + "-" + col);
+                        if (!newitem) {
+                                return false;
+                        }
+
+                        if (!newitem.classList.contains("crossword-board__item--blank")) {
+                                newitem.focus();
+                                return true;
+                        }
+
+                        row += drow;
+                        col += dcol;
+                }
+        }
+
+        function setText(elem, text) {
+            elem.value = text;
+            if (elem.classList.contains("extract")) {
+                var extractid = elem.getAttribute("extract-id");
+                document.getElementById(extractid).innerText = elem.value;
+            }
+        }
+
+        var state = localStorage.getItem("ph3");
+        if (state) { state = state.split("|"); }
+        var iItem = 0;
+
+        document.querySelectorAll(".crossword-board__item").forEach(item => {
+                if (state) { setText(item, state[iItem++]); };
+
+                // When an input box is selected, the appropriate clue(s) are highlighted too
+                item.onfocus = e => {
+                        var label = e.target.id;
+                        var row = parseInt(label.split("-")[0].substr(4));
+                        var col = parseInt(label.split("-")[1]);
+
+                        // Check up for a label
+                        label = FindLabelVertical(row, col);
+                        if (label) {
+                            label.classList.add("marked");
+                        }
+
+                        // Check to the left for a label
+                        label = FindLabelHorizontal(row, col);
+                        if (label) {
+                            label.classList.add("marked");
+                        }
+                };
+                item.onblur = e => {
+                        document.querySelectorAll(".crossword-clues__list-item").forEach(clue => { clue.classList.remove("marked"); });
+                };
+
+                item.ondblclick = e => {
+                        typingDirection = (typingDirection == "across") ? "down" : "across";
+                }
+
+                item.addEventListener("keydown", e => {
+                        if (e.keyCode == 32) { // space
+                                typingDirection = (typingDirection == "across") ? "down" : "across";
+                        }
+                        else if (e.keyCode == 37) { // left
+                                move(e.target, 0, -1);
+                                typingDirection = "across";
+                        }
+                        else if (e.keyCode == 38) { // up
+                                move(e.target, -1, 0);
+                                typingDirection = "down";
+                        }
+                        else if (e.keyCode == 39) { // right
+                                move(e.target, 0, 1);
+                                typingDirection = "across";
+                        }
+                        else if (e.keyCode == 40) { // down
+                                move(e.target, 1, 0);
+                                typingDirection = "down";
+                        }
+                        else if (e.keyCode == 9) { // tab
+                                var label = e.target.id;
+                                var row = parseInt(label.split("-")[0].substr(4));
+                                var col = parseInt(label.split("-")[1]);
+
+                                var label;
+                                if (typingDirection === "across") {
+                                        label = FindLabelHorizontal(row, col);
+                                        if (label === null) {
+                                                label = FindLabelVertical(row, col);
+                                        }
+                                }
+                                else { // typingDirection === "down"
+                                        label = FindLabelVertical(row, col);
+                                        if (label === null) {
+                                                label = FindLabelHorizontal(row, col);
+                                        }
+                                }
+                                if (label !== null) {
+                                        var next = parseInt(label.getAttribute("data-number")) + (fShift ? -1 : 1);
+
+                                        if (document.querySelector("*[data-number='" + next + "']") === null) {
+                                                if (!fShift) next = 1;
+                                                else {
+                                                        next = 0;
+
+                                                        document.querySelectorAll("dd").forEach(dd => {
+                                                                next = Math.max(next, parseInt(dd.getAttribute("data-number")));
+                                                        });
+                                                }
+                                        }
+
+                                        next = document.querySelector("*[data-number='" + next + "']");
+                                        document.getElementById("item" + next.getAttribute("data-row") + "-" + next.getAttribute("data-col")).focus();
+
+                                        if (next.className.indexOf("across") === -1)
+                                                typingDirection = "down";
+                                        else
+                                                typingDirection = "across";
+
+                                        e.preventDefault();
+                                }
+                        }
+                        else if (e.keyCode == 8 || e.keyCode == 46) { // backspace/delete
+                                setText(e.target, "");
+                                var label = e.target.id;
+                                var row = parseInt(label.split("-")[0].substr(4));
+                                var col = parseInt(label.split("-")[1]);
+
+                                if (typingDirection == "across") {
+                                        move(e.target, 0, -1);
+                                }
+                                else {
+                                        move(e.target, -1, 0);
+                                }
+
+                                e.preventDefault();
+                        }
+                        else if (e.target.value != "" && (e.keyCode >= 65 && e.keyCode <= 90)) { // clear existing letter for new one
+                                setText(e.target, "");
+                        }
+                });
+
+                item.addEventListener("keypress", e => {
+                        if ((e.which >= 65 && e.which <= 90) || (e.which >= 97 && e.which <= 122)) { // A-Z
+                                setText(e.target, e.key.toUpperCase());
+
+                                if (typingDirection === "across") {
+                                        move(e.target, 0, 1);
+                                }
+                                else { // typingDirection === "down"
+                                        move(e.target, 1, 0);
+                                }
+                        }
+                        else { // don't allow other characters
+                                var currVal = e.target.value;
+                                if (currVal && !((currVal.charCodeAt(0) >= 65 && currVal.charCodeAt(0) <= 90) || (currVal.charCodeAt(0) >= 97 && currVal.charCodeAt(0) <= 122))) {
+                                        setText(e.target, "");
+                                }
+                        }
+
+                        e.preventDefault();
+                });
+        });
+
+        window.addEventListener('beforeunload', function(e) {
+            var state = [];
+            document.querySelectorAll(".crossword-board__item").forEach(item => {
+                state.push(item.value);
+            });
+            localStorage.setItem("ph3", state.join("|"));
+        });
+
+        document.addEventListener("keyup", e => { fShift = e.shiftKey });
+        document.addEventListener("keydown", e => { fShift = e.shiftKey });
+});
+</script>
+<body><div class="page-div"><div class="content-div"><p>On <i>The Cross-Wits</i>, teams competed to solve clues to a themed crossword puzzle.  The title is a hint to the theme of this puzzle. Highlighted cells provide information to solve the overall puzzle.</p><div id="extraction" class="extraction"></div><br/><div class='crossword-board-container'><div id='crossword-board' class='crossword-board'></div><div class='crossword-board crossword-board--labels'><span id='label-1' class='crossword-board__item-label crossword-board__item-label--1' style='grid-column: 1/1; grid-row: 1/1;'><span class='crossword-board__item-label-text'>1</span></span><span id='label-2' class='crossword-board__item-label crossword-board__item-label--2' style='grid-column: 4/4; grid-row: 1/1;'><span class='crossword-board__item-label-text'>2</span></span><span id='label-3' class='crossword-board__item-label crossword-board__item-label--3' style='grid-column: 2/2; grid-row: 3/3;'><span class='crossword-board__item-label-text'>3</span></span><span id='label-4' class='crossword-board__item-label crossword-board__item-label--4' style='grid-column: 8/8; grid-row: 3/3;'><span class='crossword-board__item-label-text'>4</span></span><span id='label-5' class='crossword-board__item-label crossword-board__item-label--5' style='grid-column: 10/10; grid-row: 5/5;'><span class='crossword-board__item-label-text'>5</span></span><span id='label-6' class='crossword-board__item-label crossword-board__item-label--6' style='grid-column: 12/12; grid-row: 5/5;'><span class='crossword-board__item-label-text'>6</span></span><span id='label-7' class='crossword-board__item-label crossword-board__item-label--7' style='grid-column: 14/14; grid-row: 5/5;'><span class='crossword-board__item-label-text'>7</span></span><span id='label-8' class='crossword-board__item-label crossword-board__item-label--8' style='grid-column: 1/1; grid-row: 6/6;'><span class='crossword-board__item-label-text'>8</span></span><span id='label-9' class='crossword-board__item-label crossword-board__item-label--9' style='grid-column: 10/10; grid-row: 7/7;'><span class='crossword-board__item-label-text'>9</span></span><span id='label-10' class='crossword-board__item-label crossword-board__item-label--10' style='grid-column: 4/4; grid-row: 8/8;'><span class='crossword-board__item-label-text'>10</span></span><span id='label-11' class='crossword-board__item-label crossword-board__item-label--11' style='grid-column: 17/17; grid-row: 9/9;'><span class='crossword-board__item-label-text'>11</span></span><span id='label-12' class='crossword-board__item-label crossword-board__item-label--12' style='grid-column: 3/3; grid-row: 10/10;'><span class='crossword-board__item-label-text'>12</span></span><span id='label-13' class='crossword-board__item-label crossword-board__item-label--13' style='grid-column: 12/12; grid-row: 11/11;'><span class='crossword-board__item-label-text'>13</span></span><span id='label-14' class='crossword-board__item-label crossword-board__item-label--14' style='grid-column: 1/1; grid-row: 12/12;'><span class='crossword-board__item-label-text'>14</span></span><span id='label-15' class='crossword-board__item-label crossword-board__item-label--15' style='grid-column: 9/9; grid-row: 12/12;'><span class='crossword-board__item-label-text'>15</span></span><span id='label-16' class='crossword-board__item-label crossword-board__item-label--16' style='grid-column: 8/8; grid-row: 14/14;'><span class='crossword-board__item-label-text'>16</span></span><span id='label-17' class='crossword-board__item-label crossword-board__item-label--17' style='grid-column: 10/10; grid-row: 15/15;'><span class='crossword-board__item-label-text'>17</span></span><span id='label-18' class='crossword-board__item-label crossword-board__item-label--18' style='grid-column: 7/7; grid-row: 17/17;'><span class='crossword-board__item-label-text'>18</span></span></div><div class='crossword-clues'><dl class='crossword-clues__list crossword-clues__list--across'><dt class='crossword-clues__list-title'>Across</dt><dd class='crossword-clues__list-item crossword-clues__list-item--across-1' data-number='1' data-row='1' data-col='1'>Marcus Mumford (2)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--across-3' data-number='3' data-row='3' data-col='2'>Billy Joel (12)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--across-5' data-number='5' data-row='5' data-col='10'>Neil Diamond (9)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--across-8' data-number='8' data-row='6' data-col='1'>John Belushi (17)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--across-9' data-number='9' data-row='7' data-col='10'>Elton John (10)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--across-10' data-number='10' data-row='8' data-col='4'>John Lennon (4)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--across-14' data-number='14' data-row='12' data-col='1'>Dickey Betts (7)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--across-15' data-number='15' data-row='12' data-col='9'>Ronnie Van Zant (18)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--across-17' data-number='17' data-row='15' data-col='10'>Sammy Davis, Jr. (20)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--across-18' data-number='18' data-row='17' data-col='7'>Ozzy Osbourne (14)</dd></dl><dl class='crossword-clues__list crossword-clues__list--down'><dt class='crossword-clues__list-title'>Down</dt><dd class='crossword-clues__list-item crossword-clues__list-item--down-2' data-number='2' data-row='1' data-col='4'>Ricky Nelson (13)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--down-4' data-number='4' data-row='3' data-col='8'>Neil Young (6)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--down-5' data-number='5' data-row='5' data-col='10'>Mick Jagger (5)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--down-6' data-number='6' data-row='5' data-col='12'>Greg Lake (11)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--down-7' data-number='7' data-row='5' data-col='14'>Philippé Wynne (3)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--down-8' data-number='8' data-row='6' data-col='1'>Billy Gibbons (8)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--down-11' data-number='11' data-row='9' data-col='17'>Willie Nelson (16)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--down-12' data-number='12' data-row='10' data-col='3'>Daryl Hall (15)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--down-13' data-number='13' data-row='11' data-col='12'>Joey Ramone (1)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--down-16' data-number='16' data-row='14' data-col='8'>David Bowie (19)</dd></dl></div></div></div></div></body>
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

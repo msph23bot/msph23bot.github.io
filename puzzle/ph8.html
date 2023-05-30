@@ -1,0 +1,308 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>PH8: Poker Table</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+<a href="../round/placement-test.html" class="btn">Placement Test</a>
+
+
+
+
+
+<a href="../post-hunt-solve/ph8.html" class="btn">Call in an answer</a>
+
+
+<a href="../solution/ph8.html" class="btn solution-button">View solution</a>
+<a href="../stats/ph8.html" class="btn">Stats</a>
+
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<h1 class="puzzle-title">
+    PH8: Poker Table
+    
+</h1>
+
+<main class="puzzle-main clipboard-container">
+    
+
+    
+    <style>
+        .felt {
+            background-color: #006847;
+            width: 1080px;
+            height: 720px;
+            position: relative;
+        }
+
+        .slot {
+            background: gray;
+            position: absolute;
+            border: 1px solid black;
+            width: 58px;
+            height: 58px;
+        }
+
+        .rankslot {
+            background: yellow;
+            position: absolute;
+            border: 1px solid black;
+            width: 58px;
+            height: 58px;
+        }
+
+        .card, .fixedcard, .rank {
+            position: absolute;
+            user-select: none;
+        }
+
+        .fixedcard {
+            background: lightgray;
+            border: 3px solid black;
+            width: 54px;
+            height: 54px;
+        }
+
+        .card {
+            cursor: move; 
+            background: white;
+            border: 1px solid black;
+            width: 54px;
+            height: 54px;
+            padding: 2px;
+        }
+
+        .cardtext {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 2px;
+        }
+
+        .cardletter {
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: -2px;
+        }
+
+        .redsuit {
+            color: red;
+        }
+
+        .rank {
+            cursor: move; 
+            background: lightyellow;
+            border: 1px solid black;
+            line-height: 1.6rem;
+            width: 54px;
+            height: 54px;
+            padding: 2px;
+        }
+
+        .ranktext {
+            font-size: 14px;
+            text-align: center;
+            height: 40px;
+            margin-top: -2px;
+        }
+
+        .ranklevel {
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: -2px;
+        }
+
+        @media screen {
+            .print-only {
+                display: none;
+            }
+        }
+
+        @media print {
+            @page {
+                size: landscape;
+            }
+
+            .screen-only {
+                display: none;
+            }
+
+            .felt {
+                width: 720px;
+                height: 480px;
+                background-color: transparent;
+            }
+
+            .slot {
+                background-color: transparent;
+            }
+
+            .fixedcard {
+                background-color: transparent;
+            }
+
+            .rankslot, .rank {
+                background-color: lightgray;
+                print-color-adjust: exact !important;
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+        }
+</style>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<body><div class="page-div"><div class="content-div"><p><span class="screen-only">Drag</span><span class="print-only">Use</span> the cards provided below to fill the grid such that each row and each column is a unique type of poker hand. Each row must be a better hand than the row below it. Each column must be a better hand than the column to its right.</p><br/><div class="felt"><div class="rankslot" style="left: 60px; top: 120px;"></div><div class="rankslot" style="left: 60px; top: 180px;"></div><div class="rankslot" style="left: 60px; top: 240px;"></div><div class="rankslot" style="left: 60px; top: 300px;"></div><div class="rankslot" style="left: 60px; top: 360px;"></div><div class="rankslot" style="left: 120px; top: 60px;"></div><div class="rankslot" style="left: 180px; top: 60px;"></div><div class="rankslot" style="left: 240px; top: 60px;"></div><div class="rankslot" style="left: 300px; top: 60px;"></div><div class="rankslot" style="left: 360px; top: 60px;"></div><div class="slot" style="left: 120px; top: 120px;"></div><div class="slot" style="left: 120px; top: 180px;"></div><div class="slot" style="left: 120px; top: 240px;"></div><div class="slot" style="left: 120px; top: 300px;"></div><div class="slot" style="left: 120px; top: 360px;"></div><div class="slot" style="left: 180px; top: 120px;"></div><div class="slot" style="left: 180px; top: 180px;"></div><div class="slot" style="left: 180px; top: 240px;"></div><div class="slot" style="left: 180px; top: 300px;"></div><div class="slot" style="left: 180px; top: 360px;"></div><div class="slot" style="left: 240px; top: 120px;"></div><div class="slot" style="left: 240px; top: 180px;"></div><div class="slot" style="left: 240px; top: 240px;"></div><div class="slot" style="left: 240px; top: 300px;"></div><div class="slot" style="left: 240px; top: 360px;"></div><div class="slot" style="left: 300px; top: 120px;"></div><div class="slot" style="left: 300px; top: 180px;"></div><div class="slot" style="left: 300px; top: 240px;"></div><div class="slot" style="left: 300px; top: 300px;"></div><div class="slot" style="left: 300px; top: 360px;"></div><div class="slot" style="left: 360px; top: 120px;"></div><div class="slot" style="left: 360px; top: 180px;"></div><div class="slot" style="left: 360px; top: 240px;"></div><div class="slot" style="left: 360px; top: 300px;"></div><div class="slot" style="left: 360px; top: 360px;"></div><div class="fixedcard" style="left: 360px; top: 120px;"><div class="cardtext">2<span class="redsuit">♥️</span></div><div class="cardletter">I</div></div><div class="fixedcard" style="left: 360px; top: 180px;"><div class="cardtext">3♣️</div><div class="cardletter">A</div></div><div class="fixedcard" style="left: 300px; top: 240px;"><div class="cardtext">Q♠️</div><div class="cardletter">C</div></div><div class="fixedcard" style="left: 120px; top: 300px;"><div class="cardtext">Q<span class="redsuit">♥️</span></div><div class="cardletter">S</div></div><div class="fixedcard" style="left: 240px; top: 360px;"><div class="cardtext">2♠️</div><div class="cardletter">H</div></div><div class="card" style="left: 480px; top: 60px;"><div class="cardtext">3♠️</div><div class="cardletter">B</div></div><div class="card" style="left: 540px; top: 60px;"><div class="cardtext">6♠️</div><div class="cardletter">N</div></div><div class="card" style="left: 600px; top: 60px;"><div class="cardtext">8♠️</div><div class="cardletter">A</div></div><div class="card" style="left: 660px; top: 60px;"><div class="cardtext">J♠️</div><div class="cardletter">L</div></div><div class="card" style="left: 720px; top: 60px;"><div class="cardtext">9<span class="redsuit">♥️</span></div><div class="cardletter">D</div></div><div class="card" style="left: 480px; top: 120px;"><div class="cardtext">10<span class="redsuit">♥️</span></div><div class="cardletter">N</div></div><div class="card" style="left: 540px; top: 120px;"><div class="cardtext">J<span class="redsuit">♥️</span></div><div class="cardletter">H</div></div><div class="card" style="left: 600px; top: 120px;"><div class="cardtext">K<span class="redsuit">♥️</span></div><div class="cardletter">C</div></div><div class="card" style="left: 660px; top: 120px;"><div class="cardtext">A<span class="redsuit">♥️</span></div><div class="cardletter">I</div></div><div class="card" style="left: 720px; top: 120px;"><div class="cardtext">3<span class="redsuit">♦️</span></div><div class="cardletter">S</div></div><div class="card" style="left: 480px; top: 180px;"><div class="cardtext">8<span class="redsuit">♦️</span></div><div class="cardletter">E</div></div><div class="card" style="left: 540px; top: 180px;"><div class="cardtext">10<span class="redsuit">♦️</span></div><div class="cardletter">L</div></div><div class="card" style="left: 600px; top: 180px;"><div class="cardtext">J<span class="redsuit">♦️</span></div><div class="cardletter">D</div></div><div class="card" style="left: 660px; top: 180px;"><div class="cardtext">K<span class="redsuit">♦️</span></div><div class="cardletter">T</div></div><div class="card" style="left: 720px; top: 180px;"><div class="cardtext">2♣️</div><div class="cardletter">E</div></div><div class="card" style="left: 480px; top: 240px;"><div class="cardtext">7♣️</div><div class="cardletter">G</div></div><div class="card" style="left: 540px; top: 240px;"><div class="cardtext">8♣️</div><div class="cardletter">K</div></div><div class="card" style="left: 600px; top: 240px;"><div class="cardtext">9♣️</div><div class="cardletter">A</div></div><div class="card" style="left: 660px; top: 240px;"><div class="cardtext">10♣️</div><div class="cardletter">G</div></div><div class="card" style="left: 720px; top: 240px;"><div class="cardtext">J♣️</div><div class="cardletter">O</div></div><div class="rank" style="left: 480px; top: 300px;"><div class="ranktext">Royal Flush</div><div class="ranklevel">1</div></div><div class="rank" style="left: 540px; top: 300px;"><div class="ranktext">Straight Flush</div><div class="ranklevel">2</div></div><div class="rank" style="left: 600px; top: 300px;"><div class="ranktext">Four of a Kind</div><div class="ranklevel">3</div></div><div class="rank" style="left: 660px; top: 300px;"><div class="ranktext">Full House</div><div class="ranklevel">4</div></div><div class="rank" style="left: 720px; top: 300px;"><div class="ranktext">Flush</div><div class="ranklevel">5</div></div><div class="rank" style="left: 480px; top: 360px;"><div class="ranktext">Straight</div><div class="ranklevel">6</div></div><div class="rank" style="left: 540px; top: 360px;"><div class="ranktext">Three of a Kind</div><div class="ranklevel">7</div></div><div class="rank" style="left: 600px; top: 360px;"><div class="ranktext">Two Pair</div><div class="ranklevel">8</div></div><div class="rank" style="left: 660px; top: 360px;"><div class="ranktext">One Pair</div><div class="ranklevel">9</div></div><div class="rank" style="left: 720px; top: 360px;"><div class="ranktext">High Card</div><div class="ranklevel">10</div></div></div></div></div><script>
+        function start(event, ui) {
+            var drag = event.target;
+            $(drag).attr("data-origLeft", $(drag).css("left"));
+            $(drag).attr("data-origTop", $(drag).css("top"));
+        }
+
+        function stop(event, ui) {
+            var drag = event.target;
+            var nowLeft = $(drag).css("left");
+            var nowTop = $(drag).css("top");
+
+            $(".card, .rank").each(function(index, element) {
+                if (element !== drag && nowLeft == $(element).css("left") && nowTop == $(element).css("top")) {
+                    $(element).css("left", $(drag).attr("data-origLeft"));
+                    $(element).css("top", $(drag).attr("data-origTop"));
+                }
+            });
+            $(drag).removeAttr("data-origLeft");
+            $(drag).removeAttr("data-origTop");
+        }
+
+        $(".card").draggable({ grid: [60, 60], opacity: 0.75, stack: ".card", start: start, stop: stop });
+        $(".rank").draggable({ grid: [60, 60], opacity: 0.75, stack: ".rank", start: start, stop: stop });
+
+        var state = localStorage.getItem("ph8");
+        if (state) {
+            state = state.split("|");
+            $(".card, .rank").each(function(index, element) {
+                var dstate = state[index].split(",");
+                $(element).css("left", dstate[0]);
+                $(element).css("top", dstate[1]);
+            });
+        }
+
+        window.addEventListener('beforeunload', function(e) {
+            var state = [];
+            $(".card, .rank").each(function(index, element) {
+                state.push($(element).css("left") + "," + $(element).css("top"));
+            });
+            localStorage.setItem("ph8", state.join("|"));
+        });
+    </script></body>
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

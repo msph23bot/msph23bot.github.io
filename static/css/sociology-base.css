@@ -1,0 +1,20 @@
+.copy-only {
+    display: none;
+}
+
+.clipboard-button {
+    /* Every page should add their own styling. */
+    bottom: 1.5em;
+    cursor: pointer;
+    font-size: 1em;
+    height: 2em;
+    position: fixed !important;
+    right: 1.5em;
+    z-index: 100;
+}
+
+@media print {
+    .clipboard-button {
+        display: none;
+    }
+}

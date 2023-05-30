@@ -1,0 +1,257 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: MATH 200 Lie Groups</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="../puzzle/lie-groups.html" class="btn">Back to the puzzle</a>
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: MATH 200 Lie Groups
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer spoiler">MASS CLAIM</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Kenny Young
+
+    </h2>
+
+    
+    <style>
+.kenken {
+        margin: 0px auto;
+}
+
+.kenken td {
+        width: 60px;
+        height: 60px;
+        padding: 0px;
+        border: 1px solid gray;
+        text-align: center;
+        font-size: xx-large;
+        position: relative;
+}
+
+.kenken td.bordertop {
+        border-top: 3px solid black;
+}
+
+.kenken td.borderbottom {
+        border-bottom: 3px solid black;
+}
+
+.kenken td.borderleft {
+        border-left: 3px solid black;
+}
+
+.kenken td.borderright {
+        border-right: 3px solid black;
+}
+
+.kenken td.is-lie {
+        background: #ffcccc;
+}
+
+.kenken td.is-true {
+        background: #ccccff;
+}
+
+.kenken .clue {
+        position: absolute;
+        top: 0px;
+        left: 3px;
+        margin: 0px;
+        pointer-events: none;
+        user-select: none;
+        font-size: small;
+        line-height: 1.6rem;
+}
+
+.kenken .lie {
+        position: absolute;
+        bottom: 0px;
+        right: 3px;
+        margin: 0px;
+        pointer-events: none;
+        user-select: none;
+        font-size: small;
+        color: red;
+        line-height: 1.6rem;
+}
+
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll(".kenken").forEach((k) => { new Kenken(k); });
+});
+
+function Kenken(k) {
+        k.querySelectorAll("td").forEach((td) => {
+                var clue = td.getAttribute("data-clue");
+                var lie = td.getAttribute("data-lie");
+                var border = td.getAttribute("data-border");
+
+                if (border.includes("t")) { td.classList.add("bordertop"); }
+                if (border.includes("b")) { td.classList.add("borderbottom"); }
+                if (border.includes("l")) { td.classList.add("borderleft"); }
+                if (border.includes("r")) { td.classList.add("borderright"); }
+
+                if (clue) {
+                        var clueText = document.createElement("div");
+                        clueText.innerText = clue;
+                        clueText.classList.add("clue");
+                        td.appendChild(clueText);
+                }
+
+                if (lie) {
+                        var lieText = document.createElement("div");
+                        lieText.innerText = lie;
+                        lieText.classList.add("lie");
+                        td.appendChild(lieText);
+                        td.classList.add("is-lie");
+                } else {
+                        td.classList.add("is-true");
+                }
+        });
+}
+</script>
+<p>A good place to start this puzzle is to note that the 9x and 9/ cages on the top row cannot both contain a 9, so one contains a 9 and the other a lie. This means that the other 5 cells on the top row are not lies and also not 9&rsquo;s. Then the bottom cell of the 25+ cage has to be greater than 9, so it is a lie and the rest of that cell&rsquo;s row and column are true.</p>
+<p>The solved grid is as follows:</p>
+<table class="kenken"><tr><td data-border="tlb" data-clue="9x">3</td><td data-border="trb" data-lie="3">5</td><td data-border="tlr" data-clue="21+">6</td><td data-border="tlb" data-clue="15+">8</td><td data-border="trb">7</td><td data-border="tl" data-clue="25+">4</td><td data-border="trb">2</td><td data-border="tlb" data-clue="9/">1</td><td data-border="trb">9</td></tr><tr><td data-border="tlr" data-clue="9x">9</td><td data-border="tlr" data-clue="54x">1</td><td data-border="lb">8</td><td data-border="trb">7</td><td data-border="tlr" data-clue="26+">4</td><td data-border="lrb" data-lie="19">3</td><td data-border="tlr" data-clue="12+">6</td><td data-border="tlr" data-clue="40x">5</td><td data-border="tlr" data-clue="21+">2</td></tr><tr><td data-border="lrb">1</td><td data-border="lb">6</td><td data-border="trb">9</td><td data-border="tlb" data-lie="19">4</td><td data-border="rb">3</td><td data-border="tlr" data-clue="10x">2</td><td data-border="lr">5</td><td data-border="lrb">8</td><td data-border="lr">7</td></tr><tr><td data-border="tlb" data-clue="6x">2</td><td data-border="trb">3</td><td data-border="tlb" data-clue="2-">7</td><td data-border="trb">9</td><td data-border="tlr" data-clue="13+">8</td><td data-border="lrb">5</td><td data-border="lrb">1</td><td data-border="tlr" data-clue="17+">4</td><td data-border="lrb" data-lie="12">6</td></tr><tr><td data-border="tlr" data-clue="12+">4</td><td data-border="tlr" data-clue="8x">2</td><td data-border="tlb" data-clue="3-">3</td><td data-border="trb">6</td><td data-border="lrb">5</td><td data-border="tlb" data-clue="56x">8</td><td data-border="trb">7</td><td data-border="lrb" data-lie="13">9</td><td data-border="tlr" data-clue="13+">1</td></tr><tr><td data-border="lrb">8</td><td data-border="lrb">4</td><td data-border="tlr" data-clue="6+" data-lie="1">2</td><td data-border="tlr" data-clue="3/">3</td><td data-border="tlr" data-clue="15+">6</td><td data-border="tlr" data-clue="5-">1</td><td data-border="tlr" data-clue="5-">9</td><td data-border="tlb">7</td><td data-border="rb">5</td></tr><tr><td data-border="tlr" data-clue="5x" data-lie="1">7</td><td data-border="tlr" data-clue="15+">8</td><td data-border="lrb">5</td><td data-border="lrb">1</td><td data-border="lrb">9</td><td data-border="lrb">6</td><td data-border="lrb">4</td><td data-border="tlb" data-clue="1-">2</td><td data-border="trb">3</td></tr><tr><td data-border="lrb">5</td><td data-border="lrb">7</td><td data-border="tlr" data-clue="4x">4</td><td data-border="tlr" data-clue="3-">2</td><td data-border="tlr" data-clue="15+" data-lie="13">1</td><td data-border="tlb" data-clue="6-">9</td><td data-border="trb">3</td><td data-border="tlr" data-clue="2/">6</td><td data-border="tlr" data-clue="4-">8</td></tr><tr><td data-border="tlb" data-clue="54x">6</td><td data-border="trb">9</td><td data-border="lrb">1</td><td data-border="lrb">5</td><td data-border="lrb">2</td><td data-border="tlb" data-clue="16+">7</td><td data-border="trb" data-lie="9">8</td><td data-border="lrb">3</td><td data-border="lrb">4</td></tr></table>
+<p><br/><p>To get the answer, list the lies in 1-9 order:</p></p>
+<table class="kenken"><tr><td data-border="tlb" data-lie="13">1</td><td data-border="tb" data-lie="1">2</td><td data-border="tb" data-lie="19">3</td><td data-border="tb" data-lie="19">4</td><td data-border="tb" data-lie="3">5</td><td data-border="tb" data-lie="12">6</td><td data-border="tb" data-lie="1">7</td><td data-border="tb" data-lie="9">8</td><td data-border="trb" data-lie="13">9</td></tr></table>
+<p><br/><p>Converting to the alphabet, this gives the answer MASS CLAIM.</p>
+</p>
+
+    
+    
+
+    
+    
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,310 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: PH3: Mr. Tambourine Man</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="../puzzle/ph3.html" class="btn">Back to the puzzle</a>
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: PH3: Mr. Tambourine Man
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer spoiler">WITCHY</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Dana Young
+
+    </h2>
+
+    
+    <style>
+:root {
+        --item-size: 36px;
+        --cols: 17;
+        --rows: 18;
+        --focus-color: rgba(255, 255, 116, .5);
+}
+
+/* Board and Highlighting */
+.crossword-board-container {
+        position: relative;
+        background: #FFFFFF;
+        width: calc(var(--cols) * var(--item-size));
+}
+.crossword-board {
+        position: absolute;
+        z-index: 1;
+        background: transparent;
+        border: 1px solid #000000;
+        width: calc(var(--cols) * var(--item-size));
+        height: calc(var(--rows) * var(--item-size));
+        display: grid;
+        grid-template: repeat(var(--rows),calc(100% / var(--rows))) / repeat(var(--cols),calc(100% / var(--cols)));
+        list-style-type: none;
+        padding: 0;
+        margin: 0 auto;
+        z-index: 100;
+}
+.extraction {
+        border: 1px solid #000000;
+        width: calc(20 * var(--item-size));
+        height: var(--item-size);
+        display: grid;
+        grid-template: repeat(1, 100%) / repeat(20, 5%);
+        list-style-type: none;
+        padding: 0;
+        margin: 0 auto;
+}
+.crossword-board__item, .extraction__item {
+        border: 1px solid #000000;
+        background: transparent;
+        position: relative;
+        z-index: 100;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+}
+.extraction__item {
+    border: 1px solid #000000;
+    line-height: var(--item-size);
+    vertical-align: middle;
+    background: rgba(0, 0, 255, 0.25);
+}
+
+.crossword-board__item.extract {
+    background: rgba(0, 0, 255, 0.25);
+}
+
+.crossword-board__item--blank {
+        background: black;
+        border: 1px solid #000000;
+        outline: 1px solid #000000;
+}
+
+.crossword-board__item {
+    height: var(--item-size);
+    line-height: var(--item-size);
+    background: none;
+    margin: 0px 0px;
+}
+
+/* Clues List */
+.crossword-clues {
+        min-width: 500px;
+        margin-left: calc(var(--item-size) * var(--cols) + 60px);
+        font-size: 12px;
+}
+.crossword-clues__list {
+        padding: 0;
+        vertical-align: top;
+        margin-block-start: 0;
+        margin-block-end: 0;
+}
+.crossword-clues__list-title {
+        font-weight: bold;
+}
+.crossword-clues__list-item {
+        margin: 0;
+        padding: 2px;
+}
+.crossword-clues__list-item:before {
+        content: attr(data-number) '. ';
+}
+
+@media print {
+        @page {
+                size: landscape;
+        }
+
+        .crossword-board__item--blank {
+                background: #aaaaaa;
+        }
+
+        dd {
+                font-size: 11px;
+        }
+}
+</style>
+<script>
+var typingDirection = "across";
+var fShift = false;
+var boarddata =
+[
+    "LITTLELIoN#######",
+    "###R#############",
+    "#pIANO#S#########",
+    "###V###O#########",
+    "###e###U#SOLITARy",
+    "SoUL###T#T#U#H###",
+    "H##I###H#ROCKEt##",
+    "A##NOWhERE#K#R###",
+    "R######R#e#y#U##H",
+    "P#f####n#T###B##I",
+    "D#A######F#S#B##G",
+    "RAMBlIN#SImPLE##H",
+    "E#I######G#I#R##w",
+    "S#L####S#H#d#B##A",
+    "S#Y####T#THECAnDY",
+    "e######a#I#R#n###",
+    "D#####IRoN###D###",
+    "#########G#######"
+];
+
+document.addEventListener('DOMContentLoaded', function() {
+    var board = document.getElementById("crossword-board");
+        for (var r = 0; r < boarddata.length; r++) {
+            for (var c = 0; c < boarddata[r].length; c++) {
+                var cell;
+
+                if (boarddata[r][c] == '#') {
+                    cell = document.createElement("span");
+                    cell.classList.add("crossword-board__item--blank");
+                } else {
+                    cell = document.createElement("span");
+                    cell.classList.add("crossword-board__item");
+                    cell.innerText = boarddata[r][c].toUpperCase();
+                    if (boarddata[r][c] >= "a" && boarddata[r][c] <= "z") {
+                        cell.classList.add("extract");
+                    }
+                }
+
+                board.appendChild(cell);
+            }
+        }
+});
+</script>
+<div class="page-div"><div class="content-div"><p>Fill the grid with songs sung by these artists (possibly while part of a musical group) that end with &ldquo;Man&rdquo;.</p><div class='crossword-board-container'><div id='crossword-board' class='crossword-board'></div><div class='crossword-clues'><dl class='crossword-clues__list crossword-clues__list--across'><dt class='crossword-clues__list-title'>Across</dt><dd class='crossword-clues__list-item crossword-clues__list-item--across-1' data-number='1' data-row='1' data-col='1'>Marcus Mumford (2)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--across-3' data-number='3' data-row='3' data-col='2'>Billy Joel (12)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--across-5' data-number='5' data-row='5' data-col='10'>Neil Diamond (9)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--across-8' data-number='8' data-row='6' data-col='1'>John Belushi (17)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--across-9' data-number='9' data-row='7' data-col='10'>Elton John (10)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--across-10' data-number='10' data-row='8' data-col='4'>John Lennon (4)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--across-14' data-number='14' data-row='12' data-col='1'>Dickey Betts (7)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--across-15' data-number='15' data-row='12' data-col='9'>Ronnie Van Zant (18)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--across-17' data-number='17' data-row='15' data-col='10'>Sammy Davis, Jr. (20)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--across-18' data-number='18' data-row='17' data-col='7'>Ozzy Osbourne (14)</dd></dl><dl class='crossword-clues__list crossword-clues__list--down'><dt class='crossword-clues__list-title'>Down</dt><dd class='crossword-clues__list-item crossword-clues__list-item--down-2' data-number='2' data-row='1' data-col='4'>Ricky Nelson (13)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--down-4' data-number='4' data-row='3' data-col='8'>Neil Young (6)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--down-5' data-number='5' data-row='5' data-col='10'>Mick Jagger (5)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--down-6' data-number='6' data-row='5' data-col='12'>Greg Lake (11)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--down-7' data-number='7' data-row='5' data-col='14'>Philippé Wynne (3)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--down-8' data-number='8' data-row='6' data-col='1'>Billy Gibbons (8)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--down-11' data-number='11' data-row='9' data-col='17'>Willie Nelson (16)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--down-12' data-number='12' data-row='10' data-col='3'>Daryl Hall (15)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--down-13' data-number='13' data-row='11' data-col='12'>Joey Ramone (1)</dd><dd class='crossword-clues__list-item crossword-clues__list-item--down-16' data-number='16' data-row='14' data-col='8'>David Bowie (19)</dd></dl></div></div><br/><p>The highlighted letters, taken in the order of the parentheses at the end of the clues, spell:</p><div id="extraction" class="extraction"><div class="extraction__item">D</div><div class="extraction__item">O</div><div class="extraction__item">N</div><div class="extraction__item">H</div><div class="extraction__item">E</div><div class="extraction__item">N</div><div class="extraction__item">L</div><div class="extraction__item">E</div><div class="extraction__item">Y</div><div class="extraction__item">T</div><div class="extraction__item">Y</div><div class="extraction__item">P</div><div class="extraction__item">E</div><div class="extraction__item">O</div><div class="extraction__item">F</div><div class="extraction__item">W</div><div class="extraction__item">O</div><div class="extraction__item">M</div><div class="extraction__item">A</div><div class="extraction__item">N</div></div><br/><p>Don Henley (as a member of The Eagles) sang the song &ldquo;Witchy Woman&rdquo;, so the answer is WITCHY.</p></div></div>
+
+    
+    
+
+    
+    
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

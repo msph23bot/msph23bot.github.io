@@ -1,0 +1,378 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>MATH 200 Lie Groups</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+<a href="../round/math.html" class="btn">Mathematics</a>
+
+
+
+
+
+<a href="../post-hunt-solve/lie-groups.html" class="btn">Call in an answer</a>
+
+
+<a href="../solution/lie-groups.html" class="btn solution-button">View solution</a>
+<a href="../stats/lie-groups.html" class="btn">Stats</a>
+
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<h1 class="puzzle-title">
+    MATH 200 Lie Groups
+    
+</h1>
+
+<main class="puzzle-main clipboard-container">
+    
+
+    
+    <style>
+.kenken {
+        margin: 0px auto;
+}
+
+.kenken td {
+        width: 60px;
+        height: 60px;
+        padding: 0px;
+        position: relative;
+}
+
+.kenken td.bordertop {
+        border-top: 3px solid black;
+}
+
+.kenken td.borderbottom {
+        border-bottom: 3px solid black;
+}
+
+.kenken td.borderleft {
+        border-left: 3px solid black;
+}
+
+.kenken td.borderright {
+        border-right: 3px solid black;
+}
+
+.kenken td.is-lie input {
+        background: #ffcccc;
+}
+
+.kenken td.is-true input {
+        background: #ccccff;
+}
+
+.kenken input {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        text-align: center;
+        font-size: xx-large;
+}
+
+.kenken input.candidate-mode {
+        font-size: smaller;
+}
+
+.kenken .clue {
+        position: absolute;
+        top: 0px;
+        left: 3px;
+        margin: 0px;
+        pointer-events: none;
+        user-select: none;
+        font-size: small;
+        line-height: 1.6rem;
+}
+
+.kenken .lie {
+        position: absolute;
+        bottom: 0px;
+        right: 3px;
+        margin: 0px;
+        pointer-events: none;
+        user-select: none;
+        font-size: small;
+        color: red;
+        line-height: 1.6rem;
+}
+
+@media print {
+        .screen-only {
+                display: none;
+        }
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll(".kenken").forEach((k) => { new Kenken(k); });
+
+        window.addEventListener('beforeunload', function(e) {
+            var state = [];
+            document.querySelectorAll(".kenken td").forEach(td => {
+                var v = td.querySelector("input").value;
+                var tl = td.classList.contains("is-true") ? "T" : (td.classList.contains("is-lie") ? "L" : "");
+                var l = td.querySelector(".lie");
+                state.push(v + "," + tl + "," + (l ? l.innerText : ""));
+            });
+            localStorage.setItem("lie-groups", state.join("|"));
+        });
+});
+
+function Kenken(k) {
+        this.container = k;
+
+        this.move = function(elem, drow, dcol) {
+                var td = elem.parentElement;
+                var col = dcol + Array.prototype.indexOf.call(td.parentElement.children, td);
+                var row = drow + Array.prototype.indexOf.call(td.parentElement.parentElement.children, td.parentElement);
+
+                var newitem = this.container.querySelector("tr:nth-child(" + (row + 1) + ") td:nth-child(" + (col + 1) + ") input");
+
+                if (!newitem) {
+                        return false;
+                }
+
+                newitem.focus();
+                return true;
+        }
+
+        this.createLie = function(td) {
+                var lie = document.createElement("div");
+                lie.classList.add("lie");
+                td.appendChild(lie);
+                return lie;
+        }
+
+        this.keyDown = function(e) {
+                var target = e.target;
+
+                if (e.ctrlKey) {
+                        var lie = target.parentElement.querySelector(".lie");
+                        if (!lie) {
+                                lie = this.createLie(target.parentElement);
+                        }
+                        target = lie;
+                }
+
+                if (e.keyCode == 9) { // tab
+                        return;
+                } else if (e.keyCode == 37) { // left
+                        this.move(target, 0, -1);
+                } else if (e.keyCode == 38) { // up
+                        this.move(target, -1, 0);
+                } else if (e.keyCode == 39) { // right
+                        this.move(target, 0, 1);
+                } else if (e.keyCode == 40) { // down
+                        this.move(target, 1, 0);
+                } else if (e.keyCode == 32 || e.keyCode == 8 || e.keyCode == 46) { // space/backspace/delete
+                        this.setText(target, "");
+                } else if (e.keyCode == 84) {
+                        target.parentElement.classList.toggle("is-true");
+                        target.parentElement.classList.remove("is-lie");
+                } else if (e.keyCode == 76) {
+                        target.parentElement.classList.remove("is-true");
+                        target.parentElement.classList.toggle("is-lie");
+                } else if ((e.keyCode >= 49 && e.keyCode <= 57) || (e.keyCode >= 97 && e.keyCode <= 105)) { // 1-9
+                        var ch = (e.keyCode % 48).toString();
+
+                        if (e.ctrlKey) {
+                                var val = this.getText(target);
+                                val = val + ch;
+                                this.setText(target, val);
+                                target.parentElement.classList.remove("is-true");
+                                target.parentElement.classList.add("is-lie");
+                        } else if (e.shiftKey) {
+                                var val = this.getText(target);
+                                if (!val.includes(ch)) {
+                                        val = val + ch;
+                                } else {
+                                        val = val.replace(ch, "");
+                                }
+                                this.setText(target, val);
+                                target.classList.add("candidate-mode");
+                        } else {
+                                this.setText(target, ch);
+                                target.classList.remove("candidate-mode");
+                        }
+                }
+
+                e.preventDefault();
+        }
+
+        this.setText = function(target, text) {
+                if (target.classList.contains("lie")) {
+                        target.innerText = text;
+                } else {
+                        target.value = text;
+                }
+        }
+
+        this.getText = function(target) {
+                if (target.classList.contains("lie")) {
+                        return target.innerText;
+                } else {
+                        return target.value;
+                }
+        }
+
+        var state = localStorage.getItem("lie-groups");
+        if (state) state = state.split("|");
+        var iTd = 0;
+
+        this.container.querySelectorAll("td").forEach((td) => {
+                var clue = td.getAttribute("data-clue");
+                var border = td.getAttribute("data-border");
+
+                var cell = document.createElement("input");
+                cell.setAttribute("type", "text");
+                cell.classList.add("no-copy");
+                if (border.includes("t")) { td.classList.add("bordertop"); }
+                if (border.includes("b")) { td.classList.add("borderbottom"); }
+                if (border.includes("l")) { td.classList.add("borderleft"); }
+                if (border.includes("r")) { td.classList.add("borderright"); }
+                cell.addEventListener("keydown",  e => { this.keyDown(e); });
+                td.appendChild(cell);
+
+                if (clue) {
+                        var clueText = document.createElement("div");
+                        clueText.innerText = clue;
+                        clueText.classList.add("clue");
+                        td.appendChild(clueText);
+                }
+
+                if (state) {
+                        var tdState = state[iTd++].split(",");
+                        cell.value = tdState[0];
+                        if (cell.value.length> 1) { cell.classList.add("candidate-mode"); }
+                        if (tdState[1] == "T") { td.classList.add("is-true"); }
+                        else if (tdState[1] == "L") { td.classList.add("is-lie"); }
+                        if (tdState[2]) {
+                                var lie = this.createLie(td);
+                                lie.innerText = tdState[2];
+                        }
+                }
+        });
+}
+</script>
+<p>These groups of cells contain 9 lies.</p>
+<ul><li>There is one lie in each row and in each column.
+        <li>Each digit from 1-9 will lie once; the lies themselves may be either inside or outside the 1-9 range, but they are always positive integers.</li><li>None of the clues contain lies, but a cell with a clue may contain a lie.</li></ul>
+<div class="screen-only no-copy"><p>The grid below is solvable online. No validation will be performed.</p><ul><li>Place a digit in each cell by typing 1-9. Candidates may be marked by holding Shift when typing a digit.</li><li>Press L in a cell to toggle it as a lie. Press T in a cell to toggle it as truth.</li><li>The result of a cell&rsquo;s lie can be recorded by holding Ctrl when typing one or more digits. You can use Ctrl+Space, Ctrl+Backspace, etc. to clear.</li></ul></div>
+<table class="kenken crossword"><tr><td data-border="tlb" data-clue="9x"></td><td data-border="trb"></td><td data-border="tlr" data-clue="21+"></td><td data-border="tlb" data-clue="15+"></td><td data-border="trb"></td><td data-border="tl" data-clue="25+"></td><td data-border="trb"></td><td data-border="tlb" data-clue="9/"></td><td data-border="trb"></td></tr><tr><td data-border="tlr" data-clue="9x"></td><td data-border="tlr" data-clue="54x"></td><td data-border="lb"></td><td data-border="trb"></td><td data-border="tlr" data-clue="26+"></td><td data-border="lrb"></td><td data-border="tlr" data-clue="12+"></td><td data-border="tlr" data-clue="40x"></td><td data-border="tlr" data-clue="21+"></td></tr><tr><td data-border="lrb"></td><td data-border="lb"></td><td data-border="trb"></td><td data-border="tlb"></td><td data-border="rb"></td><td data-border="tlr" data-clue="10x"></td><td data-border="lr"></td><td data-border="lrb"></td><td data-border="lr"></td></tr><tr><td data-border="tlb" data-clue="6x"></td><td data-border="trb"></td><td data-border="tlb" data-clue="2-"></td><td data-border="trb"></td><td data-border="tlr" data-clue="13+"></td><td data-border="lrb"></td><td data-border="lrb"></td><td data-border="tlr" data-clue="17+"></td><td data-border="lrb"></td></tr><tr><td data-border="tlr" data-clue="12+"></td><td data-border="tlr" data-clue="8x"></td><td data-border="tlb" data-clue="3-"></td><td data-border="trb"></td><td data-border="lrb"></td><td data-border="tlb" data-clue="56x"></td><td data-border="trb"></td><td data-border="lrb"></td><td data-border="tlr" data-clue="13+"></td></tr><tr><td data-border="lrb"></td><td data-border="lrb"></td><td data-border="tlr" data-clue="6+"></td><td data-border="tlr" data-clue="3/"></td><td data-border="tlr" data-clue="15+"></td><td data-border="tlr" data-clue="5-"></td><td data-border="tlr" data-clue="5-"></td><td data-border="tlb"></td><td data-border="rb"></td></tr><tr><td data-border="tlr" data-clue="5x"></td><td data-border="tlr" data-clue="15+"></td><td data-border="lrb"></td><td data-border="lrb"></td><td data-border="lrb"></td><td data-border="lrb"></td><td data-border="lrb"></td><td data-border="tlb" data-clue="1-"></td><td data-border="trb"></td></tr><tr><td data-border="lrb"></td><td data-border="lrb"></td><td data-border="tlr" data-clue="4x"></td><td data-border="tlr" data-clue="3-"></td><td data-border="tlr" data-clue="15+"></td><td data-border="tlb" data-clue="6-"></td><td data-border="trb"></td><td data-border="tlr" data-clue="2/"></td><td data-border="tlr" data-clue="4-"></td></tr><tr><td data-border="tlb" data-clue="54x"></td><td data-border="trb"></td><td data-border="lrb"></td><td data-border="lrb"></td><td data-border="lrb"></td><td data-border="tlb" data-clue="16+"></td><td data-border="trb"></td><td data-border="lrb"></td><td data-border="lrb"></td></tr></table>
+<p><button class="btn clipboard-button"></button></p>
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

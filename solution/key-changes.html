@@ -1,0 +1,316 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: Key Changes</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="../puzzle/key-changes.html" class="btn">Back to the puzzle</a>
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: Key Changes
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer spoiler">MAC TAYLOR</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Jonah Ostroff
+
+    </h2>
+
+    
+    <p>The “key changes” to perform are each common(-ish) puzzle hunt codes. Each one can be decoded to give the name of another 
+encoding, so solvers can use this to identify the ones they’re missing. The encoded terms are in alphabetical order, but we 
+can arrange the list to form one long loop, where each encoding decodes to the next one in the list: Maritime flags, 
+Gold Bug, Pigpen, Ternary, Binary, NATO, Tap Code, Phone spelling, ASCII, Semaphore, A1Z26, Braille, Roman numerals, 
+Elements, Morse code, and then back to Maritime flags again.</p>
+<p>Below the key changes are a list of ways to “perform” these key changes. Each one can be interpreted as a way to transform 
+one of these encodings. In a few of them, it also seems like the output is an encoded letter in another one of the fifteen 
+codes.</p>
+<p>With this in mind, solvers might guess that the output of “Replace the middle digit with ., increment the last digit, then 
+write the name of that MacOS” is Sierra, a NATO alphabet letter. Sierra is version 10.12, which means the input is 
+10[something]11. Interpreted as 5-bit binary, this could be an S or W.</p>
+<p>At this point solvers should notice that each instruction can be interpreted to send a letter in one encoding to the next 
+encoding in loop order. Given this, it’s easy to deduce the pairs for some transformations (e.g. “Make the background yellow,
+ then cut the image in half” goes from Morse code to maritime signal flags). Others can be deduced by process of elimination.</p>
+<p>Once the encodings are known for the instructions, solvers can then notice that for each instruction, there is exactly one 
+letter which is mapped to the same letter in the new encoding. For example, if you count the number of 
+yellow regions in <img src="key-changes/1.png" alt="The maritime signal flag for G: a square colored in alternating vertical stripes: yellow, blue, yellow, blue, yellow, blue."/>
+(“G” in maritime signal flags), you get 3, which is the symbol for G in the gold bug cipher. No other letter has this 
+property.</p>
+<p>Here’s a table of all the letters that map to themselves:</p>
+<table>
+<thead>
+<tr>
+<th>Encoding 1</th>
+<th>Encoding 2</th>
+<th>Letter</th>
+<th>Instruction</th>
+<th>From</th>
+<th>To</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Maritime flags</td>
+<td>Gold Bug</td>
+<td>G</td>
+<td>Write the number of yellow regions.</td>
+<td><img src="key-changes/1.png" alt="The maritime signal flag for G: a square colored in alternating vertical stripes: yellow, blue, yellow, blue, yellow, blue."/></td>
+<td>3</td>
+</tr>
+<tr>
+<td>Gold Bug</td>
+<td>Pigpen</td>
+<td>A</td>
+<td>Delete any curves, then rotate 180°.</td>
+<td>5</td>
+<td><img src="key-changes/2.png" alt="The pigpen shape for A: the right and bottom sides of a square."/></td>
+</tr>
+<tr>
+<td>Pigpen</td>
+<td>Ternary</td>
+<td>R</td>
+<td>Let A, B, and C be the numbers of all lines, dots, and diagonal lines. Write A×B, A×C, and B×C.</td>
+<td><img src="key-changes/3.png" alt="The pigpen shape for R: the top and left sides of a square, with a dot in between."/></td>
+<td>200</td>
+</tr>
+<tr>
+<td>Ternary</td>
+<td>Binary</td>
+<td>Y</td>
+<td>Write 1 [first digit] times, then 0 [second digit] times, then 1 [third digit] times.</td>
+<td>221</td>
+<td>11001</td>
+</tr>
+<tr>
+<td>Binary</td>
+<td>NATO</td>
+<td>S</td>
+<td>Replace the middle digit with ., increment the last digit, then write the name of that MacOS.</td>
+<td>10011</td>
+<td>SIERRA</td>
+</tr>
+<tr>
+<td>NATO</td>
+<td>Prison Tap Code</td>
+<td>I</td>
+<td>Write the number of occurrences of the most frequent letter, then the number of distinct letters.</td>
+<td>INDIA</td>
+<td>24</td>
+</tr>
+<tr>
+<td>Prison Tap Code</td>
+<td>Phone spelling</td>
+<td>N</td>
+<td>Multiply by two.</td>
+<td>33</td>
+<td>66</td>
+</tr>
+<tr>
+<td>Phone spelling</td>
+<td>ASCII</td>
+<td>I</td>
+<td>Write the largest prime factor, but backwards.</td>
+<td>444</td>
+<td>73</td>
+</tr>
+<tr>
+<td>ASCII</td>
+<td>Sempahore</td>
+<td>S</td>
+<td>Hold flags in the positions of the digits, where 1=south, 2=southwest, ..., 8=southeast.</td>
+<td>83</td>
+<td>West-Southeast</td>
+</tr>
+<tr>
+<td>Semaphore</td>
+<td>A1Z26</td>
+<td>E</td>
+<td>Count the vowels in the names of the directions of the flags.</td>
+<td>South-Northeast</td>
+<td>5</td>
+</tr>
+<tr>
+<td>A1Z26</td>
+<td>Braille</td>
+<td>O</td>
+<td>Fill in every dot that's a proper divisor of the number (using the standard numbering).</td>
+<td>15</td>
+<td>⠕</td>
+</tr>
+<tr>
+<td>Braille</td>
+<td>Roman numerals</td>
+<td>N</td>
+<td>Replace each row as follows: ⚬•s becomes Is, •⚬s becomes Vs, ••s becomes Xs. Delete ⚬⚬s.</td>
+<td>⠝</td>
+<td>XIV</td>
+</tr>
+<tr>
+<td>Roman numerals</td>
+<td>Elements</td>
+<td>C</td>
+<td>Replace the first two letters with L and make the rest lowercase.</td>
+<td>III</td>
+<td>Li</td>
+</tr>
+<tr>
+<td>Elements</td>
+<td>Morse code</td>
+<td>S</td>
+<td>Write a dot for each straight line, then a dash for each curve.</td>
+<td>K</td>
+<td>...</td>
+</tr>
+<tr>
+<td>Morse code</td>
+<td>Maritime flags</td>
+<td>I</td>
+<td>Make the background yellow, then cut the image in half.</td>
+<td>..</td>
+<td><img src="key-changes/4.png" alt="The maritime signal flag for I: a yellow square with a dot in the middle."/></td>
+</tr>
+</tbody>
+</table>
+<p>The letters that are fixed by the transformations spell <span class="spoiler">GARY SINISE ON CSI</span>, which clues the 
+answer <span class="spoiler">MAC TAYLOR</span>.</p>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p>This puzzle was inspired by the observation that semaphore for F, N, and U kind of look like their letters, that Braille 
+and Morse I both consist of two dots (but oriented differently), and that semaphore I and U are both rotations of their 
+pigpen analogues. None of these observations made it into the puzzle.</p>
+<p>There are a number of interesting transformations that have two fixed points. For example, “count the dots from in each row 
+from bottom to top” works for both A and N from braille to ternary, and “alphabetize all possible colors, and write 1 for 
+each one that appears and 0 for each one that doesn’t” works for both F and J from maritime flags to binary.</p>
+    
+
+    
+    
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

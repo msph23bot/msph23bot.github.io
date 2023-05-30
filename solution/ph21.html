@@ -1,0 +1,600 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: PH21: Introduction to Sprite Design</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="../puzzle/ph21.html" class="btn">Back to the puzzle</a>
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: PH21: Introduction to Sprite Design
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer spoiler">DARKNESS</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Derek Young
+
+    </h2>
+
+    
+    <style>
+    :root {
+        --gridline: lightslategray;
+    }
+
+    .nonogram {
+        width: 580px;
+        margin: 0px auto;
+    }
+
+    .nonogram-root {
+        margin-left: auto;
+    }
+
+    p.caption {
+        width: 580px;
+        margin: 0px auto;
+        text-align: right;
+    }
+
+    table {
+        border-collapse: collapse;
+        margin-bottom: 0px;
+    }
+
+    td {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .griddy tr td {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        border: 1px solid var(--gridline);
+        border-bottom: 1px solid var(--gridline);
+        text-align: center;
+        line-height: 1.5rem;
+        print-color-adjust: exact !important;
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
+
+    .leftclues .checker {
+        width: 10px;
+    }
+
+    .topclues .checker {
+        height: 10px;
+    }
+
+    .griddy.clues td {
+        background: white;
+        color: black;
+    }
+
+    .griddy.clues td.highlight {
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    td.checker.correct {
+        background: #b0ffb0;
+    }
+
+    td.checker.incorrect {
+        background: #ffb0b0;
+    }
+
+    .griddy.leftclues td {
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        cursor: pointer;
+    }
+
+    .griddy.topclues td {
+        border-left-color: transparent;
+        border-right-color: transparent;
+        cursor: pointer;
+    }
+
+    .griddy.vertlines td:nth-child(5n+1) {
+        border-left: 2px solid var(--gridline);
+    }
+
+    .griddy.vertlines td:last-child {
+        border-right: 2px solid var(--gridline);
+    }
+
+    .griddy.horzlines tr:nth-child(5n+1) td {
+        border-top: 2px solid var(--gridline);
+    }
+
+    .griddy.horzlines tr:last-child td {
+        border-bottom: 2px solid var(--gridline);
+    }
+
+    td.complete {
+        font-style: italic;
+        text-decoration: line-through;
+    }
+
+    .maingrid td {
+        background: lightgray;
+    }
+
+    .griddy td.color-K {
+        background: black;
+        color: white;
+    }
+
+    .griddy td.color-A {
+        background: darkgray;
+        color: black;
+    }
+
+    .griddy td.color-T {
+        background: bisque;
+        color: black;
+    }
+
+    .griddy td.color-R {
+        background: red;
+        color: black;
+    }
+
+    .griddy td.color-O {
+        background: darkorange;
+        color: black;
+    }
+
+    .griddy td.color-Y {
+        background: gold;
+        color: black;
+    }
+
+    .griddy td.color-G {
+        background: limegreen;
+        color: black;
+    }
+
+    .griddy td.color-C {
+        background: cyan;
+        color: black;
+    }
+
+    .griddy td.color-B {
+        background: blue;
+        color: white;
+    }
+
+    .griddy td.color-I {
+        background: purple;
+        color: black;
+    }
+
+    .griddy td.color-V {
+        background: magenta;
+        color: black;
+    }
+
+    .griddy td.color-X, .maingrid.griddy.solved td:not([class]), .maingrid.griddy.solved td[class=""] {
+        background: white;
+    }
+
+    @media print {
+        @page {
+            size: portrait;
+        }
+
+        .nonogram-root {
+            margin-top: 20px;
+        }
+
+        .maingrid td {
+            background: white;
+        }
+
+        .chips * {
+            display: none;
+        }
+    }
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll(".nonogram").forEach((n) => { new Nonogram(n); });
+    });
+
+    function Nonogram(n)
+    {
+        this.div = n;
+        this.fSolved = false;
+        this.horzClues = null;
+        this.vertClues = null;
+        this.leftColor = null;
+        this.rightColor = "color-X";
+
+        this.parseText = function(text) {
+            var result = [];
+            while (text.length > 0)
+            {
+                var num = parseInt(text);
+                var numLen = num.toString().length;
+                var letter = text[numLen];
+                text = text.substring(numLen + 1);
+                result.push({count: num, color: "color-" + letter});
+            }
+            return result;
+        };
+
+        this.CheckCounts = function(currentCounts, desiredCounts) {
+            var currentTotal = 0;
+            var desiredTotal = 0;
+
+            for (var i = 0; i < currentCounts.length; i++) { currentTotal += currentCounts[i].count; }
+            for (var i = 0; i < desiredCounts.length; i++) { desiredTotal += desiredCounts[i].count; }
+
+            if (currentTotal < desiredTotal) { return 0; }
+            else if (currentTotal > desiredTotal) { return -1; }
+            else if (currentCounts.length != desiredCounts.length) { return -1; }
+            else {
+                for (var i = 0; i < currentCounts.length; i++) {
+                    if (currentCounts[i].count != desiredCounts[i].count || currentCounts[i].color != desiredCounts[i].color) { return -1; }
+                }
+                return 1;
+            }
+        };    
+
+        this.CheckCol = function(col, update) {
+            var counts = [];
+            var lastClass = "color-X";
+
+            this.div.querySelectorAll(".maingrid tr td:nth-child(" + (col + 1) + "):not(.checker)").forEach(cell => {
+                var thisClass = cell.className;
+                if (thisClass != "color-X" && thisClass != undefined && thisClass != "") {
+                    if (thisClass == lastClass) {
+                        counts[counts.length - 1].count++;
+                    }
+                    else {
+                        counts.push({ count: 1, color: thisClass });
+                    }
+                }
+                lastClass = thisClass;
+            });
+
+            var result = this.CheckCounts(counts, this.vertClues[col]);
+
+            if (update) {
+                this.div.querySelectorAll(".topclues tr td:nth-child(" + (col + 1) + ").checker").forEach(cell => {
+                    cell.classList.remove("correct");
+                    cell.classList.remove("incorrect");
+
+                    if (result == 1) { cell.classList.add("correct"); }
+                    if (result == -1) { cell.classList.add("incorrect"); }
+                });
+            }
+
+            return result;
+        };
+
+        this.CheckRow = function(row, update) {
+            var counts = [];
+            var lastClass = "color-X";
+
+            this.div.querySelectorAll(".maingrid tr:nth-child(" + (row + 1) + ") td:not(.checker)").forEach(cell => {
+                var thisClass = cell.className;
+                if (thisClass != "color-X" && thisClass != undefined && thisClass != "") {
+                    if (thisClass == lastClass) {
+                        counts[counts.length - 1].count++;
+                    }
+                    else {
+                        counts.push({ count: 1, color: thisClass });
+                    }
+                }
+                lastClass = thisClass;
+            });
+
+            var result = this.CheckCounts(counts, this.horzClues[row]);
+
+            if (update) {
+                this.div.querySelectorAll(".leftclues tr:nth-child(" + (row + 1) + ") td.checker").forEach(cell => {
+                    cell.classList.remove("correct");
+                    cell.classList.remove("incorrect");
+
+                    if (result == 1) { cell.classList.add("correct"); }
+                    if (result == -1) { cell.classList.add("incorrect"); }
+                });
+            }
+
+            return result;
+        };
+
+        this.Verify = function() {
+            var verified = true;
+
+            for (var i = 0; i < this.vertClues.length; i++) {
+                if (this.CheckCol(i, true) != 1) verified = false;
+            }
+            for (var i = 0; i < this.horzClues.length; i++) {
+                if (this.CheckRow(i, true) != 1) verified = false;
+            }
+
+            if (!verified) return;
+
+            this.fSolved = true;
+            this.div.querySelectorAll(".griddy").forEach(griddy => {
+                griddy.classList.add("solved");
+            });
+        }
+
+        this.init = function() {
+            // add table contents based on data, in one fragment per table to minimize reflow
+            var horzClueText = this.div.getAttribute("horzClues");
+            var vertClueText = this.div.getAttribute("vertClues");
+            var chipsText = this.div.getAttribute("colorChips");
+
+            var numHorzClues = 0;
+            var numVertClues = 0;
+
+            this.horzClues = horzClueText.split(" ");
+            this.vertClues = vertClueText.split(" ");
+            var solution = this.div.getAttribute("solution");
+            if (solution) { solution = solution.split("|"); }
+
+            for (var i = 0; i < this.horzClues.length; i++) {
+                this.horzClues[i] = this.parseText(this.horzClues[i]);
+                if (this.horzClues[i].length > numHorzClues) { numHorzClues = this.horzClues[i].length; }
+            }
+
+            for (var i = 0; i < this.vertClues.length; i++) {
+                this.vertClues[i] = this.parseText(this.vertClues[i]);
+                if (this.vertClues[i].length > numVertClues) { numVertClues = this.vertClues[i].length; }
+            }
+
+            var topfragment = document.createDocumentFragment();
+            var topTable = document.createElement("table");
+            topfragment.appendChild(topTable);
+            for (var i = 0; i < numVertClues; i++) {
+                var tr = document.createElement("tr");
+                for (var j = 0; j < this.vertClues.length; j++) {
+                    var td =document.createElement("td");
+                    var clueindex = i - numVertClues + this.vertClues[j].length;
+                    if (clueindex >= 0) { td.textContent = this.vertClues[j][clueindex].count.toString(); td.classList.add(this.vertClues[j][clueindex].color); }
+                    tr.appendChild(td);
+                }
+
+                topTable.appendChild(tr);
+            }
+
+            var tr = document.createElement("tr");
+            for (var j = 0; j < this.vertClues.length; j++) {
+                var td = document.createElement("td");
+                td.classList.add("checker");
+                tr.appendChild(td);
+            }
+
+            topTable.appendChild(tr);
+
+            var leftfragment = document.createDocumentFragment();
+            var leftTable = document.createElement("table");
+            leftfragment.append(leftTable);
+            for (var i = 0; i < this.horzClues.length; i++) {
+                var tr = document.createElement("tr");
+                for (var j = 0; j < numHorzClues; j++) {
+                    var td = document.createElement("td");
+                    var clueindex = j - numHorzClues + this.horzClues[i].length;
+                    if (clueindex >= 0) { td.textContent = this.horzClues[i][clueindex].count.toString(); td.classList.add(this.horzClues[i][clueindex].color); }
+                    tr.appendChild(td);
+                }
+
+                var td = document.createElement("td");
+                td.classList.add("checker");
+                tr.appendChild(td);
+
+                leftTable.appendChild(tr);
+            }
+
+            var mainfragment = document.createDocumentFragment();
+            var mainTable = document.createElement("table");
+            mainfragment.append(mainTable);
+            for (var i = 0; i < this.horzClues.length; i++) {
+                var tr = document.createElement("tr");
+                for (var j = 0; j < this.vertClues.length; j++) {
+                    var td = document.createElement("td");
+                    if (solution && solution[i][j] != ".") {
+                        td.classList.add("color-" + solution[i][j]);
+                    }
+                    tr.appendChild(td);
+                }
+
+                mainTable.appendChild(tr);
+            }
+
+            var allfragment = document.createDocumentFragment();
+            var allTable = document.createElement("table");
+            allTable.classList.add("nonogram-root");
+            allfragment.append(allTable);
+            var trN = document.createElement("tr");
+            var trS = document.createElement("tr");
+            allTable.append(trN);
+            allTable.append(trS);
+
+            var tdChips = document.createElement("td");
+            trN.append(tdChips);
+
+            var tdTop = document.createElement("td");
+            tdTop.className = "griddy clues topclues vertlines";
+            tdTop.append(topfragment);
+            trN.append(tdTop);
+
+            var tdLeft = document.createElement("td");
+            tdLeft.className = "griddy clues leftclues horzlines";
+            tdLeft.append(leftfragment);
+            trS.append(tdLeft);
+
+            var tdMain = document.createElement("td");
+            tdMain.className = "griddy maingrid horzlines vertlines";
+            tdMain.append(mainfragment);
+            trS.append(tdMain);
+
+            this.div.appendChild(allfragment);
+
+            if (solution) {
+                this.Verify();
+            }
+        };
+
+        this.init();
+    }
+</script>
+<p>All of these characters are from video game franchises featured as modules in Puzzle Hunt 21.</p>
+<hr /><div class="nonogram no-break" solution=".....Y.YY.Y.....|.....YYCCYY.....|...OOOY..YOOO...|..OOOOOYYOOOOO..|..OOOOOOOOOOOO..|..OOOOOOOOOOOO..|..OOOOOTTOOOOO..|.OOOOTTTTTTOOOO.|.OOOTKKTTKKTOOO.|..O.T..TT..T.O..|...CT.BTTB.TC...|OOO.TTTTTTTT.OOO|.OOOOTTKKTTOOOO.|..YYO.TTTT.OYY..|.YYYYY....YYYYY.|YYYYYYYYYYYYYYYY" horzClues="1Y2Y1Y 2Y2C2Y 3O1Y1Y3O 5O2Y5O 12O 12O 5O2T5O 4O6T4O 3O1T2K2T2K1T3O 1O1T2T1T1O 1C1T1B2T1B1T1C 3O8T3O 4O2T2K2T4O 2Y1O4T1O2Y 5Y5Y 16Y" vertClues="1O1Y 2O2O2Y 7O2O3Y 7O1C1O3Y 6O4T2O2Y 2Y5O1T1K2T2Y 2Y4O1T1K1B3T1Y 1Y1C1Y2O6T1K1T1Y 1Y1C1Y2O6T1K1T1Y 2Y4O1T1K1B3T1Y 2Y5O1T1K2T2Y 6O4T2O2Y 7O1C1O3Y 7O2O3Y 2O2O2Y 1O1Y" colorChips="OYC BKT X"></div>
+<p class="caption">Princess <b>DAISY</b> from <i>Super Mario Odyssey</i></p>
+<hr /><div class="nonogram no-break" solution="......AAAA......|......AAOAKAA...|......AIIKAAKA..|.......KKKAAKAA.|.......A.AAA..A.|...CCAAA.AA...AK|..CCAC...KK...KI|..C.CC..KAAK....|.C.CC..AA..AA...|C.C....AA..AA...|.C.....AAK.AA...|........KA.K....|........AA.AA...|.......AAA.AA...|.......AA..AAA..|............AA.." horzClues="4A 2A1O1A1K2A 1A2I1K2A1K1A 3K2A1K2A 1A3A1A 2C3A2A1A1K 2C1A1C2K1K1I 1C2C1K2A1K 1C2C2A2A 1C1C2A2A 1C2A1K2A 1K1A1K 2A2A 3A2A 2A3A 2A" vertClues="1C 1C1C 2C1C 2C1C 1C1A2C 1A2C 3A1A 2A1I1K2A3A2A 1A1O1I1K1K3A1K3A 2A2K2A1K1A1K3A 1K4A1K1A 4A1K3A1K3A 1A2K3A4A 2A2A 3A1K 1K1I" colorChips="OCI KAX"></div>
+<p class="caption">The <b>ARBITER</b> from <i>Halo</i></p>
+<hr /><div class="nonogram no-break" solution="....KK......K...|....K.KKKK.K.K..|....KKKRRRK..K..|....K..KRRRK.K..|...KRKKRRRRKK...|...KRRRR..RRRK..|...K..R...TRRK..|KKKK.KTKK.TRRK..|K.KKKKTKK.TKK...|KKKTTTTTTTTTKKKK|.KTTTTTTKKTTKRRK|..KTTKKKKTKKTRK.|...KKKKKTKTTKR.R|....KTTTKKKKRK.K|.....KKKKRRRRK.K|........KRRRRKK." horzClues="2K1K 1K4K1K1K 3K3R1K1K 1K1K3R1K1K 1K1R2K4R2K 1K4R3R1K 1K1R1T2R1K 4K1K1T2K1T2R1K 1K4K1T2K1T2K 3K9T4K 1K6T2K2T1K2R1K 1K2T4K1T2K1T1R1K 5K1T1K2T1K1R1R 1K3T4K1R1K1K 4K4R1K1K 1K4R2K" vertClues="3K 1K2K 3K1T1K 5K3T1K 4K2R1K3T2K 1K1K1K1R2K2T2K1T1K 2K1K2R4T2K1T1K 1K1R1K2R2K2T2K1T1K 1K3R2K1T2K1T3K 1K3R1T1K1T2K2R 1K3R5T1K1T1K2R 1K2K3R1K2T1K1T1K2R 1K1K3R3K1T1K3R 3K3K1K3R3K 1K1R1K1K 2K1R2K" colorChips="RK TX"></div>
+<p class="caption"><b>RUSH</b> from <i>Mega Man</i></p>
+<hr /><div class="nonogram no-break" solution=".....RRRRRRR....|...RRRRRRRRRRR..|..RRRRRRRRKKRRR.|.RRRRRKKRRKKRRR.|.RRRRRKKRRRRRRR.|.RRRRRRRRRRRRRR.|.RRRRRRRRRRRRR..|.RRRRRRRRRRRRR..|..RRRRRRRRRRRR..|..RRRRRRRRRRRR..|...RRRRRRRRRR...|...RRRRRRRRR....|...RRRR..RR.....|...RR....RR.....|...RRRR..RRRR...|...RRRR..RRRR..." horzClues="7R 11R 8R2K3R 5R2K2R2K3R 5R2K7R 14R 13R 13R 12R 12R 10R 9R 4R2R 2R2R 4R4R 4R4R" vertClues=" 5R 8R 15R 15R 13R2R 3R2K8R2R 3R2K7R 12R 16R 2R2K12R 2R2K8R2R 10R2R 9R 4R " colorChips="RK X"></div>
+<p class="caption"><b>Keke</b> from <i>Baba is You</i></p>
+<hr /><hr /><div class="nonogram no-break" solution="...........RR...|.........RRRRRK.|....KKKKKRRKKK..|...KGGGGGKK.....|..KGGGGGGGK.....|YYYYG.K.GGGKKK..|YYYYYGK.GKKRRRK.|.YYYYGGGGYYKRRRK|.KGGGGGGGYYKKRRK|.KGGGGGGGYYKRKK.|..KGGGGGGYYKRK..|...KGGGGGKKKK...|....KKKKK.K.....|......RR........|...KRRRRRRK.....|....K.K........." horzClues="2R 5R1K 5K2R3K 1K5G2K 1K7G1K 4Y1G1K3G3K 5Y1G1K1G2K3R1K 4Y4G2Y1K3R1K 1K7G2Y2K2R1K 1K7G2Y1K1R2K 1K6G2Y1K1R1K 1K5G4K 5K1K 2R 1K6R1K 1K1K" vertClues="2Y 3Y2K 1K3Y2G1K 1K1G3Y3G1K1K 1K3G2Y4G1K1R1K 1K2G6G1K1R 1K2G2K5G1K2R1K 1K2G5G1K2R 1K9G1K1R 2R1K2G1K4Y1K1R 2R2K1G1K4Y2K1K 2R1K1K1R5K 2R1K1K2R1K2R1K 1R1K1K3R2K 1K1K2R1K 2K" colorChips="RYG KX"></div>
+<p class="caption"><b>NATU</b> from <i>Pokemon GO</i></p>
+<hr /><div class="nonogram no-break" solution="....KKKKKKKK....|....KKKKKKKK....|....KKKKKKKK....|....KKKKKKKK....|.....V.KK.V.....|....KKKKKKKK....|....KKKKKKKK....|....KKKKKKKK....|................|...KKKKKKKKKK...|..KKKKKKKKKKKK..|..KKKKKKKKKKKK..|.KK.KKKKKKKK.KK.|.KK.KKKKKKKK.KK.|KK..KKKKKKKK..KK|KK..KKKKKKKK..KK" horzClues="8K 8K 8K 8K 1V2K1V 8K 8K 8K  10K 12K 12K 2K8K2K 2K8K2K 2K8K2K 2K8K2K" vertClues="2K 4K 4K 3K 4K3K7K 4K1V3K7K 4K3K7K 8K7K 8K7K 4K3K7K 4K1V3K7K 4K3K7K 3K 4K 4K 2K" colorChips="VK X"></div>
+<p class="caption"><b>ENDERMAN</b> from <i>Minecraft</i></p>
+<hr /><div class="nonogram no-break" solution=".......RR.......|.....RRYYRR.....|....RGRRRRGR....|....GYGRRGYG....|...RGGYGGYGGR...|...RGKGGGGKGR...|...RRRKGGKRRR...|.YYYKRRKKRRKYYY.|YYYYYGRKKRGYYYYY|YYYYYRGRRGRYYYYY|.GYYRRYRRYRRYYG.|.YYRRYRRYRRRRYY.|.Y.GRRRRRRRRG.Y.|RR..GRRGGRRG..RR|YGGYGKGYYGGY..YY|.KGGYGKYYYYKRYYY" horzClues="2R 2R2Y2R 1R1G4R1G1R 1G1Y1G2R1G1Y1G 1R2G1Y2G1Y2G1R 1R1G1K4G1K1G1R 3R1K2G1K3R 3Y1K2R2K2R1K3Y 5Y1G1R2K1R1G5Y 5Y1R1G2R1G1R5Y 1G2Y2R1Y2R1Y2R2Y1G 2Y2R1Y2R1Y4R2Y 1Y1G8R1G1Y 2R1G2R2G2R1G2R 1Y2G1Y1G1K1G2Y2G1Y2Y 1K2G1Y1G1K4Y1K1R3Y" vertClues="2Y1R1Y 3Y1G2Y1R1G1K 5Y2G 3R4Y1R1G1Y1G 1R3G1R1K2Y3R2G1Y 1R1G1Y1G1K2R1G2R1Y2R1K1G 2R1G1Y1G1K2R1G1Y3R1G1K 1R1Y2R3G2K4R1G2Y 1R1Y2R3G2K2R1Y1R1G2Y 2R1G1Y1G1K2R1G1Y3R1G1Y 1R1G1Y1G1K2R1G5R1G1Y 1R3G1R1K2Y3R1G1Y1K 3R4Y1R1G1R 5Y1Y 3Y1G2Y1R2Y 2Y1R2Y" colorChips="RYG KX"></div>
+<p class="caption"><b>SAMUS</b> from <i>Super Metroid</i></p>
+<hr /><div class="nonogram no-break" solution=".....BBBB.......|...BBBBBBBB...B.|.BBBBBBTBBBB.BB.|...BBBTTTBBBBBB.|....BBTTBBBBBBB.|..BBBBBBBB.BBBB.|.BBBBBBBBB..BBB.|BBBBBBBBBB..KBK.|...BBBBBBB..K.K.|....BBBBBTTTTTT.|...BBBBTTTTTTTKK|..BBBBBBTTTTTT..|.BBBBBBBBTTTB...|......BBBBBBB...|.....TTTTBTTB...|....TTBBBTTTT..." horzClues="4B 8B1B 6B1T4B2B 3B3T6B 2B2T7B 8B4B 9B3B 10B1K1B1K 7B1K1K 5B6T 4B7T2K 6B6T 8B3T1B 7B 4T1B2T1B 2T3B4T" vertClues="1B 1B2B1B 1B3B2B 3B4B3B 12B1T 13B2T 3B2T9B1T1B 2B3T5B1T3B1T1B 3B1T6B2T2B1T1B 8B4T2B1T 4B4T1B2T 4B4T1B2T 4B2K3T3B1T 6B3T 6B2K1T1K 1K" colorChips="BK TX"></div>
+<p class="caption"><b>SONIC</b> the Hedgehog from <i>Genesis</i></p>
+<hr /><p>The first letters of all these characters, taken in order, spell out the answer DARKNESS.</p>
+
+    
+    
+
+    
+    
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,773 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Guns and Butter</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+<a href="../round/econ.html" class="btn">Economics</a>
+
+
+
+
+
+<a href="../post-hunt-solve/guns-and-butter.html" class="btn">Call in an answer</a>
+
+
+<a href="../solution/guns-and-butter.html" class="btn solution-button">View solution</a>
+<a href="../stats/guns-and-butter.html" class="btn">Stats</a>
+
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<h1 class="puzzle-title">
+    Guns and Butter
+    
+</h1>
+
+<main class="puzzle-main clipboard-container">
+    
+
+    
+    <style>
+    .guns-and-butter {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .guns-and-butter .layers {
+        margin: 0px auto;
+        position: relative;
+    }
+
+    .guns-and-butter.solution {
+        pointer-events: none;
+    }
+
+    .numbers {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .dominoes {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .disabled {
+        pointer-events: none;
+    }
+
+    .numbers tr td {
+        width: 40px;
+        height: 40px;
+        padding: 0px;
+        margin: 0px;
+        border: 1px solid black;
+        border-bottom: 1px solid black;
+        background: transparent;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        user-select: none;
+    }
+
+    .numbers tr:first-child td {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .numbers tr td:first-child {
+        border-top: none;
+        border-left: none;
+        border-bottom: none;
+    }
+
+    .numbers td.clickable {
+        cursor: pointer;
+    }
+
+    .numbers td:focus-visible {
+        outline-color: red;
+        outline-offset: -5px;
+    }
+
+    .numbers td.gun {
+        background-color: lightgray;
+        print-color-adjust: exact !important;
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
+
+    .numbers td.butter {
+        background-color: yellow;
+    }
+
+    .numbers td.used-by-domino {
+        background-color: yellow;
+    }
+
+    .dominoes rect {
+        stroke-width: 8px;
+        stroke: transparent;
+        fill: transparent;
+    }
+
+    .dominoes rect.path-on {
+        stroke: black;
+    }
+
+    .part {
+        padding: 0px;
+        margin: 5px;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .part tr td {
+        width: 20px;
+        height: 20px;
+        border: 1px solid black;
+        border-bottom: 1px solid black;
+        padding: 0px;
+        margin: 0px;
+        line-height: 1.5rem;
+        font-size: smaller;
+        text-align: center;
+    }
+
+    .part.gun.used td {
+        background: lightgray;
+    }
+
+    .part.butter.used td {
+        background: yellow;
+    }
+
+    .parts {
+        margin-top: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .example {
+        border: 2px solid;
+        padding: 20px;
+        page-break-after: always;
+    }
+
+    .copy-only td:not(:empty) {
+        border: 1px solid black;
+        border-bottom: 1px solid black;
+        text-align: center;
+    }
+
+    @media print {
+        .gunsandbutterpuzzle {
+            font-size: 14px;
+            line-height: 15px;
+        }
+
+        .gunsandbutterpuzzle p {
+            margin-bottom: 6px;
+        }
+
+        .instructions {
+            display: none;
+        }
+    }
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll(".guns-and-butter").forEach((gb) => { new GunsAndButter(gb); });
+
+            window.addEventListener('beforeunload', function(e) {
+                document.querySelectorAll(".guns-and-butter.puzzle").forEach(gb => {
+                    gb.gunsandbutter.saveState();
+                });
+            });
+    });
+
+    function GunsAndButter(t) {
+            this.container = t;
+            t.gunsandbutter = this;
+            this.fShift = false;
+            this.dominoes = this.container.querySelector(".dominoes");
+            this.mousedown = false;
+            this.currentFill = "";
+            this.undoStack = [];
+            this.redoStack = [];
+            this.maxCol = 0;
+            this.maxRow = 0;
+
+            this.horzdominoes = {};
+            this.vertdominoes = {};
+            this.usedbydomino = {};
+            this.usedbyship = {};
+
+            this.redoUnit = function(unit) {
+                var elem = unit.elem;
+
+                if (unit.adds) {
+                    unit.adds.forEach((a) => { elem.classList.add(a); });
+                }
+
+                if (unit.removes) {
+                    unit.removes.forEach((a) => { elem.classList.remove(a); });
+                }
+
+                if (unit.children) {
+                    unit.children.forEach((c) => { this.redoUnit(c) });
+                }
+
+                if (unit.oldValue || unit.newValue) {
+                    elem.value = unit.newValue;
+                }
+            }
+
+            this.undoUnit = function(unit) {
+                var elem = unit.elem;
+
+                if (unit.adds) {
+                    unit.adds.forEach((a) => { elem.classList.remove(a); });
+                }
+
+                if (unit.removes) {
+                    unit.removes.forEach((a) => { elem.classList.add(a); });
+                }
+
+                if (unit.children) {
+                    unit.children.forEach((c) => { this.undoUnit(c) });
+                }
+
+                if (unit.oldValue || unit.newValue) {
+                    elem.value = unit.oldValue;
+                }
+            }
+
+            this.undo = function() {
+                if (this.undoStack.length == 0) { return; }
+
+                var unit = this.undoStack.pop();
+                this.undoUnit(unit);
+                this.redoStack.push(unit);
+                this.rebuildUsedby();
+            }
+
+            this.redo = function() {
+                if (this.redoStack.length == 0) { return; }
+
+                var unit = this.redoStack.pop();
+                this.redoUnit(unit);
+                this.undoStack.push(unit);
+                this.rebuildUsedby();
+            }
+
+            this.modifyClass = function(elem, adds, removes, newValue) {
+                var trueAdds = [];
+                var trueRemoves = [];
+
+                adds.forEach((a) => { if (a && !elem.classList.contains(a)) { trueAdds.push(a); }});
+                removes.forEach((r) => { if (r && elem.classList.contains(r)) { trueRemoves.push(r); }});
+
+                if (trueAdds.length == 0 && trueRemoves.length == 0 && newValue == null) { return; }
+
+                var unit = { "elem": elem };
+                if (trueAdds.length > 0) { unit.adds = trueAdds; }
+                if (trueRemoves.length > 0) { unit.removes = trueRemoves; }
+                if (newValue != null) { unit.oldValue = elem.value; unit.newValue = newValue; }
+
+                this.redoUnit(unit);
+                this.undoStack.push(unit);
+                this.redoStack = [];
+                this.rebuildUsedby();
+            }
+
+            this.rebuildUsedby = function() {
+                this.usedbydomino = {};
+                this.usedbyship = {};
+                for (const [key, value] of Object.entries(this.horzdominoes)) {
+                    if (value.classList.contains("path-on")) {
+                        this.usedbydomino[key] = true;
+                        this.usedbydomino[key - this.maxCol] = true;
+                    }
+                }
+
+                for (const [key, value] of Object.entries(this.vertdominoes)) {
+                    if (value.classList.contains("path-on")) {
+                        this.usedbydomino[key] = true;
+                        this.usedbydomino[key - 1] = true;
+                    }
+                }
+
+                this.container.querySelectorAll("td").forEach((td) => {
+                    var col = Array.prototype.indexOf.call(td.parentElement.children, td);
+                    var row = Array.prototype.indexOf.call(td.parentElement.parentElement.children, td.parentElement);
+
+                    if (this.usedbydomino[row * this.maxCol + col]) {
+                        td.classList.add("used-by-domino");
+                    } else {
+                        td.classList.remove("used-by-domino");
+                    }
+
+                    if (td.classList.contains("gun")) {
+                        this.usedbyship[row * this.maxCol + col] = true;
+                    }
+                });
+            }
+
+            this.move = function(elem, drow, dcol) {
+                    var td = elem;
+                    var col = Array.prototype.indexOf.call(td.parentElement.children, td);
+                    var row = Array.prototype.indexOf.call(td.parentElement.parentElement.children, td.parentElement);
+
+                    if (this.fShift) {
+                        if (dcol == -1 && col > 1) {
+                            this.toggleVertPath(col, row);
+                        } else if (dcol == 1 && col < this.maxCol - 1) {
+                            this.toggleVertPath(col + dcol, row);
+                        } else if (drow == -1 && row > 1) {
+                            this.toggleHorzPath(col, row);
+                        } else if (drow == 1 && row < this.maxRow - 1) {
+                            this.toggleHorzPath(col, row + drow);
+                        }
+                    }
+
+                    if (row + drow == 0 || col + dcol == 0) {
+                        return false;
+                    }
+
+                    var newitem = this.container.querySelector("tr:nth-child(" + (row + drow + 1) + ") td:nth-child(" + (col + dcol + 1) + ")");
+
+                    if (!newitem) {
+                        return false;
+                    }
+
+                    newitem.focus();
+                    return true;
+            }
+
+            this.rotateFill = function(td, backwards) {
+                    if (td.classList.contains("used-by-domino")) { return; }
+                    var cls = this.getFill(td);
+
+                    if (backwards) {
+                        if (cls == "") { cls = "butter"; }
+                        else if (cls == "butter") { cls = "gun"; }
+                        else { cls = ""; }
+                    } else {
+                        if (cls == "") { cls = "gun"; }
+                        else if (cls == "gun") { cls = "butter"; }
+                        else { cls = ""; }
+                    }
+
+                    this.setFill(td, cls);
+                    this.currentFill = cls;
+            }
+
+            this.setCurrentFill = function(td) {
+                    this.setFill(td, this.currentFill);
+            }
+
+            this.keyDown = function(e) {
+                    if (e.keyCode == 9) { // tab
+                        return;
+                    } else if (e.keyCode == 37 || e.keyCode == 65) { // left/A
+                            this.move(e.target, 0, -1);
+                    } else if (e.keyCode == 38 || e.keyCode == 87) { // up/W
+                            this.move(e.target, -1, 0);
+                    } else if (e.keyCode == 39 || e.keyCode == 68) { // right/D
+                            this.move(e.target, 0, 1);
+                    } else if (e.keyCode == 40 || e.keyCode == 83) { // down/S
+                            this.move(e.target, 1, 0);
+                    } else if (e.keyCode == 32) { // space
+                            this.rotateFill(e.target, this.fShift);
+                    } else if (e.keyCode == 90) { // Z
+                        if (e.ctrlKey) { this.undo(); }
+                    } else if (e.keyCode == 89) { // Y
+                        if (e.ctrlKey) { this.redo(); }
+                    }
+
+                    e.preventDefault();
+            }
+
+            this.updateModifiers = function(e) {
+                this.fShift = e.shiftKey;
+            }
+
+            this.undoCheck = function(e) {
+                if (e.defaultPrevented) { return; }
+                if (e.keyCode == 90) { // Z
+                    if (e.ctrlKey) { this.undo(); e.preventDefault(); }
+                } else if (e.keyCode == 89) { // Y
+                    if (e.ctrlKey) { this.redo(); e.preventDefault(); }
+                }
+            }
+
+            this.getFill = function(td) {
+                if (td.classList.contains("gun")) { return "gun"; }
+                if (td.classList.contains("butter")) { return "butter"; }
+                return "";
+            }
+
+            this.setFill = function(td, cls) {
+                if (cls) {
+                    this.modifyClass(td, [cls], ["gun", "butter"], null);
+                } else {
+                    this.modifyClass(td, [], ["gun", "butter"], null);
+                }
+            }
+
+            this.createPath = function(x, y, w, h) {
+                var rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+                rect.setAttributeNS(null, "x", x);
+                rect.setAttributeNS(null, "y", y);
+                rect.setAttributeNS(null, "width", w);
+                rect.setAttributeNS(null, "height", h);
+                this.dominoes.appendChild(rect);
+
+                return rect;
+            }
+
+            this.createHorzPath = function(x, y) {
+                var path = this.createPath(x * 100, y * 100 - 100, 100, 200);
+                this.horzdominoes[y * this.maxCol + x] = path;
+                return path;
+            }
+
+            this.createVertPath = function(x, y) {
+                var path = this.createPath(x * 100 - 100, y * 100, 200, 100);
+                this.vertdominoes[y * this.maxCol + x] = path;
+                return path;
+            }
+
+            this.toggleHorzPath = function(x, y) {
+                var path = this.horzdominoes[y * this.maxCol + x];
+                if (path != null && path.classList.contains("path-on")) {
+                    this.modifyClass(path, [], ["path-on"], null);
+                } else {
+                    var code = y * this.maxCol + x;
+                    var codePrev = code - this.maxCol;
+                    if (this.usedbydomino[code] || this.usedbyship[code] || this.usedbydomino[codePrev] || this.usedbyship[codePrev]) { return; }
+                    if (path == null) {
+                        path = this.createHorzPath(x, y);
+                    }
+                    this.modifyClass(path, ["path-on"], [], null);
+                }
+            }
+
+            this.toggleVertPath = function(x, y) {
+                var path = this.vertdominoes[y * this.maxCol + x];
+                if (path != null && path.classList.contains("path-on")) {
+                    this.modifyClass(path, [], ["path-on"], null);
+                } else {
+                    var code = y * this.maxCol + x;
+                    var codePrev = code - 1;
+                    if (this.usedbydomino[code] || this.usedbyship[code] || this.usedbydomino[codePrev] || this.usedbyship[codePrev]) { return; }
+                    if (path == null) {
+                        path = this.createVertPath(x, y);
+                    }
+                    this.modifyClass(path, ["path-on"], [], null);
+                }
+            }
+
+            this.getEdge = function(e) {
+                if (e.offsetX < 8) {
+                    return "L";
+                } else if (e.offsetX > e.currentTarget.offsetWidth - 8) {
+                    return "R";
+                } else if (e.offsetY < 8) {
+                    return "T";
+                } else if (e.offsetY > e.currentTarget.offsetHeight - 8) {
+                    return "B";
+                } else {
+                    return null;
+                }
+            }
+
+            this.mouseMove = function(e) {
+                var edge = this.getEdge(e);
+
+                // TODO: feedback highlight
+            }
+
+            this.mouseDown = function(e) {
+                var edge = this.getEdge(e);
+                var td = e.currentTarget;
+
+                if (!edge) {
+                    this.mousedown = true;
+                    this.rotateFill(e.currentTarget, e.which != 1 || this.fShift);
+                } else {
+                    var col = Array.prototype.indexOf.call(td.parentElement.children, td);
+                    var row = Array.prototype.indexOf.call(td.parentElement.parentElement.children, td.parentElement);
+
+                    if (edge == "L" && col > 1) {
+                        this.toggleVertPath(col, row);
+                    } else if (edge == "R" && col < this.maxCol - 1) {
+                        this.toggleVertPath(col + 1, row);
+                    } else if (edge == "T" && row > 1) {
+                        this.toggleHorzPath(col, row);
+                    } else if (edge == "B" && row < this.maxRow - 1) {
+                        this.toggleHorzPath(col, row + 1);
+                    }
+                }
+                td.focus();
+            }
+
+            this.mouseEnter = function(e) {
+                if (this.mousedown) {
+                    this.setCurrentFill(e.currentTarget);
+                    e.currentTarget.focus();
+                }
+            }
+
+            this.togglePart = function(e) {
+                var part = e.currentTarget;
+
+                if (part.classList.contains("used")) {
+                    this.modifyClass(part, [], ["used"], null);
+                } else {
+                    this.modifyClass(part, ["used"], [], null);
+                }
+            }
+
+            this.saveState = function() {
+                var state = [];
+                this.container.querySelectorAll(".numbers td").forEach(td => {
+                    var col = Array.prototype.indexOf.call(td.parentElement.children, td);
+                    var row = Array.prototype.indexOf.call(td.parentElement.parentElement.children, td.parentElement);
+
+                    var fill = this.getFill(td);
+                    var f = fill == "gun" ? "G" : (fill == "butter" ? "B" : " ");
+                    var hd = this.horzdominoes[row * this.maxCol + col];
+                    var vd = this.vertdominoes[row * this.maxCol + col];
+                    var d = (hd && hd.classList.contains("path-on")) ? "H" : ((vd && vd.classList.contains("path-on")) ? "V" : " ");
+                    state.push(f + d);
+                });
+                localStorage.setItem("guns-and-butter", state.join("|"));
+
+                var partState = [];
+                this.container.querySelectorAll(".part").forEach(part => {
+                    partState.push(part.classList.contains("used") ? "U" : "");
+                });
+                localStorage.setItem("guns-and-butter-parts", partState.join("|"));
+            }
+
+            this.loadState = function() {
+                var state = localStorage.getItem("guns-and-butter");
+                if (!state) return;
+
+                state = state.split("|");
+                var iTd = 0;
+                this.container.querySelectorAll(".numbers td").forEach(td => {
+                    var col = Array.prototype.indexOf.call(td.parentElement.children, td);
+                    var row = Array.prototype.indexOf.call(td.parentElement.parentElement.children, td.parentElement);
+
+                    var tdState = state[iTd++];
+                    if (tdState[0] != " ") {
+                        td.classList.add(tdState[0] == "G" ? "gun" : "butter");
+                    }
+                    if (tdState[1] == "H") {
+                        this.createHorzPath(col, row);
+                        this.horzdominoes[row * this.maxCol + col].classList.add("path-on");
+                    }
+                    if (tdState[1] == "V") {
+                        this.createVertPath(col, row);
+                        this.vertdominoes[row * this.maxCol + col].classList.add("path-on");
+                    }
+                });
+
+                var partState = localStorage.getItem("guns-and-butter-parts");
+                if (!partState) return;
+
+                partState = partState.split("|");
+                var iPart = 0;
+                this.container.querySelectorAll(".part").forEach(part => {
+                    if (partState[iPart++]) {
+                        part.classList.add("used");
+                    }
+                });
+            }
+
+            var shape = this.container.getAttribute("data-shape").split("|");
+            var numbers = this.container.querySelector(".numbers");
+            var solution = this.container.getAttribute("data-solution");
+
+            if (solution) { solution = solution.split("|"); }
+
+            for (var r = 0; r < shape.length; r++) {
+                var tr = document.createElement("tr");
+
+                for (var c = 0; c < shape[r].length; c++) {
+                        var td = document.createElement("td");
+                        if (r > 0 && c > 0) {
+                            if (solution) {
+                                var s = solution[r][c];
+                                if (s == "G") {
+                                    td.classList.add("gun");
+                                } else if (s== "H") {
+                                    this.toggleVertPath(c + 1, r);
+                                } else if (s== "V") {
+                                    this.toggleHorzPath(c, r + 1);
+                                }
+                            } else {
+                                td.classList.add("clickable");
+                                td.tabIndex = 0;
+                                td.addEventListener("keydown",  e => { this.keyDown(e); });
+                                td.addEventListener("mousedown",  e => { this.mouseDown(e); });
+                                td.addEventListener("mouseenter",  e => { this.mouseEnter(e); });
+                                td.addEventListener("mousemove",  e => { this.mouseMove(e); });
+                                td.addEventListener("contextmenu",  e => { e.preventDefault(); });
+                            }
+                        }
+
+                        const value = shape[r][c];
+                        if (value != ".") {
+                            td.innerText = value;
+                        }
+
+                        tr.appendChild(td);
+                }
+
+                this.maxCol = Math.max(this.maxCol, c);
+
+                numbers.appendChild(tr);
+            }
+
+            this.container.querySelectorAll(".part").forEach((p) => {
+                p.addEventListener("mousedown", e => { this.togglePart(e); });
+                p.addEventListener("keydown", e => { if (e.keyCode == 32) { this.togglePart(e); } if (e.keyCode != 9) { e.preventDefault(); } });
+            });
+
+            this.maxRow = r;
+
+            this.dominoes.setAttributeNS(null, "viewBox", "0 0 " + (this.maxCol * 100 + 4).toString() + " " + (this.maxRow * 100 + 4).toString());
+            var outline = this.createPath(100, 100, (this.maxCol - 1) * 100, (this.maxRow - 1) * 100);
+            outline.classList.add("path-on");
+
+            if (this.container.classList.contains("puzzle")) { this.loadState(); }
+            this.rebuildUsedby();
+
+            window.addEventListener("mouseup", e => {this.mousedown = false; });
+            document.addEventListener("keyup", e => { this.updateModifiers(e); });
+            document.addEventListener("keydown", e => { this.updateModifiers(e); this.undoCheck(e); });
+    }
+</script>
+<div class="gunsandbutterpuzzle"><p>Divide the grid into guns and butter as follows:</p><ul><li>All battleships (guns) and dominoes (sticks of butter) must be used exactly once.</li><li>No two battleships may touch each other, not even diagonally.</li><li>No battleship may be placed on a ~ symbol, which signifies blank/water.</li><li>Numbers outside the grid indicate how many battleship segments are in that row/column.</li></ul><div class="example no-copy"><p>Here is an example puzzle and its solution. The example uses a double-4 set of dominoes and a reduced set of ships; the puzzle itself uses a double-8 set and a standard set of ships.</p><div class="guns-and-butter sample" data-shape="..3......|.14311131|.42244133|32344~~2~|.12~22233|.4~3111~2"><div class="layers"><table class="numbers"></table><svg class="dominoes disabled" xmlns="http://www.w3.org/2000/svg" version="1.1"></svg></div><div class="parts"><table class="part butter" tabindex="0"><tr><td>~</td><td>~</td></tr></table><table class="part butter" tabindex="0"><tr><td>~</td><td>1</td></tr></table><table class="part butter" tabindex="0"><tr><td>~</td><td>2</td></tr></table><table class="part butter" tabindex="0"><tr><td>~</td><td>3</td></tr></table><table class="part butter" tabindex="0"><tr><td>~</td><td>4</td></tr></table><table class="part butter" tabindex="0"><tr><td>1</td><td>1</td></tr></table><table class="part butter" tabindex="0"><tr><td>1</td><td>2</td></tr></table><table class="part butter" tabindex="0"><tr><td>1</td><td>3</td></tr></table><table class="part butter" tabindex="0"><tr><td>1</td><td>4</td></tr></table><table class="part butter" tabindex="0"><tr><td>2</td><td>2</td></tr></table><table class="part butter" tabindex="0"><tr><td>2</td><td>3</td></tr></table><table class="part butter" tabindex="0"><tr><td>2</td><td>4</td></tr></table><table class="part butter" tabindex="0"><tr><td>3</td><td>3</td></tr></table><table class="part butter" tabindex="0"><tr><td>3</td><td>4</td></tr></table><table class="part butter" tabindex="0"><tr><td>4</td><td>4</td></tr></table><table class="part gun" tabindex="0"><tr><td>⚓</td><td>⚓</td><td>⚓</td></tr></table><table class="part gun" tabindex="0"><tr><td>⚓</td><td>⚓</td></tr></table><table class="part gun" tabindex="0"><tr><td>⚓</td><td>⚓</td></tr></table><table class="part gun" tabindex="0"><tr><td>⚓</td></tr></table><table class="part gun" tabindex="0"><tr><td>⚓</td></tr></table><table class="part gun" tabindex="0"><tr><td>⚓</td></tr></table></div></div><br/><div class="guns-and-butter sample solution" data-shape="..3......|.14311131|.42244133|32344~~2~|.12~22233|.4~3111~2" data-solution="........|.VHBGGVVG|.BGVHBBBV|.VGBGHBGB|.BGHBHBGV|.HBHBGHBB"><div class="layers"><table class="numbers"></table><svg class="dominoes disabled" xmlns="http://www.w3.org/2000/svg" version="1.1"></svg></div></div></div><br/><div class="instructions no-copy"><p>The puzzle below is interactive and supports undo/redo.</p><ul><li>Click or Shift-click a cell to cycle through unknown, guns, and butter. You can also use the Space key for this.</li><li>Click the edge of a cell to place a domino between the two cells. You can also use Shift+arrow keys to do this.</li><li>You cannot place a domino in a place where it would be invalid (e.g. because a battleship is in the way).</li><li>You can click on the dominoes/ships below the puzzle to mark them as used.</li><li>You can undo with Ctrl+Z and redo with Ctrl+Y.</li></ul></div><div class="guns-and-butter puzzle" data-shape="....4.......|265172~26743|874846863465|.77217474212|.735~1635522|.432866~7511|.17856873556|.~1147~~1133|.5346833488~|.122653~4883|.2~216~44885"><div class="layers"><table class="numbers"></table><svg class="dominoes disabled" xmlns="http://www.w3.org/2000/svg" version="1.1"></svg></div><div class="parts no-copy"><table class="part butter" tabindex="0"><tr><td>~</td><td>~</td></tr></table><table class="part butter" tabindex="0"><tr><td>~</td><td>1</td></tr></table><table class="part butter" tabindex="0"><tr><td>~</td><td>2</td></tr></table><table class="part butter" tabindex="0"><tr><td>~</td><td>3</td></tr></table><table class="part butter" tabindex="0"><tr><td>~</td><td>4</td></tr></table><table class="part butter" tabindex="0"><tr><td>~</td><td>5</td></tr></table><table class="part butter" tabindex="0"><tr><td>~</td><td>6</td></tr></table><table class="part butter" tabindex="0"><tr><td>~</td><td>7</td></tr></table><table class="part butter" tabindex="0"><tr><td>~</td><td>8</td></tr></table><table class="part butter" tabindex="0"><tr><td>1</td><td>1</td></tr></table><table class="part butter" tabindex="0"><tr><td>1</td><td>2</td></tr></table><table class="part butter" tabindex="0"><tr><td>1</td><td>3</td></tr></table><table class="part butter" tabindex="0"><tr><td>1</td><td>4</td></tr></table><table class="part butter" tabindex="0"><tr><td>1</td><td>5</td></tr></table><table class="part butter" tabindex="0"><tr><td>1</td><td>6</td></tr></table><table class="part butter" tabindex="0"><tr><td>1</td><td>7</td></tr></table><table class="part butter" tabindex="0"><tr><td>1</td><td>8</td></tr></table><table class="part butter" tabindex="0"><tr><td>2</td><td>2</td></tr></table><table class="part butter" tabindex="0"><tr><td>2</td><td>3</td></tr></table><table class="part butter" tabindex="0"><tr><td>2</td><td>4</td></tr></table><table class="part butter" tabindex="0"><tr><td>2</td><td>5</td></tr></table><table class="part butter" tabindex="0"><tr><td>2</td><td>6</td></tr></table><table class="part butter" tabindex="0"><tr><td>2</td><td>7</td></tr></table><table class="part butter" tabindex="0"><tr><td>2</td><td>8</td></tr></table><table class="part butter" tabindex="0"><tr><td>3</td><td>3</td></tr></table><table class="part butter" tabindex="0"><tr><td>3</td><td>4</td></tr></table><table class="part butter" tabindex="0"><tr><td>3</td><td>5</td></tr></table><table class="part butter" tabindex="0"><tr><td>3</td><td>6</td></tr></table><table class="part butter" tabindex="0"><tr><td>3</td><td>7</td></tr></table><table class="part butter" tabindex="0"><tr><td>3</td><td>8</td></tr></table><table class="part butter" tabindex="0"><tr><td>4</td><td>4</td></tr></table><table class="part butter" tabindex="0"><tr><td>4</td><td>5</td></tr></table><table class="part butter" tabindex="0"><tr><td>4</td><td>6</td></tr></table><table class="part butter" tabindex="0"><tr><td>4</td><td>7</td></tr></table><table class="part butter" tabindex="0"><tr><td>4</td><td>8</td></tr></table><table class="part butter" tabindex="0"><tr><td>5</td><td>5</td></tr></table><table class="part butter" tabindex="0"><tr><td>5</td><td>6</td></tr></table><table class="part butter" tabindex="0"><tr><td>5</td><td>7</td></tr></table><table class="part butter" tabindex="0"><tr><td>5</td><td>8</td></tr></table><table class="part butter" tabindex="0"><tr><td>6</td><td>6</td></tr></table><table class="part butter" tabindex="0"><tr><td>6</td><td>7</td></tr></table><table class="part butter" tabindex="0"><tr><td>6</td><td>8</td></tr></table><table class="part butter" tabindex="0"><tr><td>7</td><td>7</td></tr></table><table class="part butter" tabindex="0"><tr><td>7</td><td>8</td></tr></table><table class="part butter" tabindex="0"><tr><td>8</td><td>8</td></tr></table><table class="part gun" tabindex="0"><tr><td>⚓</td><td>⚓</td><td>⚓</td><td>⚓</td></tr></table><table class="part gun" tabindex="0"><tr><td>⚓</td><td>⚓</td><td>⚓</td></tr></table><table class="part gun" tabindex="0"><tr><td>⚓</td><td>⚓</td><td>⚓</td></tr></table><table class="part gun" tabindex="0"><tr><td>⚓</td><td>⚓</td></tr></table><table class="part gun" tabindex="0"><tr><td>⚓</td><td>⚓</td></tr></table><table class="part gun" tabindex="0"><tr><td>⚓</td><td>⚓</td></tr></table><table class="part gun" tabindex="0"><tr><td>⚓</td></tr></table><table class="part gun" tabindex="0"><tr><td>⚓</td></tr></table><table class="part gun" tabindex="0"><tr><td>⚓</td></tr></table><table class="part gun" tabindex="0"><tr><td>⚓</td></tr></table></div><table class="copy-only"><tr></tr><tr><td></td><td>~</td><td>~</td><td></td><td>~</td><td>1</td><td></td><td>~</td><td>2</td><td></td><td>~</td><td>3</td></tr><tr></tr><tr><td></td><td>~</td><td>4</td><td></td><td>~</td><td>5</td><td></td><td>~</td><td>6</td><td></td><td>~</td><td>7</td></tr><tr></tr><tr><td></td><td>~</td><td>8</td><td></td><td>1</td><td>1</td><td></td><td>1</td><td>2</td><td></td><td>1</td><td>3</td></tr><tr></tr><tr><td></td><td>1</td><td>4</td><td></td><td>1</td><td>5</td><td></td><td>1</td><td>6</td><td></td><td>1</td><td>7</td></tr><tr></tr><tr><td></td><td>1</td><td>8</td><td></td><td>2</td><td>2</td><td></td><td>2</td><td>3</td><td></td><td>2</td><td>4</td></tr><tr></tr><tr><td></td><td>2</td><td>5</td><td></td><td>2</td><td>6</td><td></td><td>2</td><td>7</td><td></td><td>2</td><td>8</td></tr><tr></tr><tr><td></td><td>3</td><td>3</td><td></td><td>3</td><td>4</td><td></td><td>3</td><td>5</td><td></td><td>3</td><td>6</td></tr><tr></tr><tr><td></td><td>3</td><td>7</td><td></td><td>3</td><td>8</td><td></td><td>4</td><td>4</td><td></td><td>4</td><td>5</td></tr><tr></tr><tr><td></td><td>4</td><td>6</td><td></td><td>4</td><td>7</td><td></td><td>4</td><td>8</td><td></td><td>5</td><td>5</td></tr><tr></tr><tr><td></td><td>5</td><td>6</td><td></td><td>5</td><td>7</td><td></td><td>5</td><td>8</td><td></td><td>6</td><td>6</td></tr><tr></tr><tr><td></td><td>6</td><td>7</td><td></td><td>6</td><td>8</td><td></td><td>7</td><td>7</td><td></td><td>7</td><td>8</td></tr><tr></tr><tr><td></td><td>8</td><td>8</td><td></td><td>⚓</td><td>⚓</td><td>⚓</td><td>⚓</td><td></td><td>⚓</td><td>⚓</td><td>⚓</td></tr><tr></tr><tr><td></td><td></td><td></td><td>⚓</td><td>⚓</td><td>⚓</td><td></td><td>⚓</td><td>⚓</td><td></td><td>⚓</td><td>⚓</td></tr><tr></tr><tr><td></td><td></td><td>⚓</td><td>⚓</td><td></td><td>⚓</td><td></td><td>⚓</td><td></td><td>⚓</td><td></td><td>⚓</td></tr></table></div><br/><p>When the grid is complete, extract an answer by looking around the four 1x1 ships.</p></div>
+<p><button class="btn clipboard-button"></button></p>
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

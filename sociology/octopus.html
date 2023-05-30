@@ -1,0 +1,351 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+  <link rel="stylesheet" href="../static/css/sociology-base.css">
+  <link rel="stylesheet" href="../static/puzzle_resources/octopus/octopus.css">
+  <title>Octopus' Chumblr page</title>
+
+    
+  <link rel="icon" type="image/png" href="../static/puzzle_resources/octopus/chumblr.webp">
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+ <div id="deptdropdownmenu"></div>
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="../round/sociology.html" class="btn">Back to Sociology</a>
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<script>
+function refreshTime() {
+    const timeDisplay = document.getElementById('notif-time');
+    const dateString = new Date().toLocaleTimeString();
+    timeDisplay.textContent = dateString.substring(0, dateString.indexOf(':', 3));
+}
+setInterval(refreshTime, 1000);
+</script>
+<style>
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.screen-container {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen {
+    .media-icon, .fish-icon {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+    }
+
+    .media-icon {
+        height: 12em;
+        right: 1em;
+        top: 3em;
+        transform: rotate(15deg);
+        width: 12em;
+        z-index: 0;
+    }
+
+    .fish-icon {
+        z-index: 20;
+    }
+
+    .phone-container {
+        background-color: black;
+        border-radius: 30px;
+        height: 60em;
+        overflow: hidden;
+        padding: 3em 1em 1em;
+        position: relative;
+        width: 30em;
+    }
+
+    .phone-screen {
+        background-color: white;
+        border-radius: 20px;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .phone-notification-bar {
+        align-items: center;
+        display: flex;
+        background-color: #050505;
+        height: 2em;
+        justify-content: space-between;
+        padding: 0 2%;
+    }
+
+    .notif-text{
+        color: white;
+        font-size: 1em;
+        padding: 0 1%;
+    }
+
+    .notif-gap {
+        flex-grow: 1;
+    }
+
+    .notif-icon {
+        color: white;
+        font-size: 1em;
+    }
+
+    .phone-nav-bar {
+        align-items: center;
+        display: flex;
+        background-color: #050505;
+        gap: 25%;
+        height: 2.5em;
+        justify-content: center;
+    }
+
+    .nav-icon {
+        color: white;
+        font-size: 1.5em;
+    }
+
+    .phone-contents {
+        height: calc(100% - 4.5em);
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+
+    .phone-contents h1 {
+        background-color: transparent;
+        border: none;
+        font-size: 1.6em;
+    }
+  
+    .phone-contents h2 {
+        background-color: transparent;
+        border: none;
+        font-size: 1.4em;
+    }
+  
+    .phone-contents h3 {
+        background-color: transparent;
+        border: none;
+        font-size: 1.2em;
+    }
+  
+    .phone-contents h4 {
+        background-color: transparent;
+        border: none;
+        font-size: 1em;
+    }
+
+    .phone-contents p {
+        font-size: 0.9em;
+        line-height: 1.2em;
+    }
+}
+
+</style>
+
+
+  <h1>Octopus' Chumblr page</h1>
+  <button class="btn clipboard-button" data-skip-inline-styles="true"></button>
+
+
+<main class="screen-container">
+    
+
+    <div class="media-icon"></div>
+    <div class="fish-icon"></div>
+    <div class="phone-container">
+        <div class="phone-screen">
+            <div class="phone-notification-bar">
+                <span class="notif-text" id="notif-time"></span>
+                <span class="notif-gap"></span>
+                <span class="material-symbols-outlined notif-icon">network_wifi</span>
+                <span class="material-symbols-outlined notif-icon">network_cell</span>
+                <span class="notif-text" id="notif-time">100%</span>
+                <span class="material-symbols-outlined notif-icon">battery_full</span>
+            </div>
+            <div class="phone-contents">
+                
+                
+                    <style>
+@media screen {
+  .media-icon {
+      background-image: url("../static/puzzle_resources/octopus/chumblr.webp");
+  }
+
+  .fish-icon {
+      background-image: url("../static/puzzle_resources/octopus/octopus.webp");
+      height: 14em;
+      width: 15em;
+      transform: rotate(25deg);
+      left: 5em;
+      top: -4em;
+  }
+
+  .profile-header {
+    background-image: url("../static/puzzle_resources/octopus/octopus_cover.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .profile-pic {
+    background-image: url("../static/puzzle_resources/octopus/octopus_pfp.webp");
+    background-size: cover;
+  }
+
+  .reblog-pfp {
+    background-image:  url("../static/puzzle_resources/octopus/default_pfp.webp");
+    background-size: cover;
+  }
+
+  .reblog-icon {
+    background-image:  url("../static/puzzle_resources/octopus/reblog_icon.webp");
+    background-size: cover;
+  }
+
+}
+</style>
+<div class="chumblr-container"><div class="profile-header"><div class="action-bar"><span class="material-symbols-outlined action-icon">arrow_back</span><span class="username">the.octoblogger</span><span class="material-symbols-outlined action-icon">search</span><span class="material-symbols-outlined action-icon">redeem</span><span class="material-symbols-outlined action-icon">add_comment</span><span class="material-symbols-outlined action-icon">person</span><span class="follow">Follow</span></div><div class="profile-pic"></div><h1 class="account-name">Welcome to the Octoblog.</h1><h3 class="account-subtitle">School mate at Puzzle University. 🧩🎓</h3><div class="ask-button">Ask me anything</div></div><div class="clipboard-container"><div class="chumblr-post"><div class="post-header"><div class="profile-pic"></div><h3 class="account-name no-copy">the.octoblogger</h3><span class="material-symbols-outlined action-icon no-copy">more_horiz</span></div><div class="post-contents"><img src="../static/puzzle_resources/octopus/1.webp"
+            alt="Anakin and Padme 4-panel meme: In the first panel, top text has “THE PERSON WHO BOUGHT LAVENDER” and bottom text has “We bought the same prime number of flowers.” In the second panel, top text has “GLENDORA” and bottom text has “Someone else bought a prime number too, right?” In the fourth panel, bottom text has “Someone else bought a prime number too, right?”"/></div><div class="post-footer"><span class="post-notes"></span><span class="material-symbols-outlined action-icon no-copy">reply</span><span class="material-symbols-outlined action-icon no-copy">chat_bubble</span><span class="material-symbols-outlined action-icon no-copy">cached</span><span class="material-symbols-outlined action-icon no-copy">favorite</span></div></div><div class="chumblr-post"><div class="post-header"><div class="profile-pic"></div><h3 class="account-name no-copy">the.octoblogger</h3><span class="material-symbols-outlined action-icon no-copy">more_horiz</span></div><div class="post-contents"><img src="../static/puzzle_resources/octopus/2.webp"
+            alt="Assasination Chain 2-panel meme: Front person has label “THE WOMAN IN HOUSE #5”, middle person has label “THE LARKSPUR PURCHASER” and rear person has label “LYSANDER”. Middle person’s gun and rear person’s gun are both labelled “BUYING ONE MORE FLOWER”. Person on balcony is labelled “SOMEONE ELSE” and their gun is labelled “BUYING EVEN MORE FLOWERS”."/></div><div class="post-footer"><span class="post-notes"></span><span class="material-symbols-outlined action-icon no-copy">reply</span><span class="material-symbols-outlined action-icon no-copy">chat_bubble</span><span class="material-symbols-outlined action-icon no-copy">cached</span><span class="material-symbols-outlined action-icon no-copy">favorite</span></div></div><div class="chumblr-post"><div class="post-header"><div class="profile-pic"></div><h3 class="account-name no-copy">the.octoblogger</h3><span class="material-symbols-outlined action-icon no-copy">more_horiz</span></div><div class="post-contents"><img src="../static/puzzle_resources/octopus/3.webp"
+            alt="Trolley Problem meme: Person at lever is labelled “THE HYACINTH ENJOYER”. Individual person on shunt track is labelled “EVERYONE WHO BOUGHT FEWER FLOWERS THAN THEM”. Five people on main track are labelled “EVERYONE WHO BOUGHT MORE FLOWERS THAN THEM”."/></div><div class="post-footer"><span class="post-notes"></span><span class="material-symbols-outlined action-icon no-copy">reply</span><span class="material-symbols-outlined action-icon no-copy">chat_bubble</span><span class="material-symbols-outlined action-icon no-copy">cached</span><span class="material-symbols-outlined action-icon no-copy">favorite</span></div></div><div class="chumblr-post"><div class="post-header"><div class="profile-pic"></div><h3 class="account-name no-copy">the.octoblogger</h3><span class="material-symbols-outlined action-icon no-copy">more_horiz</span></div><div class="post-contents"><img src="../static/puzzle_resources/octopus/4.webp"
+            alt="Same Picture meme: The left is “The house with the person who bought marigolds”, and the right is “The house numbered one less than Gabriela’s house.” Top panel is captioned “Corporate needs you to find the differences between this picture and this picture.” Bottom panel is captioned “They’re the same picture.”"/></div><div class="post-footer"><span class="post-notes"></span><span class="material-symbols-outlined action-icon no-copy">reply</span><span class="material-symbols-outlined action-icon no-copy">chat_bubble</span><span class="material-symbols-outlined action-icon no-copy">cached</span><span class="material-symbols-outlined action-icon no-copy">favorite</span></div></div><div class="chumblr-post"><div class="post-header"><div class="profile-pic"></div><h3 class="account-name no-copy">the.octoblogger</h3><span class="material-symbols-outlined action-icon no-copy">more_horiz</span></div><div class="post-contents"><img src="../static/puzzle_resources/octopus/5.webp"
+              alt="Gru’s plan meme: First panel sheet says “Be Mordecai”. Second panel sheet says “Buy more flowers than both neighbors combined”. Third and fourth panel sheets both say “But don’t buy geraniums”."/></div><div class="post-footer"><span class="post-notes"></span><span class="material-symbols-outlined action-icon no-copy">reply</span><span class="material-symbols-outlined action-icon no-copy">chat_bubble</span><span class="material-symbols-outlined action-icon no-copy">cached</span><span class="material-symbols-outlined action-icon no-copy">favorite</span></div></div><div class="chumblr-post"><div class="post-header"><div class="profile-pic"></div><h3 class="account-name no-copy">the.octoblogger</h3><span class="material-symbols-outlined action-icon no-copy">more_horiz</span></div><div class="post-contents"><img src="../static/puzzle_resources/octopus/6.webp"
+            alt="Vince McMahon reaction with glowing eyes 4-panel meme: First panel says “SOMEONE BOUGHT AN EVEN NUMBER OF DAFFODILS”. Second panel says “ONE OF THEIR NEIGHBORS ALSO BOUGHT AN EVEN NUMBER OF FLOWERS”. Third panel says “THAT PERSON’S OTHER NEIGHBOR ALSO BOUGHT AN EVEN NUMBER OF FLOWERS”. Fourth panel says “*THAT* PERSON’S *OTHER* NEIGHBOR *ALSO* BOUGHT AN EVEN NUMBER OF FLOWERS”."/></div><div class="post-footer"><span class="post-notes"></span><span class="material-symbols-outlined action-icon no-copy">reply</span><span class="material-symbols-outlined action-icon no-copy">chat_bubble</span><span class="material-symbols-outlined action-icon no-copy">cached</span><span class="material-symbols-outlined action-icon no-copy">favorite</span></div></div><div class="chumblr-post"><div class="post-header"><div class="profile-pic"></div><h3 class="account-name no-copy">the.octoblogger</h3><span class="material-symbols-outlined action-icon no-copy">more_horiz</span></div><div class="post-contents"><img src="../static/puzzle_resources/octopus/7.webp"
+            alt="Thinking about other women meme: The woman is labelled “I bet he’s thinking about other women”. The man is labelled with “The person in house #1” and “I’m the only person who bought a type of flower that begins with the same letter as my name”."/></div><div class="post-footer"><span class="post-notes"></span><span class="material-symbols-outlined action-icon no-copy">reply</span><span class="material-symbols-outlined action-icon no-copy">chat_bubble</span><span class="material-symbols-outlined action-icon no-copy">cached</span><span class="material-symbols-outlined action-icon no-copy">favorite</span></div></div><div class="chumblr-post"><div class="post-header"><div class="profile-pic"></div><h3 class="account-name no-copy">the.octoblogger</h3><span class="material-symbols-outlined action-icon no-copy">more_horiz</span></div><div class="post-contents"><img src="../static/puzzle_resources/octopus/8.webp"
+            alt="Drakeposting meme: In both panels, Drake is labelled with “LEONARDO”. In the first panel, Drake holds his hand up as if to push away the text “Living next to Herschel”. In the second panel, Drake smiles next to the text “Living next to someone who bought wisteria”."/></div><div class="post-footer"><span class="post-notes"></span><span class="material-symbols-outlined action-icon no-copy">reply</span><span class="material-symbols-outlined action-icon no-copy">chat_bubble</span><span class="material-symbols-outlined action-icon no-copy">cached</span><span class="material-symbols-outlined action-icon no-copy">favorite</span></div></div><div class="chumblr-post"><div class="post-header"><div class="profile-pic"></div><h3 class="account-name no-copy">the.octoblogger</h3><span class="material-symbols-outlined action-icon no-copy">more_horiz</span></div><div class="post-contents"><img src="../static/puzzle_resources/octopus/9.webp"
+            alt="Draw 25 meme: The Uno card says “Live next to the daffodil fan OR draw 25”. The person in the second panel is labelled “Herschel”."/></div><div class="post-footer"><span class="post-notes"></span><span class="material-symbols-outlined action-icon no-copy">reply</span><span class="material-symbols-outlined action-icon no-copy">chat_bubble</span><span class="material-symbols-outlined action-icon no-copy">cached</span><span class="material-symbols-outlined action-icon no-copy">favorite</span></div></div><div class="chumblr-post"><div class="post-header"><div class="profile-pic"></div><h3 class="account-name no-copy">the.octoblogger</h3><span class="material-symbols-outlined action-icon no-copy">more_horiz</span></div><div class="post-contents"><p>Do you ever think about how a few small differences can result in dramatic changes over the years?</p><div class="reblog-card"><div class="reblog-pfp"></div><div class="reblog-icon"></div><span class="reblog-name">VaccineDude1985</span><span class="follow-button no-copy">Follow</span></div><div class="reblog-card"><div class="reblog-pfp"></div><div class="reblog-icon"></div><span class="reblog-name">Flavor1139</span><span class="follow-button no-copy">Follow</span></div><div class="reblog-card"><div class="reblog-pfp"></div><div class="reblog-icon"></div><span class="reblog-name">Sediment1978</span><span class="follow-button no-copy">Follow</span></div><div class="reblog-card"><div class="reblog-pfp"></div><div class="reblog-icon"></div><span class="reblog-name">Fade1293</span><span class="follow-button no-copy">Follow</span></div><div class="reblog-card"><div class="reblog-pfp"></div><div class="reblog-icon"></div><span class="reblog-name">DisneyGuy1256</span><span class="follow-button no-copy">Follow</span></div><div class="reblog-card"><div class="reblog-pfp"></div><div class="reblog-icon"></div><span class="reblog-name">GermanForest2003</span><span class="follow-button no-copy">Follow</span></div><div class="reblog-card"><div class="reblog-pfp"></div><div class="reblog-icon"></div><span class="reblog-name">Hairless1963</span><span class="follow-button no-copy">Follow</span></div><div class="reblog-card"><div class="reblog-pfp"></div><div class="reblog-icon"></div><span class="reblog-name">Club1328</span><span class="follow-button no-copy">Follow</span></div><div class="reblog-card"><div class="reblog-pfp"></div><div class="reblog-icon"></div><span class="reblog-name">Flex1982</span><span class="follow-button no-copy">Follow</span></div><div class="reblog-card"><div class="reblog-pfp"></div><div class="reblog-icon"></div><span class="reblog-name">Gravitate1860</span><span class="follow-button no-copy">Follow</span></div><div class="reblog-card"><div class="reblog-pfp"></div><div class="reblog-icon"></div><span class="reblog-name">Hamiltons1934</span><span class="follow-button no-copy">Follow</span></div><div class="reblog-card"><div class="reblog-pfp"></div><div class="reblog-icon"></div><span class="reblog-name">GreenAndBlack2011</span><span class="follow-button no-copy">Follow</span></div><div class="reblog-card"><div class="reblog-pfp"></div><div class="reblog-icon"></div><span class="reblog-name">TropicalWood1146</span><span class="follow-button no-copy">Follow</span></div></div><div class="post-footer"><span class="post-notes"></span><span class="material-symbols-outlined action-icon no-copy">reply</span><span class="material-symbols-outlined action-icon no-copy">chat_bubble</span><span class="material-symbols-outlined action-icon no-copy">cached</span><span class="material-symbols-outlined action-icon no-copy">favorite</span></div></div><div class="chumblr-post"><div class="post-header"><div class="profile-pic"></div><h3 class="account-name no-copy">the.octoblogger</h3><span class="material-symbols-outlined action-icon no-copy">more_horiz</span></div><div class="post-contents"><p>What3words you see first will describe your 2023!</p><img class="no-copy" src="../static/puzzle_resources/octopus/10.webp"
+            alt="21x9 word search. Use copy-to-clipboard to get a Sheets-friendly version."/><table class="copy-only"><tr><td>S</td><td>H</td><td>A</td><td>R</td><td>E</td><td>S</td><td>F</td><td>O</td><td>R</td><td>T</td><td>U</td><td>N</td><td>E</td><td>S</td><td>N</td><td>O</td><td>T</td><td>I</td><td>C</td><td>E</td><td>D</td></tr><tr><td>F</td><td>R</td><td>E</td><td>S</td><td>H</td><td>E</td><td>N</td><td>P</td><td>E</td><td>P</td><td>P</td><td>E</td><td>R</td><td>M</td><td>I</td><td>N</td><td>T</td><td>G</td><td>O</td><td>E</td><td>S</td></tr><tr><td>F</td><td>I</td><td>X</td><td>T</td><td>U</td><td>R</td><td>E</td><td>S</td><td>P</td><td>A</td><td>Y</td><td>E</td><td>E</td><td>L</td><td>E</td><td>V</td><td>E</td><td>R</td><td>I</td><td>N</td><td>G</td></tr><tr><td>A</td><td>U</td><td>C</td><td>T</td><td>I</td><td>O</td><td>N</td><td>R</td><td>U</td><td>N</td><td>A</td><td>W</td><td>A</td><td>Y</td><td>S</td><td>L</td><td>E</td><td>A</td><td>P</td><td>E</td><td>D</td></tr><tr><td>G</td><td>A</td><td>Z</td><td>E</td><td>B</td><td>O</td><td>C</td><td>U</td><td>S</td><td>H</td><td>I</td><td>O</td><td>N</td><td>I</td><td>N</td><td>G</td><td>A</td><td>L</td><td>O</td><td>N</td><td>G</td></tr><tr><td>E</td><td>T</td><td>C</td><td>H</td><td>I</td><td>N</td><td>G</td><td>S</td><td>B</td><td>O</td><td>X</td><td>F</td><td>U</td><td>L</td><td>S</td><td>W</td><td>O</td><td>O</td><td>N</td><td>E</td><td>D</td></tr><tr><td>O</td><td>V</td><td>E</td><td>R</td><td>P</td><td>A</td><td>I</td><td>D</td><td>S</td><td>Y</td><td>M</td><td>P</td><td>H</td><td>O</td><td>N</td><td>I</td><td>C</td><td>H</td><td>A</td><td>N</td><td>D</td></tr><tr><td>T</td><td>A</td><td>X</td><td>E</td><td>D</td><td>W</td><td>R</td><td>E</td><td>S</td><td>T</td><td>L</td><td>E</td><td>C</td><td>O</td><td>N</td><td>N</td><td>E</td><td>C</td><td>T</td><td>O</td><td>R</td></tr><tr><td>L</td><td>A</td><td>N</td><td>D</td><td>E</td><td>D</td><td>C</td><td>O</td><td>M</td><td>I</td><td>C</td><td>A</td><td>L</td><td>L</td><td>Y</td><td>D</td><td>O</td><td>N</td><td>A</td><td>T</td><td>E</td></tr></table></div><div class="post-footer"><span class="post-notes"></span><span class="material-symbols-outlined action-icon no-copy">reply</span><span class="material-symbols-outlined action-icon no-copy">chat_bubble</span><span class="material-symbols-outlined action-icon no-copy">cached</span><span class="material-symbols-outlined action-icon no-copy">favorite</span></div></div><div class="chumblr-post"><div class="post-header"><div class="profile-pic"></div><h3 class="account-name no-copy">the.octoblogger</h3><span class="material-symbols-outlined action-icon no-copy">more_horiz</span></div><div class="post-contents"><p>So I&rsquo;ve recently been hearing a bunch of people talking about a lost book by one of my favorite authors.  I tracked down a copy and it is weird! I&rsquo;m going to post my thoughts about all the different storylines as I read through it.</p></div><div class="post-footer"><span class="post-notes"></span><span class="material-symbols-outlined action-icon no-copy">reply</span><span class="material-symbols-outlined action-icon no-copy">chat_bubble</span><span class="material-symbols-outlined action-icon no-copy">cached</span><span class="material-symbols-outlined action-icon no-copy">favorite</span></div></div><div class="chumblr-post"><div class="post-header"><div class="profile-pic"></div><h3 class="account-name no-copy">the.octoblogger</h3><span class="material-symbols-outlined action-icon no-copy">more_horiz</span></div><div class="post-contents"><p>The son of a murdered king must prove his innocence; luckily his brother observed the crime through the mounted heads of a big lizard&rsquo;s past paramours.</p></div><div class="post-footer"><span class="post-notes">
+    3 notes
+  </span><span class="material-symbols-outlined action-icon no-copy">reply</span><span class="material-symbols-outlined action-icon no-copy">chat_bubble</span><span class="material-symbols-outlined action-icon no-copy">cached</span><span class="material-symbols-outlined action-icon no-copy">favorite</span></div></div><div class="chumblr-post"><div class="post-header"><div class="profile-pic"></div><h3 class="account-name no-copy">the.octoblogger</h3><span class="material-symbols-outlined action-icon no-copy">more_horiz</span></div><div class="post-contents"><p>A young man finds himself in an embattled fantastical land, and has to learn just how much these little creatures weigh when they aren&rsquo;t carrying anything.</p></div><div class="post-footer"><span class="post-notes">
+    4 notes
+  </span><span class="material-symbols-outlined action-icon no-copy">reply</span><span class="material-symbols-outlined action-icon no-copy">chat_bubble</span><span class="material-symbols-outlined action-icon no-copy">cached</span><span class="material-symbols-outlined action-icon no-copy">favorite</span></div></div><div class="chumblr-post"><div class="post-header"><div class="profile-pic"></div><h3 class="account-name no-copy">the.octoblogger</h3><span class="material-symbols-outlined action-icon no-copy">more_horiz</span></div><div class="post-contents"><p>Part of the story centers around an eight-year-old girl who can create thin strands of metal with her mind.</p></div><div class="post-footer"><span class="post-notes">
+    10 notes
+  </span><span class="material-symbols-outlined action-icon no-copy">reply</span><span class="material-symbols-outlined action-icon no-copy">chat_bubble</span><span class="material-symbols-outlined action-icon no-copy">cached</span><span class="material-symbols-outlined action-icon no-copy">favorite</span></div></div><div class="chumblr-post"><div class="post-header"><div class="profile-pic"></div><h3 class="account-name no-copy">the.octoblogger</h3><span class="material-symbols-outlined action-icon no-copy">more_horiz</span></div><div class="post-contents"><p>Things start getting pretty harrowing when Judi Dench finds herself handcuffed to a bed.</p></div><div class="post-footer"><span class="post-notes">
+    6 notes
+  </span><span class="material-symbols-outlined action-icon no-copy">reply</span><span class="material-symbols-outlined action-icon no-copy">chat_bubble</span><span class="material-symbols-outlined action-icon no-copy">cached</span><span class="material-symbols-outlined action-icon no-copy">favorite</span></div></div><div class="chumblr-post"><div class="post-header"><div class="profile-pic"></div><h3 class="account-name no-copy">the.octoblogger</h3><span class="material-symbols-outlined action-icon no-copy">more_horiz</span></div><div class="post-contents"><p>Children and adults in a small Maine town are terrorized by an otherworldly moon, which seems to know all of their deepest fears.</p></div><div class="post-footer"><span class="post-notes">
+    2 notes
+  </span><span class="material-symbols-outlined action-icon no-copy">reply</span><span class="material-symbols-outlined action-icon no-copy">chat_bubble</span><span class="material-symbols-outlined action-icon no-copy">cached</span><span class="material-symbols-outlined action-icon no-copy">favorite</span></div></div><div class="chumblr-post"><div class="post-header"><div class="profile-pic"></div><h3 class="account-name no-copy">the.octoblogger</h3><span class="material-symbols-outlined action-icon no-copy">more_horiz</span></div><div class="post-contents"><p>A down on his luck family man enters a deadly competition where he must escape capture while mailing in daily videos of his wimple.</p></div><div class="post-footer"><span class="post-notes">
+    1 note
+  </span><span class="material-symbols-outlined action-icon no-copy">reply</span><span class="material-symbols-outlined action-icon no-copy">chat_bubble</span><span class="material-symbols-outlined action-icon no-copy">cached</span><span class="material-symbols-outlined action-icon no-copy">favorite</span></div></div><div class="chumblr-post"><div class="post-header"><div class="profile-pic"></div><h3 class="account-name no-copy">the.octoblogger</h3><span class="material-symbols-outlined action-icon no-copy">more_horiz</span></div><div class="post-contents"><p>The denizens of a small Maine town deal with the collapse of society when a large book suddenly appears and hovers in the sky above them.</p></div><div class="post-footer"><span class="post-notes">
+    1 note
+  </span><span class="material-symbols-outlined action-icon no-copy">reply</span><span class="material-symbols-outlined action-icon no-copy">chat_bubble</span><span class="material-symbols-outlined action-icon no-copy">cached</span><span class="material-symbols-outlined action-icon no-copy">favorite</span></div></div><div class="chumblr-post"><div class="post-header"><div class="profile-pic"></div><h3 class="account-name no-copy">the.octoblogger</h3><span class="material-symbols-outlined action-icon no-copy">more_horiz</span></div><div class="post-contents"><p>I thought this storyline was over, but in this story-within-a-story a glass of merlot must squeeze through a tiny opening to battle a shape-shifter.</p></div><div class="post-footer"><span class="post-notes">
+    6 notes
+  </span><span class="material-symbols-outlined action-icon no-copy">reply</span><span class="material-symbols-outlined action-icon no-copy">chat_bubble</span><span class="material-symbols-outlined action-icon no-copy">cached</span><span class="material-symbols-outlined action-icon no-copy">favorite</span></div></div></div></div>
+                
+            </div>
+            <div class="phone-nav-bar">
+                <span class="material-symbols-outlined nav-icon">arrow_back_ios</span>
+                <span class="material-symbols-outlined nav-icon">circle</span>
+                <span class="material-symbols-outlined nav-icon">menu</span>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

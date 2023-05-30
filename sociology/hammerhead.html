@@ -1,0 +1,332 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+  <link rel="stylesheet" href="../static/css/sociology-base.css">
+  <link rel="stylesheet" href="../static/puzzle_resources/hammerhead/hammerhead.css">
+  <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+  <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+  <title>Hammerhead's Instaclam page</title>
+
+    
+  <link rel="icon" type="image/png" href="../static/puzzle_resources/hammerhead/instaclam.webp">
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+ <div id="deptdropdownmenu"></div>
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="../round/sociology.html" class="btn">Back to Sociology</a>
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<script>
+function refreshTime() {
+    const timeDisplay = document.getElementById('notif-time');
+    const dateString = new Date().toLocaleTimeString();
+    timeDisplay.textContent = dateString.substring(0, dateString.indexOf(':', 3));
+}
+setInterval(refreshTime, 1000);
+</script>
+<style>
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.screen-container {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen {
+    .media-icon, .fish-icon {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+    }
+
+    .media-icon {
+        height: 12em;
+        right: 1em;
+        top: 3em;
+        transform: rotate(15deg);
+        width: 12em;
+        z-index: 0;
+    }
+
+    .fish-icon {
+        z-index: 20;
+    }
+
+    .phone-container {
+        background-color: black;
+        border-radius: 30px;
+        height: 60em;
+        overflow: hidden;
+        padding: 3em 1em 1em;
+        position: relative;
+        width: 30em;
+    }
+
+    .phone-screen {
+        background-color: white;
+        border-radius: 20px;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .phone-notification-bar {
+        align-items: center;
+        display: flex;
+        background-color: #050505;
+        height: 2em;
+        justify-content: space-between;
+        padding: 0 2%;
+    }
+
+    .notif-text{
+        color: white;
+        font-size: 1em;
+        padding: 0 1%;
+    }
+
+    .notif-gap {
+        flex-grow: 1;
+    }
+
+    .notif-icon {
+        color: white;
+        font-size: 1em;
+    }
+
+    .phone-nav-bar {
+        align-items: center;
+        display: flex;
+        background-color: #050505;
+        gap: 25%;
+        height: 2.5em;
+        justify-content: center;
+    }
+
+    .nav-icon {
+        color: white;
+        font-size: 1.5em;
+    }
+
+    .phone-contents {
+        height: calc(100% - 4.5em);
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+
+    .phone-contents h1 {
+        background-color: transparent;
+        border: none;
+        font-size: 1.6em;
+    }
+  
+    .phone-contents h2 {
+        background-color: transparent;
+        border: none;
+        font-size: 1.4em;
+    }
+  
+    .phone-contents h3 {
+        background-color: transparent;
+        border: none;
+        font-size: 1.2em;
+    }
+  
+    .phone-contents h4 {
+        background-color: transparent;
+        border: none;
+        font-size: 1em;
+    }
+
+    .phone-contents p {
+        font-size: 0.9em;
+        line-height: 1.2em;
+    }
+}
+
+</style>
+
+
+  <h1>Hammerhead's Instaclam page</h1>
+  <button class="btn clipboard-button" data-skip-inline-styles="true"></button>
+
+  <div class="print-only">
+    Please view this puzzle on the website.
+  </div>
+
+
+<main class="screen-container">
+    
+
+    <div class="media-icon"></div>
+    <div class="fish-icon"></div>
+    <div class="phone-container">
+        <div class="phone-screen">
+            <div class="phone-notification-bar">
+                <span class="notif-text" id="notif-time"></span>
+                <span class="notif-gap"></span>
+                <span class="material-symbols-outlined notif-icon">network_wifi</span>
+                <span class="material-symbols-outlined notif-icon">network_cell</span>
+                <span class="notif-text" id="notif-time">100%</span>
+                <span class="material-symbols-outlined notif-icon">battery_full</span>
+            </div>
+            <div class="phone-contents">
+                
+                
+                    <style>
+@media screen {
+  .media-icon {
+      background-image: url("../static/puzzle_resources/hammerhead/instaclam.webp");
+  }
+
+  .fish-icon {    
+    background-image: url("../static/puzzle_resources/hammerhead/hammerhead.webp");
+    height: 13em;
+    width: 21em;
+    transform: rotate(-30deg);
+    left: -2em;
+    top: 14em;
+    pointer-events: none;
+  }
+
+  .profile-pic {
+    background-image: url("../static/puzzle_resources/hammerhead/hammerhead_propic.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+</style>
+<div class="instaclam-container no-copy"><div class="page-container" id="instaclam-page-container"><div class="instaclam-main-page instaclam-page"><div class="header-bar"><span class="material-symbols-outlined action-icon">arrow_back</span><span class="username">hammer.gram</span><span class="material-symbols-outlined action-icon">notifications</span><span class="material-symbols-outlined action-icon">more_vert</span></div><div class="profile-bar"><div class="profile-pic"></div><div class="metric-container posts"><div class="profile-metric">31</div><div class="profile-label">Posts</div></div><div class="metric-container followers"><div class="profile-metric">4</div><div class="profile-label">Followers</div></div><div class="metric-container following"><div class="profile-metric">4</div><div class="profile-label">Following</div></div></div><div class="profile-bio"><p class="name">Hammerhead</p><p class="description">School mate at Puzzle University 🧩🎓</p></div><div class="instaclam-button-row"><div class="instaclam-button">
+          Following
+          <span class="material-symbols-outlined">expand_more</span></div><div class="instaclam-button">Message</div><div class="instaclam-button"><span class="material-symbols-outlined">person_add</span></div></div><div class="instaclam-tab-row"><div class="instaclam-tab posts"><span class="material-symbols-outlined tab-icon">grid_on</span></div><div class="instaclam-tab tagged"><span class="material-symbols-outlined tab-icon">person_pin</span></div></div><div class="instaclam-content-grid"><div class="instaclam-content-thumb" onclick="toPosts('img-0')"><img src="../static/puzzle_resources/hammerhead/0.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('img-1')"><img src="../static/puzzle_resources/hammerhead/1.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('img-2')"><img src="../static/puzzle_resources/hammerhead/2.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('img-3')"><img src="../static/puzzle_resources/hammerhead/3.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('img-4')"><img src="../static/puzzle_resources/hammerhead/4.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('img-5')"><img src="../static/puzzle_resources/hammerhead/5.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('img-6')"><img src="../static/puzzle_resources/hammerhead/6.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('img-7')"><img src="../static/puzzle_resources/hammerhead/7.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('img-8')"><img src="../static/puzzle_resources/hammerhead/8.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('img-9')"><img src="../static/puzzle_resources/hammerhead/9.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('img-10')"><img src="../static/puzzle_resources/hammerhead/10.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('img-11')"><img src="../static/puzzle_resources/hammerhead/11.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('img-12')"><img src="../static/puzzle_resources/hammerhead/12.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('img-13')"><img src="../static/puzzle_resources/hammerhead/13.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('img-14')"><img src="../static/puzzle_resources/hammerhead/14.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('img-15')"><img src="../static/puzzle_resources/hammerhead/15.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('img-16')"><img src="../static/puzzle_resources/hammerhead/16.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('img-17')"><img src="../static/puzzle_resources/hammerhead/17.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('img-18')"><img src="../static/puzzle_resources/hammerhead/18.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('vid-0')"><img src="../static/puzzle_resources/hammerhead/thumbs/0.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('vid-1')"><img src="../static/puzzle_resources/hammerhead/thumbs/1.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('vid-2')"><img src="../static/puzzle_resources/hammerhead/thumbs/2.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('vid-3')"><img src="../static/puzzle_resources/hammerhead/thumbs/3.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('vid-4')"><img src="../static/puzzle_resources/hammerhead/thumbs/4.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('vid-5')"><img src="../static/puzzle_resources/hammerhead/thumbs/5.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('vid-6')"><img src="../static/puzzle_resources/hammerhead/thumbs/6.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('vid-7')"><img src="../static/puzzle_resources/hammerhead/thumbs/7.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('vid-8')"><img src="../static/puzzle_resources/hammerhead/thumbs/8.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('vid-9')"><img src="../static/puzzle_resources/hammerhead/thumbs/9.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('vid-10')"><img src="../static/puzzle_resources/hammerhead/thumbs/10.webp"></div><div class="instaclam-content-thumb" onclick="toPosts('vid-11')"><img src="../static/puzzle_resources/hammerhead/thumbs/11.webp"></div></div></div><div class="instaclam-posts-page instaclam-page"><div class="posts-header-bar"><span class="material-symbols-outlined action-icon" onclick="toMain()">arrow_back</span><span class="header">Posts</span></div><div class="posts-spacer"></div><div class="image-post" id="img-0"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><img class="post-body" src="../static/puzzle_resources/hammerhead/0.webp"><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="post-comments"><p><span class="username">hammer.gram</span>
+          This bird made such a cute sound!
+        </p></div><div class="image-post" id="img-1"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><img class="post-body" src="../static/puzzle_resources/hammerhead/1.webp"><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="post-comments"><p><span class="username">hammer.gram</span>
+          Today I learned about a really cool number, but I think I spelled it wrong.
+        </p></div><div class="image-post" id="img-2"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><img class="post-body" src="../static/puzzle_resources/hammerhead/2.webp"><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="post-comments"><p><span class="username">hammer.gram</span>
+          This pie is so good! What’s in it?
+        </p></div><div class="image-post" id="img-3"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><img class="post-body" src="../static/puzzle_resources/hammerhead/3.webp"><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="post-comments"><p><span class="username">hammer.gram</span>
+          Just passed by this choir. I think the lyrics were about a patriotic uncle, or maybe director Raimi.
+        </p></div><div class="image-post" id="img-4"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><img class="post-body" src="../static/puzzle_resources/hammerhead/4.webp"><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="post-comments"><p><span class="username">hammer.gram</span>
+          This stuff is like, 10⁻⁶ on the Mohs scale.
+        </p></div><div class="image-post" id="img-5"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><img class="post-body" src="../static/puzzle_resources/hammerhead/5.webp"><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="image-post" id="img-6"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><img class="post-body" src="../static/puzzle_resources/hammerhead/6.webp"><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="image-post" id="img-7"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><img class="post-body" src="../static/puzzle_resources/hammerhead/7.webp"><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="image-post" id="img-8"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><img class="post-body" src="../static/puzzle_resources/hammerhead/8.webp"><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="image-post" id="img-9"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><img class="post-body" src="../static/puzzle_resources/hammerhead/9.webp"><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="image-post" id="img-10"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><img class="post-body" src="../static/puzzle_resources/hammerhead/10.webp"><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="image-post" id="img-11"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><img class="post-body" src="../static/puzzle_resources/hammerhead/11.webp"><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="image-post" id="img-12"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><img class="post-body" src="../static/puzzle_resources/hammerhead/12.webp"><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="image-post" id="img-13"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><img class="post-body" src="../static/puzzle_resources/hammerhead/13.webp"><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="image-post" id="img-14"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><img class="post-body" src="../static/puzzle_resources/hammerhead/14.webp"><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="image-post" id="img-15"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><img class="post-body" src="../static/puzzle_resources/hammerhead/15.webp"><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="image-post" id="img-16"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><img class="post-body" src="../static/puzzle_resources/hammerhead/16.webp"><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="image-post" id="img-17"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><img class="post-body" src="../static/puzzle_resources/hammerhead/17.webp"><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="image-post" id="img-18"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><img class="post-body" src="../static/puzzle_resources/hammerhead/18.webp"><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="post-comments"><p><span class="username">hammer.gram</span>
+          Swimming season is approaching, and that means it’s time to review some important guidelines! (1) Humans always hang out in an area that perfectly fits them. (2) Humans will let you know when they’re ready to be eaten. (3) Follow standard <a href="https://puzz.link/rules.html?haisu" target="_blank">Haisu rules</a>.
+        </p></div><div class="video-post" id="vid-0"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><video class="instaclam-vid" loop muted onclick="togglePlay(0)"><source src="../static/puzzle_resources/hammerhead/0.mp4" type="video/mp4"></video><div class="mute-container"><span class="material-symbols-outlined toggle-mute" onclick="toggleAudio(0)">volume_off</span></div><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="video-post" id="vid-1"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><video class="instaclam-vid" loop muted onclick="togglePlay(1)"><source src="../static/puzzle_resources/hammerhead/1.mp4" type="video/mp4"></video><div class="mute-container"><span class="material-symbols-outlined toggle-mute" onclick="toggleAudio(1)">volume_off</span></div><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="video-post" id="vid-2"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><video class="instaclam-vid" loop muted onclick="togglePlay(2)"><source src="../static/puzzle_resources/hammerhead/2.mp4" type="video/mp4"></video><div class="mute-container"><span class="material-symbols-outlined toggle-mute" onclick="toggleAudio(2)">volume_off</span></div><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="video-post" id="vid-3"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><video class="instaclam-vid" loop muted onclick="togglePlay(3)"><source src="../static/puzzle_resources/hammerhead/3.mp4" type="video/mp4"></video><div class="mute-container"><span class="material-symbols-outlined toggle-mute" onclick="toggleAudio(3)">volume_off</span></div><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="video-post" id="vid-4"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><video class="instaclam-vid" loop muted onclick="togglePlay(4)"><source src="../static/puzzle_resources/hammerhead/4.mp4" type="video/mp4"></video><div class="mute-container"><span class="material-symbols-outlined toggle-mute" onclick="toggleAudio(4)">volume_off</span></div><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="video-post" id="vid-5"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><video class="instaclam-vid" loop muted onclick="togglePlay(5)"><source src="../static/puzzle_resources/hammerhead/5.mp4" type="video/mp4"></video><div class="mute-container"><span class="material-symbols-outlined toggle-mute" onclick="toggleAudio(5)">volume_off</span></div><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="video-post" id="vid-6"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><video class="instaclam-vid" loop muted onclick="togglePlay(6)"><source src="../static/puzzle_resources/hammerhead/6.mp4" type="video/mp4"></video><div class="mute-container"><span class="material-symbols-outlined toggle-mute" onclick="toggleAudio(6)">volume_off</span></div><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="video-post" id="vid-7"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><video class="instaclam-vid" loop muted onclick="togglePlay(7)"><source src="../static/puzzle_resources/hammerhead/7.mp4" type="video/mp4"></video><div class="mute-container"><span class="material-symbols-outlined toggle-mute" onclick="toggleAudio(7)">volume_off</span></div><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="video-post" id="vid-8"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><video class="instaclam-vid" loop muted onclick="togglePlay(8)"><source src="../static/puzzle_resources/hammerhead/8.mp4" type="video/mp4"></video><div class="mute-container"><span class="material-symbols-outlined toggle-mute" onclick="toggleAudio(8)">volume_off</span></div><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="video-post" id="vid-9"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><video class="instaclam-vid" loop muted onclick="togglePlay(9)"><source src="../static/puzzle_resources/hammerhead/9.mp4" type="video/mp4"></video><div class="mute-container"><span class="material-symbols-outlined toggle-mute" onclick="toggleAudio(9)">volume_off</span></div><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="video-post" id="vid-10"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><video class="instaclam-vid" loop muted onclick="togglePlay(10)"><source src="../static/puzzle_resources/hammerhead/10.mp4" type="video/mp4"></video><div class="mute-container"><span class="material-symbols-outlined toggle-mute" onclick="toggleAudio(10)">volume_off</span></div><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div><div class="video-post" id="vid-11"><div class="post-header"><div class="profile-pic"></div><span class="username">hammer.gram</span><span class="material-symbols-outlined">more_vert</span></div><video class="instaclam-vid" loop muted onclick="togglePlay(11)"><source src="../static/puzzle_resources/hammerhead/11.mp4" type="video/mp4"></video><div class="mute-container"><span class="material-symbols-outlined toggle-mute" onclick="toggleAudio(11)">volume_off</span></div><div class="post-footer"><span class="material-symbols-outlined action-icon">favorite</span><span class="material-symbols-outlined action-icon">mode_comment</span><span class="material-symbols-outlined action-icon">send</span><span class="material-symbols-outlined action-icon">bookmark</span></div></div></div></div><div class="instaclam-footer"><span class="material-symbols-outlined action-icon">home</span><span class="material-symbols-outlined action-icon">search</span><span class="material-symbols-outlined action-icon">add_box</span><span class="material-symbols-outlined action-icon">movie</span><span class="material-symbols-outlined action-icon">account_circle</span></div></div>
+<div class="clipboard-container copy-only"><table><tr><td>This bird made such a cute sound!</td><td><img src="../static/puzzle_resources/hammerhead/emoji-1-heart.webp"/></td><td><img src="../static/puzzle_resources/hammerhead/emoji-1-smile.webp"/></td><td><img src="../static/puzzle_resources/hammerhead/emoji-1-smile.webp"/></td><td><img src="../static/puzzle_resources/hammerhead/emoji-1-smile.webp"/></td><td><img src="../static/puzzle_resources/hammerhead/emoji-1-smile.webp"/></td></tr><tr><td>Today I learned about a really cool number, but I think I spelled it wrong.</td><td><img src="../static/puzzle_resources/hammerhead/emoji-2-smile.webp"/></td><td><img src="../static/puzzle_resources/hammerhead/emoji-2-heart.webp"/></td><td><img src="../static/puzzle_resources/hammerhead/emoji-2-smile.webp"/></td><td><img src="../static/puzzle_resources/hammerhead/emoji-2-smile.webp"/></td><td><img src="../static/puzzle_resources/hammerhead/emoji-2-smile.webp"/></td></tr><tr><td>This pie is so good! What&rsquo;s in it?</td><td><img src="../static/puzzle_resources/hammerhead/emoji-3-smile.webp"/></td><td><img src="../static/puzzle_resources/hammerhead/emoji-3-smile.webp"/></td><td><img src="../static/puzzle_resources/hammerhead/emoji-3-heart.webp"/></td><td><img src="../static/puzzle_resources/hammerhead/emoji-3-smile.webp"/></td><td><img src="../static/puzzle_resources/hammerhead/emoji-3-smile.webp"/></td></tr><tr><td>Just passed by this choir. I think the lyrics were about a patriotic uncle, or maybe director Raimi.</td><td><img src="../static/puzzle_resources/hammerhead/emoji-4-smile.webp"/></td><td><img src="../static/puzzle_resources/hammerhead/emoji-4-smile.webp"/></td><td><img src="../static/puzzle_resources/hammerhead/emoji-4-smile.webp"/></td><td><img src="../static/puzzle_resources/hammerhead/emoji-4-heart.webp"/></td><td><img src="../static/puzzle_resources/hammerhead/emoji-4-smile.webp"/></td></tr><tr><td>This stuff is like, 10⁻⁶ on the Mohs scale.</td><td><img src="../static/puzzle_resources/hammerhead/emoji-5-smile.webp"/></td><td><img src="../static/puzzle_resources/hammerhead/emoji-5-smile.webp"/></td><td><img src="../static/puzzle_resources/hammerhead/emoji-5-smile.webp"/></td><td><img src="../static/puzzle_resources/hammerhead/emoji-5-smile.webp"/></td><td><img src="../static/puzzle_resources/hammerhead/emoji-5-heart.webp"/></td></tr><tr><td>Imagine how good your life would be if you had a 695yo tub by your side. now replace A with O</td></tr><tr><td>Imagine how good your life would be if you had a 60yo Ichabod rival by your side. now replace B with F</td></tr><tr><td>Imagine how good your life would be if you had a 20yo African country by your side. now replace D with R</td></tr><tr><td>Imagine how good your life would be if you had a 38yo informant by your side. now replace K with D</td></tr><tr><td>Imagine how good your life would be if you had a 41yo Mustang maker by your side. now replace F with W</td></tr><tr><td>Imagine how good your life would be if you had a 12yo programmer&rsquo;s whole numbers by your side. now replace S with O</td></tr><tr><td>Imagine how good your life would be if you had a 877yo Shakespearean king by your side. now replace L with Y</td></tr><tr><td>Imagine how good your life would be if you had a 884yo jet speed unit by your side. now replace M with E</td></tr><tr><td>Imagine how good your life would be if you had a 89yo Brazilian currency by your side. now replace L with D</td></tr><tr><td>Imagine how good your life would be if you had a 767yo price-cutting event by your side. now replace L with M</td></tr><tr><td>Imagine how good your life would be if you had a 45yo glass of liquor by your side. now replace H with P</td></tr><tr><td>Imagine how good your life would be if you had a 163yo adolescent by your side. now replace E with H</td></tr><tr><td>Imagine how good your life would be if you had a 730yo Genie&rsquo;s command by your side. now replace S with T</td></tr><tr><td style="background-color: #c3f3ff; border-left: 3px solid navy; border-top: 3px solid navy">S</td><td style="background-color: #c3f3ff; border-left: 3px solid navy; border-top: 3px solid navy"></td><td style="background-color: #c3f3ff; border-top: 3px solid navy"></td><td style="background-color: #ffe599; border-left: 3px solid navy; border-top: 3px solid navy"></td><td style="background-color: #c3f3ff; border-top: 3px solid navy"></td><td style="background-color: #c3f3ff; border-left: 3px solid navy; border-top: 3px solid navy"></td><td style="background-color: #c3f3ff; border-left: 3px solid navy; border-top: 3px solid navy"></td><td style="background-color: #c3f3ff; border-top: 3px solid navy; border-right: 3px solid navy"></td></tr><tr><td style="background-color: #c3f3ff; border-left: 3px solid navy; border-top: 3px solid navy"></td><td style="background-color: #c3f3ff"></td><td style="background-color: #c3f3ff; border-left: 3px solid navy; border-top: 3px solid navy"></td><td style="background-color: #c3f3ff"></td><td style="background-color: #c3f3ff">🏊</td><td style="background-color: #c3f3ff; border-left: 3px solid navy"></td><td style="background-color: #c3f3ff; border-top: 3px solid navy"></td><td style="background-color: #c3f3ff; border-left: 3px solid navy; border-right: 3px solid navy"></td></tr><tr><td style="background-color: #ffe599; border-left: 3px solid navy; border-top: 3px solid navy"></td><td style="background-color: #c3f3ff; border-left: 3px solid navy"></td><td style="background-color: #c3f3ff; border-left: 3px solid navy; border-top: 3px solid navy">🏊</td><td style="background-color: #c3f3ff; border-top: 3px solid navy"></td><td style="background-color: #c3f3ff; border-top: 3px solid navy"></td><td style="background-color: #c3f3ff"></td><td style="background-color: #c3f3ff"></td><td style="background-color: #c3f3ff; border-left: 3px solid navy; border-right: 3px solid navy">🏊</td></tr><tr><td style="background-color: #c3f3ff; border-left: 3px solid navy"></td><td style="background-color: #c3f3ff; border-left: 3px solid navy">🏊</td><td style="background-color: #c3f3ff; border-top: 3px solid navy"></td><td style="background-color: #c3f3ff; border-left: 3px solid navy"></td><td style="background-color: #c3f3ff"></td><td style="background-color: #c3f3ff"></td><td style="background-color: #ffe599"></td><td style="background-color: #c3f3ff; border-left: 3px solid navy; border-right: 3px solid navy"></td></tr><tr><td style="background-color: #c3f3ff; border-left: 3px solid navy">🏊</td><td style="background-color: #c3f3ff; border-top: 3px solid navy"></td><td style="background-color: #c3f3ff; border-left: 3px solid navy"></td><td style="background-color: #c3f3ff; border-top: 3px solid navy"></td><td style="background-color: #c3f3ff; border-top: 3px solid navy"></td><td style="background-color: #c3f3ff; border-left: 3px solid navy"></td><td style="background-color: #c3f3ff"></td><td style="background-color: #c3f3ff; border-left: 3px solid navy; border-right: 3px solid navy"></td></tr><tr><td style="background-color: #c3f3ff; border-left: 3px solid navy"></td><td style="background-color: #c3f3ff"></td><td style="background-color: #c3f3ff; border-left: 3px solid navy; border-top: 3px solid navy"></td><td style="background-color: #c3f3ff; border-top: 3px solid navy">🏊</td><td style="background-color: #c3f3ff; border-left: 3px solid navy"></td><td style="background-color: #ffe599; border-top: 3px solid navy"></td><td style="background-color: #c3f3ff; border-left: 3px solid navy"></td><td style="background-color: #c3f3ff; border-left: 3px solid navy; border-right: 3px solid navy"></td></tr><tr><td style="background-color: #c3f3ff; border-left: 3px solid navy; border-top: 3px solid navy"></td><td style="background-color: #c3f3ff; border-left: 3px solid navy; border-top: 3px solid navy"></td><td style="background-color: #ffe599"></td><td style="background-color: #c3f3ff"></td><td style="background-color: #c3f3ff; border-top: 3px solid navy"></td><td style="background-color: #c3f3ff; border-top: 3px solid navy"></td><td style="background-color: #c3f3ff; border-top: 3px solid navy"></td><td style="background-color: #c3f3ff; border-left: 3px solid navy; border-right: 3px solid navy"></td></tr><tr><td style="background-color: #c3f3ff; border-left: 3px solid navy"></td><td style="background-color: #c3f3ff; border-left: 3px solid navy"></td><td style="background-color: #c3f3ff"></td><td style="background-color: #c3f3ff"></td><td style="background-color: #c3f3ff"></td><td style="background-color: #c3f3ff"></td><td style="background-color: #c3f3ff; border-left: 3px solid navy; border-top: 3px solid navy"></td><td style="background-color: #ffe599; border-left: 3px solid navy; border-right: 3px solid navy"></td></tr><tr><td style="background-color: #c3f3ff; border-left: 3px solid navy; border-bottom: 3px solid navy"></td><td style="background-color: #ffe599; border-top: 3px solid navy; border-bottom: 3px solid navy"></td><td style="background-color: #c3f3ff; border-top: 3px solid navy; border-bottom: 3px solid navy"></td><td style="background-color: #c3f3ff; border-top: 3px solid navy; border-bottom: 3px solid navy"></td><td style="background-color: #c3f3ff; border-top: 3px solid navy; border-bottom: 3px solid navy"></td><td style="background-color: #c3f3ff; border-top: 3px solid navy; border-bottom: 3px solid navy"></td><td style="background-color: #c3f3ff; border-bottom: 3px solid navy">🏊</td><td style="background-color: #c3f3ff; border: 3px solid navy">G</td></tr><tr><td>Swimming season is approaching, and that means it&rsquo;s time to review some important guidelines:</td></tr><tr><td></td><td>Humans always hang out in an area that perfectly fits them.</td></tr><tr><td></td><td>Humans will let you know when they&rsquo;re ready to be eaten.</td></tr><tr><td></td><td>Follow <a href="https://puzz.link/rules.html?haisu">standard Haisu rules</a>.</td></tr><tr><td><a href="../static/puzzle_resources/hammerhead/0.mp4">Watch instructional video.</a></td></tr><tr><td><a href="../static/puzzle_resources/hammerhead/1.mp4">Watch instructional video.</a></td></tr><tr><td><a href="../static/puzzle_resources/hammerhead/2.mp4">Watch instructional video.</a></td></tr><tr><td><a href="../static/puzzle_resources/hammerhead/3.mp4">Watch instructional video.</a></td></tr><tr><td><a href="../static/puzzle_resources/hammerhead/4.mp4">Watch instructional video.</a></td></tr><tr><td><a href="../static/puzzle_resources/hammerhead/5.mp4">Watch instructional video.</a></td></tr><tr><td><a href="../static/puzzle_resources/hammerhead/6.mp4">Watch instructional video.</a></td></tr><tr><td><a href="../static/puzzle_resources/hammerhead/7.mp4">Watch instructional video.</a></td></tr><tr><td><a href="../static/puzzle_resources/hammerhead/8.mp4">Watch instructional video.</a></td></tr><tr><td><a href="../static/puzzle_resources/hammerhead/9.mp4">Watch instructional video.</a></td></tr><tr><td><a href="../static/puzzle_resources/hammerhead/10.mp4">Watch instructional video.</a></td></tr><tr><td><a href="../static/puzzle_resources/hammerhead/11.mp4">Watch instructional video.</a></td></tr></table></div>
+<script src="../static/puzzle_resources/hammerhead/hammerhead.js"></script>
+                
+            </div>
+            <div class="phone-nav-bar">
+                <span class="material-symbols-outlined nav-icon">arrow_back_ios</span>
+                <span class="material-symbols-outlined nav-icon">circle</span>
+                <span class="material-symbols-outlined nav-icon">menu</span>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

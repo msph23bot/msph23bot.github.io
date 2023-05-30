@@ -1,0 +1,545 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Locally Operating Globally Interconnected Computers</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+<a href="../round/computer-science.html" class="btn">Computer Science</a>
+
+
+
+
+
+<a href="../post-hunt-solve/cs-logic.html" class="btn">Call in an answer</a>
+
+
+<a href="../solution/cs-logic.html" class="btn solution-button">View solution</a>
+<a href="../stats/cs-logic.html" class="btn">Stats</a>
+
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<h1 class="puzzle-title">
+    Locally Operating Globally Interconnected Computers
+    
+</h1>
+
+<main class="puzzle-main clipboard-container">
+    
+
+    
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  .puzzle-main {
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  .puzzle-main .section-name {
+    font-weight: bold;
+    text-decoration-line: underline;
+    margin: 0px;
+  }
+
+  .puzzle-main .leftpad {
+    margin-left: 30px;
+  }
+
+  table.grid {
+    width: auto;
+  }
+
+  table.grid td {
+    background-clip: border-box;
+    min-width: 2em;
+    height: 2em;
+    border: none;
+    position: relative;
+    padding: 0px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  table.grid td span {
+    font-size: 1.5em;
+  }
+
+  .cs {
+    position: absolute;
+  }
+
+  a.cs span {
+    color: rgb(34, 34, 34);
+    font-weight: normal;
+    font-size: 1.75rem;
+    text-decoration: none;
+  }
+
+  table.grid td span.border-provider {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: lightcoral;
+    box-shadow: inset 50px 50px lightcoral;
+  }
+
+  /* In Chrome, this must go on a <div>, not a <table>, to work. */
+  /* In Firefox, this must go on a <table>, not a <div>, to work. */
+  /* tl;dr - Use it on both containing div and inner table. */
+  .no-break {
+    break-inside: avoid;
+  }
+
+  div.centerer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  td.red {
+    background-color: lightcoral;
+    box-shadow: inset 50px 50px lightcoral;
+  }
+
+  div.grid-image-container {
+    position: relative;
+    width: auto;
+    height: 510px;
+    object-fit: cover;
+  }
+
+  img.grid-image {
+    width: 816px;
+    height: 1056px;
+    clip-path: inset(0px 160px 540px 140px);
+  }
+
+  @media only print {
+    div.grid-image-container, div.centerer > table {
+      transform: scale(.8);
+    }
+  }
+</style>
+
+<p>puzzle LOGIC(input):</p>
+
+<p class="section-name">Construction:</p>
+<p class="leftpad">Write each word in the grid, one letter per space, starting at the triangles and proceeding in the 
+  indicated direction.</p>
+
+<div class="centerer">
+  <div class="grid-image-container">
+    <img class="grid-image"
+        src="../static/puzzle_resources/cs-logic/nikoji-grid.svg"
+        alt="A 9x9 grid. There are some arrows in the grid, and words written next to them outside of the grid. Counting rows and columns starting at (1, 1) in the top left: LIST(lover) is to the left of row 1, column 1, which contains a right-pointing arrow; EMPTY(frayed) is to the right of row 2, column 9, which contains a down-pointing arrow; input is to the left of row 5, column 1, which contains a right-pointing arrow; CLUES(born) is to the left of row 9, column 1. There are also some letters in the grid. A is written in row 3, column 3. B is written in row 3, column 7. C is written in row 8, column 6. A 2nd A is written in row 8, column 7. Some of the edges have the letter a written on them, with subscripts 1 to 11. Some of the cells have the letter b written in them, with subscripts 1 to 11. b1 is in row 1, column 3; b8 is in row 1, column 5; b6 is in row 2, column 4; b2 is in row 2, column 7; a10 is between row 2, column 5 and row 3 column 5; b7 is in row 3, column 6; a2 is between row 3, column 5 and row 4, column 5; b11 is in row 4, column 2; a5 is between row 4, column 4 and row 4, column 5; a3 is between row 4, column 3 and row 5, column 3; a1 is between row 4, column 5 and row 5, column 5; a11 is between row 5, column 5 and row 5, column 6; b9 is in row 5, column 8; a8 is between row 5, column 2 and row 6, column 2; a9 is between row 5, column 6 and row 6, column 6; b10 is in row 6, column 4; b3 is in row 6, column 5; b4 is in row 7, column 3; b5 is in row 7, column 6; a4 is between row 7, column 2 and row 8, column 2; a7 is between row 7, column 5 and row 8, column 5; a6 is between row 8, column 4 and row 8 column 5."/>
+    <a href="cs-list.html" class="cs no-copy" style="top: 15px; left: 10px">LIST(<span>lover</span>)</a>
+    <a href="cs-empty.html" class="cs no-copy" style="top: 72px; left: 655px">EMPTY(<span>frayed</span>)</a>
+    <span class="cs no-copy" style="top: 240px; left: 75px"><b><i>input</i></b></span>
+    <a href="cs-clues.html" class="cs no-copy" style="top: 463px; left: 10px">CLUES(<span>born</span>)</a>
+  </div>
+</div>
+  
+<div class="copy-only">
+  <table class="grid" style="font-size: 10pt">
+    <tr>
+      <td style="border: none; text-align: end; padding-right: 5px"><a href="cs-list.html">LIST(<span>lover</span>)</a></td>
+      <td style="border-top: 3px solid black; border-left: 3px solid black; color: gray">▶</td>
+      <td style="border-top: 3px solid black"></td>
+      <td style="border-top: 3px solid black; font-weight: bold"></td>
+      <td style="border-top: 3px solid black"></td>
+      <td style="border-top: 3px solid black; font-weight: bold"></td>
+      <td style="border-top: 3px solid black"></td>
+      <td style="border-top: 3px solid black"></td>
+      <td style="border-top: 3px solid black"></td>
+      <td style="border-top: 3px solid black; border-right: 3px solid black"></td>
+      <td style="border: none"></td>
+    </tr>
+    <tr>
+      <td style="border: none"></td>
+      <td style="border-left: 3px solid black"></td>
+      <td></td>
+      <td></td>
+      <td style="font-weight: bold"></td>
+      <td></td>
+      <td></td>
+      <td style="font-weight: bold"></td>
+      <td></td>
+      <td style="border-right: 3px solid black; color: gray">▼</td>
+      <td style="border: none; padding-left: 5px"><a href="cs-empty.html">EMPTY(<span>frayed</span>)</a></td>
+    </tr>
+    <tr>
+      <td style="border: none"></td>
+      <td style="border-left: 3px solid black"></td>
+      <td></td>
+      <td><span data-skip-inline-styles="true">A</span></td>
+      <td></td>
+      <td style="border-top: 1px dotted gray"></td>
+      <td style="font-weight: bold"></td>
+      <td><span data-skip-inline-styles="true">B</span></td>
+      <td></td>
+      <td style="border-right: 3px solid black"></td>
+      <td style="border: none"></td>
+    </tr>
+    <tr>
+      <td style="border: none"></td>
+      <td style="border-left: 3px solid black"></td>
+      <td style="font-weight: bold"></td>
+      <td></td>
+      <td></td>
+      <td style="border-left: 1px dotted gray; border-top: 1px dotted gray"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td style="border-right: 3px solid black"></td>
+      <td style="border: none"></td>
+    </tr>
+    <tr>
+      <td style="border: none; text-align: end; padding-right: 5px"><b><i>input</b></i></td>
+      <td style="border-left: 3px solid black; color: gray">▶</td>
+      <td></td>
+      <td style="border-top: 1px dotted gray"></td>
+      <td></td>
+      <td style="border-top: 1px dotted gray"></td>
+      <td style="border-left: 1px dotted gray"></td>
+      <td></td>
+      <td style="font-weight: bold"></td>
+      <td style="border-right: 3px solid black"></td>
+      <td style="border: none"></td>
+    </tr>
+    <tr>
+      <td style="border: none"></td>
+      <td style="border-left: 3px solid black"></td>
+      <td style="border-top: 1px dotted gray"></td>
+      <td></td>
+      <td style="font-weight: bold"></td>
+      <td style="font-weight: bold"></td>
+      <td style="border-top: 1px dotted gray"></td>
+      <td></td>
+      <td></td>
+      <td style="border-right: 3px solid black"></td>
+      <td style="border: none"></td>
+    </tr>
+    <tr>
+      <td style="border: none"></td>
+      <td style="border-left: 3px solid black"></td>
+      <td></td>
+      <td style="font-weight: bold"></td>
+      <td></td>
+      <td></td>
+      <td style="font-weight: bold"></td>
+      <td></td>
+      <td></td>
+      <td style="border-right: 3px solid black"></td>
+      <td style="border: none"></td>
+    </tr>
+    <tr>
+      <td style="border: none"></td>
+      <td style="border-left: 3px solid black"></td>
+      <td style="border-top: 1px dotted gray"></td>
+      <td></td>
+      <td></td>
+      <td style="border-left: 1px dotted gray; border-top: 1px dotted gray"></td>
+      <td><span data-skip-inline-styles="true">C</span></td>
+      <td><span data-skip-inline-styles="true">A</span></td>
+      <td></td>
+      <td style="border-right: 3px solid black"></td>
+      <td style="border: none"></td>
+    </tr>
+    <tr>
+      <td style="border: none; text-align: end; padding-right: 5px"><a href="cs-clues.html">CLUES(<span>born</span>)</a></td>
+      <td style="border-bottom: 3px solid black; border-left: 3px solid black; color: gray">▶</td>
+      <td style="border-bottom: 3px solid black"></td>
+      <td style="border-bottom: 3px solid black"></td>
+      <td style="border-bottom: 3px solid black"></td>
+      <td style="border-bottom: 3px solid black"></td>
+      <td style="border-bottom: 3px solid black"></td>
+      <td style="border-bottom: 3px solid black"></td>
+      <td style="border-bottom: 3px solid black"></td>
+      <td style="border-bottom: 3px solid black; border-right: 3px solid black"></td>
+      <td style="border: none"></td>
+    </tr>
+  </table>
+  <p>
+    The gray aᵢs and bᵢs in the original grid have been replaced with dotted lines and bold text. See original puzzle for 
+    specific values.
+  </p>
+</div>
+
+<p class="section-name">Deduction:</p>
+<div class="leftpad">
+  <p>Ignore the gray aᵢs and bᵢs for now.</p>
+  <p>Solve as a <a href="https://puzz.link/p?nikoji_edit/9/9/z1i2zzi31q">NIKOJI</a>:</p>
+  <ul>
+    <li>Divide the grid into regions along gridlines.</li>
+    <li>Every region must contain exactly one letter.</li>
+    <li>Regions with the same letter must have the same shape and orientation, with the letter in the same relative position.</li>
+    <li>Regions with different letters may not have the same shape, even with rotation and/or reflection.</li>
+  </ul>
+</div>
+
+<div class="no-break centerer">
+  <table class="no-break grid">
+    <tr>
+      <td style="border-top: 3px solid black; border-left: 3px solid black"><span data-skip-inline-styles="true">H</span></td>
+      <td style="border-top: 3px solid black"><span data-skip-inline-styles="true">E</span></td>
+      <td style="border-top: 3px solid black"></td>
+      <td style="border-top: 3px solid black"></td>
+      <td style="border-top: 3px solid black; border-right: 3px solid black"><span data-skip-inline-styles="true">O</span></td>
+      <td style="border: none; min-width: 5px; width: 5px; max-width: 5px"></td>
+      <td style="border-top: 3px solid black; border-left: 3px solid black"><span data-skip-inline-styles="true">H</span></td>
+      <td style="border-top: 3px solid black; border-left: 3px solid black"><span data-skip-inline-styles="true">E</span></td>
+      <td style="border-top: 3px solid black"></td>
+      <td class="red" style="border-top: 3px solid black; border-left: 3px solid black"><span class="border-provider" style="border-right: 1px dashed gray"></span></td>
+      <td class="red" style="border-top: 3px solid black; border-right: 3px solid black"><span data-skip-inline-styles="true">O</span></td>
+      <td style="border: none; min-width: 5px; width: 5px; max-width: 5px"></td>
+      <td style="border-top: 3px solid black; border-left: 3px solid black"><span data-skip-inline-styles="true">H</span></td>
+      <td style="border-left: 3px solid black; border-top: 3px solid black"><span data-skip-inline-styles="true">E</span></td>
+      <td style="border-top: 3px solid black"></td>
+      <td style="border-top: 3px solid black"></td>
+      <td style="border-left: 3px solid black; border-top: 3px solid black; border-right: 3px solid black"><span data-skip-inline-styles="true">O</span></td>
+      <td style="border: none; min-width: 5px; width: 5px; max-width: 5px"></td>
+      <td style="border-top: 3px solid black; border-left: 3px solid black"><span data-skip-inline-styles="true">H</span></td>
+      <td style="border-left: 3px solid black; border-top: 3px solid black"><span data-skip-inline-styles="true">E</span></td>
+      <td style="border-top: 3px solid black"></td>
+      <td style="border-left: 3px solid black; border-top: 3px solid black"></td>
+      <td style="border-top: 3px solid black; border-right: 3px solid black"><span data-skip-inline-styles="true">O</span></td>
+    </tr>
+    <tr>
+      <td style="border-left: 3px solid black"></td>
+      <td></td>
+      <td><span data-skip-inline-styles="true">L</span></td>
+      <td><span data-skip-inline-styles="true">L</span></td>
+      <td style="border-right: 3px solid black"></td>
+      <td style="border: none; min-width: 5px; width: 5px; max-width: 5px"></td>
+      <td style="border-left: 3px solid black"></td>
+      <td style="border-left: 3px solid black"></td>
+      <td style="border-left: 3px solid black; border-top: 3px solid black"><span data-skip-inline-styles="true">L</span></td>
+      <td style="border-left: 3px solid black; border-top: 3px solid black"><span data-skip-inline-styles="true">L</span></td>
+      <td style="border-left: 3px solid black; border-top: 3px solid black; border-right: 3px solid black"></td>
+      <td style="border: none; min-width: 5px; width: 5px; max-width: 5px"></td>
+      <td style="border-left: 3px solid black"></td>
+      <td style="border-top: 3px solid black"></td>
+      <td style="border-left: 3px solid black; border-top: 3px solid black"><span data-skip-inline-styles="true">L</span></td>
+      <td style="border-left: 3px solid black; border-top: 3px solid black"><span data-skip-inline-styles="true">L</span></td>
+      <td style="border-left: 3px solid black; border-right: 3px solid black"></td>
+      <td style="border: none; min-width: 5px; width: 5px; max-width: 5px"></td>
+      <td style="border-left: 3px solid black"></td>
+      <td style="border-left: 3px solid black"></td>
+      <td style="border-left: 3px solid black; border-top: 3px solid black"><span data-skip-inline-styles="true">L</span></td>
+      <td style="border-left: 3px solid black; border-top: 3px solid black"><span data-skip-inline-styles="true">L</span></td>
+      <td style="border-left: 3px solid black; border-top: 3px solid black; border-right: 3px solid black"></td>
+    </tr>
+    <tr>
+      <td style="border-left: 3px solid black"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td style="border-right: 3px solid black"></td>
+      <td style="border: none; min-width: 5px; width: 5px; max-width: 5px"></td>
+      <td style="border-left: 3px solid black"></td>
+      <td class="red" style="border-left: 3px solid black; border-top: 3px solid black"><span class="border-provider" style="border-top: 1px solid black; border-bottom: 1px dashed gray"></span></td>
+      <td style="border-left: 3px solid black; border-top: 3px solid black"></td>
+      <td style="border-top: 3px solid black"></td>
+      <td style="border-left: 3px solid black; border-right: 3px solid black"></td>
+      <td style="border: none; min-width: 5px; width: 5px; max-width: 5px"></td>
+      <td class="red" style="border-left: 3px solid black; border-top: 3px solid black"><span class="border-provider" style="border-top: 1px solid black; border-right: 1px dashed gray; border-bottom: 1px dashed gray"</td>
+      <td class="red" style="border-top: 3px solid black"></td>
+      <td style="border-left: 3px solid black; border-top: 3px solid black"></td>
+      <td class="red" style="border-left: 3px solid black; border-top: 3px solid black"><span class="border-provider" style="border-right: 1px dashed gray"></span></td>
+      <td class="red" style="border-top: 3px solid black; border-right: 3px solid black"><span class="border-provider" style="border-top: 1px solid black; border-bottom: 1px dashed gray"></span></td>
+      <td style="border: none; min-width: 5px; width: 5px; max-width: 5px"></td>
+      <td style="border-left: 3px solid black"></td>
+      <td style="border-top: 3px solid black"></td>
+      <td style="border-left: 3px solid black; border-top: 3px solid black"></td>
+      <td style="border-top: 3px solid black"></td>
+      <td style="border-left: 3px solid black; border-right: 3px solid black"></td>
+    </tr>
+    <tr>
+      <td style="border-left: 3px solid black"></td>
+      <td><span data-skip-inline-styles="true">O</span></td>
+      <td><span data-skip-inline-styles="true">R</span></td>
+      <td></td>
+      <td style="border-right: 3px solid black"></td>
+      <td style="border: none; min-width: 5px; width: 5px; max-width: 5px"></td>
+      <td style="border-left: 3px solid black; border-top: 3px solid black"></td>
+      <td class="red" style="border-left: 3px solid black"><span data-skip-inline-styles="true">O</span></td>
+      <td style="border-left: 3px solid black"><span data-skip-inline-styles="true">R</span></td>
+      <td></td>
+      <td style="border-left: 3px solid black; border-right: 3px solid black"></td>
+      <td style="border: none; min-width: 5px; width: 5px; max-width: 5px"></td>
+      <td class="red" style="border-left: 3px solid black"><span class="border-provider" style="border-top: 1px dashed gray; border-bottom: 1px dashed gray"></span></td>
+      <td style="border-left: 3px solid black; border-top: 3px solid black"><span data-skip-inline-styles="true">O</span></td>
+      <td style="border-left: 3px solid black"><span data-skip-inline-styles="true">R</span></td>
+      <td style="border-top: 3px solid black"></td>
+      <td class="red" style="border-left: 3px solid black; border-right: 3px solid black"><span class="border-provider" style="border-top: 1px dashed gray; border-bottom: 1px dashed gray"></span></td>
+      <td style="border: none; min-width: 5px; width: 5px; max-width: 5px"></td>
+      <td style="border-left: 3px solid black; border-top: 3px solid black;"></td>
+      <td style="border-top: 3px solid black"><span data-skip-inline-styles="true">O</span></td>
+      <td style="border-left: 3px solid black"><span data-skip-inline-styles="true">R</span></td>
+      <td></td>
+      <td style="border-left: 3px solid black; border-right: 3px solid black"></td>
+    </tr>
+    <tr>
+      <td style="border-bottom: 3px solid black; border-left: 3px solid black"><span data-skip-inline-styles="true">W</span></td>
+      <td style="border-bottom: 3px solid black"></td>
+      <td style="border-bottom: 3px solid black"></td>
+      <td style="border-bottom: 3px solid black"><span data-skip-inline-styles="true">L</span></td>
+      <td style="border-bottom: 3px solid black; border-right: 3px solid black"><span data-skip-inline-styles="true">D</span></td>
+      <td style="border: none; min-width: 5px; width: 5px; max-width: 5px"></td>
+      <td style="border-bottom: 3px solid black; border-left: 3px solid black"><span data-skip-inline-styles="true">W</span></td>
+      <td style="border-top: 3px solid black; border-bottom: 3px solid black"></td>
+      <td style="border-top: 3px solid black; border-bottom: 3px solid black"></td>
+      <td style="border-left: 3px solid black; border-top: 3px solid black; border-bottom: 3px solid black"><span data-skip-inline-styles="true">L</span></td>
+      <td style="border-left: 3px solid black; border-bottom: 3px solid black; border-right: 3px solid black"><span data-skip-inline-styles="true">D</span></td>
+      <td style="border: none; min-width: 5px; width: 5px; max-width: 5px"></td>
+      <td class="red" style="border-bottom: 3px solid black; border-left: 3px solid black"><span data-skip-inline-styles="true">W</span></td>
+      <td style="border-left: 3px solid black; border-bottom: 3px solid black"></td>
+      <td style="border-left: 3px solid black; border-bottom: 3px solid black"></td>
+      <td style="border-left: 3px solid black; border-top: 3px solid black; border-bottom: 3px solid black"><span data-skip-inline-styles="true">L</span></td>
+      <td class="red" style="border-left: 3px solid black; border-bottom: 3px solid black; border-right: 3px solid black"><span data-skip-inline-styles="true">D</span></td>
+      <td style="border: none; min-width: 5px; width: 5px; max-width: 5px"></td>
+      <td style="border-top: 3px solid black; border-bottom: 3px solid black; border-left: 3px solid black"><span data-skip-inline-styles="true">W</span></td>
+      <td style="border-top: 3px solid black; border-bottom: 3px solid black"></td>
+      <td style="border-top: 3px solid black; border-bottom: 3px solid black"></td>
+      <td style="border-left: 3px solid black; border-top: 3px solid black; border-bottom: 3px solid black"><span data-skip-inline-styles="true">L</span></td>
+      <td style="border-left: 3px solid black; border-bottom: 3px solid black; border-right: 3px solid black"><span data-skip-inline-styles="true">D</span></td>
+    </tr>
+    <tr>
+      <td style="border: none" colspan="5">Example</td>
+      <td style="border: none; min-width: 5px; width: 5px; max-width: 5px"></td>
+      <td style="border: none" colspan="5">Incorrect</td>
+      <td style="border: none; min-width: 5px; width: 5px; max-width: 5px"></td>
+      <td style="border: none" colspan="5">Incorrect</td>
+      <td style="border: none; min-width: 5px; width: 5px; max-width: 5px"></td>
+      <td style="border: none" colspan="5">Correct</td>
+    </tr>
+  </table>
+</div>
+
+<p class="section-name">Extraction:</p>
+<div class="leftpad">
+  <div>Let <b><i>output</i></b> be the empty string.</div>
+  <div>For each i from 1 to 11:</div>
+  <div class="leftpad">
+    If aᵢ is <u>not</u> a border between two regions:
+    <div class="leftpad">Append the letter from bᵢ&rsquo;s region to <b><i>output</i></b>.</div>
+  </div>
+</div>
+
+<button class="btn clipboard-button"></button>
+
+
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

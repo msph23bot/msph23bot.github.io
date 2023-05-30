@@ -1,0 +1,465 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Computer Science</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+    
+</head>
+<body>
+    
+<style>
+@media screen {
+    body {
+        background-color: black;
+        overflow-x: hidden;
+    }
+
+    .cs-background-container {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+    .cs-img {
+        position: fixed;
+        width: 100%;
+    }
+
+    .puzzles-list-container {
+        background: #0e0e0eee;
+        padding: 1em;
+        border-radius: 1em;
+        box-shadow: 0 0 1em white;
+        margin-bottom: 2em;
+    }
+
+    .content h1, .content h3  {
+        display: none;
+    }
+
+    .puzzles-list a, .puzzles-list h3, .puzzles-answer {
+        color: #ddd;
+        border-color: #ccc;
+    }
+
+    .puzzles-answer > :first-child {
+        border-color: #bbb;
+    }
+
+    .puzzles-list a:hover {
+        color: var(--link-hover-color);
+    }
+
+    .puzzle-row {
+        color: #ddd;
+    }
+
+    .puzzles-list .puzzles-new {
+        background-color: #ccc;
+        color: #111;
+    }
+
+    .puzzles-list .puzzles-new:hover {
+        color: black;
+        background-color: var(--btn-hover-color);
+    }
+
+    .terminal {
+        background: #111e;
+        border-radius: 1em;
+        border: 0.5rem solid white;
+        color: white;
+        font-family: monospace;
+        font-size: 0.9em;
+        line-height: 1.2em;
+        margin-bottom: 2em;
+        padding: 1em;
+        width: 100%;
+    }
+
+    .terminal a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .terminal pre {
+        margin: 0;
+    }
+
+    .terminal a:hover {
+        text-decoration: underline;
+    }
+
+    .terminal .uname {
+        color: #3264a8;
+        font-weight: 600;
+    }
+
+    .terminal .pwd {
+        color: red;
+    }
+
+    .terminal .dir {
+        color: #4e4;
+    }
+
+    .terminal .meta {
+        color: orangered;
+        font-weight: 600;
+    }
+}   
+</style>
+
+<div class="cs-background-container">
+    <img class="cs-img cs-base" src="../static/puzzle_resources/compsci/compsci_base.png" style="bottom: 0"></img>
+    <img class="cs-img cs-top" src="../static/puzzle_resources/compsci/compsci_top.png" style="top: 0"></img>
+</div>
+
+
+
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"></div>
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="../departments.html" class="btn">All departments</a>
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+
+<h1>Computer Science</h1>
+
+
+
+
+
+
+<div class="terminal">
+<pre>
++===============================================================+
+|                                                               |
+|    .d8888b.   .d8888b.   .d8888888b.  8888888b.  888     888  |
+|   d88P  Y88b d88P  Y88b d88P"   "Y88b 888   Y88b 888     888  |
+|   888    888 Y88b.      888  d8b  888 888    888 888     888  |
+|   888         "Y888b.   888  888  888 888   d88P 888     888  |
+|   888            "Y88b. 888  888bd88P 8888888P"  888     888  |
+|   888    888       "888 888  Y8888P"  888        888     888  |
+|   Y88b  d88P Y88b  d88P Y88b.     .d8 888        Y88b. .d88P  |
+|    "Y8888P"   "Y8888P"   "Y88888888P" 888         "Y88888P"   |
+|                                                               |
++====== PUZZLE UNIVERSITY DEPARTMENT OF COMPUTER SCIENCE =======+
+
+Last login: Tue May 09 11:30 PDT 2023 from 192.168.0.1 on pts/1
+Welcome to the Puzzle University Department of Computer Science!
+
+<span class="uname">AnonymousUser@puzzu</span>:<span class="pwd">~</span>$ pwd
+/depts/cmsc/users/AnonymousUser 
+
+<span class="uname">AnonymousUser@puzzu</span>:<span class="pwd">~</span>$ ls
+<span class="dir">puzzles/</span> README
+
+<span class="uname">AnonymousUser@puzzu</span>:<span class="pwd">~</span>$ cat README
+</pre>
+<div>
+    Nothing on this page is a puzzle. There are only links to actual puzzles below. This README is only here to help you understand the very non-standard concepts in this department.<br><br>
+
+    ### Inputs to Puzzles ###<br>
+    Each of the non-meta puzzles in this department take one word as input. This input word changes how the puzzle solves, and therefore instead of a puzzle having a single answer, a puzzle has a single answer for a particular input. When submitting answers you will need to select the input word and provide the appropriate output word (aka answer).<br><br>
+
+    ### Rate Limiting ###<br>
+    Guesses are per puzzle, not per input. So if you guess a lot quickly on an input of foo, then you'll be rate-limited for an input of bar as well.<br><br>
+
+    ### Function Calls ###<br>
+    Most of the puzzles involve "function calls" to other puzzles; these look like: CLUES(born). For the purposes of solving the puzzle, in this example, the function call should be replaced with the output of the CLUES puzzle when given an input of "born".<br><br>
+</div>
+<pre>
+<span class="uname">AnonymousUser@puzzu</span>:<span class="pwd">~</span>$ ls puzzles/
+<a href="../puzzle/cs-clues.html">CLUES.puzz</a>
+<a href="../puzzle/cs-empty.html">EMPTY.puzz</a>
+<a href="../puzzle/cs-list.html">LIST.puzz</a>
+<a href="../puzzle/cs-logic.html">LOGIC.puzz</a>
+<a class="meta hide-if-locked" data-puzzle-id="61" href="../puzzle/cs-meta.html">META.puzz</a>
+
+<span class="uname">AnonymousUser@puzzu</span>:<span class="pwd">~</span>$ █
+
+
+</pre>
+</div>
+
+
+
+
+<div class="puzzles-list-container">
+    <table class="puzzles-list">
+    
+<tbody class="puzzles-section">
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="42" id="cs-clues-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/cs-clues.html">
+                
+                
+                Crafting Linux User Error Strings
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>299</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/cs-clues.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="42">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="45" id="cs-empty-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/cs-empty.html">
+                
+                
+                Effective Mac Process Thread Yielding
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>484</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/cs-empty.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="45">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="43" id="cs-list-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/cs-list.html">
+                
+                
+                Log In Security Testing
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>308</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/cs-list.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="43">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="44" id="cs-logic-row">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <a href="../puzzle/cs-logic.html">
+                
+                
+                Locally Operating Globally Interconnected Computers
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>271</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/cs-logic.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="44">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+    
+    <tr class="puzzle-row hide-if-locked" data-puzzle-id="61" id="cs-meta-row">
+        <td>
+            
+        </td>
+        <td>
+            <a href="../puzzle/cs-meta.html">
+                
+                <div class="puzzles-new">meta</div>
+                
+                
+                Computer Science Meta
+            </a>
+            
+            <div class="puzzles-inner">
+
+                <b>64</b>&nbsp;solves
+            </div>
+            
+        </td>
+        <td>
+            
+            <a class="puzzles-new solution-button" href="../solution/cs-meta.html">Solution</a>
+            
+        </td>
+        
+        <td class="puzzles-answer">
+            <div class="display-answer" data-puzzle-id="61">&nbsp;</div>
+        </td>
+    </tr>
+
+    
+
+    
+    
+
+</tbody>
+
+    </table>
+</div>
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,1048 @@
+/** Global variable definitions. */
+
+html {
+    --page-bg-rgb: 242, 243, 243;
+    --white-color: white;
+    --neutral-color: #bbb;
+    --accent-color: rgb(var(--accent-rgb));
+    --accent-bg-color: rgba(var(--accent-rgb), 0.1);
+    --secondary-color: rgb(var(--secondary-accent-rgb));
+
+    --page-bg-color: rgb(var(--page-bg-rgb));
+    --sticky-bg-color: rgba(var(--page-bg-rgb), 0.9);
+    --heading-text-color: var(--accent-color);
+
+    --border-color: var(--accent-color);
+    --print-border-color: #111;
+
+    --link-text-color: var(--accent-color);
+    --link-hover-color: var(--accent-hover-color);
+
+    --toolbar-link-text-color: var(--white-color);
+    --toolbar-link-hover-color: #ccc;
+    --toolbar-menu-color: var(--secondary-color);
+
+    --btn-text-color: var(--white-color);
+    --btn-bg-color: var(--accent-color);
+    --btn-hover-color: var(--accent-hover-color);
+
+    --tray-text-color: var(--white-color);
+    --tray-bg-color: var(--accent-color);
+
+    --text-font: "myriad-pro";
+    --btn-font: "myriad-pro";
+    --input-font: monospace;
+    --answer-font: monospace;
+}
+
+/** 
+ * Global styles. Any styles defined here will apply at the highest priority, 
+ * regardless of screen size.
+ */
+
+body {
+    font-family: var(--text-font);
+    font-size: 1.75rem;
+    font-variant-ligatures: none;
+    line-height: 2.6rem;
+    overflow-wrap: break-word;
+    position: relative;
+}
+
+p {
+    margin-bottom: 1.8rem;
+}
+
+li {
+    list-style-position: outside;
+    margin-left: 1.5em;
+}
+
+ul > li {
+    list-style-type: "\2013  ";
+}
+
+textarea {
+    font-family: var(--input-font);
+    min-height: 24ch;
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+h1, h2 {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 4rem;
+    margin-top: 2.5rem;
+}
+
+main {
+    position: relative;
+}
+
+hr {
+    margin-bottom: 1.8rem;
+    margin-top: 1.8rem;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table.very-small {
+    font-size: 80%;
+}
+
+table.very-small td, table.very-small th {
+    padding: 0.4em;
+    line-height: 1.4;
+}
+
+code {
+    font-size: 80%;
+    max-width: 1000px;
+    overflow: scroll;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+a, .btn {
+    color: var(--link-text-color);
+}
+
+nav {
+    position: relative;
+}
+
+.btn, .shortcuts .btn {
+    border-radius: 0;
+    border: none;
+    display: inline-block;
+    font-family: var(--btn-font);
+    font-size: 1.8rem;
+    font-weight: normal;
+    height: 32px;
+    letter-spacing: 0;
+    line-height: 32px;
+    padding: 0 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+form .btn {
+    font-size: 3rem;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 24px;
+}
+
+input[type=text], input[type=password], input[type=email] {
+    border-radius: 0;
+    font-family: var(--input-font);
+    margin: 0.5rem 0;
+    width: 100%;
+}
+
+figcaption {
+    text-align: center;
+}
+
+footer {
+    font-size: 80%;
+    opacity: 0.5;
+    text-align: center;
+}
+
+.background-image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -5;
+}
+
+.hunt-icon {
+    vertical-align: bottom;
+}
+
+.btn .hunt-icon {
+    vertical-align: -5px;
+}
+
+.list-table {
+    max-width: 100%;
+    min-width: 100%;
+    table-layout: fixed;
+}
+
+.list-table td, .list-table th {
+    padding: 4px 8px;
+}
+
+.list-table td:first-child, .list-table th:first-child {
+    padding-left: 0;
+}
+
+.list-table td {
+    border-color: var(--border-color);
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.form-section {
+    margin: 4rem 0;
+}
+
+.form-row, .note {
+    background-color: var(--accent-bg-color);
+    border-left: 2px solid var(--border-color);
+    margin: 1rem 0 1rem;
+    padding: 1rem 1.8rem;
+    position: relative;
+}
+
+.form-desc label {
+    display: inline;
+}
+
+.form-row .delete-row {
+    font-size: 2.4rem;
+    position: absolute;
+    right: 1.8rem;
+    text-decoration: none;
+    top: 1rem;
+}
+
+.dynamic-form:only-of-type .delete-row {
+    display: none;
+}
+
+.info-row {
+    background-color: var(--white-color);
+    margin-bottom: 2.4rem;
+}
+
+.info-desc p:last-child {
+    margin-bottom: 0;
+}
+
+.no-break {
+    -webkit-column-break-inside: avoid; /* Chrome, Safari */
+    break-inside: avoid;                /* IE 11 */
+    display: table;                     /* Actually FF 20+ */
+    page-break-inside: avoid;           /* Theoretically FF 20+ */
+    width: 100%;
+}
+
+.submitted-text {
+    margin: 0;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.flavor {
+    font-style: italic;
+    margin-left: 22.5%;
+    margin-right: 22.5%;
+    text-align: center;
+}
+
+.errorlist {
+    background-color: var(--white-color);
+    border: 3px solid currentColor;
+    color: #b21;
+    list-style-type: none;
+    padding: 1rem;
+}
+
+.errorlist li {
+    list-style-type: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    text-indent: 0;
+}
+
+.solved-title-marker {
+    color: initial;
+    font-size: 50%;
+}
+
+.solved-title-answer {
+    color: #4a2;
+    font-family: var(--answer-font);
+}
+
+.stat-entry {
+    font-weight: bold;
+}
+
+.stat-value {
+    font-weight: normal;
+}
+
+.current-team {
+    font-weight: bold;
+}
+
+.meta-stats {
+    font-style: italic;
+}
+
+.puzzle-erratum {
+    color: #c32;
+    margin-bottom: 1rem;
+}
+
+/** Hint table global styles. */
+
+.hint-table {
+    width: 100%;
+}
+
+.hint-table th, .hint-table td {
+    border: none;
+    padding: 0 15px;
+}
+
+.hint-table tr:first-child th, .hint-table tr:first-child td, .hint-table td[colspan] {
+    padding-top: 12px;
+}
+
+.hint-table tr:last-child th, .hint-table tr:last-child td {
+    padding-bottom: 12px;
+}
+
+.hint-table button {
+    margin: 0;
+}
+
+.hint-table hr {
+    border-color: currentColor;
+    opacity: 0.25;
+}
+
+.hint-table .submitted-text, .hint-table textarea {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+}
+
+.hint-controls {
+    margin-bottom: 1.8rem;
+}
+
+.hint-controls > :last-child {
+    float: right;
+}
+
+.hint-controls form, .hint-controls input {
+    margin: 0;
+}
+
+/** Puzzle list global styles. */
+
+.puzzles-list {
+    font-size: 2.4rem;
+    width: 100%;
+}
+
+.puzzles-list a {
+    text-decoration: none;
+}
+
+.puzzles-list h1 {
+    text-align: left;
+    margin: 0;
+}
+
+.puzzles-list th {
+    border: none;
+}
+
+.puzzles-list tbody:not(:first-child) th {
+    padding-top: 2em;
+}
+
+.puzzles-list td {
+    border: none;
+    overflow-wrap: anywhere;
+    padding-left: 0;
+    padding-right: 0.5ch;
+    vertical-align: top;
+    word-break: break-word;
+}
+
+.puzzles-list td:first-child {
+    font-weight: bold;
+    text-align: right;
+    width: 3rem;
+}
+
+.puzzles-list td:nth-child(3) {
+    width: 0;
+    white-space: nowrap;
+}
+
+.puzzles-list td:last-child {
+    padding-right: 0;
+}
+
+.puzzles-answer {
+    width: 20ch;
+    max-width: 30vw;
+}
+
+.puzzles-answer > :first-child {
+    border-bottom: 2px solid var(--border-color);
+    font-family: var(--answer-font);
+    font-weight: bold;
+}
+
+.puzzles-new {
+    display: inline-block;
+    font-family: var(--btn-font);
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+    text-transform: uppercase;
+    vertical-align: top;
+}
+
+.puzzles-inner {
+    font-size: 1.8rem;
+}
+
+.puzzles-inner b {
+    font-size: 2.0rem;
+}
+
+/** Copy paste stylings. */
+
+.copy-only {
+    display: none;
+}
+
+.clipboard-button {
+    border-radius: 1em;
+    bottom: 1.5em;
+    cursor: pointer;
+    font-size: 1em;
+    height: 2em;
+    padding: 0 0.8em;
+    position: fixed !important;
+    right: 1.5em;
+}
+
+/** Team solve chart stylings. */
+
+.chart {
+    display: block;
+    margin-bottom: 2.4rem;
+    position: relative;
+    transform: scaleY(-1);
+    width: 100%;
+    z-index: -1;
+}
+
+.chart-area {
+    fill: var(--neutral-color);
+    opacity: 0.5;
+}
+
+.chart-line {
+    fill: none;
+    stroke-width: 0.25%;
+    stroke: var(--accent-color);
+}
+
+/** Puzzle dropdown stylings. */
+
+.menu-button-links button {
+  border: none;
+  font-weight: normal;
+  margin: 0;
+  text-transform: none;
+}
+
+.menu-button-links hr {
+  border: 1px solid var(--white-color);
+  margin: 1rem 0px;
+}
+
+.menu-button-links [role="menu"] {
+  background-color: var(--toolbar-menu-color);
+  display: none;
+  margin: 0px;
+  min-width: 220px;
+  opacity: 0%;
+  padding: 5px 15px;
+  position: absolute;
+  top: 2em;
+  transition: opacity 0.2s;
+  z-index: 800;
+}
+
+.menu-button-links [role="menuitem"] {
+  margin: 5px 0;
+  opacity: 100%;
+  padding: 0;
+  display: block;
+  z-index: 800;
+}
+
+.menu-button-links button svg.down {
+  padding: 0 10px;
+  fill: currentcolor;
+  stroke: currentcolor;
+}
+
+.menu-button-links button[aria-expanded="true"] svg.down {
+  transform: rotate(180deg);
+}
+
+/* focus styling */
+
+.menu-button-links button:hover,
+.menu-button-links button:focus,
+.menu-button-links button[aria-expanded="true"] {
+  color: var(--toolbar-link-hover-color);
+  border: none;
+}
+
+.menu-button-links button:focus {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.menu-button-links [role="menuitem"]:focus {
+  color: var(--toolbar-link-hover-color);
+}
+
+.hide-from-static {
+    display: none !important;
+}
+
+/** 
+ * Styles for general desktop window sizes. These styles may be altered for 
+ * different window sizes / print mode in the override sections below.
+ */
+@media screen {
+    html {
+        background-color: var(--page-bg-color);
+    }
+
+    main {
+        box-sizing: border-box;
+        display: table;
+        min-width: 100%;
+    }
+
+    body {/*
+        margin: 0 20px 60px;*/
+        /*max-width: 960px;
+        width: 80%;
+        width: 80vw;*/
+    }
+
+    h1, h2, h3, h4 {
+        color: var(--heading-text-color);
+    }
+
+    h1, h2 {
+        background-color: var(--accent-bg-color);
+        border-left: 3rem solid var(--border-color);
+        padding: 1.8rem;
+    }
+
+    h3, h4 {
+        border-bottom: 2px solid var(--border-color);
+        font-weight: normal;
+    }
+
+    a {
+        transition: color 0.3s;
+    }
+
+    a:hover,
+    a:focus {
+        color: var(--link-hover-color);
+    }
+
+    .header-content,
+    .content {
+        margin: 60px auto 0;
+        max-width: 960px;
+        position: relative;
+        width: 80%;
+        width: 80vw;
+    }
+
+    .puzzle-main {
+        background-color: var(--white-color);
+        padding: 20px 30px;
+    }
+
+    .puzzle-main h1, .puzzle-main h2, .puzzle-main h3, .puzzle-main h4 {
+        background: none;
+        border-left: none;
+        color: initial;
+        padding: 0;
+    }
+
+    .btn {
+        background-color: var(--btn-bg-color);
+        color: var(--btn-text-color);
+        transition: background-color 0.3s;
+    }
+
+    .btn:hover,
+    .btn:focus {
+        background-color: var(--btn-hover-color);
+        color: var(--btn-text-color);
+    }
+
+    .btn.danger {
+        filter: hue-rotate(180deg);
+    }
+
+    .btn:disabled, .btn:disabled:hover, .btn.btn-disabled {
+        background-color: var(--btn-bg-color);
+        cursor: not-allowed;
+        filter: grayscale(1);
+    }
+
+    .top-tabs {
+        align-items: center;
+        background-color: var(--accent-color);
+        display: flex;
+        justify-content: space-evenly;
+        line-height: 1;
+        margin: 0 0 1.5rem;
+        padding: 0 15%;
+        white-space: nowrap;
+    }
+
+    .top-tabs a, .top-tabs button {
+        align-items: center;
+        color: var(--toolbar-link-text-color);
+        display: inline-flex;
+        font-size: 1.8rem;
+        padding: 6px 0 10px;
+        position: relative;
+        text-decoration: none;
+    }
+
+    .top-tabs a:hover, .top-tabs button:hover {
+        color: var(--toolbar-link-hover-color);
+        transition: color 0.3s;
+    } 
+
+    .top-tabs .selected-tab {
+        font-weight: bold;
+    }
+
+    .top-left-actions {
+        float: left;
+    }
+
+    .top-right-actions {
+        float: right;
+        min-height: 32px;
+    }
+
+    .top-left-actions, .top-right-actions {
+        line-height: 32px;
+        margin: 0 20px 1.5rem;
+        word-spacing: 8px;
+    }
+
+    .top-left-actions > *, .top-right-actions > * {
+        word-spacing: initial;
+    }
+
+    .team-url-container {
+        align-items: center;
+        color: white;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .current-stat {
+        align-items: center;
+        color: #ddd;
+        display: flex;
+        gap: 2px;
+        margin-top: -4px;
+        text-decoration: none;
+        vertical-align: bottom;
+        white-space: nowrap;
+    }
+
+    .current-stat-label {
+        font-size: 2rem;
+        vertical-align: bottom;
+    }
+
+    .current-stat svg {
+        width: 24px;
+        height: 24px;
+        margin: 0;
+    }
+
+    .shortcuts {
+        background-color: white;
+        border: 2px solid var(--tray-bg-color);
+        display: none;
+        padding: 1rem 1rem 0;
+        position: absolute;
+        right: 60px;
+        top:  85px;
+        z-index: 800;
+    }
+
+    .shortcuts form {
+        margin: 0;
+    }
+
+    .shortcuts p {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        margin: 0 0 1rem;
+        width: 25rem;
+    }
+
+    .shortcuts .btn {
+        margin-bottom: 1rem;
+    }
+
+    #shortcuts {
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+    }
+
+    [for=shortcuts] {
+        cursor: pointer;
+        display: inline;
+    }
+
+    [for=shortcuts]:after {
+        content: "\25BC";
+    }
+
+    #puzzle-dropdown {
+        flex-direction: column;
+    }
+
+    #puzzle-dropdown a {
+        padding: 0;
+    }
+
+    .round-dropdown-value {
+        display: flex;
+        height: 1em;
+        width: 100%;
+    }
+
+    .round-dropdown-value.unknown {
+        cursor: default;
+    }
+
+    .round-dropdown-value .round-name {
+        flex-grow: 1;
+    }
+
+    .round-dropdown-value .status-icon {
+        font-size: 1em;
+        height: 1em;
+        padding: 0;
+    }
+
+    :checked ~ nav [for=shortcuts]:after {
+        content: "\25B2";
+    }
+
+    :checked ~ .shortcuts {
+        display: block;
+    }
+
+    time[title] {
+        cursor: help;
+        text-decoration: underline dotted;
+        text-underline-position: under;
+    }
+
+    .list-table th {
+        background-color: var(--sticky-bg-color);
+        border: none;
+        box-shadow: inset 0 -2px 0 0 var(--border-color);
+        position: sticky;
+        top: 0;
+    }
+
+    /** Styles for the info row on the index page. */
+    
+    .info-row {
+        display: flex;
+        filter: drop-shadow(0 0 5px #999);
+        padding: 30px;
+    }
+
+    .info-row > .info-block {
+        align-items: center;
+        display: flex;
+        flex-basis: 0;
+        flex-direction: column;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .info-row h4 {
+        border: none;
+        color: var(--accent-color);
+        font-family: 'myriad-pro-semi-condensed';
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 3rem;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .info-desc {
+        font-size: 1.8rem;
+        padding: 1rem 1.8rem;
+    }
+
+    /** Styles for story updates. */
+
+    .story-chunk {
+        margin: 0 auto 3rem;
+        max-width: 600px;
+    }
+
+    .story-chunk a {
+        text-decoration: none;
+    }
+
+    /** Additional styles for the "all puzzles" list. */
+    .puzzles-new {
+        background-color: var(--btn-bg-color);
+        color: var(--btn-text-color);
+        transition: background-color 0.3s;
+    }
+
+    .puzzles-new:hover, a:hover .puzzles-new {
+        background-color: var(--btn-hover-color);
+        color: var(--btn-text-color);
+    }
+
+    .spoiler.solved-title-answer {
+        display: inline-block;
+        min-width: 200px;
+        text-align: left;
+    }
+
+    .spoiler:not(:hover) {
+        background-color: currentColor;
+        color: inherit;
+    }
+}
+
+/** Styling overrides for mobile / half-width screens. */
+@media screen and (max-width: 960px) {
+    html {
+        font-size: calc((960px - 100vw) / 80 + 10px);
+    }
+
+    .header-content,
+    .content {
+        width: calc(480px + 30vw);
+    }
+
+    /** 
+     * Styles for the shortcut tray, which is only present in smaller width 
+     * screens. 
+     */
+    .tray {
+        display: flex;
+        justify-content: space-between;
+        left: 0;
+        margin: auto;
+        padding: 1.8rem calc(150vw - 1160px) 1rem;
+        position: fixed;
+        right: 0;
+        transform: translateY(calc(5px - 100%));
+        transition: transform .1s;
+        z-index: 900;
+    }
+
+    .tray:before {
+        background-color: var(--tray-bg-color);
+        bottom: 0;
+        color: var(--tray-text-color);
+        content: "This is not a puzzle.";
+        display: block;
+        left: 0;
+        padding-top: 90vh;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: -100vh;
+    }
+
+    .tray:after {
+        background-image: linear-gradient(var(--tray-bg-color), var(--tray-bg-color));
+        background-origin: content-box;
+        background-repeat: no-repeat;
+        background-size: 100% 48px;
+        color: var(--tray-text-color);
+        content: "\2630";
+        cursor: grab;
+        display: block;
+        font-size: 32px;
+        height: 64px;
+        left: 0;
+        line-height: 40px;
+        margin-top: -10px;
+        padding-top: 10px;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 100%;
+        z-index: -1;
+    }
+
+    .tray div {
+        display: flex;
+        flex-basis: 0;
+        flex-direction: column;
+        flex-grow: 1;
+        z-index: 0;
+    }
+
+    .tray .round-dropdown-value,
+    .tray .team-url-container {
+        flex-direction: row;
+    }
+
+    .top-tabs {
+        align-items: flex-start;
+        font-size: calc((960px - 100vw) / 16 + 20px);
+        justify-content: flex-start;
+        margin: 0;
+        padding: 0;
+    }
+
+    .top-tabs a, .top-tabs button {
+        z-index: -1;
+    }
+
+    .tray .menu-button-links {
+        flex-grow: 0;
+    }
+
+    #puzzle-dropdown {
+        margin-top: 12em;
+    }
+
+    .top-left-actions {
+        align-items: flex-end;
+    }
+
+    .top-left-actions a {
+        font-size: calc((960px - 100vw) * 3 / 80 + 18px);
+        height: auto;
+        line-height: 2;
+        margin-bottom: calc((960px - 100vw) * 3 / 40 + 12px);
+        text-align: right;
+    }
+
+    .top-right-actions {
+        float: none;
+        padding-top: 64px;
+        text-align: center;
+    }
+
+    .flavor {
+        margin-left: calc(100vw - 800px);
+        margin-right: calc(100vw - 800px);
+    }
+
+    .list-table th {
+        top: 4rem;
+    }
+
+    .info-row {
+        display:  block;
+    }
+}
+
+/** Styling overrides for REALLY narrow screens. */
+@media screen and (max-width: 800px) {
+    html {
+        font-size: 12px;
+    }
+
+    .tray {
+        padding: 1.8rem calc((100% - 90vw) / 2) 1rem;
+    }
+
+    .top-tabs {
+        font-size: 30px;
+    }
+
+    .top-left-actions a {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    .flavor {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/** Styling overrides for print mode. */
+@media print {
+    nav, .shortcuts, #shortcuts, .clipboard-button, .chart {
+        display: none;
+    }
+
+    h1.puzzle-title {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    footer {
+        display: none;
+    }
+
+    main {
+        border-top: 1px solid var(--print-border-color);
+    }
+
+    .btn {
+        border: 1px solid currentColor;
+    }
+
+    .story-chunk {
+        border-bottom: 1px solid var(--print-border-color);
+    }
+
+    .info-row {
+        display: flex;
+        gap: 4%;
+    }
+
+    .info-row > .info-block {
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+}

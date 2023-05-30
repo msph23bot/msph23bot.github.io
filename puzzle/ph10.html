@@ -1,0 +1,405 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>PHA: Water Beds</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+<a href="../round/placement-test.html" class="btn">Placement Test</a>
+
+
+
+
+
+<a href="../post-hunt-solve/ph10.html" class="btn">Call in an answer</a>
+
+
+<a href="../solution/ph10.html" class="btn solution-button">View solution</a>
+<a href="../stats/ph10.html" class="btn">Stats</a>
+
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<h1 class="puzzle-title">
+    PHA: Water Beds
+    
+</h1>
+
+<main class="puzzle-main clipboard-container">
+    
+
+    
+    <style>
+        #maingridtable {
+            user-select: none;
+        }
+
+        #maingridtable td {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            height: 30px;
+            width: 30px;
+            text-align: center;
+            border: 2px solid #dddddd;
+            padding: 0;
+        }
+
+        #maingridtable td.left-clue {
+            border-left-color: transparent;
+            border-top-color: transparent;
+            border-bottom-color: transparent;
+        }
+
+        #maingridtable td.top-clue {
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-top-color: transparent;
+        }
+
+        #maingridtable .show-pointer {
+            cursor: pointer;
+        }
+
+        #maingridtable .border-left {
+            border-left-color: black;
+        }
+
+        #maingridtable .border-right {
+            border-right-color: black;
+        }
+
+        #maingridtable .border-top {
+            border-top-color: black;
+        }
+
+        #maingridtable .border-bottom {
+            border-bottom-color: black;
+        }
+
+        #maingridtable .water {
+            background-color: lightcyan;
+        }
+
+        #maingridtable .nowater {
+            /* base64 encode of: <svg xmlns="http://www.w3.org/2000/svg" height="30" width="30"><path d="M0 0 L30 30 M0 30 L30 0" stroke="#777" stroke-width="1"/></svg> */
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzAiIHdpZHRoPSIzMCI+PHBhdGggZD0iTTAgMCBMMzAgMzAgTTAgMzAgTDMwIDAiIHN0cm9rZT0iIzc3NyIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+);
+            background-size: 80%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .content-div td div {
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .floating {
+            color: red;
+        }
+
+</style>
+<script>
+        var topclues = [8, 7, 2, 6, 6, 4, 3, 3, 5, 4, 4, 7, 6, 5, 5];
+        var leftclues = [3, 3, 6, 3, 4, 4, 2, 2, 3, 10, 12, 7, 4, 5, 7];
+        var borders =
+        [
+            "a2227a232337a36",
+            "8005e85eca7a5ed",
+            "805a4da5dceda5e",
+            "84e8035eec834b4",
+            "95c84a24ddce864",
+            "eb49480126dc95c",
+            "8696d85e84edb25",
+            "90687cb485cb6ce",
+            "e94da4ecda16cdc",
+            "87ce85c86ded834",
+            "ca5cda595b135ed",
+            "ccb125eeb333206",
+            "cda7cb4da337814",
+            "97cb1786cb6b5ed",
+            "b31333159793317"
+        ];
+
+        var letters =
+        [
+            "               ",
+            "   A  T     T H",
+            "  E  R UD  E C ",
+            "      A        ",
+            "FE      AL     ",
+            "   L   N  O WR ",
+            "  E T I    R  E",
+            "N        O     ",
+            " M O    R E  C ",
+            "     A   N C   ",
+            "  H E FKE E P W",
+            "   E A         ",
+            " T     R     U ",
+            "D   E       C A",
+            "  F   EDO W  N "
+        ];
+
+        var mousedown = false;
+        var currentCellType = null;
+        var shift = null;
+
+        function setCell(cell, celltype) {
+            cell.classList.remove("water");
+            cell.classList.remove("nowater");
+
+            if (celltype != null) {
+                cell.classList.add(celltype);
+            }
+
+            document.querySelectorAll(".content-div td div").forEach(div => {
+                var td = div.parentElement;
+
+                if (div) {
+                    div.classList.remove("floating");
+                    div.style.translate = null;
+
+                    if (td.classList.contains("water")) {
+                        var level = 0;
+                        var col = Array.prototype.indexOf.call(td.parentElement.children, td);
+                        var row = Array.prototype.indexOf.call(td.parentElement.parentElement.children, td.parentElement);
+
+                        var tdFloat = td;
+                        while (row > 0 && tdFloat.classList.contains("water") && !tdFloat.classList.contains("border-top")) {
+                            row--;
+                            tdFloat = document.querySelector(".content-div tr:nth-child(" + (row + 1) + ") td:nth-child(" + (col + 1) + ")");
+                            if (tdFloat.classList.contains("water")) {
+                                level++;
+                            }
+                        }
+
+                        if (level > 0) {
+                            div.classList.add("floating");
+                            div.style.translate = "0px " + (-level * 32) + "px";
+                        }
+                    }
+                }
+            });
+        }
+
+        function toggleClue(clue) {
+            if (clue.classList.contains("nowater")) {
+                clue.classList.remove("nowater");
+            } else {
+                clue.classList.add("nowater");
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var mainfragment = document.createDocumentFragment();
+            var trtop = document.createElement("tr");
+            var tdtl = document.createElement("td");
+            tdtl.classList.add("left-clue");
+            tdtl.classList.add("top-clue");
+            trtop.appendChild(tdtl);
+            for (var j = 0; j < topclues.length; j++) {
+                var td = document.createElement("td");
+                td.classList.add("border-bottom");
+                td.classList.add("top-clue");
+                td.classList.add("show-pointer");
+                td.innerText = topclues[j].toString();
+                td.onmousedown = function(e) { toggleClue(e.target); }
+                trtop.appendChild(td);
+            }
+            mainfragment.appendChild(trtop);
+
+            for (var i = 0; i < borders.length; i++) {
+                var tr = document.createElement("tr");
+                var tdleft = document.createElement("td");
+                tdleft.classList.add("border-right");
+                tdleft.classList.add("left-clue");
+                tdleft.classList.add("show-pointer");
+                tdleft.innerText = leftclues[i].toString();
+                tdleft.onmousedown = function(e) { toggleClue(e.target); }
+                tr.appendChild(tdleft);
+
+                var line = borders[i];
+                for (var j = 0; j < line.length; j++) {
+                    var td = document.createElement("td");
+                    var num = parseInt(line[j], 16);
+                    if (num & 8) { td.classList.add("border-left"); }
+                    if (num & 4) { td.classList.add("border-right"); }
+                    if (num & 2) { td.classList.add("border-top"); }
+                    if (num & 1) { td.classList.add("border-bottom"); }
+                    td.classList.add("show-pointer");
+
+                    if (letters[i][j] != " ") {
+                        var div = document.createElement("div");
+                        div.innerText = letters[i][j];
+                        td.appendChild(div);
+                    }
+
+                    td.onmousedown = function(e) {
+                        mousedown = true;
+                        currentCellType = null;
+
+                        if (shift || e.which != 1)
+                        {
+                            if (e.currentTarget.classList.contains("nowater")) { currentCellType = "water"; }
+                            else if (e.currentTarget.classList.contains("water")) { currentCellType = null; }
+                            else { currentCellType = "nowater"; }
+                        }
+                        else
+                        {
+                            if (e.currentTarget.classList.contains("water")) { currentCellType = "nowater"; }
+                            else if (e.currentTarget.classList.contains("nowater")) { currentCellType = null; }
+                            else { currentCellType = "water"; }
+                        }
+
+                        setCell(e.currentTarget, currentCellType);
+                    }
+
+                    td.onmouseenter = function(e) {
+                        if (mousedown) { setCell(e.currentTarget, currentCellType); }
+                    }
+
+                    td.oncontextmenu = (e) => { e.preventDefault(); };
+
+                    tr.appendChild(td);
+                }
+                mainfragment.appendChild(tr);
+            }
+
+            document.getElementById("maingridtable").appendChild(mainfragment);
+
+            var state = localStorage.getItem("ph10");
+            if (state) { 
+                state = state.split("|");
+                var iItem = 0;
+
+                document.querySelectorAll("#maingridtable td").forEach(item => {
+                    var c = state[iItem++];
+                    if (c == "W") { item.classList.add("water"); }
+                    if (c == "X") { item.classList.add("nowater"); }
+                });
+            }
+
+            window.onmouseup = function(e) { mousedown = false; }
+            document.addEventListener("keyup", (e) => { shift = e.shiftKey; });
+            document.addEventListener("keydown", (e) => { shift = e.shiftKey; });
+        });
+
+        window.addEventListener('beforeunload', function(e) {
+            var state = [];
+            document.querySelectorAll("#maingridtable td").forEach(item => {
+                state.push(item.classList.contains("water") ? "W" : (item.classList.contains("nowater") ? "X" : ""));
+            });
+            localStorage.setItem("ph10", state.join("|"));
+        });
+</script>
+<body><div class="page-div"><div class="content-div"><table id="maingridtable"></table><p>The grid is divided into areas called "aquariums".</p><p>Add water by shading cells (paper) or clicking cells (online).</p><p>The water level in each aquarium must be the same across its full width. Some aquariums remain empty.</p><p>Numbers indicate how many cells are filled horizontally and vertically.</p><p>Adding water causes some letters to <b>float</b> up one or more cells. Read <b>only</b> these letters left to right and top to bottom.</p></div></div></body>
+<p><button class="btn clipboard-button"></button></p>
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,666 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Student Account</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    <div class="background-image"></div>
+
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+ <div id="deptdropdownmenu"></div>
+                
+                <a class="selected-tab" href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+            </div>
+        </span>
+        <div class="top-right-actions">
+
+        </div>
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+<style>
+@media screen {
+    
+    .background-image {
+        background-image: url("../static/images/stock/ms_campus.webp");
+        height: 30em;
+    }
+
+    
+
+    .page-header-background {
+        background-color: rgba(0, 0, 0, 0.7);
+        margin-top: -1em;
+        width: 100%;
+    }
+
+    .header-content {
+        color: white;
+        margin-top: 0;
+    }
+
+    .page-header-bar {
+        display: flex;
+        padding: 2em;
+    }
+
+    .page-header-bar .page-header-text {
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+    }
+
+    .page-header-bar .title {
+        font-size: 1.2em;
+        font-family: 'trajan-pro-3', serif;
+        margin-bottom: 1rem;
+    }
+
+    .page-header-bar .subtitle {
+        font-size: 2.8em;
+        font-family: 'myriad-pro-semi-condensed', sans-serif;
+        font-weight: 600;
+        padding-bottom: 1rem;
+    }
+
+    .page-header-bar img {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .top-right-actions {
+        color: #ddd;
+    }
+
+    .content-container {    
+        background-color: white;
+        border-radius: 1em;
+        box-shadow: 0 0 2rem #0006;
+        padding: 3em;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .page-header-background {
+        margin-top: -3.2em;
+    }
+}
+
+</style>
+
+<div class="page-header-background">
+    <div class="header-content">
+        <div class="page-header-bar">
+            
+                <img type="image/png" src="../static/images/puzzu_logo.png">
+            
+            <div class="page-header-text">
+                <span class="title">Puzzle University</span>
+                <span class="subtitle">Student Account</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="content">
+        
+    <div class="content-container">
+        
+
+<style>
+.free td:not(:first-child) {
+    opacity: 0.5;
+}
+
+.free td:last-child:before {
+    content: "(";
+}
+
+.free td:last-child:after {
+    content: ")";
+}
+
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+    gap: 1rem;
+}
+
+.team-info-row {
+    display: flex;
+}
+
+.team-info-row h4 {
+    border: none;
+    color: var(--accent-color);
+    font-family: 'myriad-pro-semi-condensed';
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 3rem;
+    margin: 0;
+    margin-bottom: 20px;
+}
+</style>
+
+<h3>dpad</h3>
+
+<div class="button-row">
+
+</div>
+
+<main>
+    <div class="team-info-row">
+        <div>
+            <h4>Stats</h4>
+            <div class="info-desc">
+                <div class="stat-entry">Rank: <span class="stat-value">209</span></div>
+                <div class="stat-entry">Solves: <span class="stat-value">26</span></div>
+            </div>
+        </div>
+        <div>
+            <h4>Members</h4>
+            <div class="info-desc">
+                
+                dpad
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <svg class="chart" style="height: calc(2px * 207)" viewbox="0 0 272783.061187 207" preserveAspectRatio="none">
+        <path d="M 272783.061187 0 L 0 0
+        
+        L 0.0 1
+        L 1456.436892 1
+        
+        L 1456.436892 2
+        L 1936.088072 2
+        
+        L 1936.088072 3
+        L 2205.901589 3
+        
+        L 2205.901589 4
+        L 2467.445595 4
+        
+        L 2467.445595 5
+        L 2976.444731 5
+        
+        L 2976.444731 6
+        L 3338.692739 6
+        
+        L 3338.692739 7
+        L 4010.203446 7
+        
+        L 4010.203446 8
+        L 4714.809713 8
+        
+        L 4714.809713 9
+        L 9201.574909 9
+        
+        L 9201.574909 10
+        L 9686.898339 10
+        
+        L 9686.898339 11
+        L 15885.953932 11
+        
+        L 15885.953932 12
+        L 21839.827492 12
+        
+        L 21839.827492 13
+        L 21898.298046 13
+        
+        L 21898.298046 14
+        L 23660.830663 14
+        
+        L 23660.830663 15
+        L 27869.712639 15
+        
+        L 27869.712639 16
+        L 28582.404111 16
+        
+        L 28582.404111 17
+        L 35377.640383 17
+        
+        L 35377.640383 18
+        L 43213.116325 18
+        
+        L 43213.116325 19
+        L 73988.448506 19
+        
+        L 73988.448506 20
+        L 82089.952428 20
+        
+        L 82089.952428 21
+        L 98351.921285 21
+        
+        L 98351.921285 22
+        L 108742.599649 22
+        
+        L 108742.599649 23
+        L 115469.356638 23
+        
+        L 115469.356638 24
+        L 121324.292284 24
+        
+        L 121324.292284 25
+        L 121426.626676 25
+        
+        L 121426.626676 26
+        L 121540.406598 26
+        
+        L 121540.406598 27
+        L 272783.061187 27
+        
+        " class="chart-area"></path>
+        
+        <path d="M 21898.298046 0 L 21898.298046 207" class="chart-line"></path>
+        
+        <path d="M 23660.830663 0 L 23660.830663 207" class="chart-line"></path>
+        
+        <path d="M 121324.292284 0 L 121324.292284 207" class="chart-line"></path>
+        
+    </svg>
+    <table class="sortable list-table">
+        <col style="width: 40%">
+        <col style="width: 10%">
+        <col style="width: 20%">
+        <col style="width: 10%">
+        <col style="width: 20%">
+        <tr>
+            <th>Puzzle</th>
+            <th>Correct guesses</th>
+            <th>Incorrect guesses</th>
+            <th>Unlock time (PDT)</th>
+            <th>Time to solve</th>
+            <th>Solve time (PDT)</th>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="PH1: Vexillology">
+                <a href="../puzzle/ph1.html">PH1: Vexillology</a>
+            </td>
+            <td> 1 </td>
+            <td>4</td>
+            <td sorttable_customkey="1683421735"><time datetime="2023-05-06T17:08:55.959152+00:00" data-format="M j, H:i">May 6, 10:08</time></td>
+            <td sorttable_customkey="1220.47774">20m20s</td>
+            <td sorttable_customkey="1683422956"><time datetime="2023-05-06T17:29:16.436892+00:00" data-format="M j, H:i">May 6, 10:29</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="PH3: Mr. Tambourine Man">
+                <a href="../puzzle/ph3.html">PH3: Mr. Tambourine Man</a>
+            </td>
+            <td> 1 </td>
+            <td>0</td>
+            <td sorttable_customkey="1683421735"><time datetime="2023-05-06T17:08:55.959152+00:00" data-format="M j, H:i">May 6, 10:08</time></td>
+            <td sorttable_customkey="1700.12892">28m20s</td>
+            <td sorttable_customkey="1683423436"><time datetime="2023-05-06T17:37:16.088072+00:00" data-format="M j, H:i">May 6, 10:37</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="PH5: Mission: Langley Heist">
+                <a href="../puzzle/ph5.html">PH5: Mission: Langley Heist</a>
+            </td>
+            <td> 1 </td>
+            <td>0</td>
+            <td sorttable_customkey="1683421735"><time datetime="2023-05-06T17:08:55.959152+00:00" data-format="M j, H:i">May 6, 10:08</time></td>
+            <td sorttable_customkey="1969.942437">32m49s</td>
+            <td sorttable_customkey="1683423705"><time datetime="2023-05-06T17:41:45.901589+00:00" data-format="M j, H:i">May 6, 10:41</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="PH9: Dynamic Duos">
+                <a href="../puzzle/ph9.html">PH9: Dynamic Duos</a>
+            </td>
+            <td> 1 </td>
+            <td>0</td>
+            <td sorttable_customkey="1683421735"><time datetime="2023-05-06T17:08:55.959152+00:00" data-format="M j, H:i">May 6, 10:08</time></td>
+            <td sorttable_customkey="2231.486443">37m11s</td>
+            <td sorttable_customkey="1683423967"><time datetime="2023-05-06T17:46:07.445595+00:00" data-format="M j, H:i">May 6, 10:46</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="PHA: Water Beds">
+                <a href="../puzzle/ph10.html">PHA: Water Beds</a>
+            </td>
+            <td> 1 </td>
+            <td>0</td>
+            <td sorttable_customkey="1683421735"><time datetime="2023-05-06T17:08:55.959152+00:00" data-format="M j, H:i">May 6, 10:08</time></td>
+            <td sorttable_customkey="2740.485579">45m40s</td>
+            <td sorttable_customkey="1683424476"><time datetime="2023-05-06T17:54:36.444731+00:00" data-format="M j, H:i">May 6, 10:54</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="PH18: To Serve Man">
+                <a href="../puzzle/ph18.html">PH18: To Serve Man</a>
+            </td>
+            <td> 1 </td>
+            <td>0</td>
+            <td sorttable_customkey="1683421735"><time datetime="2023-05-06T17:08:55.959152+00:00" data-format="M j, H:i">May 6, 10:08</time></td>
+            <td sorttable_customkey="3102.733587">51m42s</td>
+            <td sorttable_customkey="1683424838"><time datetime="2023-05-06T18:00:38.692739+00:00" data-format="M j, H:i">May 6, 11:00</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="PH6: Time Frame">
+                <a href="../puzzle/ph6.html">PH6: Time Frame</a>
+            </td>
+            <td> 1 </td>
+            <td>4</td>
+            <td sorttable_customkey="1683421735"><time datetime="2023-05-06T17:08:55.959152+00:00" data-format="M j, H:i">May 6, 10:08</time></td>
+            <td sorttable_customkey="3774.244294">1h2m</td>
+            <td sorttable_customkey="1683425510"><time datetime="2023-05-06T18:11:50.203446+00:00" data-format="M j, H:i">May 6, 11:11</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="PH8: Poker Table">
+                <a href="../puzzle/ph8.html">PH8: Poker Table</a>
+            </td>
+            <td> 1 </td>
+            <td>1</td>
+            <td sorttable_customkey="1683421735"><time datetime="2023-05-06T17:08:55.959152+00:00" data-format="M j, H:i">May 6, 10:08</time></td>
+            <td sorttable_customkey="4478.850561">1h14m</td>
+            <td sorttable_customkey="1683426214"><time datetime="2023-05-06T18:23:34.809713+00:00" data-format="M j, H:i">May 6, 11:23</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="PH15: The Bad, the Good, and the Beautiful">
+                <a href="../puzzle/ph15.html">PH15: The Bad, the Good, and the Beautiful</a>
+            </td>
+            <td> 1 </td>
+            <td>4</td>
+            <td sorttable_customkey="1683421735"><time datetime="2023-05-06T17:08:55.959152+00:00" data-format="M j, H:i">May 6, 10:08</time></td>
+            <td sorttable_customkey="8965.615757">2h29m</td>
+            <td sorttable_customkey="1683430701"><time datetime="2023-05-06T19:38:21.574909+00:00" data-format="M j, H:i">May 6, 12:38</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="PH16: Intermediate Compositions">
+                <a href="../puzzle/ph16.html">PH16: Intermediate Compositions</a>
+            </td>
+            <td> 1 </td>
+            <td>2</td>
+            <td sorttable_customkey="1683421735"><time datetime="2023-05-06T17:08:55.959152+00:00" data-format="M j, H:i">May 6, 10:08</time></td>
+            <td sorttable_customkey="9450.939187">2h37m</td>
+            <td sorttable_customkey="1683431186"><time datetime="2023-05-06T19:46:26.898339+00:00" data-format="M j, H:i">May 6, 12:46</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="PH14: Making Tracks">
+                <a href="../puzzle/ph14.html">PH14: Making Tracks</a>
+            </td>
+            <td> 1 </td>
+            <td>0</td>
+            <td sorttable_customkey="1683421735"><time datetime="2023-05-06T17:08:55.959152+00:00" data-format="M j, H:i">May 6, 10:08</time></td>
+            <td sorttable_customkey="15649.99478">4h20m</td>
+            <td sorttable_customkey="1683437385"><time datetime="2023-05-06T21:29:45.953932+00:00" data-format="M j, H:i">May 6, 14:29</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="PH7: Numerator, Denominator, Fascinator">
+                <a href="../puzzle/ph7.html">PH7: Numerator, Denominator, Fascinator</a>
+            </td>
+            <td> 1 </td>
+            <td>4</td>
+            <td sorttable_customkey="1683421735"><time datetime="2023-05-06T17:08:55.959152+00:00" data-format="M j, H:i">May 6, 10:08</time></td>
+            <td sorttable_customkey="21603.86834">6h0m</td>
+            <td sorttable_customkey="1683443339"><time datetime="2023-05-06T23:08:59.827492+00:00" data-format="M j, H:i">May 6, 16:08</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="PH123: Final Jeopardy" class="meta-stats">
+                <a href="../puzzle/ph12.html">PH123: Final Jeopardy</a>
+            </td>
+            <td> 1 </td>
+            <td>2</td>
+            <td sorttable_customkey="1683421735"><time datetime="2023-05-06T17:08:55.959152+00:00" data-format="M j, H:i">May 6, 10:08</time></td>
+            <td sorttable_customkey="21662.338894">6h1m</td>
+            <td sorttable_customkey="1683443398"><time datetime="2023-05-06T23:09:58.298046+00:00" data-format="M j, H:i">May 6, 16:09</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="PH123: Web of Lies" class="meta-stats">
+                <a href="../puzzle/ph13.html">PH123: Web of Lies</a>
+            </td>
+            <td> 1 </td>
+            <td>2</td>
+            <td sorttable_customkey="1683443398"><time datetime="2023-05-06T23:09:58.563913+00:00" data-format="M j, H:i">May 6, 16:09</time></td>
+            <td sorttable_customkey="1762.26675">29m22s</td>
+            <td sorttable_customkey="1683445160"><time datetime="2023-05-06T23:39:20.830663+00:00" data-format="M j, H:i">May 6, 16:39</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Interlude: Economics">
+                <a href="../puzzle/interlude-econ.html">Interlude: Economics</a>
+            </td>
+            <td> 1 </td>
+            <td>0</td>
+            <td sorttable_customkey="1683445161"><time datetime="2023-05-06T23:39:21.070175+00:00" data-format="M j, H:i">May 6, 16:39</time></td>
+            <td sorttable_customkey="4208.642464">1h10m</td>
+            <td sorttable_customkey="1683449369"><time datetime="2023-05-07T00:49:29.712639+00:00" data-format="M j, H:i">May 6, 17:49</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Interlude: Music">
+                <a href="../puzzle/interlude-music.html">Interlude: Music</a>
+            </td>
+            <td> 1 </td>
+            <td>0</td>
+            <td sorttable_customkey="1683445161"><time datetime="2023-05-06T23:39:21.070175+00:00" data-format="M j, H:i">May 6, 16:39</time></td>
+            <td sorttable_customkey="4921.333936">1h22m</td>
+            <td sorttable_customkey="1683450082"><time datetime="2023-05-07T01:01:22.404111+00:00" data-format="M j, H:i">May 6, 18:01</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Cryptocurrency">
+                <a href="../puzzle/cryptocurrency.html">Cryptocurrency</a>
+            </td>
+            <td> 1 </td>
+            <td>3</td>
+            <td sorttable_customkey="1683449369"><time datetime="2023-05-07T00:49:29.973913+00:00" data-format="M j, H:i">May 6, 17:49</time></td>
+            <td sorttable_customkey="7507.66647">2h5m</td>
+            <td sorttable_customkey="1683456877"><time datetime="2023-05-07T02:54:37.640383+00:00" data-format="M j, H:i">May 6, 19:54</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Macroeconomics">
+                <a href="../puzzle/macroeconomics.html">Macroeconomics</a>
+            </td>
+            <td> 1 </td>
+            <td>5</td>
+            <td sorttable_customkey="1683456878"><time datetime="2023-05-07T02:54:38.103760+00:00" data-format="M j, H:i">May 6, 19:54</time></td>
+            <td sorttable_customkey="7835.012565">2h10m</td>
+            <td sorttable_customkey="1683464713"><time datetime="2023-05-07T05:05:13.116325+00:00" data-format="M j, H:i">May 6, 22:05</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="C is for Closing Bell">
+                <a href="../puzzle/c-is-for-closing-bell.html">C is for Closing Bell</a>
+            </td>
+            <td> 1 </td>
+            <td>0</td>
+            <td sorttable_customkey="1683464713"><time datetime="2023-05-07T05:05:13.707197+00:00" data-format="M j, H:i">May 6, 22:05</time></td>
+            <td sorttable_customkey="30774.741309">8h32m</td>
+            <td sorttable_customkey="1683495488"><time datetime="2023-05-07T13:38:08.448506+00:00" data-format="M j, H:i">May 7, 06:38</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Human Capital">
+                <a href="../puzzle/human-capital.html">Human Capital</a>
+            </td>
+            <td> 1 </td>
+            <td>4</td>
+            <td sorttable_customkey="1683495488"><time datetime="2023-05-07T13:38:08.687003+00:00" data-format="M j, H:i">May 7, 06:38</time></td>
+            <td sorttable_customkey="8101.265425">2h15m</td>
+            <td sorttable_customkey="1683503589"><time datetime="2023-05-07T15:53:09.952428+00:00" data-format="M j, H:i">May 7, 08:53</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Pyramid Schemes">
+                <a href="../puzzle/pyramid-schemes.html">Pyramid Schemes</a>
+            </td>
+            <td> 1 </td>
+            <td>14</td>
+            <td sorttable_customkey="1683449369"><time datetime="2023-05-07T00:49:29.973913+00:00" data-format="M j, H:i">May 6, 17:49</time></td>
+            <td sorttable_customkey="70481.947372">19h34m</td>
+            <td sorttable_customkey="1683519851"><time datetime="2023-05-07T20:24:11.921285+00:00" data-format="M j, H:i">May 7, 13:24</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Guns and Butter">
+                <a href="../puzzle/guns-and-butter.html">Guns and Butter</a>
+            </td>
+            <td> 1 </td>
+            <td>2</td>
+            <td sorttable_customkey="1683495488"><time datetime="2023-05-07T13:38:08.687003+00:00" data-format="M j, H:i">May 7, 06:38</time></td>
+            <td sorttable_customkey="34753.912646">9h39m</td>
+            <td sorttable_customkey="1683530242"><time datetime="2023-05-07T23:17:22.599649+00:00" data-format="M j, H:i">May 7, 16:17</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Supply and Demand">
+                <a href="../puzzle/supply-and-demand.html">Supply and Demand</a>
+            </td>
+            <td> 1 </td>
+            <td>10</td>
+            <td sorttable_customkey="1683449369"><time datetime="2023-05-07T00:49:29.973913+00:00" data-format="M j, H:i">May 6, 17:49</time></td>
+            <td sorttable_customkey="87599.382725">24h19m</td>
+            <td sorttable_customkey="1683536969"><time datetime="2023-05-08T01:09:29.356638+00:00" data-format="M j, H:i">May 7, 18:09</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Economics Meta" class="meta-stats">
+                <a href="../puzzle/economics-meta.html">Economics Meta</a>
+            </td>
+            <td> 1 </td>
+            <td>14</td>
+            <td sorttable_customkey="1683503590"><time datetime="2023-05-07T15:53:10.212732+00:00" data-format="M j, H:i">May 7, 08:53</time></td>
+            <td sorttable_customkey="39234.079552">10h53m</td>
+            <td sorttable_customkey="1683542824"><time datetime="2023-05-08T02:47:04.292284+00:00" data-format="M j, H:i">May 7, 19:47</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="The Eurozone">
+                <a href="../puzzle/the-eurozone.html">The Eurozone</a>
+            </td>
+            <td> 1 </td>
+            <td>6</td>
+            <td sorttable_customkey="1683456878"><time datetime="2023-05-07T02:54:38.103760+00:00" data-format="M j, H:i">May 6, 19:54</time></td>
+            <td sorttable_customkey="86048.522916">23h54m</td>
+            <td sorttable_customkey="1683542926"><time datetime="2023-05-08T02:48:46.626676+00:00" data-format="M j, H:i">May 7, 19:48</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Mercantile Exchanges">
+                <a href="../puzzle/mercantile-exchanges.html">Mercantile Exchanges</a>
+            </td>
+            <td> 1 </td>
+            <td>9</td>
+            <td sorttable_customkey="1683449369"><time datetime="2023-05-07T00:49:29.973913+00:00" data-format="M j, H:i">May 6, 17:49</time></td>
+            <td sorttable_customkey="93670.432685">26h1m</td>
+            <td sorttable_customkey="1683543040"><time datetime="2023-05-08T02:50:40.406598+00:00" data-format="M j, H:i">May 7, 19:50</time></td>
+        </tr>
+        
+    </table>
+    
+    
+</main>
+
+
+    </div>
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

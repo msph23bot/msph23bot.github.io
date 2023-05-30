@@ -1,0 +1,222 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: MATH -34012208 Set Theory</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="../puzzle/set-theory.html" class="btn">Back to the puzzle</a>
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: MATH -34012208 Set Theory
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer spoiler">SEA LANE</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Amos Eshel
+
+    </h2>
+
+    
+    <style>
+  div.monospace {
+    font-family: monospace;
+  }
+
+  div.leftpad {
+    margin-left: 30px;
+    margin-bottom: 2rem;
+  }
+
+  .puzzle-main pre {
+    margin: 0px;
+  }
+
+  span.yellow {
+    box-shadow: inset 50px 50px yellow;
+    background-color: yellow;
+  }
+</style>
+
+<p>Each set of numbers solves in a different way to a 3-digit number.</p>
+<h3>Subpuzzle 1</h3>
+<p>Pair a positive number with a negative number and add them together. The new numbers are composed of X followed by N zeroes, 
+followed by Y (and maybe some more zeroes). X &amp; Y are all between 1 &amp; 26, single digit numbers preceded by a 0. N is in 
+increasing order (1-5). Order by N and read X/Y as A1-Z26.</p>
+<div class="leftpad"><pre>SI: 190090000 = 409818765 - 219728765</pre><pre>XO: 240015000 = 501226345 - 261211345</pre><pre>NE: 140000500 = 374201122 - 234200622</pre><pre>FO:  60000150 = 421010971 - 361010821</pre><pre>UR: 210000018 = 626666659 - 416666641</pre></div>
+
+<p>For an answer of <strong>614</strong>.</p>
+<h3>Subpuzzle 2</h3>
+<p><i>Written by Jonah Ostroff</i><br>
+These numbers spell words/names with a missing letter located at the decimal point using calculator spelling (aka BEGHILOS). 
+Group by the number of digits, and order by location of the decimal point to extract the missing letters.</p>
+<div class="leftpad"><pre>T: E.HEL = 734.3</pre><pre>W: HO.LS = 57.04</pre><pre>O: BEZ.S = 5.238</pre><pre>O: IGLO.S = 5.0791</pre><pre>H: SLEIG. = .91375</pre><pre>F: SEL.ISH = 451.735</pre><pre>I: BOOB.ES = 53.8008</pre><pre>V: BELIE.E = 3.31738</pre><pre>E: LEGIBL. = .781937</pre></div>
+
+<p>For an answer of <strong>205</strong>.</p>
+<h3>Subpuzzle 3</h3>
+<p>Each number is a multiple of the previous number. These are converted A1-Z26 and read in given order.</p>
+<div class="leftpad"><pre>T = 20           * 1 = 20</pre><pre>H = 8           * 20 = 160</pre><pre>R = 18         * 160 = 2880</pre><pre>E = 5         * 2880 = 14400</pre><pre>E = 5        * 14400 = 72000</pre><pre>O = 15       * 72000 = 1080000</pre><pre>H = 8      * 1080000 = 8640000</pre><pre>O = 15     * 8640000 = 129600000</pre><pre>N = 14   * 129600000 = 1814400000</pre><pre>E = 5   * 1814400000 = 9072000000</pre></div>
+
+<p>For an answer of <strong>301</strong>.</p>
+<h3>Subpuzzle 4</h3>
+<p>Write each whole #portion out in English. The numbers of characters match the denominators, which are also unique from 5-14; 
+order by this. Then use the numerator as an index into the written out #.</p>
+<div class="leftpad"><pre>F: FI<span class="yellow">F</span>TY = 50 3/5</pre><pre>O: GOOG<span class="yellow">O</span>L = 10^100 5/6</pre><pre>U: H<span class="yellow">U</span>NDRED = 100 2/7</pre><pre>R: FOU<span class="yellow">R</span>TEEN = 14 4/8</pre><pre>O: NINETYTW<span class="yellow">O</span> = 92 9/9</pre><pre>N: NI<span class="yellow">N</span>ETYNINE = 99 / 3/10</pre><pre>E: EIGHTYSEV<span class="yellow">E</span>N = 87 10/11</pre><pre>T: SEVEN<span class="yellow">T</span>YSEVEN = 77 6/12</pre><pre>W: T<span class="yellow">W</span>ENTYMILLION = 20,000,000 2/13</pre><pre>O: TWELVETH<span class="yellow">O</span>USAND = 12,000 9/14</pre></div>
+
+<p>For an answer of <strong>412</strong>.</p>
+<h3>Subpuzzle 5</h3>
+
+<p>Each of these numbers can be written as X^Y, and using logic the Y’s can be set up such that they are uniquely 1-10 and the 
+X’s are between 1 &amp; 26.</p>
+<div class="leftpad"><pre>O: 15^1 = 15</pre><pre>N: 14^2 = 196</pre><pre>E:  5^3 = 125</pre><pre>O: 15^4 = 50625</pre><pre>N: 14^5 = 537824</pre><pre>E:  5^6 = 15625</pre><pre>N: 14^7 = 105413504</pre><pre>I:  9^8 = 43046721</pre><pre>N: 14^9 = 20661046784</pre><pre>E:  5^10 = 9765625</pre></div>
+
+<p>For an answer of <strong>119</strong>.</p>
+<h3>Subpuzzle 6</h3>
+<p>These numbers can be interpreted as (consecutive) dates. The dates correspond to holidays in the particular year. Read the 
+first letters in year order.</p>
+<div class="leftpad"><pre><span class="yellow">M</span>artin Luther King Jr. Day: Jan. 15, 2018 = 1152018</pre><pre><span class="yellow">A</span>pril Fools' Day:           Apr.  1, 2019 = 4012019</pre><pre><span class="yellow">Y</span>om Kippur:                 Sep. 27-28, 2020 = 92709282020</pre><pre><span class="yellow">D</span>-Day:                      Jun.  6, 2021 = 6062021</pre><pre><span class="yellow">A</span>sh Wednesday:              Mar.  2, 2022 = 3022022</pre><pre><span class="yellow">Y</span>om Kippur:                 Sep. 24-25, 2023 = 92409252023</pre></div>
+
+<p>For MAY DAY which provides an answer of <strong>501</strong> (aka May 1st).</p>
+<h3>Subpuzzle 7</h3>
+
+<p>If one treats these numbers as a grid, one can find the number 7 traced out as a 7, 0 as a 0, and 5 as a 5.</p>
+<div class="leftpad"><pre>1<span class="yellow">7777777</span>6517<span class="yellow">000</span>8374<span class="yellow">5555555</span>0</pre><pre>203496<span class="yellow">7</span>6464<span class="yellow">0</span>734<span class="yellow">0</span>928<span class="yellow">5</span>2092118</pre><pre>38431<span class="yellow">7</span>0854<span class="yellow">0</span>19856<span class="yellow">0</span>29<span class="yellow">5</span>6467033</pre><pre>5299<span class="yellow">7</span>52648<span class="yellow">0</span>51842<span class="yellow">0</span>662<span class="yellow">55555</span>34</pre><pre>626<span class="yellow">7</span>003583<span class="yellow">0</span>25699<span class="yellow">0</span>53497827<span class="yellow">5</span>6</pre><pre>82<span class="yellow">7</span>51269171<span class="yellow">0</span>841<span class="yellow">0</span>371<span class="yellow">5</span>27301<span class="yellow">5</span>9</pre><pre>9<span class="yellow">7</span>3818943649<span class="yellow">000</span>23708<span class="yellow">55555</span>46</pre></div>
+
+<p>For an answer of <strong>705</strong>.</p>
+<h3>Bringing it all together</h3>
+<p>The 7 answers can be ordered by their unique 1-7 1st digits. Convert the other two digits A1-Z26.</p>
+<div class="leftpad"><pre>S: 1 19</pre><pre>E: 2 05</pre><pre>A: 3 01</pre><pre>L: 4 12</pre><pre>A: 5 01</pre><pre>N: 6 14</pre><pre>E: 7 05</pre></div>
+
+<p>For a final answer of <strong>SEA LANE</strong>.</p>
+
+    
+    
+
+    
+    
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

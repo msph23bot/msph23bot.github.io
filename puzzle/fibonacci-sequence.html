@@ -1,0 +1,663 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>MATH 122 The Fibonacci Sequence</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+<a href="../round/math.html" class="btn">Mathematics</a>
+
+
+
+
+
+<a href="../post-hunt-solve/fibonacci-sequence.html" class="btn">Call in an answer</a>
+
+
+<a href="../solution/fibonacci-sequence.html" class="btn solution-button">View solution</a>
+<a href="../stats/fibonacci-sequence.html" class="btn">Stats</a>
+
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<h1 class="puzzle-title">
+    MATH 122 The Fibonacci Sequence
+    
+</h1>
+
+<main class="puzzle-main clipboard-container">
+    
+
+    
+    
+
+<style>
+  table.stripstyle {
+    width: auto;
+  }
+
+  table.stripstyle td {
+    border: none;
+    padding: 5px;
+    vertical-align: middle;
+  }
+
+  table.grid {
+    width: auto;
+  }
+
+  table.grid td {
+    background-clip: padding-box;
+    width: 1.5em;
+    height: 1.5em;
+    border: none;
+    position: relative;
+    padding: 0px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  /* In Chrome, this must go on a <div>, not a <table>, to work. */
+  /* In Firefox, this must go on a <table>, not a <div>, to work. */
+  /* tl;dr - Use it on both containing div and inner table. */
+  .no-break {
+    break-inside: avoid;
+  }
+
+  div.centerer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  td.yellow, span.yellow {
+    color: #F1C233;
+  }
+
+  td.yellow-bg, span.yellow-bg {
+    background-color: #F1C233;
+  }
+
+  td.blue, span.blue {
+    color: #3A78D9;
+  }
+
+  td.blue-bg, span.blue-bg {
+    background-color: #3A78D9;
+  }
+
+  td.green, span.green {
+    color: #68A74F;
+  }
+
+  td.green-bg, span.green-bg {
+    background-color: #68A74F;
+  }
+
+  img.emoji, .puzzle-main img.icon {
+    height: 1em;
+    width: 1em;
+    margin: 0 .05em 0 .1em;
+    vertical-align: -0.1em;
+  }
+
+  .puzzle-main img {
+    max-width: 100%;
+  }
+
+  span.monospace {
+    font-family: monospace;
+  }
+
+  span.distinct-characters {
+    letter-spacing: 3px;
+  }
+
+  div.float-right {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+
+  table.hr td {
+    background-color: gray;
+  }
+</style>
+
+<div><span class="copy-only">[green </span><span class="green">?</span><span class="copy-only">]</span>, <span class="copy-only">[</span><span class="green">?</span><span class="copy-only">]</span>, 10, 19, 29, 48, 77, 125, 202, 327, 529, 856, 1385, 2241, 3626, 5867, 9493, 15360, ...</div>
+<div><span class="copy-only">[green </span><span class="green">?</span><span class="copy-only">]</span>, <span class="copy-only">[</span><span class="green">?</span><span class="copy-only">]</span>, 8, 16, 24, 40, 64, 104, 168, 272, 440, 712, 1152, 1864, 3016, 4880, 7896, 12776, ...</div>
+<div><span class="copy-only">[green </span><span class="green">?</span><span class="copy-only">]</span>, <span class="copy-only">[</span><span class="green">?</span><span class="copy-only">]</span>, 9, 17, 26, 43, 69, 112, 181, 293, 474, 767, 1241, 2008, 3249, 5257, 8506, 13763, ...</div>
+<div><span class="copy-only">[green </span><span class="green">?</span><span class="copy-only">]</span>, <span class="copy-only">[</span><span class="green">?</span><span class="copy-only">]</span>, 9, 18, 27, 45, 72, 117, 189, 306, 495, 801, 1296, 2097, 3393, 5490, 8883, 14373, ...</div>
+<div><span class="copy-only">[green </span><span class="green">?</span><span class="copy-only">]</span>, <span class="copy-only">[</span><span class="green">?</span><span class="copy-only">]</span>, 4, 7, 11, 18, 29, 47, 76, 123, 199, 322, 521, 843, 1364, 2207, 3571, 5778, 9349, ...</div>
+<div><span class="copy-only">[green </span><span class="green">?</span><span class="copy-only">]</span>, <span class="copy-only">[</span><span class="green">?</span><span class="copy-only">]</span>, 7, 13, 20, 33, 53, 86, 139, 225, 364, 589, 953, 1542, 2495, 4037, 6532, 10569, ...</div>
+
+<hr/><table class="hr copy-only"><td colspan="10">---</td></table>
+
+<p>733484, 12646610, 13380094, ... <span class="copy-only">[green </span><span class="green">???????????????</span><span class="copy-only">]</span>, ???????????????, ????????????????, ...</p>
+
+<hr/><table class="hr copy-only"><td colspan="10">---</td></table>
+
+<div class="centerer">
+  <table class="grid">
+    <tr>
+      <td class="yellow">?</td>
+      <td class="green">→</td>
+      <td class="blue">?</td>
+    </tr>
+  </table>
+
+  <div class="no-break centerer">
+    <table id="needs-twemoji" class="no-break grid">
+      <tr style="border-top: 1px solid black">
+        <td style="border-left: 1px solid black"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>🪜</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td style="border-right: 1px solid black"></td>
+      </tr>
+      <tr>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black; border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black">🥢</td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black; border-top: 1px solid black">🦀</td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black; border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black">🧅</td>
+        <td></td>
+        <td style="border-left: 1px solid black; border-top: 1px solid black">🍋</td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-left: 1px solid black; border-right: 1px solid black">🍎</td>
+      </tr>
+      <tr>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-top: 1px solid black">🏔</td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-left: 1px solid black; border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black">👩‍🚀</td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black; border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black">⚙️</td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td></td>
+        <td style="border-left: 1px solid black; border-right: 1px solid black"></td>
+      </tr>
+      <tr>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td></td>
+        <td style="border-left: 1px solid black">🌲</td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black; border-top: 1px solid black"></td>
+        <td></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black; border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black">🐮</td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black; border-right: 1px solid black"></td>
+      </tr>
+      <tr>
+        <td style="border-left: 1px solid black; border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-left: 1px solid black">🛗</td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black"></td>
+        <td>🏳️‍🌈</td>
+        <td style="border-left: 1px solid black"></td>
+        <td></td>
+        <td></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black; border-top: 1px solid black">🔥</td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black">🦄</td>
+        <td style="border-left: 1px solid black; border-right: 1px solid black"></td>
+      </tr>
+      <tr>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black; border-top: 1px solid black">🍔</td>
+        <td style="border-top: 1px solid black"></td>
+        <td></td>
+        <td style="border-left: 1px solid black">🍇</td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black">🐶</td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-left: 1px solid black; border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black; border-right: 1px solid black"></td>
+      </tr>
+      <tr>
+        <td style="border-left: 1px solid black">📰</td>
+        <td style="border-left: 1px solid black; border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black">🦵</td>
+        <td style="border-top: 1px solid black"></td>
+        <td></td>
+        <td></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black">🐟</td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-top: 1px solid black">🦆</td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black">🎯</td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black; border-right: 1px solid black"></td>
+      </tr>
+      <tr>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black">🦪</td>
+        <td style="border-top: 1px solid black; border-left: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td></td>
+        <td style="border-left: 1px solid black">🦐</td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black; border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black">🎷</td>
+        <td style="border-top: 1px solid black"></td>
+        <td></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black; border-right: 1px solid black">🍣</td>
+      </tr>
+      <tr>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black">🧊</td>
+        <td style="border-top: 1px solid black"></td>
+        <td></td>
+        <td style="border-top: 1px solid black; border-left: 1px solid black">🦴</td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black">🐷</td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-left: 1px solid black">🚗</td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-left: 1px solid black; border-top: 1px solid black">💡</td>
+        <td style="border-top: 1px solid black"></td>
+        <td></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-top: 1px solid black; border-right: 1px solid black">💎</td>
+      </tr>
+      <tr style="border-bottom: 1px solid black">
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black">🧇</td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td></td>
+        <td style="border-left: 1px solid black; border-top: 1px solid black">🐉</td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td></td>
+        <td style="border-left: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black">⌚️</td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black"></td>
+        <td style="border-top: 1px solid black; border-right: 1px solid black">💧</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<hr/><table class="hr copy-only"><td colspan="10">---</td></table>
+
+<div class="centerer">
+  <img src="../static/puzzle_resources/fibonacci-sequence/24dots.svg"
+       alt="3 rows of 8 dots each. The top row is yellow, the middle row is green, and the bottom row is blue. The 4th dot on top has an arrow pointing towards the 4th dot in the middle. The 8th dot on top has an arrow pointing towards the 8th dot in the middle. The 1st dot in the middle has an arrow pointing towards the 2nd dot on the bottom. The 3rd dot in the middle has an arrow pointing towards the 6th dot on top. The 5th dot in the middle has an arrow pointing towards the 1st dot in the middle. The 2nd dot on the bottom has an arrow pointing towards the 5th dot on the bottom. The 4th dot on the bottom has an arrow pointing towards the 7th dot in the middle. The 5th dot on the bottom has an arrow pointing towards the 2nd dot in the middle. The 7th dot on the bottom has an arrow pointing towards the 3rd dot on the bottom, and another pointing towards the 7th dot on top."/>
+</div>
+
+<hr/><table class="hr copy-only"><td colspan="10">---</td></table>
+
+<table class="stripstyle">
+  <tr>
+    <td>Part that may <span class="copy-only">[yellow </span><span class="monospace"><span class="yellow"><span class="yellow-bg">?</span>__<span class="yellow-bg">?</span></span></span><span class="copy-only">]</span> like <span class="copy-only">[blue </span><span class="monospace"><span class="blue"><span class="blue-bg">?</span>__<span class="blue-bg">?</span></span></span><span class="copy-only">]</span>:</td>
+    <td><span class="distinct-characters"><span class="green">9</span>___<span class="green">214</span></span></td>
+  </tr>
+  <tr>
+    <td>Study of <span class="copy-only">[yellow </span><span class="monospace"><span class="yellow">_<span class="yellow-bg">??</span>_</span></span><span class="copy-only">]</span> and <span class="copy-only">[blue </span><span class="monospace"><span class="blue">_<span class="blue-bg">??</span>_</span></span><span class="copy-only">]</span>:</td>
+    <td><span class="distinct-characters"><span class="green">7</span>_<span class="green">8</span>_<span class="green">5</span>___<span class="green">3</span>__<span class="green">6</span>__</span></td>
+  </tr>
+</table>
+
+<hr/><table class="hr copy-only"><td colspan="10">---</td></table>
+
+<p>To find the <span class="green">path</span>, begin at the <span class="yellow">beginning</span>, then follow your 
+<span class="yellow">compass</span>.</p>
+
+
+<div class="no-break centerer">
+  <table class="no-break grid">
+    <tr><td style="border: 3px solid #3A78D9">A</td><td style="border: 3px solid #3A78D9">B</td><td style="border: 3px solid #3A78D9">C</td></tr>
+    <tr><td style="border: 3px solid #3A78D9">D</td><td style="border: 3px solid #3A78D9">E</td><td style="border: 3px solid #3A78D9">F</td></tr>
+    <tr><td style="border: 3px solid #3A78D9">G</td><td style="border: 3px solid #3A78D9">H</td><td style="border: 3px solid #3A78D9">I</td></tr>
+  </table>
+</div>
+
+<hr/><table class="hr copy-only"><td colspan="10">---</td></table>
+
+<div class="centerer"><p>Tarts ta Connill Notyuc</p></div>
+
+<div class="no-break centerer">
+  <table class="no-break stripstyle">
+    <tr>
+      <td style="border-left: 3px solid #F1C233; border-top: 3px solid #F1C233">↑</td><td style="border-top: 3px solid #F1C233; border-right: 3px solid #F1C233">7th letter</td>
+      <td style="min-width: 10px"></td>
+      <td style="border-left: 3px solid #3A78D9; border-top: 3px solid #3A78D9">↙</td><td style="border-top: 3px solid #3A78D9; border-right: 3px solid #3A78D9">5th letter</td>
+    </tr>
+    <tr>
+      <td style="border-left: 3px solid #F1C233">↑</td><td style="border-right: 3px solid #F1C233">2nd letter</td>
+      <td></td>
+      <td style="border-left: 3px solid #3A78D9">↖</td><td style="border-right: 3px solid #3A78D9">1st letter</td>
+    </tr>
+    <tr>
+      <td style="border-left: 3px solid #F1C233">↗</td><td style="border-right: 3px solid #F1C233">1st letter</td>
+      <td></td>
+      <td style="border-left: 3px solid #3A78D9">↗</td><td style="border-right: 3px solid #3A78D9">3rd letter</td>
+    </tr>
+    <tr>
+      <td style="border-left: 3px solid #F1C233">→</td><td style="border-right: 3px solid #F1C233">6th letter</td>
+      <td></td>
+      <td style="border-left: 3px solid #3A78D9">→</td><td style="border-right: 3px solid #3A78D9"></td>
+    </tr>
+    <tr>
+      <td style="border-left: 3px solid #F1C233">↗</td><td style="border-right: 3px solid #F1C233">5th letter</td>
+      <td></td>
+      <td style="border-left: 3px solid #3A78D9">→</td><td style="border-right: 3px solid #3A78D9" class="green">1st letter</td>
+    </tr>
+    <tr>
+      <td style="border-left: 3px solid #F1C233">↖</td><td style="border-right: 3px solid #F1C233">3rd letter</td>
+      <td></td>
+      <td style="border-left: 3px solid #3A78D9">↑</td><td style="border-right: 3px solid #3A78D9" class="green">8th letter</td>
+    </tr>
+    <tr>
+      <td style="border-left: 3px solid #F1C233; border-bottom: 3px solid #F1C233">↓</td><td style="border-right: 3px solid #F1C233; border-bottom: 3px solid #F1C233">1st letter</td>
+      <td></td>
+      <td style="border-left: 3px solid #3A78D9; border-bottom: 3px solid #3A78D9">→</td><td style="border-right: 3px solid #3A78D9; border-bottom: 3px solid #3A78D9" class="green">1st letter</td>
+    </tr>
+  </table>
+</div>
+
+<hr/><table class="hr copy-only"><td colspan="10">---</td></table>
+
+<div class="no-copy">
+  ..., <span class="blue">◗</span>, 
+  _<span class="green">6</span>, ..., 
+  <span class="distinct-characters">___</span><span class="green">4</span>, 
+  <span class="yellow">■</span>, ..., 
+  <span class="green">1</span>_, 
+  <span class="blue">◖</span>, ..., 
+  <span class="yellow">◖</span>, 
+  <span class="distinct-characters">__</span><span class="green">5</span>_, ..., 
+  <span class="green">3</span>_, 
+  <span class="yellow">◗</span>, 
+  <span class="distinct-characters">___</span><span class="green">2</span>, ...
+</div>
+<div class="copy-only">
+  <pre>...,   [blue ◗],   _[green 6],   ...,   _ _ _[green 4],   [yellow ■],   ...,   [green 1]_,   [blue ◖],   ...,   [yellow ◖],   _ _[green 5]_,   ...,   [green 3]_,   [yellow ◗],   _ _ _[green 2],   ...</pre>
+</div>
+<div class="float-right">Source: Oxford English Corpus</div>
+
+<hr/><table class="hr copy-only"><td colspan="10">---</td></table>
+
+<div class="centerer">
+  <img src="../static/puzzle_resources/fibonacci-sequence/3lines.svg"
+       alt="6 regularly-spaced vertical gray lines, with 3 colored lines starting at the leftmost vertical gray line and going up and down as they travel to the rightmost vertical gray line. At the 1st vertical gray line, the colors are in the following order, top-to-bottom: green, blue, yellow. At the 2nd gray line, they are yellow, green, blue. At the 3rd gray line, they are blue, yellow, green. At the 4th gray line, they are yellow, blue, green. At the 5th gray line, they are blue, green, yellow. At the 6th gray line, they are green, yellow, blue."/>
+  <div>Chinese dynasty</div>
+  <div>Constellation</div>
+  <div>Dog breed</div>
+  <div>Soldiers</div>
+  <div>Touch</div>
+  <div>Trig function</div>
+</div>
+
+<hr/><table class="hr copy-only"><td colspan="10">---</td></table>
+
+<div class="centerer">
+  <table class="stripstyle">
+    <tr>
+      <td>ANGEL</td><td>➜</td><td class="yellow yellow-bg">????</td>
+    </tr>
+    <tr>
+      <td>PINGALA</td><td>➛</td><td class="blue blue-bg">????</td>
+    </tr>
+    <tr>
+      <td>BELLAS</td><td>➜ ➛</td><td class="green green-bg">????</td>
+    </tr>
+  </table>
+</div>
+
+<hr/><table class="hr copy-only"><td colspan="10">---</td></table>
+
+<ul>
+  <li>
+    <span class="copy-only">[green </span><span class="green">I</span><span class="copy-only">]</span>,
+    <span class="copy-only">[yellow </span><span class="yellow">C</span><span class="copy-only">]</span>,
+    <span class="copy-only">[blue </span><span class="blue">F</span><span class="copy-only">]</span>,
+    <span class="copy-only">[blue </span><span class="blue">E</span><span class="copy-only">]</span>
+    (in that order) form a parallelogram.
+  </li>
+  <li>
+    <span class="copy-only">[green </span><span class="green">J</span><span class="copy-only">]</span> is whichever of
+    <span class="copy-only">[blue </span><span class="blue">D</span><span class="copy-only">]</span>,
+    <span class="copy-only">[blue </span><span class="blue">G</span><span class="copy-only">]</span>, or
+    <span class="copy-only">[blue </span><span class="blue">H</span><span class="copy-only">]</span> has the shortest name.
+  </li>
+  <li>
+    <span class="copy-only">[green </span><span class="green">K</span><span class="copy-only">]</span>'s atomic number is
+    ⅐ the atomic number of <span class="copy-only">[yellow </span><span class="yellow">A</span><span class="copy-only">]</span> 
+    plus ⅓ the atomic number of <span class="copy-only">[yellow </span><span class="yellow">B</span><span class="copy-only">]</span>.
+  </li>
+</ul>
+
+<hr/><table class="hr copy-only"><td colspan="10">---</td></table>
+
+<!-- Lock by Makarenko Andrey from <a href="https://thenounproject.com/browse/icons/term/lock/" target="_blank" title="Lock Icons">Noun Project</a> -->
+<!-- Key by Adrien Coquet from <a href="https://thenounproject.com/browse/icons/term/key/" target="_blank" title="Key Icons">Noun Project</a> -->
+
+<div class="centerer">
+  <div>
+    <span class="copy-only">[yellow lock]</span><img class="no-copy icon" src="../static/puzzle_resources/fibonacci-sequence/lock.svg"></img>
+    <span class="copy-only">[blue key]</span><img class="no-copy icon" src="../static/puzzle_resources/fibonacci-sequence/key.svg"></img>
+    <span class="copy-only">[green </span><span class="green">XMSXJ</span><span class="copy-only">]</span>
+  </div>
+</div>
+
+<hr/><table class="hr copy-only"><td colspan="10">---</td></table>
+
+<div class="centerer">
+  <img style="border: 1px solid black" src="../static/puzzle_resources/fibonacci-sequence/square.svg" class="no-copy"
+       alt='A large square. At the top left of the square is a small X and a sewing needle icon. On the right side of the square, a small distance down from the top, is green text: "First word in the name of this tattoo parlor". To the right of those words is a small X. At the bottom of the square, a small distance to the left of the right side, is an X formed by a blue line which slants down-right and a yellow line which slants down-left.'/>
+  <a class="copy-only" href="../static/puzzle_resources/fibonacci-sequence/square.svg">[See original puzzle for image]</a>
+</div>
+
+<script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+<script>
+  twemoji.parse(document.getElementById('needs-twemoji'));
+</script>
+
+<button class="btn clipboard-button"></button>
+
+
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

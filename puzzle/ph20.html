@@ -1,0 +1,338 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>PH20: There&#x27;s No Business Like Show Business</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+<a href="../round/placement-test.html" class="btn">Placement Test</a>
+
+
+
+
+
+<a href="../post-hunt-solve/ph20.html" class="btn">Call in an answer</a>
+
+
+<a href="../solution/ph20.html" class="btn solution-button">View solution</a>
+<a href="../stats/ph20.html" class="btn">Stats</a>
+
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<h1 class="puzzle-title">
+    PH20: There&#x27;s No Business Like Show Business
+    
+</h1>
+
+<main class="puzzle-main clipboard-container">
+    
+
+    
+    <style>
+    .content-div * {
+        line-height: 2rem;
+    }
+
+    .content-div input {
+        border: 1px solid black;
+        margin-bottom: 0;
+    }
+
+        .player {
+            display: grid;
+            grid-template-columns: 30% 70%;
+            font-size: 16px;
+        }
+
+        .player p {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .instructions {
+            border: 1px solid black;
+        }
+
+        .lyrics {
+            padding-left: 10px;
+            display: grid;
+            align-items: center;
+            grid-template-columns: 70% 30%;
+        }
+
+        .lyrics p {
+            margin-bottom: 0;
+        }
+
+        .lyrics input {
+            height: calc(1em + 10px);
+        }
+
+        .extract {
+            grid-column: 1/-1;
+            margin-top: 20px;
+        }
+
+        .extract td {
+            border: none;
+            text-align: center;
+            font-size: 20px;
+            padding: 0px 10px;
+        }
+
+        .extract .description {
+            text-align: right;
+            text-transform: uppercase;
+        }
+
+        .extract input {
+            width: calc(3em + 4px);
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .picker {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 30px;
+        }
+
+        .pickerheader {
+            border: 1px solid black;
+            padding: 5px;
+            margin-right: 10px;
+            font-weight: bold;
+            font-size: 20px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .pickerheader:hover {
+            background-color: palegoldenrod;
+        }
+
+        .pickerheader.selected {
+            background-color: yellow;
+        }
+
+        @media print {
+            .secondaryheader {
+                page-break-before: always;
+                line-height: 5rem;
+                border-bottom: 1px solid black;
+                padding-bottom: 30px;
+                margin-bottom: 0px;
+            }
+
+            .lyrics {
+                grid-template-columns: 100%;
+            }
+
+            .lyrics input {
+                display: none;
+            }
+
+            .content-div hr {
+                display: none;
+            }
+
+            .picker {
+                display: none;
+            }
+        }
+
+        @media screen {
+            .secondaryheader {
+                display: none;
+            }
+
+            .content-div hr {
+                display: none;
+            }
+
+            .instructions {
+                margin-right: 40%;
+            }
+
+            .playerheader {
+                display: none;
+            }
+
+            .unselected {
+                display: none;
+            }
+
+            .checker {
+                border: 1px solid black;
+                padding: 10px;
+                background: lightyellow;
+            }
+
+            @media print {
+                .checker {
+                    display: none;
+                }
+            }
+        }
+</style>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/sha256.js"></script>
+<script type="text/javascript" src="../static/js/crypto.js"></script>
+<script>
+        var correctHashes = [
+            "0x-1nu0er7g4jemar92kd1-l84h30mlnjfl-o76r1k1d2623-131h5ld",
+            "0x1dua8f7-gl0hi4vtvai119320ll-11u6rg7c9adn6-pes9tu-1uccr09",
+            "0xs3r30s1b0kk8o-1fsjnml-8uf4bi1nje61a-1b7ae0bbsdrj9-1qhr1re",
+            "0x-1ulajtp1q8hc6h-1tq8o71c0e9n0-9c6f5r-1vod4gv13o2fqi-fmi5nj"
+        ];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById("check").addEventListener("click", (e) => {
+                var guess = document.getElementById("guess").value.toUpperCase().replace(/[^A-Z0-9]+/g, '');
+                var hash = encrypt(guess.replaceAll(" ", ""));
+                var result;
+                if (correctHashes.includes(hash)) {
+                    result = "Yes, " + guess + " is a correct 5-letter block for this puzzle.";
+                } else {
+                    result = "No, " + guess + " is not a correct 5-letter block for this puzzle.";
+                }
+                document.getElementById("result").innerText = result;
+                document.getElementById("guess").value = "";
+                e.preventDefault();
+            });
+            var state = localStorage.getItem("ph20");
+            if (state) { state = state.split("|"); }
+            var iItem = 0;
+
+            document.querySelectorAll(".content-div input").forEach(item => {
+                if (state) { item.value = state[iItem++]; }
+            });
+        });
+
+        window.addEventListener('beforeunload', function(e) {
+            var state = [];
+            document.querySelectorAll(".content-div input").forEach(item => {
+                state.push(item.value);
+            });
+            localStorage.setItem("ph20", state.join("|"));
+        });
+
+        function setplayer(index) {
+            document.querySelectorAll(".pickerheader").forEach(h => { h.classList.remove("selected"); });
+            document.querySelectorAll(".player").forEach(h => { h.classList.add("unselected"); });
+
+            document.querySelectorAll(".pickerheader")[index - 1].classList.add("selected");
+            document.querySelectorAll(".player")[index - 1].classList.remove("unselected");
+        }
+</script>
+<form class="checker no-copy"><div style="display: flex;"><div style="flex-grow: 1; align-self: center; margin: 10px;">You can confirm a player&rsquo;s 5-letter block here.</div><input id="guess" type="text" style="width: 200px; margin: 10px; font-size: 20px; text-transform: uppercase; border-color: black;"/><input id="check" type="submit" style="margin: 10px; font-size: 20px; display: none" value="Guess"/></div><div id="result" style="text-align: right"></div></form>
+<div class="page-div"><div class="content-div"><div class="picker"><div class="pickerheader selected" onclick="setplayer(1);">Player 1</div><div class="pickerheader" onclick="setplayer(2);">Player 2</div><div class="pickerheader" onclick="setplayer(3);">Player 3</div><div class="pickerheader" onclick="setplayer(4);">Player 4</div></div><div class="player"><div class="instructions"><div class="playerheader"><p><b>Player 1</b></p><br/></div><p>Places people! There are four roles open. I&rsquo;ve provided each of you with lyrics from 5 different musicals (20 musicals in total).</p><br/><p>Read the lyrics aloud to create a somewhat sensical conversation. Make sure no person speaks twice in a row, and keep track of the order in which you say your 5 lyrics. Then put the 4 blocks of letters in some order to spell a phrase.</p><br/><p>I&rsquo;ll start the conversation:</p><p><b>Willkommen, bienvenue, welcome<br/>Im Cabaret, au Cabaret, to Cabaret<br/>Leave your troubles outside!</b></p></div><div class="lyrics"><p>Everybody Look Left!<br/>Everybody Look Right!<br/>Everywhere You Look I&rsquo;m<br/>Standing In The Spotlight</p><input type="text"/><p>I mean, with the price of meat<br/>What it is? When you get it<br/>If you get it<br/>Hah<br/>Good, you got it<br/>Take for instance, Mrs. Mooney and her pie shop<br/>Business never better using only pussycats and toast<br/>And a pussy&rsquo;s good for maybe six or seven at the most<br/>And I&rsquo;m sure they can&rsquo;t compare as far as taste</p><input type="text"/><p>(Seasons of love) yeah<br/>Woah, woah, woah, five hundred,<br/>twenty-five thousand six hundred minutes<br/>How do you figure our last year on earth</p><input type="text"/><p>Te-A drink with jam and bread<br/>That will bring us back to Do, oh, oh, oh<br/>Do-A deer, a female deer<br/>Re-A drop of golden sun</p><input type="text"/><p>To dream the impossible dream<br/>To fight the unbeatable foe<br/>To bear with unbearable sorrow</p><input type="text"/></div><table class="extract"><tr><td class="description">Order of lyrics used:</td><td>3rd</td><td>1st</td><td>5th</td><td>2nd</td><td>4th</td></tr><tr><td class="description">Index into name of musical:</td><td>4</td><td>6</td><td>8</td><td>2</td><td>4</td></tr><tr><td class="description">Letter:</td><td><input type="text" minlength="1" maxlength="1"/></td><td><input type="text" minlength="1" maxlength="1"/></td><td><input type="text" minlength="1" maxlength="1"/></td><td><input type="text" minlength="1" maxlength="1"/></td><td><input type="text" minlength="1" maxlength="1"/></td></tr></table></div><hr/><h1 class="secondaryheader">There&rsquo;s No Business Like Show Business</h1><div class="player unselected"><div class="instructions"><div class="playerheader"><p><b>Player 2</b></p><br/></div><p>Places people! There are four roles open. I&rsquo;ve provided each of you with lyrics from 5 different musicals (20 musicals in total).</p><br/><p>Read the lyrics aloud to create a somewhat sensical conversation. Make sure no person speaks twice in a row, and keep track of the order in which you say your 5 lyrics. Then put the 4 blocks of letters in some order to spell a phrase.</p><br/><p>I&rsquo;ll start the conversation:</p><p><b>Willkommen, bienvenue, welcome<br/>Im Cabaret, au Cabaret, to Cabaret<br/>Leave your troubles outside!</b></p></div><div class="lyrics"><p>If life seems jolly rotten<br/>There's something you've forgotten</p><input type="text"/><p>Something has changed within me<br/>Something is not the same<br/>I&rsquo;m through with playing by<br/>The rules of someone else&rsquo;s game</p><input type="text"/><p>Sunrise, sunset,<br/>Sunrise, sunset,<br/>Swiftly fly the years,<br/>One season following another</p><input type="text"/><p>The blood of the martyrs will water the meadows of France<br/>Do you hear the people sing?<br/>Singing the song of angry men<br/>It is the music of a people who will not be slaves again<br/>When the beating of your heart echoes the beating the drums<br/>There is a life about to start when tomorrow comes</p><input type="text"/><p>When the Moon is in the Seventh House<br/>And Jupiter aligns with Mars,<br/>Then peace will guide the planets<br/>And love will steer the stars</p><input type="text"/></div><table class="extract"><tr><td class="description">Order of lyrics used:</td><td>4th</td><td>3rd</td><td>1st</td><td>2nd</td><td>5th</td></tr><tr><td class="description">Index into name of musical:</td><td>3</td><td>2</td><td>5</td><td>3</td><td>10</td></tr><tr><td class="description">Letter:</td><td><input type="text" minlength="1" maxlength="1"/></td><td><input type="text" minlength="1" maxlength="1"/></td><td><input type="text" minlength="1" maxlength="1"/></td><td><input type="text" minlength="1" maxlength="1"/></td><td><input type="text" minlength="1" maxlength="1"/></td></tr></table></div><hr/><h1 class="secondaryheader">There&rsquo;s No Business Like Show Business</h1><div class="player unselected"><div class="instructions"><div class="playerheader"><p><b>Player 3</b></p><br/></div><p>Places people! There are four roles open. I&rsquo;ve provided each of you with lyrics from 5 different musicals (20 musicals in total).</p><br/><p>Read the lyrics aloud to create a somewhat sensical conversation. Make sure no person speaks twice in a row, and keep track of the order in which you say your 5 lyrics. Then put the 4 blocks of letters in some order to spell a phrase.</p><br/><p>I&rsquo;ll start the conversation:</p><p><b>Willkommen, bienvenue, welcome<br/>Im Cabaret, au Cabaret, to Cabaret<br/>Leave your troubles outside!</b></p></div><div class="lyrics"><p>(Don't you dare close your eyes)<br/>A hundred thousand things to see<br/>(Hold your breath, it gets better)<br/>I&rsquo;m like a shooting star, I&rsquo;ve come so far<br/>I can&rsquo;t go back to where I used to be</p><input type="text"/><p>I&rsquo;m just a mean green mother from outer space<br/>And I&rsquo;m bad<br/>I&rsquo;m just a mean green mother from outer space<br/>A real hard case. You can't beat this</p><input type="text"/><p>Let&rsquo;s do the Time Warp again<br/>Let&rsquo;s do the Time Warp again<br/>It&rsquo;s just a jump to the left<br/>And then a step to the right</p><input type="text"/><p>No one really knows how the game is played<br/>The art of the trade<br/>How the sausage gets made</p><input type="text"/><p>Try the grey stuff, it&rsquo;s delicious<br/>Don&rsquo;t believe me? Ask the dishes!<br/>They can sing, they can dance!<br/>After all, miss, this is France!</p><input type="text"/></div><table class="extract"><tr><td class="description">Order of lyrics used:</td><td>1st</td><td>2nd</td><td>4th</td><td>5th</td><td>3rd</td></tr><tr><td class="description">Index into name of musical:</td><td>10</td><td>2</td><td>2</td><td>1</td><td>1</td></tr><tr><td class="description">Letter:</td><td><input type="text" minlength="1" maxlength="1"/></td><td><input type="text" minlength="1" maxlength="1"/></td><td><input type="text" minlength="1" maxlength="1"/></td><td><input type="text" minlength="1" maxlength="1"/></td><td><input type="text" minlength="1" maxlength="1"/></td></tr></table></div><hr/><h1 class="secondaryheader">There&rsquo;s No Business Like Show Business</h1><div class="player unselected"><div class="instructions"><div class="playerheader"><p><b>Player 4</b></p><br/></div><p>Places people! There are four roles open. I&rsquo;ve provided each of you with lyrics from 5 different musicals (20 musicals in total).</p><br/><p>Read the lyrics aloud to create a somewhat sensical conversation. Make sure no person speaks twice in a row, and keep track of the order in which you say your 5 lyrics. Then put the 4 blocks of letters in some order to spell a phrase.</p><br/><p>I&rsquo;ll start the conversation:</p><p><b>Willkommen, bienvenue, welcome<br/>Im Cabaret, au Cabaret, to Cabaret<br/>Leave your troubles outside!</b></p></div><div class="lyrics"><p>Memory<br/>All alone in the moonlight</p><input type="text"/><p>The world was just an address,<br/>A place for me to live in,<br/>No better than all right,<br/>But here you are<br/>And what was just a world is a star<br/>Tonight!<br/>Goodnight, goodnight,<br/>Sleep well and when you dream,<br/>Dream of me</p><input type="text"/><p>Trouble, oh we got trouble,<br/>Right here in River City!<br/>With a capital &ldquo;T&rdquo;</p><input type="text"/><p>Turn your thoughts away from cold unfeeling light<br/>And listen to the music of the night<br/>Close your eyes and surrender to your darkest dreams<br/>Purge your thoughts of the life you knew before<br/>Close your eyes, let your spirit start to soar</p><input type="text"/><p>You can&rsquo;t stop the beat<br/>You can&rsquo;t stop a river<br/>As it rushes to the sea<br/>You can try and stop the hands of time</p><input type="text"/></div><table class="extract"><tr><td class="description">Order of lyrics used:</td><td>3rd</td><td>5th</td><td>1st</td><td>4th</td><td>2nd</td></tr><tr><td class="description">Index into name of musical:</td><td>2</td><td>10</td><td>5</td><td>5</td><td>6</td></tr><tr><td class="description">Letter:</td><td><input type="text" minlength="1" maxlength="1"/></td><td><input type="text" minlength="1" maxlength="1"/></td><td><input type="text" minlength="1" maxlength="1"/></td><td><input type="text" minlength="1" maxlength="1"/></td><td><input type="text" minlength="1" maxlength="1"/></td></tr></table></div></div></div>
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

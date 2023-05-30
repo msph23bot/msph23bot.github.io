@@ -1,0 +1,416 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: PH14: Making Tracks</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="../puzzle/ph14.html" class="btn">Back to the puzzle</a>
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: PH14: Making Tracks
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer spoiler">TERMINAL</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Dana Young
+
+    </h2>
+
+    
+    <style>
+body
+{
+    font-family: Tahoma, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+.content-div table {
+    border-collapse: collapse;
+    user-select: none;
+    margin: 0;
+}
+
+.content-div td {
+    padding: 0px;
+    margin: 0px;
+    border: 0px solid black;
+}
+
+.griddy td {
+    width: 49px;
+    height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    -webkit-text-stroke: 1px black;
+    border: 2px solid black;
+    text-align: center;
+    padding: 0;
+}
+
+
+.griddy td.track-answer {
+    color: cyan;
+}
+
+.griddy tr:last-child td {
+    border-bottom: 2px solid black;
+}
+
+.griddy.clues td {
+    background: white;
+    color: black;
+}
+
+.griddy.clues td.correct {
+    background: #b0ffb0;
+}
+
+.griddy.clues td.incorrect {
+    background: #ffb0b0;
+}
+
+#maingrid td {
+    background: white;
+}
+
+#maingrid td:hover {
+    cursor: pointer;
+}
+
+#maingrid td.left, #maingrid td.right, #maingrid td.top, #maingrid td.bottom, #maingrid td.used {
+    background: url(../static/puzzle_resources/ph14/Tracks.png);
+    background-color: #c0c0c0;
+    background-size: 200px;
+}
+
+#maingrid td.left {
+    background-position-y: 100px;
+}
+
+#maingrid td.right {
+    background-position-y: 150px;
+}
+
+#maingrid td.left.right {
+    background-position-y: 50px;
+}
+
+#maingrid td.top {
+    background-position-x: 100px;
+}
+
+#maingrid td.bottom {
+    background-position-x: 150px;
+}
+
+#maingrid td.top.bottom {
+    background-position-x: 50px;
+}
+
+#maingrid td.empty {
+    background-color: #b0ffb0;
+}
+
+#maingrid.griddy td:hover {
+    cursor: pointer;
+}
+
+#maingrid.griddy td.portalcell:hover {
+    cursor: default;
+}
+
+@media screen {
+    #maingrid td.given-left.given-right, #maingrid td.given-left.given-top, #maingrid td.given-left.given-bottom, #maingrid td.given-right.given-top, #maingrid td.given-right.given-bottom, #maingrid td.given-bottom.given-top {
+        background-color: #b97a57;
+    }    
+}
+
+@media print {
+    img {
+        width: 100px;
+    }
+
+    .griddy td {
+        width: 39px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    #maingrid td.left, #maingrid td.right, #maingrid td.top, #maingrid td.bottom, #maingrid td.used {
+        background-size: 160px;
+    }
+
+    #maingrid td.left {
+        background-position-y: 80px;
+    }
+
+    #maingrid td.right {
+        background-position-y: 120px;
+    }
+
+    #maingrid td.left.right {
+        background-position-y: 40px;
+    }
+
+    #maingrid td.top {
+        background-position-x: 80px;
+    }
+
+    #maingrid td.bottom {
+        background-position-x: 120px;
+    }
+
+    #maingrid td.top.bottom {
+        background-position-x: 40px;
+    }
+
+    .griddy.clues td.correct {
+        background: white;
+    }
+}
+</style>
+<script>
+var fShift = false;
+var currentCell = null;
+var fSolved = false;
+
+// set init to null if no init state
+var init = [
+        "RAILROADTICKETB",
+        "O1XC49ARENGINEE",
+        "168RL2OCOMOTIVE",
+        "68CONDUCTORPASS",
+        "ENGERTUNNE49LUN",
+        "COUPLEMETRO2LIN",
+        "ERFREIGHTS4c8WI",
+        "T5849CHBRAKEMAN",
+        "C2OM2MUTERSTA58",
+        "TIONALLABOARD2W",
+        "HISTLESTOPJUN1C",
+        "TIONSL58EEPI4aN",
+        "GCAR1T2RANSCONT",
+        "9INE68NTALCOACH",
+        "2ST58EAMCABOOSE",
+];
+
+var track = [
+        "...5ccc9.......",
+        "59.6c9.69......",
+        "36ccca..6c9....",
+        "69........3....",
+        "5a........69...",
+        "3.........5a.59",
+        "3.59......6cca3",
+        "35a69.........3",
+        "369.3........5a",
+        "3.696c9......69",
+        "3..6c969.....5a",
+        "3....35a...5ca.",
+        "6c9.5a6cccca...",
+        "95a.69.........",
+        "6a.5ca.........",
+];
+
+var vertClues = [14, 9, 7, 8, 10, 9, 5, 5, 3, 2, 6, 5, 2, 6, 6];
+
+var horzClues = [5, 7, 9, 3, 4, 5, 8, 6, 6, 8, 8, 7, 11, 5, 5];
+
+document.addEventListener('DOMContentLoaded', function() {
+
+        var topfragment = document.createDocumentFragment();
+        var tr = document.createElement("tr");
+        for (var j = 0; j < vertClues.length; j++) {
+                var td = document.createElement("td");
+                td.textContent = vertClues[j].toString();
+                td.classList.add("correct");
+                tr.appendChild(td);
+        }
+
+        topfragment.appendChild(tr);
+
+        document.getElementById("topcluestable").appendChild(topfragment);
+
+        var leftfragment = document.createDocumentFragment();
+        for (var i = 0; i < horzClues.length; i++) {
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.textContent = horzClues[i].toString();
+                td.classList.add("correct");
+                tr.appendChild(td);
+
+                leftfragment.appendChild(tr);
+        }
+
+        document.getElementById("leftcluestable").appendChild(leftfragment);
+
+        var mainfragment = document.createDocumentFragment();
+        for (var i = 0; i < horzClues.length; i++) {
+                var tr = document.createElement("tr");
+                var line = init[i];
+                var trackLine = track[i];
+                for (var j = 0; j < vertClues.length; j++) {
+                        var td = document.createElement("td");
+                        if ((line[j] <= 9 && line[j] >= 0) || (line[j] <= 'f' && line[j] >= 'a')) {
+                                var num = parseInt(line[j], 16);
+                                if (num & 8) { td.classList.add("left"); td.classList.add("given-left"); }
+                                if (num & 4) { td.classList.add("right"); td.classList.add("given-right"); }
+                                if (num & 2) { td.classList.add("top"); td.classList.add("given-top"); }
+                                if (num & 1) { td.classList.add("bottom"); td.classList.add("given-bottom"); }
+                        }
+                        else { td.textContent = line[j]; }
+
+                        if ((trackLine[j] <= 9 && trackLine[j] >= 0) || (trackLine[j] <= 'f' && trackLine[j] >= 'a')) {
+                                var num = parseInt(trackLine[j], 16);
+                                if (num & 8) { td.classList.add("left"); }
+                                if (num & 4) { td.classList.add("right"); }
+                                if (num & 2) { td.classList.add("top"); }
+                                if (num & 1) { td.classList.add("bottom"); }
+                        }
+
+                        if ((i == 0 && j == 4) || (i == 2 && j == 9) || (i == 4 && j == 0) || (i == 6 && j == 14) || (i == 9 && j == 4) || (i == 10 && j == 4) || (i == 11 && j == 0) || (i == 12 && j == 9)) {
+                            td.classList.add("track-answer");
+                        }
+                        tr.appendChild(td);
+                }
+
+                mainfragment.appendChild(tr);
+        }
+
+        document.getElementById("maingridtable").appendChild(mainfragment);
+});
+</script>
+<div class="page-div"><div class="content-div"><table><tr><td id="topclues" class="griddy clues vertlines"><table id="topcluestable"></table></td><td></td></tr><tr><td id="maingrid" class="griddy vertlines horzlines"><table id="maingridtable"></table></td><td id="leftclues" class="griddy clues horzlines"><table id="leftcluestable"></table></td></tr></table><br/><p>Reading every seventh letter on the track as per the instructions yields the answer TERMINAL.</p></div></div>
+
+    
+    
+
+    
+    
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>

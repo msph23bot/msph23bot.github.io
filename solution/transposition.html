@@ -1,0 +1,259 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <style>
+    
+        html {
+            --accent-rgb: 56, 75, 160;
+            --secondary-accent-rgb: 28, 39, 81;
+            --accent-hover-color: #2af;
+        }
+    
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: Transposition</title>
+
+    
+        
+            <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon-ph23.ico" type="image/vnd.microsoft.icon">
+        
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Puzzle University">
+    <meta property="og:description" content="Registration for this year's Puzzle University is now open!">
+    <!--meta property="og:image" content="http://localhost:8000/static/images/favicon-ph23.ico"-->
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Myriad font -->
+    <link rel="stylesheet" href="https://use.typekit.net/zwt2rdl.css">
+    <!-- Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../jsi18n/index.html"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script src="../static/js/menu-button-links.js"></script>
+<script src="../static/js/puzzledb.js"></script>
+<script src="../static/js/teamstate.js"></script>
+</head>
+<body>
+    
+    
+    <div class="header-bar">
+        
+    </div>
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../rules.html">
+                    Policies
+                </a>
+                
+                <a href="../story.html">
+                    Story
+                </a>
+                
+                
+                
+                <div id="deptdropdownmenu"> </div>                
+                
+                <a href="../teams.html">
+                    Directory
+                </a>
+                <a href="../faq.html">
+                    FAQ
+                </a>
+                
+
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="../puzzle/transposition.html" class="btn">Back to the puzzle</a>
+
+            </div>
+        </span>
+
+    </nav>
+    
+    <script>
+    
+    
+    </script>
+    <div class="header">
+        
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: Transposition
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer spoiler">CHOKE KNOBS</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Adam Gleitman
+
+    </h2>
+
+    
+    <style>
+  /* Table grid properties. These will not copy on Firefox, so use for
+      styles that affect formatting for web (not copy-paste) only. */
+  table.grid {
+    border-collapse: collapse;
+    width: auto;
+    font-size: 0.7em;
+    line-height: 0.7em;
+    position: relative;
+  }
+
+  table.grid td {
+    background-clip: padding-box;
+    height: 2em;
+    width: 2em;
+    padding: 0px;
+    text-align: center;
+    vertical-align: bottom;
+    border-left: 1px solid #777;
+    border-right: 1px solid #777;
+    border-top: 1px solid #777;
+    border-bottom: 1px solid #777;
+    position: relative; /* so that "position: absolute;" works below */
+  }
+
+  /* Crossword number format
+     Scale numbers with transform so that we don't mess with font sizes
+     when pasting. */
+  table.grid .number {
+    position: absolute;
+    width: min-content;
+    height: 33%;
+    text-align: left;
+    top: 1px;
+    left: 1px;
+    transform: scale(0.75);
+    transform-origin: top left;
+  }
+
+  table.grid td.black {
+    box-shadow: inset 50px 50px black;
+    background-color: black;
+  }
+
+  table.grid td.yellow {
+    box-shadow: inset 50px 50px yellow;
+    background-color: yellow;
+  }
+
+  div.centerer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* In Chrome, this must go on a <div>, not a <table>, to work. */
+  /* In Firefox, this must go on a <table>, not a <div>, to work. */
+  /* tl;dr - Use it on both containing div and inner table. */
+  .no-break {
+    break-inside: avoid;
+  }
+
+  span.em {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+</style>
+
+<p>Five entries in the grid have two of their letters transposed:</p>
+<table>
+<thead>
+<tr>
+<th>Location</th>
+<th>Gridded Answer</th>
+<th>&ldquo;Actual&rdquo; Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>17-Across</td>
+<td>MAR<span class="em">HC</span> KING</td>
+<td>MAR<span class="em">CH</span> KING</td>
+</tr>
+<tr>
+<td>23-Across</td>
+<td>BR<span class="em">KO</span>EN DOWN</td>
+<td>BR<span class="em">OK</span>EN DOWN</td>
+</tr>
+<tr>
+<td>33-Across</td>
+<td>THE WE<span class="em">KE</span>ND</td>
+<td>THE WE<span class="em">EK</span>ND</td>
+</tr>
+<tr>
+<td>48-Across</td>
+<td>PHO<span class="em">ON</span>GRAPH</td>
+<td>PHO<span class="em">NO</span>GRAPH</td>
+</tr>
+<tr>
+<td>53-Across</td>
+<td>SU<span class="em">SB</span>CRIBE</td>
+<td>SU<span class="em">BS</span>CRIBE</td>
+</tr>
+</tbody>
+</table>
+<p>&ldquo;Un-transposing&rdquo; these letters into their correct positions yields the phrase CHOKE KNOBS.</p>
+<div class="centerer no-break"><table class="grid no-break"><tr><td><span class="number">1</span>R</td><td><span class="number">2</span>A</td><td><span class="number">3</span>S</td><td><span class="number">4</span>P</td><td class="black"></td><td class="black"></td><td><span class="number">5</span>P</td><td><span class="number">6</span>G</td><td><span class="number">7</span>A</td><td class="black"></td><td class="black"></td><td><span class="number">8</span>Y</td><td><span class="number">9</span>M</td><td><span class="number">10</span>C</td><td><span class="number">11</span>A</td></tr><tr><td><span class="number">12</span>I</td><td>S</td><td>T</td><td>O</td><td class="black"></td><td class="black"></td><td><span class="number">13</span>O</td><td>U</td><td>R</td><td class="black"></td><td><span class="number">14</span>A</td><td>A</td><td>R</td><td>O</td><td>N</td></tr><tr><td><span class="number">15</span>C</td><td>H</td><td>R</td><td>I</td><td><span class="number">16</span>S</td><td class="black"></td><td><span class="number">17</span>M</td><td>A</td><td>R</td><td class="yellow"><span class="number">18</span>H</td><td class="yellow">C</td><td>K</td><td>I</td><td>N</td><td>G</td></tr><tr><td class="black"></td><td><span class="number">19</span>A</td><td>I</td><td>S</td><td>H</td><td><span class="number">20</span>A</td><td class="black"></td><td><span class="number">21</span>P</td><td>O</td><td>O</td><td>L</td><td class="black"></td><td><span class="number">22</span>S</td><td>A</td><td>L</td></tr><tr><td><span class="number">23</span>B</td><td>R</td><td class="yellow">K</td><td class="yellow">O</td><td>E</td><td>N</td><td><span class="number">24</span>D</td><td>O</td><td>W</td><td>N</td><td class="black"></td><td><span class="number">25</span>A</td><td>C</td><td>I</td><td>E</td></tr><tr><td><span class="number">26</span>O</td><td>P</td><td>E</td><td>N</td><td>A</td><td>I</td><td>R</td><td class="black"></td><td><span class="number">27</span>S</td><td>E</td><td><span class="number">28</span>E</td><td>M</td><td>A</td><td>R</td><td>S</td></tr><tr><td><span class="number">29</span>T</td><td>S</td><td>R</td><td class="black"></td><td><span class="number">30</span>T</td><td>S</td><td>A</td><td><span class="number">31</span>R</td><td class="black"></td><td class="black"></td><td><span class="number">32</span>N</td><td>I</td><td>N</td><td>E</td><td class="black"></td></tr><tr><td class="black"></td><td class="black"></td><td class="black"></td><td><span class="number">33</span>T</td><td>H</td><td>E</td><td>W</td><td>E</td><td class="yellow"><span class="number">34</span>K</td><td class="yellow"><span class="number">35</span>E</td><td>N</td><td>D</td><td class="black"></td><td class="black"></td><td class="black"></td></tr><tr><td class="black"></td><td><span class="number">36</span>T</td><td><span class="number">37</span>O</td><td>N</td><td>E</td><td class="black"></td><td class="black"></td><td><span class="number">38</span>V</td><td>I</td><td>V</td><td>E</td><td class="black"></td><td><span class="number">39</span>C</td><td><span class="number">40</span>P</td><td><span class="number">41</span>A</td></tr><tr><td><span class="number">42</span>P</td><td>O</td><td>S</td><td>T</td><td>D</td><td><span class="number">43</span>O</td><td><span class="number">44</span>C</td><td class="black"></td><td><span class="number">45</span>R</td><td>E</td><td>A</td><td><span class="number">46</span>C</td><td>H</td><td>E</td><td>S</td></tr><tr><td><span class="number">47</span>R</td><td>O</td><td>M</td><td>S</td><td class="black"></td><td><span class="number">48</span>P</td><td>H</td><td><span class="number">49</span>O</td><td class="yellow">O</td><td class="yellow">N</td><td>G</td><td>R</td><td>A</td><td>P</td><td>H</td></tr><tr><td><span class="number">50</span>E</td><td>C</td><td>O</td><td class="black"></td><td><span class="number">51</span>D</td><td>E</td><td>A</td><td>R</td><td class="black"></td><td><span class="number">52</span>T</td><td>O</td><td>O</td><td>L</td><td>S</td><td class="black"></td></tr><tr><td><span class="number">53</span>S</td><td>U</td><td class="yellow">S</td><td class="yellow"><span class="number">54</span>B</td><td>C</td><td>R</td><td>I</td><td>B</td><td><span class="number">55</span>E</td><td class="black"></td><td><span class="number">56</span>N</td><td>O</td><td>L</td><td>I</td><td><span class="number">57</span>E</td></tr><tr><td><span class="number">58</span>E</td><td>T</td><td>I</td><td>K</td><td>A</td><td class="black"></td><td><span class="number">59</span>R</td><td>I</td><td>M</td><td class="black"></td><td class="black"></td><td><span class="number">60</span>N</td><td>A</td><td>C</td><td>L</td></tr><tr><td><span class="number">61</span>T</td><td>E</td><td>S</td><td>S</td><td class="black"></td><td class="black"></td><td><span class="number">62</span>S</td><td>T</td><td>U</td><td class="black"></td><td class="black"></td><td><span class="number">63</span>S</td><td>H</td><td>O</td><td>O</td></table></div>
+
+    
+    
+
+    
+    
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+
+</body>
+</html>
