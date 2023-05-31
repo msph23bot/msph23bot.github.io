@@ -59,7 +59,8 @@ LOREM_IPSUM = 'Lorem ipsum olor sit amet, consectetr adipiscing elit, ed do euso
 
 function econ(request)
 {  
-
+  re = /[^A-Z]/g
+  guess = request.toUpperCase().replace(re,'')
     len_11_guess = guess.substr(0,11)
     currencies = [
         'Argentine Peso',
